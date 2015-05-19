@@ -1,0 +1,77 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<TestRun id="e3cb11d9-2205-43c3-b403-f977cffbc2d4" name="sheila.deskins@TEGRIT0048 2015-05-19 13:34:48" runUser="TEGRITSOLUTIONS\sheila.deskins" xmlns="http://microsoft.com/schemas/VisualStudio/TeamTest/2010">
+  <TestSettings name="Default Test Settings" id="7249704e-6ca1-4015-9023-9907b1a0edec">
+    <Deployment runDeploymentRoot="sheila.deskins_TEGRIT0048 2015-05-19 13_34_48">
+      <DeploymentItem filename="C:\Exercises\MVC\AspNetMvcTrainingKit\Labs\aspNetMVC\Ex03-TestingMvcApp\begin\MvcSampleApp\bin\MvcSampleApp.dll" />
+      <DeploymentItem filename="C:\Exercises\MVC\AspNetMvcTrainingKit\Labs\aspNetMVC\Assets\Moq.dll" />
+    </Deployment>
+    <Execution>
+      <TestTypeSpecific />
+      <AgentRule name="Execution Agents">
+      </AgentRule>
+    </Execution>
+  </TestSettings>
+  <Times creation="2015-05-19T13:34:48.6521023-04:00" queuing="2015-05-19T13:34:49.6167499-04:00" start="2015-05-19T13:34:49.7106183-04:00" finish="2015-05-19T13:43:36.6889310-04:00" />
+  <ResultSummary outcome="Completed">
+    <Counters total="7" executed="7" passed="7" error="0" failed="0" timeout="0" aborted="0" inconclusive="0" passedButRunAborted="0" notRunnable="0" notExecuted="0" disconnected="0" warning="0" completed="0" inProgress="0" pending="0" />
+  </ResultSummary>
+  <TestDefinitions>
+    <UnitTest name="ShouldCustomerTakeDefaultRoute" storage="c:\exercises\mvc\aspnetmvctrainingkit\labs\aspnetmvc\ex03-testingmvcapp\begin\mvcsampleapp.tests\bin\debug\mvcsampleapp.tests.dll" id="b3b6e3df-04b7-f2fd-5b3a-583639120d11">
+      <Execution id="2bcacaee-2597-4ddc-a764-b5ea5ff1e13a" />
+      <TestMethod codeBase="C:/Exercises/MVC/AspNetMvcTrainingKit/Labs/aspNetMVC/Ex03-TestingMvcApp/begin/MvcSampleApp.Tests/bin/Debug/MvcSampleApp.Tests.DLL" adapterTypeName="Microsoft.VisualStudio.TestTools.TestTypes.Unit.UnitTestAdapter, Microsoft.VisualStudio.QualityTools.Tips.UnitTest.Adapter, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" className="MvcSampleApp.Tests.RouteTests, MvcSampleApp.Tests, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null" name="ShouldCustomerTakeDefaultRoute" />
+    </UnitTest>
+    <UnitTest name="ShouldLoadCustomerInfoView" storage="c:\exercises\mvc\aspnetmvctrainingkit\labs\aspnetmvc\ex03-testingmvcapp\begin\mvcsampleapp.tests\bin\debug\mvcsampleapp.tests.dll" id="9cc35a59-d65f-3716-0f14-57cb1100a4bd">
+      <Execution id="194c2a7d-018d-40bc-a98f-b7685a12d68f" />
+      <TestMethod codeBase="C:/Exercises/MVC/AspNetMvcTrainingKit/Labs/aspNetMVC/Ex03-TestingMvcApp/begin/MvcSampleApp.Tests/bin/Debug/MvcSampleApp.Tests.DLL" adapterTypeName="Microsoft.VisualStudio.TestTools.TestTypes.Unit.UnitTestAdapter, Microsoft.VisualStudio.QualityTools.Tips.UnitTest.Adapter, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" className="MvcSampleApp.Tests.CustomerControllerTests, MvcSampleApp.Tests, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null" name="ShouldLoadCustomerInfoView" />
+    </UnitTest>
+    <UnitTest name="ShouldLoadCustomerOneInfoView" storage="c:\exercises\mvc\aspnetmvctrainingkit\labs\aspnetmvc\ex03-testingmvcapp\begin\mvcsampleapp.tests\bin\debug\mvcsampleapp.tests.dll" id="a1dde339-5a4d-69ad-c55c-b368306f48b8">
+      <Execution id="00e029ff-afaf-413d-a47b-0f79ff9911fd" />
+      <TestMethod codeBase="C:/Exercises/MVC/AspNetMvcTrainingKit/Labs/aspNetMVC/Ex03-TestingMvcApp/begin/MvcSampleApp.Tests/bin/Debug/MvcSampleApp.Tests.DLL" adapterTypeName="Microsoft.VisualStudio.TestTools.TestTypes.Unit.UnitTestAdapter, Microsoft.VisualStudio.QualityTools.Tips.UnitTest.Adapter, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" className="MvcSampleApp.Tests.CustomerControllerTests, MvcSampleApp.Tests, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null" name="ShouldLoadCustomerOneInfoView" />
+    </UnitTest>
+    <UnitTest name="ShouldLoadCustomerIndexPageView" storage="c:\exercises\mvc\aspnetmvctrainingkit\labs\aspnetmvc\ex03-testingmvcapp\begin\mvcsampleapp.tests\bin\debug\mvcsampleapp.tests.dll" id="3371b580-8e05-6df4-2ae4-1f7b85574417">
+      <Execution id="fc4b2537-2e49-4365-a172-5b971a6bfb0d" />
+      <TestMethod codeBase="C:/Exercises/MVC/AspNetMvcTrainingKit/Labs/aspNetMVC/Ex03-TestingMvcApp/begin/MvcSampleApp.Tests/bin/Debug/MvcSampleApp.Tests.DLL" adapterTypeName="Microsoft.VisualStudio.TestTools.TestTypes.Unit.UnitTestAdapter, Microsoft.VisualStudio.QualityTools.Tips.UnitTest.Adapter, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" className="MvcSampleApp.Tests.CustomerControllerTests, MvcSampleApp.Tests, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null" name="ShouldLoadCustomerIndexPageView" />
+    </UnitTest>
+    <UnitTest name="ShouldLoadCustomerIndexView" storage="c:\exercises\mvc\aspnetmvctrainingkit\labs\aspnetmvc\ex03-testingmvcapp\begin\mvcsampleapp.tests\bin\debug\mvcsampleapp.tests.dll" id="c45f9866-a6fe-c797-0a04-db8ac869e157">
+      <Execution id="4bee19aa-b17b-47d5-ae1d-b60f9c96a70a" />
+      <TestMethod codeBase="C:/Exercises/MVC/AspNetMvcTrainingKit/Labs/aspNetMVC/Ex03-TestingMvcApp/begin/MvcSampleApp.Tests/bin/Debug/MvcSampleApp.Tests.DLL" adapterTypeName="Microsoft.VisualStudio.TestTools.TestTypes.Unit.UnitTestAdapter, Microsoft.VisualStudio.QualityTools.Tips.UnitTest.Adapter, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" className="MvcSampleApp.Tests.CustomerControllerTests, MvcSampleApp.Tests, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null" name="ShouldLoadCustomerIndexView" />
+    </UnitTest>
+    <UnitTest name="ShouldAddressTakeCreateRoute" storage="c:\exercises\mvc\aspnetmvctrainingkit\labs\aspnetmvc\ex03-testingmvcapp\begin\mvcsampleapp.tests\bin\debug\mvcsampleapp.tests.dll" id="8ebbd454-a277-5bb4-3575-4a30cca98109">
+      <Execution id="d2163d26-a3ca-4c21-82b1-eb5d2c40d48f" />
+      <TestMethod codeBase="C:/Exercises/MVC/AspNetMvcTrainingKit/Labs/aspNetMVC/Ex03-TestingMvcApp/begin/MvcSampleApp.Tests/bin/Debug/MvcSampleApp.Tests.DLL" adapterTypeName="Microsoft.VisualStudio.TestTools.TestTypes.Unit.UnitTestAdapter, Microsoft.VisualStudio.QualityTools.Tips.UnitTest.Adapter, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" className="MvcSampleApp.Tests.RouteTests, MvcSampleApp.Tests, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null" name="ShouldAddressTakeCreateRoute" />
+    </UnitTest>
+    <UnitTest name="ShouldCustomerTakeInfoRoute" storage="c:\exercises\mvc\aspnetmvctrainingkit\labs\aspnetmvc\ex03-testingmvcapp\begin\mvcsampleapp.tests\bin\debug\mvcsampleapp.tests.dll" id="23999c71-c6f7-32ef-4ec3-87142a0315d0">
+      <Execution id="14fd5088-2f0d-4b8d-91c7-fd0e96387b93" />
+      <TestMethod codeBase="C:/Exercises/MVC/AspNetMvcTrainingKit/Labs/aspNetMVC/Ex03-TestingMvcApp/begin/MvcSampleApp.Tests/bin/Debug/MvcSampleApp.Tests.DLL" adapterTypeName="Microsoft.VisualStudio.TestTools.TestTypes.Unit.UnitTestAdapter, Microsoft.VisualStudio.QualityTools.Tips.UnitTest.Adapter, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" className="MvcSampleApp.Tests.RouteTests, MvcSampleApp.Tests, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null" name="ShouldCustomerTakeInfoRoute" />
+    </UnitTest>
+  </TestDefinitions>
+  <TestLists>
+    <TestList name="Results Not in a List" id="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestList name="All Loaded Results" id="19431567-8539-422a-85d7-44ee4e166bda" />
+  </TestLists>
+  <TestEntries>
+    <TestEntry testId="c45f9866-a6fe-c797-0a04-db8ac869e157" executionId="4bee19aa-b17b-47d5-ae1d-b60f9c96a70a" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="23999c71-c6f7-32ef-4ec3-87142a0315d0" executionId="14fd5088-2f0d-4b8d-91c7-fd0e96387b93" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="8ebbd454-a277-5bb4-3575-4a30cca98109" executionId="d2163d26-a3ca-4c21-82b1-eb5d2c40d48f" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="b3b6e3df-04b7-f2fd-5b3a-583639120d11" executionId="2bcacaee-2597-4ddc-a764-b5ea5ff1e13a" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="3371b580-8e05-6df4-2ae4-1f7b85574417" executionId="fc4b2537-2e49-4365-a172-5b971a6bfb0d" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="a1dde339-5a4d-69ad-c55c-b368306f48b8" executionId="00e029ff-afaf-413d-a47b-0f79ff9911fd" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="9cc35a59-d65f-3716-0f14-57cb1100a4bd" executionId="194c2a7d-018d-40bc-a98f-b7685a12d68f" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+  </TestEntries>
+  <Results>
+    <UnitTestResult executionId="4bee19aa-b17b-47d5-ae1d-b60f9c96a70a" testId="c45f9866-a6fe-c797-0a04-db8ac869e157" testName="ShouldLoadCustomerIndexView" computerName="TEGRIT0048" duration="00:02:37.6997463" startTime="2015-05-19T13:34:49.8144727-04:00" endTime="2015-05-19T13:37:28.6064238-04:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="4bee19aa-b17b-47d5-ae1d-b60f9c96a70a">
+    </UnitTestResult>
+    <UnitTestResult executionId="14fd5088-2f0d-4b8d-91c7-fd0e96387b93" testId="23999c71-c6f7-32ef-4ec3-87142a0315d0" testName="ShouldCustomerTakeInfoRoute" computerName="TEGRIT0048" duration="00:00:14.5793487" startTime="2015-05-19T13:37:28.6364088-04:00" endTime="2015-05-19T13:37:43.2101183-04:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="14fd5088-2f0d-4b8d-91c7-fd0e96387b93">
+    </UnitTestResult>
+    <UnitTestResult executionId="d2163d26-a3ca-4c21-82b1-eb5d2c40d48f" testId="8ebbd454-a277-5bb4-3575-4a30cca98109" testName="ShouldAddressTakeCreateRoute" computerName="TEGRIT0048" duration="00:00:00.0010052" startTime="2015-05-19T13:37:43.2231118-04:00" endTime="2015-05-19T13:37:43.2261103-04:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="d2163d26-a3ca-4c21-82b1-eb5d2c40d48f">
+    </UnitTestResult>
+    <UnitTestResult executionId="2bcacaee-2597-4ddc-a764-b5ea5ff1e13a" testId="b3b6e3df-04b7-f2fd-5b3a-583639120d11" testName="ShouldCustomerTakeDefaultRoute" computerName="TEGRIT0048" duration="00:00:00.0007127" startTime="2015-05-19T13:37:43.2321073-04:00" endTime="2015-05-19T13:37:43.2381043-04:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="2bcacaee-2597-4ddc-a764-b5ea5ff1e13a">
+    </UnitTestResult>
+    <UnitTestResult executionId="fc4b2537-2e49-4365-a172-5b971a6bfb0d" testId="3371b580-8e05-6df4-2ae4-1f7b85574417" testName="ShouldLoadCustomerIndexPageView" computerName="TEGRIT0048" duration="00:04:02.3232513" startTime="2015-05-19T13:37:43.2421023-04:00" endTime="2015-05-19T13:41:45.4520558-04:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="fc4b2537-2e49-4365-a172-5b971a6bfb0d">
+    </UnitTestResult>
+    <UnitTestResult executionId="00e029ff-afaf-413d-a47b-0f79ff9911fd" testId="a1dde339-5a4d-69ad-c55c-b368306f48b8" testName="ShouldLoadCustomerOneInfoView" computerName="TEGRIT0048" duration="00:01:48.7374522" startTime="2015-05-19T13:41:45.4830527-04:00" endTime="2015-05-19T13:43:34.2091790-04:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="00e029ff-afaf-413d-a47b-0f79ff9911fd">
+    </UnitTestResult>
+    <UnitTestResult executionId="194c2a7d-018d-40bc-a98f-b7685a12d68f" testId="9cc35a59-d65f-3716-0f14-57cb1100a4bd" testName="ShouldLoadCustomerInfoView" computerName="TEGRIT0048" duration="00:00:02.3196331" startTime="2015-05-19T13:43:34.2331766-04:00" endTime="2015-05-19T13:43:36.5569442-04:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="194c2a7d-018d-40bc-a98f-b7685a12d68f">
+    </UnitTestResult>
+  </Results>
+</TestRun>
