@@ -58,11 +58,16 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Controllers\HomeControllerTest.cs" />
     <Compile Include="Controllers\AccountControllerTest.cs" />
+    <Compile Include="TestCatalogRepository.cs" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="App.config" />
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="..\ClassLibrary1\Commerce.MVC.Services.csproj">
+      <Project>{3AA0C3AB-77CC-437D-B76B-36605723BDF7}</Project>
+      <Name>Commerce.MVC.Services</Name>
+    </ProjectReference>
     <ProjectReference Include="..\ClassLibrary2\Commerce.MVC.Data.csproj">
       <Project>{1B6BB0F6-138E-4E7B-8537-7D1892A45CEE}</Project>
       <Name>Commerce.MVC.Data</Name>

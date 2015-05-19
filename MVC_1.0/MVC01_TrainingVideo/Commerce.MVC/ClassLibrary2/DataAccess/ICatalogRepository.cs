@@ -7,5 +7,6 @@ namespace Commerce.MVC.Data.DataAccess
 {
     public interface ICatalogRepository
     {
+        IQueryable<Category> GetCategories();
     }
 }
