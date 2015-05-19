@@ -1,0 +1,57 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<TestRun id="355293c4-5a31-434c-9576-7ef79b118732" name="sheila.deskins@TEGRIT0048 2015-05-19 16:39:33" runUser="TEGRITSOLUTIONS\sheila.deskins" xmlns="http://microsoft.com/schemas/VisualStudio/TeamTest/2010">
+  <TestSettings name="Default Test Settings" id="fafa593d-a3fc-4598-8149-7859394ad5a2">
+    <Deployment userDeploymentRoot="C:\Exercises\MVC\MVC_1.0\MVC01_TrainingVideo\Commerce.MVC\TestResults" useDefaultDeploymentRoot="false" runDeploymentRoot="sheila.deskins_TEGRIT0048 2015-05-19 16_39_33">
+      <DeploymentItem filename="C:\Exercises\MVC\MVC_1.0\MVC01_TrainingVideo\Commerce.MVC\Commerce.MVC\bin\Commerce.MVC.dll" />
+      <DeploymentItem filename="C:\Exercises\MVC\MVC_1.0\MVC01_TrainingVideo\Commerce.MVC\ClassLibrary2\bin\Debug\Commerce.MVC.Data.dll" />
+      <DeploymentItem filename="C:\Exercises\MVC\MVC_1.0\MVC01_TrainingVideo\Commerce.MVC\ClassLibrary1\bin\Debug\Commerce.MVC.Services.dll" />
+    </Deployment>
+    <Execution>
+      <TestTypeSpecific />
+      <AgentRule name="Execution Agents">
+      </AgentRule>
+    </Execution>
+  </TestSettings>
+  <Times creation="2015-05-19T16:39:33.3265855-04:00" queuing="2015-05-19T16:39:34.1755855-04:00" start="2015-05-19T16:39:34.2735855-04:00" finish="2015-05-19T16:40:05.9185855-04:00" />
+  <ResultSummary outcome="Failed">
+    <Counters total="2" executed="2" error="0" failed="2" timeout="0" aborted="0" inconclusive="0" passedButRunAborted="0" notRunnable="0" notExecuted="0" disconnected="0" warning="0" passed="0" completed="0" inProgress="0" pending="0" />
+  </ResultSummary>
+  <TestDefinitions>
+    <UnitTest name="Repository_ProductFilter_Returns_5_Products_Wtih_Category_11" storage="c:\exercises\mvc\mvc_1.0\mvc01_trainingvideo\commerce.mvc\commerce.mvc.tests\bin\debug\commerce.mvc.tests.dll" id="37fc31cd-daa3-d9b9-f32a-811f8af9e708">
+      <Execution id="79432d1c-711c-428a-be2b-3a41e9e972b3" />
+      <TestMethod codeBase="C:/Exercises/MVC/MVC_1.0/MVC01_TrainingVideo/Commerce.MVC/Commerce.MVC.Tests/bin/Debug/Commerce.MVC.Tests.DLL" adapterTypeName="Microsoft.VisualStudio.TestTools.TestTypes.Unit.UnitTestAdapter, Microsoft.VisualStudio.QualityTools.Tips.UnitTest.Adapter, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" className="Commerce.MVC.Tests.CatalogTests, Commerce.MVC.Tests, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null" name="Repository_ProductFilter_Returns_5_Products_Wtih_Category_11" />
+    </UnitTest>
+    <UnitTest name="CatalogRepository_Each_Category_Contain_5_Products" storage="c:\exercises\mvc\mvc_1.0\mvc01_trainingvideo\commerce.mvc\commerce.mvc.tests\bin\debug\commerce.mvc.tests.dll" id="9d682666-04c0-4fe7-48d2-3044ecb03f51">
+      <Execution id="75e12883-ba26-41d5-8f70-0acd01f3729f" />
+      <TestMethod codeBase="C:/Exercises/MVC/MVC_1.0/MVC01_TrainingVideo/Commerce.MVC/Commerce.MVC.Tests/bin/Debug/Commerce.MVC.Tests.DLL" adapterTypeName="Microsoft.VisualStudio.TestTools.TestTypes.Unit.UnitTestAdapter, Microsoft.VisualStudio.QualityTools.Tips.UnitTest.Adapter, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" className="Commerce.MVC.Tests.CatalogTests, Commerce.MVC.Tests, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null" name="CatalogRepository_Each_Category_Contain_5_Products" />
+    </UnitTest>
+  </TestDefinitions>
+  <TestLists>
+    <TestList name="Results Not in a List" id="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestList name="All Loaded Results" id="19431567-8539-422a-85d7-44ee4e166bda" />
+  </TestLists>
+  <TestEntries>
+    <TestEntry testId="9d682666-04c0-4fe7-48d2-3044ecb03f51" executionId="75e12883-ba26-41d5-8f70-0acd01f3729f" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="37fc31cd-daa3-d9b9-f32a-811f8af9e708" executionId="79432d1c-711c-428a-be2b-3a41e9e972b3" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+  </TestEntries>
+  <Results>
+    <UnitTestResult executionId="75e12883-ba26-41d5-8f70-0acd01f3729f" testId="9d682666-04c0-4fe7-48d2-3044ecb03f51" testName="CatalogRepository_Each_Category_Contain_5_Products" computerName="TEGRIT0048" duration="00:00:12.6767729" startTime="2015-05-19T16:39:34.3685855-04:00" endTime="2015-05-19T16:39:48.0875855-04:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Failed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="75e12883-ba26-41d5-8f70-0acd01f3729f">
+      <Output>
+        <ErrorInfo>
+          <Message>Assert.AreEqual failed. Expected:&lt;5&gt;. Actual:&lt;10&gt;. </Message>
+          <StackTrace>   at Commerce.MVC.Tests.CatalogTests.CatalogRepository_Each_Category_Contain_5_Products() in C:\Exercises\MVC\MVC_1.0\MVC01_TrainingVideo\Commerce.MVC\Commerce.MVC.Tests\CatalogTests.cs:line 101
+</StackTrace>
+        </ErrorInfo>
+      </Output>
+    </UnitTestResult>
+    <UnitTestResult executionId="79432d1c-711c-428a-be2b-3a41e9e972b3" testId="37fc31cd-daa3-d9b9-f32a-811f8af9e708" testName="Repository_ProductFilter_Returns_5_Products_Wtih_Category_11" computerName="TEGRIT0048" duration="00:00:17.7666956" startTime="2015-05-19T16:39:48.0915855-04:00" endTime="2015-05-19T16:40:05.8615855-04:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Failed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="79432d1c-711c-428a-be2b-3a41e9e972b3">
+      <Output>
+        <ErrorInfo>
+          <Message>Assert.AreEqual failed. Expected:&lt;5&gt;. Actual:&lt;10&gt;. </Message>
+          <StackTrace>   at Commerce.MVC.Tests.CatalogTests.Repository_ProductFilter_Returns_5_Products_Wtih_Category_11() in C:\Exercises\MVC\MVC_1.0\MVC01_TrainingVideo\Commerce.MVC\Commerce.MVC.Tests\CatalogTests.cs:line 119
+</StackTrace>
+        </ErrorInfo>
+      </Output>
+    </UnitTestResult>
+  </Results>
+</TestRun>

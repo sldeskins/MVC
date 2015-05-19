@@ -9,6 +9,9 @@ namespace Commerce.MVC.Tests
 {
     public class TestCatalogRepository : ICatalogRepository
     {
+        IList<Product> productList;
+        IList<Category> categoryList;
+
         public IQueryable<Category> GetCategories()
         {
             IList<Category> result = new List<Category>();
@@ -34,5 +37,34 @@ namespace Commerce.MVC.Tests
             return result.AsQueryable<Category>();
 
         }
+        public IQueryable<Product> GetProducts()
+        {
+            IList<Product> result = new List<Product>();
+
+            int loopIndex = 0;
+            int uniqueProductID = 1;
+
+            var categories = GetCategories().Where(x => x.ParentID > 0).ToList();
+
+            foreach (var c in categories)
+            {
+                for (int y = 1; y <= 5; y++)
+                {
+                    Product p = new Product();
+                    p.Name = "Product" + loopIndex.ToString();
+                    p.ID = uniqueProductID;
+                    p.Price = y * 5.68M;
+                    p.Description = "Test Description";
+
+                    p.CategoryID = c.ID;
+                    uniqueProductID++;
+                    result.Add(p);
+                }
+            }
+
+            return result.AsQueryable<Product>();
+        }
+
+
     }
 }

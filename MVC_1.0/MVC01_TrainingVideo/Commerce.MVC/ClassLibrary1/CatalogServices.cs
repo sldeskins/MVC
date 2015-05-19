@@ -36,5 +36,12 @@ namespace Commerce.MVC.Services
 
             return parents;
         }
+        public IList<Product> GetProductsByCategory(int categoryID) {
+            return _repository.GetProducts().WithCategory(categoryID).ToList();
+        }
+        public Product GetProductsByID(int id)
+        {
+            return _repository.GetProducts().WithID(id).Single();
+        }
     }
 }

@@ -1,0 +1,267 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<TestRun id="ef4b7560-534d-4d93-a8b5-565e33c5214e" name="sheila.deskins@TEGRIT0048 2015-05-19 17:11:44" runUser="TEGRITSOLUTIONS\sheila.deskins" xmlns="http://microsoft.com/schemas/VisualStudio/TeamTest/2010">
+  <TestSettings name="Default Test Settings" id="1f3afcbd-80e7-40cf-a607-c7347791cddf">
+    <Deployment runDeploymentRoot="sheila.deskins_TEGRIT0048 2015-05-19 17_11_44">
+      <DeploymentItem filename="C:\Exercises\MVC\MVC_1.0\MVC01_TrainingVideo\Commerce.MVC\Commerce.MVC\bin\Commerce.MVC.dll" />
+      <DeploymentItem filename="C:\Exercises\MVC\MVC_1.0\MVC01_TrainingVideo\Commerce.MVC\ClassLibrary2\bin\Debug\Commerce.MVC.Data.dll" />
+      <DeploymentItem filename="C:\Exercises\MVC\MVC_1.0\MVC01_TrainingVideo\Commerce.MVC\ClassLibrary1\bin\Debug\Commerce.MVC.Services.dll" />
+    </Deployment>
+    <Execution>
+      <TestTypeSpecific />
+      <AgentRule name="Execution Agents">
+      </AgentRule>
+    </Execution>
+  </TestSettings>
+  <Times creation="2015-05-19T17:11:44.2235855-04:00" queuing="2015-05-19T17:11:45.0415855-04:00" start="2015-05-19T17:11:45.1095855-04:00" finish="2015-05-19T17:11:51.9745855-04:00" />
+  <ResultSummary outcome="Failed">
+    <Counters total="31" executed="31" passed="28" error="0" failed="3" timeout="0" aborted="0" inconclusive="0" passedButRunAborted="0" notRunnable="0" notExecuted="0" disconnected="0" warning="0" completed="0" inProgress="0" pending="0" />
+  </ResultSummary>
+  <TestDefinitions>
+    <UnitTest name="LogOn_Get_ReturnsView" storage="c:\exercises\mvc\mvc_1.0\mvc01_trainingvideo\commerce.mvc\commerce.mvc.tests\bin\debug\commerce.mvc.tests.dll" id="8d1b1feb-a745-4234-a6d1-a381af55cac9">
+      <Execution id="41e67396-4c03-4a32-9d78-9f03d7995963" />
+      <TestMethod codeBase="C:/Exercises/MVC/MVC_1.0/MVC01_TrainingVideo/Commerce.MVC/Commerce.MVC.Tests/bin/Debug/Commerce.MVC.Tests.DLL" adapterTypeName="Microsoft.VisualStudio.TestTools.TestTypes.Unit.UnitTestAdapter, Microsoft.VisualStudio.QualityTools.Tips.UnitTest.Adapter, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" className="Commerce.MVC.Tests.Controllers.AccountControllerTest, Commerce.MVC.Tests, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null" name="LogOn_Get_ReturnsView" />
+    </UnitTest>
+    <UnitTest name="LogOn_Post_ReturnsRedirectOnSuccess_WithReturnUrl" storage="c:\exercises\mvc\mvc_1.0\mvc01_trainingvideo\commerce.mvc\commerce.mvc.tests\bin\debug\commerce.mvc.tests.dll" id="b20d3daf-9915-d9d3-9e0a-31bb698ea9b3">
+      <Execution id="6389944b-250a-498b-b48e-36302c8d6f68" />
+      <TestMethod codeBase="C:/Exercises/MVC/MVC_1.0/MVC01_TrainingVideo/Commerce.MVC/Commerce.MVC.Tests/bin/Debug/Commerce.MVC.Tests.DLL" adapterTypeName="Microsoft.VisualStudio.TestTools.TestTypes.Unit.UnitTestAdapter, Microsoft.VisualStudio.QualityTools.Tips.UnitTest.Adapter, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" className="Commerce.MVC.Tests.Controllers.AccountControllerTest, Commerce.MVC.Tests, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null" name="LogOn_Post_ReturnsRedirectOnSuccess_WithReturnUrl" />
+    </UnitTest>
+    <UnitTest name="LogOn_Post_ReturnsRedirectOnSuccess_WithoutReturnUrl" storage="c:\exercises\mvc\mvc_1.0\mvc01_trainingvideo\commerce.mvc\commerce.mvc.tests\bin\debug\commerce.mvc.tests.dll" id="b3a164be-57e7-9368-3776-0fce21c64e54">
+      <Execution id="8b9444f3-b985-4e79-8ba8-2cae04fa003d" />
+      <TestMethod codeBase="C:/Exercises/MVC/MVC_1.0/MVC01_TrainingVideo/Commerce.MVC/Commerce.MVC.Tests/bin/Debug/Commerce.MVC.Tests.DLL" adapterTypeName="Microsoft.VisualStudio.TestTools.TestTypes.Unit.UnitTestAdapter, Microsoft.VisualStudio.QualityTools.Tips.UnitTest.Adapter, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" className="Commerce.MVC.Tests.Controllers.AccountControllerTest, Commerce.MVC.Tests, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null" name="LogOn_Post_ReturnsRedirectOnSuccess_WithoutReturnUrl" />
+    </UnitTest>
+    <UnitTest name="Register_Post_ReturnsViewIfRegistrationFails" storage="c:\exercises\mvc\mvc_1.0\mvc01_trainingvideo\commerce.mvc\commerce.mvc.tests\bin\debug\commerce.mvc.tests.dll" id="e7e81652-627a-a728-3b65-3dc87a0c628f">
+      <Execution id="2ecfdee0-88e6-42cd-9b76-3855c914175a" />
+      <TestMethod codeBase="C:/Exercises/MVC/MVC_1.0/MVC01_TrainingVideo/Commerce.MVC/Commerce.MVC.Tests/bin/Debug/Commerce.MVC.Tests.DLL" adapterTypeName="Microsoft.VisualStudio.TestTools.TestTypes.Unit.UnitTestAdapter, Microsoft.VisualStudio.QualityTools.Tips.UnitTest.Adapter, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" className="Commerce.MVC.Tests.Controllers.AccountControllerTest, Commerce.MVC.Tests, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null" name="Register_Post_ReturnsViewIfRegistrationFails" />
+    </UnitTest>
+    <UnitTest name="Repository_Returns_Single_Product_When_Filtered_ByID_1" storage="c:\exercises\mvc\mvc_1.0\mvc01_trainingvideo\commerce.mvc\commerce.mvc.tests\bin\debug\commerce.mvc.tests.dll" id="1f0b25a7-09ff-1f7e-fd8a-049c06c424f3">
+      <Execution id="80204f8e-2900-44cc-9ade-7bdaf2ea4f56" />
+      <TestMethod codeBase="C:/Exercises/MVC/MVC_1.0/MVC01_TrainingVideo/Commerce.MVC/Commerce.MVC.Tests/bin/Debug/Commerce.MVC.Tests.DLL" adapterTypeName="Microsoft.VisualStudio.TestTools.TestTypes.Unit.UnitTestAdapter, Microsoft.VisualStudio.QualityTools.Tips.UnitTest.Adapter, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" className="Commerce.MVC.Tests.CatalogTests, Commerce.MVC.Tests, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null" name="Repository_Returns_Single_Product_When_Filtered_ByID_1" />
+    </UnitTest>
+    <UnitTest name="ChangePassword_Post_ReturnsRedirectOnSuccess" storage="c:\exercises\mvc\mvc_1.0\mvc01_trainingvideo\commerce.mvc\commerce.mvc.tests\bin\debug\commerce.mvc.tests.dll" id="a573b03e-4e26-3945-cb27-b25aec903969">
+      <Execution id="c2a6de88-09e5-4746-982b-73f79bb2382b" />
+      <TestMethod codeBase="C:/Exercises/MVC/MVC_1.0/MVC01_TrainingVideo/Commerce.MVC/Commerce.MVC.Tests/bin/Debug/Commerce.MVC.Tests.DLL" adapterTypeName="Microsoft.VisualStudio.TestTools.TestTypes.Unit.UnitTestAdapter, Microsoft.VisualStudio.QualityTools.Tips.UnitTest.Adapter, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" className="Commerce.MVC.Tests.Controllers.AccountControllerTest, Commerce.MVC.Tests, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null" name="ChangePassword_Post_ReturnsRedirectOnSuccess" />
+    </UnitTest>
+    <UnitTest name="Register_Post_ReturnsRedirectOnSuccess" storage="c:\exercises\mvc\mvc_1.0\mvc01_trainingvideo\commerce.mvc\commerce.mvc.tests\bin\debug\commerce.mvc.tests.dll" id="d7103425-9b95-5cdc-5f69-73dcd39e6ba3">
+      <Execution id="c1e53886-7b71-488f-a233-967d26ad3f68" />
+      <TestMethod codeBase="C:/Exercises/MVC/MVC_1.0/MVC01_TrainingVideo/Commerce.MVC/Commerce.MVC.Tests/bin/Debug/Commerce.MVC.Tests.DLL" adapterTypeName="Microsoft.VisualStudio.TestTools.TestTypes.Unit.UnitTestAdapter, Microsoft.VisualStudio.QualityTools.Tips.UnitTest.Adapter, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" className="Commerce.MVC.Tests.Controllers.AccountControllerTest, Commerce.MVC.Tests, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null" name="Register_Post_ReturnsRedirectOnSuccess" />
+    </UnitTest>
+    <UnitTest name="CatalogService_Can_Group_ParentCategories" storage="c:\exercises\mvc\mvc_1.0\mvc01_trainingvideo\commerce.mvc\commerce.mvc.tests\bin\debug\commerce.mvc.tests.dll" id="4027e48d-36d2-cdbb-23cd-9ef9c383eb3f">
+      <Execution id="1b75cf97-c9b4-407b-a1f0-16fedd99c010" />
+      <TestMethod codeBase="C:/Exercises/MVC/MVC_1.0/MVC01_TrainingVideo/Commerce.MVC/Commerce.MVC.Tests/bin/Debug/Commerce.MVC.Tests.DLL" adapterTypeName="Microsoft.VisualStudio.TestTools.TestTypes.Unit.UnitTestAdapter, Microsoft.VisualStudio.QualityTools.Tips.UnitTest.Adapter, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" className="Commerce.MVC.Tests.CatalogTests, Commerce.MVC.Tests, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null" name="CatalogService_Can_Group_ParentCategories" />
+    </UnitTest>
+    <UnitTest name="LogOn_Post_ReturnsViewIfModelStateIsInvalid" storage="c:\exercises\mvc\mvc_1.0\mvc01_trainingvideo\commerce.mvc\commerce.mvc.tests\bin\debug\commerce.mvc.tests.dll" id="5aa59720-f663-6ff1-0ec5-51c64b852b5f">
+      <Execution id="e8a8eabc-78d4-4bd9-ad64-d963f21ad661" />
+      <TestMethod codeBase="C:/Exercises/MVC/MVC_1.0/MVC01_TrainingVideo/Commerce.MVC/Commerce.MVC.Tests/bin/Debug/Commerce.MVC.Tests.DLL" adapterTypeName="Microsoft.VisualStudio.TestTools.TestTypes.Unit.UnitTestAdapter, Microsoft.VisualStudio.QualityTools.Tips.UnitTest.Adapter, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" className="Commerce.MVC.Tests.Controllers.AccountControllerTest, Commerce.MVC.Tests, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null" name="LogOn_Post_ReturnsViewIfModelStateIsInvalid" />
+    </UnitTest>
+    <UnitTest name="Service_Returns_Single_Product_When_Filtered_ByID_1" storage="c:\exercises\mvc\mvc_1.0\mvc01_trainingvideo\commerce.mvc\commerce.mvc.tests\bin\debug\commerce.mvc.tests.dll" id="ea0df013-1d99-4a2d-8a2e-8ea3ecd54339">
+      <Execution id="97d311e7-9cff-436a-b5f7-033cefa25c2e" />
+      <TestMethod codeBase="C:/Exercises/MVC/MVC_1.0/MVC01_TrainingVideo/Commerce.MVC/Commerce.MVC.Tests/bin/Debug/Commerce.MVC.Tests.DLL" adapterTypeName="Microsoft.VisualStudio.TestTools.TestTypes.Unit.UnitTestAdapter, Microsoft.VisualStudio.QualityTools.Tips.UnitTest.Adapter, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" className="Commerce.MVC.Tests.CatalogTests, Commerce.MVC.Tests, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null" name="Service_Returns_Single_Product_When_Filtered_ByID_1" />
+    </UnitTest>
+    <UnitTest name="Repository_ProductFilter_Returns_5_Products_Wtih_Category_11" storage="c:\exercises\mvc\mvc_1.0\mvc01_trainingvideo\commerce.mvc\commerce.mvc.tests\bin\debug\commerce.mvc.tests.dll" id="37fc31cd-daa3-d9b9-f32a-811f8af9e708">
+      <Execution id="8eb78734-d13d-4308-93d7-fcbb6565e291" />
+      <TestMethod codeBase="C:/Exercises/MVC/MVC_1.0/MVC01_TrainingVideo/Commerce.MVC/Commerce.MVC.Tests/bin/Debug/Commerce.MVC.Tests.DLL" adapterTypeName="Microsoft.VisualStudio.TestTools.TestTypes.Unit.UnitTestAdapter, Microsoft.VisualStudio.QualityTools.Tips.UnitTest.Adapter, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" className="Commerce.MVC.Tests.CatalogTests, Commerce.MVC.Tests, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null" name="Repository_ProductFilter_Returns_5_Products_Wtih_Category_11" />
+    </UnitTest>
+    <UnitTest name="Repository_has_Category_Filter_For_Products" storage="c:\exercises\mvc\mvc_1.0\mvc01_trainingvideo\commerce.mvc\commerce.mvc.tests\bin\debug\commerce.mvc.tests.dll" id="5b0d6551-0c5f-0335-715b-4eb0c6964c96">
+      <Execution id="e231325b-aab8-42de-9e61-294f0b0290c3" />
+      <TestMethod codeBase="C:/Exercises/MVC/MVC_1.0/MVC01_TrainingVideo/Commerce.MVC/Commerce.MVC.Tests/bin/Debug/Commerce.MVC.Tests.DLL" adapterTypeName="Microsoft.VisualStudio.TestTools.TestTypes.Unit.UnitTestAdapter, Microsoft.VisualStudio.QualityTools.Tips.UnitTest.Adapter, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" className="Commerce.MVC.Tests.CatalogTests, Commerce.MVC.Tests, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null" name="Repository_has_Category_Filter_For_Products" />
+    </UnitTest>
+    <UnitTest name="CatalogRespository_Respository_IsNotNull" storage="c:\exercises\mvc\mvc_1.0\mvc01_trainingvideo\commerce.mvc\commerce.mvc.tests\bin\debug\commerce.mvc.tests.dll" id="6c5d5ba2-725f-1add-322c-38f089eff964">
+      <Execution id="11ce1452-a306-45a3-af70-440ac3c9339f" />
+      <TestMethod codeBase="C:/Exercises/MVC/MVC_1.0/MVC01_TrainingVideo/Commerce.MVC/Commerce.MVC.Tests/bin/Debug/Commerce.MVC.Tests.DLL" adapterTypeName="Microsoft.VisualStudio.TestTools.TestTypes.Unit.UnitTestAdapter, Microsoft.VisualStudio.QualityTools.Tips.UnitTest.Adapter, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" className="Commerce.MVC.Tests.CatalogTests, Commerce.MVC.Tests, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null" name="CatalogRespository_Respository_IsNotNull" />
+    </UnitTest>
+    <UnitTest name="CatalogRepository_Contains_Products" storage="c:\exercises\mvc\mvc_1.0\mvc01_trainingvideo\commerce.mvc\commerce.mvc.tests\bin\debug\commerce.mvc.tests.dll" id="8abe6c3c-c866-bd43-9abc-228b0143a4f9">
+      <Execution id="a0028585-0771-46cd-af75-89661e9609ec" />
+      <TestMethod codeBase="C:/Exercises/MVC/MVC_1.0/MVC01_TrainingVideo/Commerce.MVC/Commerce.MVC.Tests/bin/Debug/Commerce.MVC.Tests.DLL" adapterTypeName="Microsoft.VisualStudio.TestTools.TestTypes.Unit.UnitTestAdapter, Microsoft.VisualStudio.QualityTools.Tips.UnitTest.Adapter, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" className="Commerce.MVC.Tests.CatalogTests, Commerce.MVC.Tests, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null" name="CatalogRepository_Contains_Products" />
+    </UnitTest>
+    <UnitTest name="CatalogRepository_Each_Category_Contain_5_Products" storage="c:\exercises\mvc\mvc_1.0\mvc01_trainingvideo\commerce.mvc\commerce.mvc.tests\bin\debug\commerce.mvc.tests.dll" id="9d682666-04c0-4fe7-48d2-3044ecb03f51">
+      <Execution id="c5376b91-64ed-4248-ab5e-47550e19454f" />
+      <TestMethod codeBase="C:/Exercises/MVC/MVC_1.0/MVC01_TrainingVideo/Commerce.MVC/Commerce.MVC.Tests/bin/Debug/Commerce.MVC.Tests.DLL" adapterTypeName="Microsoft.VisualStudio.TestTools.TestTypes.Unit.UnitTestAdapter, Microsoft.VisualStudio.QualityTools.Tips.UnitTest.Adapter, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" className="Commerce.MVC.Tests.CatalogTests, Commerce.MVC.Tests, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null" name="CatalogRepository_Each_Category_Contain_5_Products" />
+    </UnitTest>
+    <UnitTest name="Index" storage="c:\exercises\mvc\mvc_1.0\mvc01_trainingvideo\commerce.mvc\commerce.mvc.tests\bin\debug\commerce.mvc.tests.dll" id="8a8f61c8-116c-7612-1817-6c67debb8ef2">
+      <Execution id="7a0f1cbd-478e-4ce5-bc83-71c92d960036" />
+      <TestMethod codeBase="C:/Exercises/MVC/MVC_1.0/MVC01_TrainingVideo/Commerce.MVC/Commerce.MVC.Tests/bin/Debug/Commerce.MVC.Tests.DLL" adapterTypeName="Microsoft.VisualStudio.TestTools.TestTypes.Unit.UnitTestAdapter, Microsoft.VisualStudio.QualityTools.Tips.UnitTest.Adapter, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" className="Commerce.MVC.Tests.Controllers.HomeControllerTest, Commerce.MVC.Tests, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null" name="Index" />
+    </UnitTest>
+    <UnitTest name="Register_Get_ReturnsView" storage="c:\exercises\mvc\mvc_1.0\mvc01_trainingvideo\commerce.mvc\commerce.mvc.tests\bin\debug\commerce.mvc.tests.dll" id="23ce7a93-139a-c985-e675-c3111da8a2dc">
+      <Execution id="92db2213-0ab8-4b33-8a27-1dc26e21a73c" />
+      <TestMethod codeBase="C:/Exercises/MVC/MVC_1.0/MVC01_TrainingVideo/Commerce.MVC/Commerce.MVC.Tests/bin/Debug/Commerce.MVC.Tests.DLL" adapterTypeName="Microsoft.VisualStudio.TestTools.TestTypes.Unit.UnitTestAdapter, Microsoft.VisualStudio.QualityTools.Tips.UnitTest.Adapter, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" className="Commerce.MVC.Tests.Controllers.AccountControllerTest, Commerce.MVC.Tests, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null" name="Register_Get_ReturnsView" />
+    </UnitTest>
+    <UnitTest name="CatalogService_Can_Group_SubCategories" storage="c:\exercises\mvc\mvc_1.0\mvc01_trainingvideo\commerce.mvc\commerce.mvc.tests\bin\debug\commerce.mvc.tests.dll" id="e8f411e5-c146-f581-aad7-846708ac4f5f">
+      <Execution id="936b5f08-a4d6-4148-a6db-292c0bf4b24e" />
+      <TestMethod codeBase="C:/Exercises/MVC/MVC_1.0/MVC01_TrainingVideo/Commerce.MVC/Commerce.MVC.Tests/bin/Debug/Commerce.MVC.Tests.DLL" adapterTypeName="Microsoft.VisualStudio.TestTools.TestTypes.Unit.UnitTestAdapter, Microsoft.VisualStudio.QualityTools.Tips.UnitTest.Adapter, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" className="Commerce.MVC.Tests.CatalogTests, Commerce.MVC.Tests, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null" name="CatalogService_Can_Group_SubCategories" />
+    </UnitTest>
+    <UnitTest name="Product_ShouldHave_Name_Description_Category_Price_Discount_Fields" storage="c:\exercises\mvc\mvc_1.0\mvc01_trainingvideo\commerce.mvc\commerce.mvc.tests\bin\debug\commerce.mvc.tests.dll" id="980ea060-3f31-def4-4ed9-20ea00bf10a5">
+      <Execution id="dda60f2b-3ebb-47ae-8476-3e1c2711f7ec" />
+      <TestMethod codeBase="C:/Exercises/MVC/MVC_1.0/MVC01_TrainingVideo/Commerce.MVC/Commerce.MVC.Tests/bin/Debug/Commerce.MVC.Tests.DLL" adapterTypeName="Microsoft.VisualStudio.TestTools.TestTypes.Unit.UnitTestAdapter, Microsoft.VisualStudio.QualityTools.Tips.UnitTest.Adapter, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" className="Commerce.MVC.Tests.CatalogTests, Commerce.MVC.Tests, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null" name="Product_ShouldHave_Name_Description_Category_Price_Discount_Fields" />
+    </UnitTest>
+    <UnitTest name="Product_Discount_Price_Is_Valid" storage="c:\exercises\mvc\mvc_1.0\mvc01_trainingvideo\commerce.mvc\commerce.mvc.tests\bin\debug\commerce.mvc.tests.dll" id="ddd4ab95-5d08-9020-c10a-d161d0d5eae5">
+      <Execution id="35d495c3-1b3d-4e17-8426-4aaa70df945f" />
+      <TestMethod codeBase="C:/Exercises/MVC/MVC_1.0/MVC01_TrainingVideo/Commerce.MVC/Commerce.MVC.Tests/bin/Debug/Commerce.MVC.Tests.DLL" adapterTypeName="Microsoft.VisualStudio.TestTools.TestTypes.Unit.UnitTestAdapter, Microsoft.VisualStudio.QualityTools.Tips.UnitTest.Adapter, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" className="Commerce.MVC.Tests.CatalogTests, Commerce.MVC.Tests, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null" name="Product_Discount_Price_Is_Valid" />
+    </UnitTest>
+    <UnitTest name="Register_Post_ReturnsViewIfModelStateIsInvalid" storage="c:\exercises\mvc\mvc_1.0\mvc01_trainingvideo\commerce.mvc\commerce.mvc.tests\bin\debug\commerce.mvc.tests.dll" id="6ee09b6c-2603-885e-43cd-8754809539b5">
+      <Execution id="b1cf7d8e-b60a-485b-9f30-ef993243f493" />
+      <TestMethod codeBase="C:/Exercises/MVC/MVC_1.0/MVC01_TrainingVideo/Commerce.MVC/Commerce.MVC.Tests/bin/Debug/Commerce.MVC.Tests.DLL" adapterTypeName="Microsoft.VisualStudio.TestTools.TestTypes.Unit.UnitTestAdapter, Microsoft.VisualStudio.QualityTools.Tips.UnitTest.Adapter, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" className="Commerce.MVC.Tests.Controllers.AccountControllerTest, Commerce.MVC.Tests, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null" name="Register_Post_ReturnsViewIfModelStateIsInvalid" />
+    </UnitTest>
+    <UnitTest name="Product_Discount_Amount_Is_Valid" storage="c:\exercises\mvc\mvc_1.0\mvc01_trainingvideo\commerce.mvc\commerce.mvc.tests\bin\debug\commerce.mvc.tests.dll" id="554f262a-ed3b-553b-fb57-1213c99f22bd">
+      <Execution id="a26d55f0-34e0-47ed-99ed-c9729576ae3d" />
+      <TestMethod codeBase="C:/Exercises/MVC/MVC_1.0/MVC01_TrainingVideo/Commerce.MVC/Commerce.MVC.Tests/bin/Debug/Commerce.MVC.Tests.DLL" adapterTypeName="Microsoft.VisualStudio.TestTools.TestTypes.Unit.UnitTestAdapter, Microsoft.VisualStudio.QualityTools.Tips.UnitTest.Adapter, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" className="Commerce.MVC.Tests.CatalogTests, Commerce.MVC.Tests, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null" name="Product_Discount_Amount_Is_Valid" />
+    </UnitTest>
+    <UnitTest name="About" storage="c:\exercises\mvc\mvc_1.0\mvc01_trainingvideo\commerce.mvc\commerce.mvc.tests\bin\debug\commerce.mvc.tests.dll" id="d384fe9d-a8b0-774d-ea4f-1e6262380876">
+      <Execution id="7cf874c4-f5bf-4894-8067-58247f7d6ba8" />
+      <TestMethod codeBase="C:/Exercises/MVC/MVC_1.0/MVC01_TrainingVideo/Commerce.MVC/Commerce.MVC.Tests/bin/Debug/Commerce.MVC.Tests.DLL" adapterTypeName="Microsoft.VisualStudio.TestTools.TestTypes.Unit.UnitTestAdapter, Microsoft.VisualStudio.QualityTools.Tips.UnitTest.Adapter, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" className="Commerce.MVC.Tests.Controllers.HomeControllerTest, Commerce.MVC.Tests, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null" name="About" />
+    </UnitTest>
+    <UnitTest name="ChangePassword_Get_ReturnsView" storage="c:\exercises\mvc\mvc_1.0\mvc01_trainingvideo\commerce.mvc\commerce.mvc.tests\bin\debug\commerce.mvc.tests.dll" id="c3a5f0fb-0524-e9ba-5435-1b8b36b686ae">
+      <Execution id="7fb1b5d1-2571-4f2b-9012-b5f811116b63" />
+      <TestMethod codeBase="C:/Exercises/MVC/MVC_1.0/MVC01_TrainingVideo/Commerce.MVC/Commerce.MVC.Tests/bin/Debug/Commerce.MVC.Tests.DLL" adapterTypeName="Microsoft.VisualStudio.TestTools.TestTypes.Unit.UnitTestAdapter, Microsoft.VisualStudio.QualityTools.Tips.UnitTest.Adapter, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" className="Commerce.MVC.Tests.Controllers.AccountControllerTest, Commerce.MVC.Tests, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null" name="ChangePassword_Get_ReturnsView" />
+    </UnitTest>
+    <UnitTest name="ChangePassword_Post_ReturnsViewIfChangePasswordFails" storage="c:\exercises\mvc\mvc_1.0\mvc01_trainingvideo\commerce.mvc\commerce.mvc.tests\bin\debug\commerce.mvc.tests.dll" id="c1f07888-97bf-96b4-5c14-41bd98741e37">
+      <Execution id="0a941d54-e4f7-4577-a7a5-54d79a433dca" />
+      <TestMethod codeBase="C:/Exercises/MVC/MVC_1.0/MVC01_TrainingVideo/Commerce.MVC/Commerce.MVC.Tests/bin/Debug/Commerce.MVC.Tests.DLL" adapterTypeName="Microsoft.VisualStudio.TestTools.TestTypes.Unit.UnitTestAdapter, Microsoft.VisualStudio.QualityTools.Tips.UnitTest.Adapter, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" className="Commerce.MVC.Tests.Controllers.AccountControllerTest, Commerce.MVC.Tests, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null" name="ChangePassword_Post_ReturnsViewIfChangePasswordFails" />
+    </UnitTest>
+    <UnitTest name="LogOn_Post_ReturnsViewIfValidateUserFails" storage="c:\exercises\mvc\mvc_1.0\mvc01_trainingvideo\commerce.mvc\commerce.mvc.tests\bin\debug\commerce.mvc.tests.dll" id="48f77b01-e6cf-0082-3ee2-137c5ebd255a">
+      <Execution id="57642e34-48de-4319-a05b-dadee31e95a9" />
+      <TestMethod codeBase="C:/Exercises/MVC/MVC_1.0/MVC01_TrainingVideo/Commerce.MVC/Commerce.MVC.Tests/bin/Debug/Commerce.MVC.Tests.DLL" adapterTypeName="Microsoft.VisualStudio.TestTools.TestTypes.Unit.UnitTestAdapter, Microsoft.VisualStudio.QualityTools.Tips.UnitTest.Adapter, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" className="Commerce.MVC.Tests.Controllers.AccountControllerTest, Commerce.MVC.Tests, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null" name="LogOn_Post_ReturnsViewIfValidateUserFails" />
+    </UnitTest>
+    <UnitTest name="CatalogService_Can_Get_Categories_From_Service" storage="c:\exercises\mvc\mvc_1.0\mvc01_trainingvideo\commerce.mvc\commerce.mvc.tests\bin\debug\commerce.mvc.tests.dll" id="afe3af13-837e-1542-131e-bf3718b85b8c">
+      <Execution id="8a8e4f6e-4937-4dba-b52a-800d939fa7dc" />
+      <TestMethod codeBase="C:/Exercises/MVC/MVC_1.0/MVC01_TrainingVideo/Commerce.MVC/Commerce.MVC.Tests/bin/Debug/Commerce.MVC.Tests.DLL" adapterTypeName="Microsoft.VisualStudio.TestTools.TestTypes.Unit.UnitTestAdapter, Microsoft.VisualStudio.QualityTools.Tips.UnitTest.Adapter, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" className="Commerce.MVC.Tests.CatalogTests, Commerce.MVC.Tests, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null" name="CatalogService_Can_Get_Categories_From_Service" />
+    </UnitTest>
+    <UnitTest name="ChangePasswordSuccess_ReturnsView" storage="c:\exercises\mvc\mvc_1.0\mvc01_trainingvideo\commerce.mvc\commerce.mvc.tests\bin\debug\commerce.mvc.tests.dll" id="9d8c13bf-0867-6e82-6f6d-e4b0c8d32193">
+      <Execution id="c6aa82cb-311a-454e-853f-e6d99f387ccf" />
+      <TestMethod codeBase="C:/Exercises/MVC/MVC_1.0/MVC01_TrainingVideo/Commerce.MVC/Commerce.MVC.Tests/bin/Debug/Commerce.MVC.Tests.DLL" adapterTypeName="Microsoft.VisualStudio.TestTools.TestTypes.Unit.UnitTestAdapter, Microsoft.VisualStudio.QualityTools.Tips.UnitTest.Adapter, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" className="Commerce.MVC.Tests.Controllers.AccountControllerTest, Commerce.MVC.Tests, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null" name="ChangePasswordSuccess_ReturnsView" />
+    </UnitTest>
+    <UnitTest name="ChangePassword_Post_ReturnsViewIfModelStateIsInvalid" storage="c:\exercises\mvc\mvc_1.0\mvc01_trainingvideo\commerce.mvc\commerce.mvc.tests\bin\debug\commerce.mvc.tests.dll" id="a3dbe461-79c3-d0bb-28a2-46b2a457ecbc">
+      <Execution id="7d4520e5-f055-4cda-86a0-08b21cfa67fb" />
+      <TestMethod codeBase="C:/Exercises/MVC/MVC_1.0/MVC01_TrainingVideo/Commerce.MVC/Commerce.MVC.Tests/bin/Debug/Commerce.MVC.Tests.DLL" adapterTypeName="Microsoft.VisualStudio.TestTools.TestTypes.Unit.UnitTestAdapter, Microsoft.VisualStudio.QualityTools.Tips.UnitTest.Adapter, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" className="Commerce.MVC.Tests.Controllers.AccountControllerTest, Commerce.MVC.Tests, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null" name="ChangePassword_Post_ReturnsViewIfModelStateIsInvalid" />
+    </UnitTest>
+    <UnitTest name="CatalogService_Returns_5_Products_Wtih_Category_11" storage="c:\exercises\mvc\mvc_1.0\mvc01_trainingvideo\commerce.mvc\commerce.mvc.tests\bin\debug\commerce.mvc.tests.dll" id="9a40eff0-e98c-4b50-9f1d-e4958d92a7f0">
+      <Execution id="009696d7-383a-46f0-9888-137342112c9e" />
+      <TestMethod codeBase="C:/Exercises/MVC/MVC_1.0/MVC01_TrainingVideo/Commerce.MVC/Commerce.MVC.Tests/bin/Debug/Commerce.MVC.Tests.DLL" adapterTypeName="Microsoft.VisualStudio.TestTools.TestTypes.Unit.UnitTestAdapter, Microsoft.VisualStudio.QualityTools.Tips.UnitTest.Adapter, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" className="Commerce.MVC.Tests.CatalogTests, Commerce.MVC.Tests, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null" name="CatalogService_Returns_5_Products_Wtih_Category_11" />
+    </UnitTest>
+    <UnitTest name="LogOff_LogsOutAndRedirects" storage="c:\exercises\mvc\mvc_1.0\mvc01_trainingvideo\commerce.mvc\commerce.mvc.tests\bin\debug\commerce.mvc.tests.dll" id="6ba9f56c-02c2-f47d-8c0d-98c88b5aebf4">
+      <Execution id="61e92b6f-a7fd-4236-bb8c-ea8e9e2d7d44" />
+      <TestMethod codeBase="C:/Exercises/MVC/MVC_1.0/MVC01_TrainingVideo/Commerce.MVC/Commerce.MVC.Tests/bin/Debug/Commerce.MVC.Tests.DLL" adapterTypeName="Microsoft.VisualStudio.TestTools.TestTypes.Unit.UnitTestAdapter, Microsoft.VisualStudio.QualityTools.Tips.UnitTest.Adapter, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" className="Commerce.MVC.Tests.Controllers.AccountControllerTest, Commerce.MVC.Tests, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null" name="LogOff_LogsOutAndRedirects" />
+    </UnitTest>
+  </TestDefinitions>
+  <TestLists>
+    <TestList name="Results Not in a List" id="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestList name="All Loaded Results" id="19431567-8539-422a-85d7-44ee4e166bda" />
+  </TestLists>
+  <TestEntries>
+    <TestEntry testId="1f0b25a7-09ff-1f7e-fd8a-049c06c424f3" executionId="80204f8e-2900-44cc-9ade-7bdaf2ea4f56" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="23ce7a93-139a-c985-e675-c3111da8a2dc" executionId="92db2213-0ab8-4b33-8a27-1dc26e21a73c" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="37fc31cd-daa3-d9b9-f32a-811f8af9e708" executionId="8eb78734-d13d-4308-93d7-fcbb6565e291" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="4027e48d-36d2-cdbb-23cd-9ef9c383eb3f" executionId="1b75cf97-c9b4-407b-a1f0-16fedd99c010" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="48f77b01-e6cf-0082-3ee2-137c5ebd255a" executionId="57642e34-48de-4319-a05b-dadee31e95a9" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="554f262a-ed3b-553b-fb57-1213c99f22bd" executionId="a26d55f0-34e0-47ed-99ed-c9729576ae3d" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="5aa59720-f663-6ff1-0ec5-51c64b852b5f" executionId="e8a8eabc-78d4-4bd9-ad64-d963f21ad661" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="5b0d6551-0c5f-0335-715b-4eb0c6964c96" executionId="e231325b-aab8-42de-9e61-294f0b0290c3" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="6ba9f56c-02c2-f47d-8c0d-98c88b5aebf4" executionId="61e92b6f-a7fd-4236-bb8c-ea8e9e2d7d44" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="6c5d5ba2-725f-1add-322c-38f089eff964" executionId="11ce1452-a306-45a3-af70-440ac3c9339f" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="6ee09b6c-2603-885e-43cd-8754809539b5" executionId="b1cf7d8e-b60a-485b-9f30-ef993243f493" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="8a8f61c8-116c-7612-1817-6c67debb8ef2" executionId="7a0f1cbd-478e-4ce5-bc83-71c92d960036" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="8abe6c3c-c866-bd43-9abc-228b0143a4f9" executionId="a0028585-0771-46cd-af75-89661e9609ec" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="8d1b1feb-a745-4234-a6d1-a381af55cac9" executionId="41e67396-4c03-4a32-9d78-9f03d7995963" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="980ea060-3f31-def4-4ed9-20ea00bf10a5" executionId="dda60f2b-3ebb-47ae-8476-3e1c2711f7ec" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="9a40eff0-e98c-4b50-9f1d-e4958d92a7f0" executionId="009696d7-383a-46f0-9888-137342112c9e" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="9d682666-04c0-4fe7-48d2-3044ecb03f51" executionId="c5376b91-64ed-4248-ab5e-47550e19454f" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="9d8c13bf-0867-6e82-6f6d-e4b0c8d32193" executionId="c6aa82cb-311a-454e-853f-e6d99f387ccf" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="a3dbe461-79c3-d0bb-28a2-46b2a457ecbc" executionId="7d4520e5-f055-4cda-86a0-08b21cfa67fb" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="a573b03e-4e26-3945-cb27-b25aec903969" executionId="c2a6de88-09e5-4746-982b-73f79bb2382b" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="afe3af13-837e-1542-131e-bf3718b85b8c" executionId="8a8e4f6e-4937-4dba-b52a-800d939fa7dc" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="b20d3daf-9915-d9d3-9e0a-31bb698ea9b3" executionId="6389944b-250a-498b-b48e-36302c8d6f68" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="b3a164be-57e7-9368-3776-0fce21c64e54" executionId="8b9444f3-b985-4e79-8ba8-2cae04fa003d" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="c1f07888-97bf-96b4-5c14-41bd98741e37" executionId="0a941d54-e4f7-4577-a7a5-54d79a433dca" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="c3a5f0fb-0524-e9ba-5435-1b8b36b686ae" executionId="7fb1b5d1-2571-4f2b-9012-b5f811116b63" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="d384fe9d-a8b0-774d-ea4f-1e6262380876" executionId="7cf874c4-f5bf-4894-8067-58247f7d6ba8" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="d7103425-9b95-5cdc-5f69-73dcd39e6ba3" executionId="c1e53886-7b71-488f-a233-967d26ad3f68" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="ddd4ab95-5d08-9020-c10a-d161d0d5eae5" executionId="35d495c3-1b3d-4e17-8426-4aaa70df945f" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="e7e81652-627a-a728-3b65-3dc87a0c628f" executionId="2ecfdee0-88e6-42cd-9b76-3855c914175a" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="e8f411e5-c146-f581-aad7-846708ac4f5f" executionId="936b5f08-a4d6-4148-a6db-292c0bf4b24e" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="ea0df013-1d99-4a2d-8a2e-8ea3ecd54339" executionId="97d311e7-9cff-436a-b5f7-033cefa25c2e" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+  </TestEntries>
+  <Results>
+    <UnitTestResult executionId="80204f8e-2900-44cc-9ade-7bdaf2ea4f56" testId="1f0b25a7-09ff-1f7e-fd8a-049c06c424f3" testName="Repository_Returns_Single_Product_When_Filtered_ByID_1" computerName="TEGRIT0048" duration="00:00:00.0213846" startTime="2015-05-19T17:11:45.1495855-04:00" endTime="2015-05-19T17:11:46.2535855-04:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="80204f8e-2900-44cc-9ade-7bdaf2ea4f56">
+    </UnitTestResult>
+    <UnitTestResult executionId="92db2213-0ab8-4b33-8a27-1dc26e21a73c" testId="23ce7a93-139a-c985-e675-c3111da8a2dc" testName="Register_Get_ReturnsView" computerName="TEGRIT0048" duration="00:00:00.0216603" startTime="2015-05-19T17:11:46.2625855-04:00" endTime="2015-05-19T17:11:46.2925855-04:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="92db2213-0ab8-4b33-8a27-1dc26e21a73c">
+    </UnitTestResult>
+    <UnitTestResult executionId="8eb78734-d13d-4308-93d7-fcbb6565e291" testId="37fc31cd-daa3-d9b9-f32a-811f8af9e708" testName="Repository_ProductFilter_Returns_5_Products_Wtih_Category_11" computerName="TEGRIT0048" duration="00:00:02.5584701" startTime="2015-05-19T17:11:46.3075855-04:00" endTime="2015-05-19T17:11:48.8685855-04:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Failed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="8eb78734-d13d-4308-93d7-fcbb6565e291">
+      <Output>
+        <ErrorInfo>
+          <Message>Assert.AreEqual failed. Expected:&lt;5&gt;. Actual:&lt;10&gt;. </Message>
+          <StackTrace>   at Commerce.MVC.Tests.CatalogTests.Repository_ProductFilter_Returns_5_Products_Wtih_Category_11() in C:\Exercises\MVC\MVC_1.0\MVC01_TrainingVideo\Commerce.MVC\Commerce.MVC.Tests\CatalogTests.cs:line 119
+</StackTrace>
+        </ErrorInfo>
+      </Output>
+    </UnitTestResult>
+    <UnitTestResult executionId="1b75cf97-c9b4-407b-a1f0-16fedd99c010" testId="4027e48d-36d2-cdbb-23cd-9ef9c383eb3f" testName="CatalogService_Can_Group_ParentCategories" computerName="TEGRIT0048" duration="00:00:00.0008886" startTime="2015-05-19T17:11:48.8865855-04:00" endTime="2015-05-19T17:11:48.8905855-04:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="1b75cf97-c9b4-407b-a1f0-16fedd99c010">
+    </UnitTestResult>
+    <UnitTestResult executionId="57642e34-48de-4319-a05b-dadee31e95a9" testId="48f77b01-e6cf-0082-3ee2-137c5ebd255a" testName="LogOn_Post_ReturnsViewIfValidateUserFails" computerName="TEGRIT0048" duration="00:00:00.0024090" startTime="2015-05-19T17:11:48.8955855-04:00" endTime="2015-05-19T17:11:48.9005855-04:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="57642e34-48de-4319-a05b-dadee31e95a9">
+    </UnitTestResult>
+    <UnitTestResult executionId="a26d55f0-34e0-47ed-99ed-c9729576ae3d" testId="554f262a-ed3b-553b-fb57-1213c99f22bd" testName="Product_Discount_Amount_Is_Valid" computerName="TEGRIT0048" duration="00:00:00.0010953" startTime="2015-05-19T17:11:48.9045855-04:00" endTime="2015-05-19T17:11:48.9075855-04:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="a26d55f0-34e0-47ed-99ed-c9729576ae3d">
+    </UnitTestResult>
+    <UnitTestResult executionId="e8a8eabc-78d4-4bd9-ad64-d963f21ad661" testId="5aa59720-f663-6ff1-0ec5-51c64b852b5f" testName="LogOn_Post_ReturnsViewIfModelStateIsInvalid" computerName="TEGRIT0048" duration="00:00:00.0003107" startTime="2015-05-19T17:11:48.9125855-04:00" endTime="2015-05-19T17:11:48.9155855-04:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="e8a8eabc-78d4-4bd9-ad64-d963f21ad661">
+    </UnitTestResult>
+    <UnitTestResult executionId="e231325b-aab8-42de-9e61-294f0b0290c3" testId="5b0d6551-0c5f-0335-715b-4eb0c6964c96" testName="Repository_has_Category_Filter_For_Products" computerName="TEGRIT0048" duration="00:00:00.0011939" startTime="2015-05-19T17:11:48.9205855-04:00" endTime="2015-05-19T17:11:48.9235855-04:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="e231325b-aab8-42de-9e61-294f0b0290c3">
+    </UnitTestResult>
+    <UnitTestResult executionId="61e92b6f-a7fd-4236-bb8c-ea8e9e2d7d44" testId="6ba9f56c-02c2-f47d-8c0d-98c88b5aebf4" testName="LogOff_LogsOutAndRedirects" computerName="TEGRIT0048" duration="00:00:00.0012259" startTime="2015-05-19T17:11:48.9295855-04:00" endTime="2015-05-19T17:11:48.9325855-04:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="61e92b6f-a7fd-4236-bb8c-ea8e9e2d7d44">
+    </UnitTestResult>
+    <UnitTestResult executionId="11ce1452-a306-45a3-af70-440ac3c9339f" testId="6c5d5ba2-725f-1add-322c-38f089eff964" testName="CatalogRespository_Respository_IsNotNull" computerName="TEGRIT0048" duration="00:00:00.0001405" startTime="2015-05-19T17:11:48.9375855-04:00" endTime="2015-05-19T17:11:48.9395855-04:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="11ce1452-a306-45a3-af70-440ac3c9339f">
+    </UnitTestResult>
+    <UnitTestResult executionId="b1cf7d8e-b60a-485b-9f30-ef993243f493" testId="6ee09b6c-2603-885e-43cd-8754809539b5" testName="Register_Post_ReturnsViewIfModelStateIsInvalid" computerName="TEGRIT0048" duration="00:00:00.0007173" startTime="2015-05-19T17:11:48.9435855-04:00" endTime="2015-05-19T17:11:48.9465855-04:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="b1cf7d8e-b60a-485b-9f30-ef993243f493">
+    </UnitTestResult>
+    <UnitTestResult executionId="7a0f1cbd-478e-4ce5-bc83-71c92d960036" testId="8a8f61c8-116c-7612-1817-6c67debb8ef2" testName="Index" computerName="TEGRIT0048" duration="00:00:00.0004219" startTime="2015-05-19T17:11:48.9505855-04:00" endTime="2015-05-19T17:11:48.9535855-04:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="7a0f1cbd-478e-4ce5-bc83-71c92d960036">
+    </UnitTestResult>
+    <UnitTestResult executionId="a0028585-0771-46cd-af75-89661e9609ec" testId="8abe6c3c-c866-bd43-9abc-228b0143a4f9" testName="CatalogRepository_Contains_Products" computerName="TEGRIT0048" duration="00:00:00.0008096" startTime="2015-05-19T17:11:48.9625855-04:00" endTime="2015-05-19T17:11:48.9665855-04:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="a0028585-0771-46cd-af75-89661e9609ec">
+    </UnitTestResult>
+    <UnitTestResult executionId="41e67396-4c03-4a32-9d78-9f03d7995963" testId="8d1b1feb-a745-4234-a6d1-a381af55cac9" testName="LogOn_Get_ReturnsView" computerName="TEGRIT0048" duration="00:00:00.0002169" startTime="2015-05-19T17:11:48.9695855-04:00" endTime="2015-05-19T17:11:48.9725855-04:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="41e67396-4c03-4a32-9d78-9f03d7995963">
+    </UnitTestResult>
+    <UnitTestResult executionId="dda60f2b-3ebb-47ae-8476-3e1c2711f7ec" testId="980ea060-3f31-def4-4ed9-20ea00bf10a5" testName="Product_ShouldHave_Name_Description_Category_Price_Discount_Fields" computerName="TEGRIT0048" duration="00:00:00.0004766" startTime="2015-05-19T17:11:48.9755855-04:00" endTime="2015-05-19T17:11:48.9785855-04:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="dda60f2b-3ebb-47ae-8476-3e1c2711f7ec">
+    </UnitTestResult>
+    <UnitTestResult executionId="009696d7-383a-46f0-9888-137342112c9e" testId="9a40eff0-e98c-4b50-9f1d-e4958d92a7f0" testName="CatalogService_Returns_5_Products_Wtih_Category_11" computerName="TEGRIT0048" duration="00:00:00.9171531" startTime="2015-05-19T17:11:48.9825855-04:00" endTime="2015-05-19T17:11:49.9015855-04:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Failed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="009696d7-383a-46f0-9888-137342112c9e">
+      <Output>
+        <ErrorInfo>
+          <Message>Assert.AreEqual failed. Expected:&lt;5&gt;. Actual:&lt;10&gt;. </Message>
+          <StackTrace>   at Commerce.MVC.Tests.CatalogTests.CatalogService_Returns_5_Products_Wtih_Category_11() in C:\Exercises\MVC\MVC_1.0\MVC01_TrainingVideo\Commerce.MVC\Commerce.MVC.Tests\CatalogTests.cs:line 126
+</StackTrace>
+        </ErrorInfo>
+      </Output>
+    </UnitTestResult>
+    <UnitTestResult executionId="c5376b91-64ed-4248-ab5e-47550e19454f" testId="9d682666-04c0-4fe7-48d2-3044ecb03f51" testName="CatalogRepository_Each_Category_Contain_5_Products" computerName="TEGRIT0048" duration="00:00:01.8250112" startTime="2015-05-19T17:11:49.9205855-04:00" endTime="2015-05-19T17:11:51.7485855-04:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Failed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="c5376b91-64ed-4248-ab5e-47550e19454f">
+      <Output>
+        <ErrorInfo>
+          <Message>Assert.AreEqual failed. Expected:&lt;5&gt;. Actual:&lt;10&gt;. </Message>
+          <StackTrace>   at Commerce.MVC.Tests.CatalogTests.CatalogRepository_Each_Category_Contain_5_Products() in C:\Exercises\MVC\MVC_1.0\MVC01_TrainingVideo\Commerce.MVC\Commerce.MVC.Tests\CatalogTests.cs:line 101
+</StackTrace>
+        </ErrorInfo>
+      </Output>
+    </UnitTestResult>
+    <UnitTestResult executionId="c6aa82cb-311a-454e-853f-e6d99f387ccf" testId="9d8c13bf-0867-6e82-6f6d-e4b0c8d32193" testName="ChangePasswordSuccess_ReturnsView" computerName="TEGRIT0048" duration="00:00:00.0002990" startTime="2015-05-19T17:11:51.7545855-04:00" endTime="2015-05-19T17:11:51.7585855-04:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="c6aa82cb-311a-454e-853f-e6d99f387ccf">
+    </UnitTestResult>
+    <UnitTestResult executionId="7d4520e5-f055-4cda-86a0-08b21cfa67fb" testId="a3dbe461-79c3-d0bb-28a2-46b2a457ecbc" testName="ChangePassword_Post_ReturnsViewIfModelStateIsInvalid" computerName="TEGRIT0048" duration="00:00:00.0009890" startTime="2015-05-19T17:11:51.7635855-04:00" endTime="2015-05-19T17:11:51.7685855-04:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="7d4520e5-f055-4cda-86a0-08b21cfa67fb">
+    </UnitTestResult>
+    <UnitTestResult executionId="c2a6de88-09e5-4746-982b-73f79bb2382b" testId="a573b03e-4e26-3945-cb27-b25aec903969" testName="ChangePassword_Post_ReturnsRedirectOnSuccess" computerName="TEGRIT0048" duration="00:00:00.0065293" startTime="2015-05-19T17:11:51.7985855-04:00" endTime="2015-05-19T17:11:51.8075855-04:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="c2a6de88-09e5-4746-982b-73f79bb2382b">
+    </UnitTestResult>
+    <UnitTestResult executionId="8a8e4f6e-4937-4dba-b52a-800d939fa7dc" testId="afe3af13-837e-1542-131e-bf3718b85b8c" testName="CatalogService_Can_Get_Categories_From_Service" computerName="TEGRIT0048" duration="00:00:00.0001593" startTime="2015-05-19T17:11:51.8115855-04:00" endTime="2015-05-19T17:11:51.8135855-04:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="8a8e4f6e-4937-4dba-b52a-800d939fa7dc">
+    </UnitTestResult>
+    <UnitTestResult executionId="6389944b-250a-498b-b48e-36302c8d6f68" testId="b20d3daf-9915-d9d3-9e0a-31bb698ea9b3" testName="LogOn_Post_ReturnsRedirectOnSuccess_WithReturnUrl" computerName="TEGRIT0048" duration="00:00:00.0008664" startTime="2015-05-19T17:11:51.8185855-04:00" endTime="2015-05-19T17:11:51.8215855-04:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="6389944b-250a-498b-b48e-36302c8d6f68">
+    </UnitTestResult>
+    <UnitTestResult executionId="8b9444f3-b985-4e79-8ba8-2cae04fa003d" testId="b3a164be-57e7-9368-3776-0fce21c64e54" testName="LogOn_Post_ReturnsRedirectOnSuccess_WithoutReturnUrl" computerName="TEGRIT0048" duration="00:00:00.0002634" startTime="2015-05-19T17:11:51.8265855-04:00" endTime="2015-05-19T17:11:51.8295855-04:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="8b9444f3-b985-4e79-8ba8-2cae04fa003d">
+    </UnitTestResult>
+    <UnitTestResult executionId="0a941d54-e4f7-4577-a7a5-54d79a433dca" testId="c1f07888-97bf-96b4-5c14-41bd98741e37" testName="ChangePassword_Post_ReturnsViewIfChangePasswordFails" computerName="TEGRIT0048" duration="00:00:00.0003367" startTime="2015-05-19T17:11:51.8335855-04:00" endTime="2015-05-19T17:11:51.8385855-04:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="0a941d54-e4f7-4577-a7a5-54d79a433dca">
+    </UnitTestResult>
+    <UnitTestResult executionId="7fb1b5d1-2571-4f2b-9012-b5f811116b63" testId="c3a5f0fb-0524-e9ba-5435-1b8b36b686ae" testName="ChangePassword_Get_ReturnsView" computerName="TEGRIT0048" duration="00:00:00.0002868" startTime="2015-05-19T17:11:51.8455855-04:00" endTime="2015-05-19T17:11:51.8485855-04:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="7fb1b5d1-2571-4f2b-9012-b5f811116b63">
+    </UnitTestResult>
+    <UnitTestResult executionId="7cf874c4-f5bf-4894-8067-58247f7d6ba8" testId="d384fe9d-a8b0-774d-ea4f-1e6262380876" testName="About" computerName="TEGRIT0048" duration="00:00:00.0001978" startTime="2015-05-19T17:11:51.8515855-04:00" endTime="2015-05-19T17:11:51.8565855-04:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="7cf874c4-f5bf-4894-8067-58247f7d6ba8">
+    </UnitTestResult>
+    <UnitTestResult executionId="c1e53886-7b71-488f-a233-967d26ad3f68" testId="d7103425-9b95-5cdc-5f69-73dcd39e6ba3" testName="Register_Post_ReturnsRedirectOnSuccess" computerName="TEGRIT0048" duration="00:00:00.0004783" startTime="2015-05-19T17:11:51.8605855-04:00" endTime="2015-05-19T17:11:51.8635855-04:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="c1e53886-7b71-488f-a233-967d26ad3f68">
+    </UnitTestResult>
+    <UnitTestResult executionId="35d495c3-1b3d-4e17-8426-4aaa70df945f" testId="ddd4ab95-5d08-9020-c10a-d161d0d5eae5" testName="Product_Discount_Price_Is_Valid" computerName="TEGRIT0048" duration="00:00:00.0002759" startTime="2015-05-19T17:11:51.8715855-04:00" endTime="2015-05-19T17:11:51.8745855-04:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="35d495c3-1b3d-4e17-8426-4aaa70df945f">
+    </UnitTestResult>
+    <UnitTestResult executionId="2ecfdee0-88e6-42cd-9b76-3855c914175a" testId="e7e81652-627a-a728-3b65-3dc87a0c628f" testName="Register_Post_ReturnsViewIfRegistrationFails" computerName="TEGRIT0048" duration="00:00:00.0004068" startTime="2015-05-19T17:11:51.8815855-04:00" endTime="2015-05-19T17:11:51.8845855-04:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="2ecfdee0-88e6-42cd-9b76-3855c914175a">
+    </UnitTestResult>
+    <UnitTestResult executionId="936b5f08-a4d6-4148-a6db-292c0bf4b24e" testId="e8f411e5-c146-f581-aad7-846708ac4f5f" testName="CatalogService_Can_Group_SubCategories" computerName="TEGRIT0048" duration="00:00:00.0002679" startTime="2015-05-19T17:11:51.8945855-04:00" endTime="2015-05-19T17:11:51.8975855-04:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="936b5f08-a4d6-4148-a6db-292c0bf4b24e">
+    </UnitTestResult>
+    <UnitTestResult executionId="97d311e7-9cff-436a-b5f7-033cefa25c2e" testId="ea0df013-1d99-4a2d-8a2e-8ea3ecd54339" testName="Service_Returns_Single_Product_When_Filtered_ByID_1" computerName="TEGRIT0048" duration="00:00:00.0014123" startTime="2015-05-19T17:11:51.9045855-04:00" endTime="2015-05-19T17:11:51.9085855-04:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="97d311e7-9cff-436a-b5f7-033cefa25c2e">
+    </UnitTestResult>
+  </Results>
+</TestRun>
