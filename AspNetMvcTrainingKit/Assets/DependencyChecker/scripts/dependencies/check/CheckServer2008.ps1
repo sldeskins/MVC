@@ -1,0 +1,1 @@
+(Get-ItemProperty "HKLM:\SOFTWARE\Microsoft\Windows NT\CurrentVersion").ProductName -like "Windows Server*2008*"

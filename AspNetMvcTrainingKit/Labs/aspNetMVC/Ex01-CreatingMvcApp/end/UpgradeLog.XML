@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?><?xml-stylesheet type='text/xsl' href='_UpgradeReport_Files/UpgradeReport.xslt'?><UpgradeLog>
+<Properties><Property Name="Solution" Value="MvcSampleApp">
+</Property><Property Name="Solution File" Value="C:\Exercises\MVC\AspNetMvcTrainingKit\Labs\aspNetMVC\Ex01-CreatingMvcApp\end\MvcSampleApp.sln">
+</Property><Property Name="Date" Value="Monday, May 18, 2015">
+</Property><Property Name="Time" Value="15:54 PM">
+</Property></Properties><Event ErrorLevel="0" Project="MvcSampleApp" Source="MvcSampleApp\MvcSampleApp.csproj" Description="Project converted successfully">
+</Event><Event ErrorLevel="3" Project="MvcSampleApp" Source="MvcSampleApp\MvcSampleApp.csproj" Description="Converted">
+</Event><Event ErrorLevel="0" Project="MvcSampleApp.Tests" Source="MvcSampleApp.Tests\MvcSampleApp.Tests.csproj" Description="Project converted successfully">
+</Event><Event ErrorLevel="3" Project="MvcSampleApp.Tests" Source="MvcSampleApp.Tests\MvcSampleApp.Tests.csproj" Description="Converted">
+</Event><Event ErrorLevel="0" Project="" Source="MvcSampleApp.sln" Description="Solution converted successfully">
+</Event><Event ErrorLevel="3" Project="" Source="MvcSampleApp.sln" Description="Converted">
+</Event><Event ErrorLevel="0" Project="MvcSampleApp" Source="MvcSampleApp\MvcSampleApp.csproj" Description="Scan complete: Upgrade not required for project files.">
+</Event><Event ErrorLevel="0" Project="MvcSampleApp.Tests" Source="MvcSampleApp.Tests\MvcSampleApp.Tests.csproj" Description="Scan complete: Upgrade not required for project files.">
+</Event></UpgradeLog>

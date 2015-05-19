@@ -1,0 +1,120 @@
+<html dir="ltr" xmlns:MSHelp="http://msdn.microsoft.com/mshelp" xmlns:dt="uuid:C2F41010-65B3-11d1-A29F-00AA00C14882" xmlns:xlink="http://www.w3.org/1999/xlink">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+    <meta name="save" content="history" />
+    <xml>
+      <MSHelp:TOCTitle Title="Exercise 2: Using Partial Views with ASP.NET AJAX" />
+      <MSHelp:RLTitle Title="Exercise 2: Using Partial Views with ASP.NET AJAX" />
+      <MSHelp:Attr Name="DocSet" Value="docSet" />
+      <MSHelp:Attr Name="TopicType" Value="kbOrient" />
+      <MSHelp:Attr Name="Locale" Value="kbEnglish" />
+      <MSHelp:Attr Name="AssetId" Value="{GUID}" />
+    </xml>
+    <title>Exercise 2: Using Partial Views with ASP.NET AJAX</title>
+    <link rel="stylesheet" type="text/css" href="../local/Classic.css" />
+    <script src="../local/EventUtilities.js" type="text/jscript" language="jscript"> </script>
+    <script src="../local/SplitScreen.js" type="text/jscript" language="jscript"> </script>
+    <script src="../local/Dropdown.js" type="text/jscript" language="jscript"> </script>
+    <script src="../local/script.js" type="text/jscript" language="jscript"> </script>
+  </head>
+  <body>
+    <input type="hidden" id="userDataCache" class="userDataStyle" />
+    <input type="hidden" id="hiddenScrollOffset" />
+    <img id="dropDownImage" style="display:none; height:0; width:0;" alt="DropDown image" src="../local/drpdown.gif" />
+    <img id="dropDownHoverImage" style="display:none; height:0; width:0;" alt="DropDownHover image" src="../local/drpdown_orange.gif" />
+    <img id="collapseImage" style="display:none; height:0; width:0;" alt="Collapse image" src="../local/collapse_all.gif" />
+    <img id="expandImage" style="display:none; height:0; width:0;" alt="Expand image" src="../local/expand_all.gif" />
+    <img id="collapseAllImage" style="display:none; height:0; width:0;" alt="CollapseAll image" src="../local/collall.gif" />
+    <img id="expandAllImage" style="display:none; height:0; width:0;" alt="ExpandAll image" src="../local/expall.gif" />
+    <img id="copyImage" style="display:none; height:0; width:0;" alt="Copy image" src="../local/copycode.gif" />
+    <img id="copyHoverImage" style="display:none; height:0; width:0;" alt="CopyHover image" src="../local/copycodeHighlight.gif" />
+    <div id="header">
+      <table width="100%" id="topTable">
+        <tr id="headerTableRow1">
+          <td align="left">
+            <span id="runningHeaderText">Enhancing Asp.NET MVC Applications</span>
+          </td>
+        </tr>
+        <tr id="headerTableRow2">
+          <td align="left">
+            <span id="nsrTitle">Exercise 2: Using Partial Views with ASP.NET AJAX</span>
+          </td>
+        </tr>
+        <tr id="headerTableRow3">
+          <td />
+        </tr>
+      </table>
+    </div>
+    <div id="mainSection">
+      <div id="mainBody">
+        <div id="allHistory" class="saveHistory" onsave="saveAll()" onload="loadAll()" />
+        <p>In this exercise, you will learn how to make the application more responsive by adding ASP.NET AJAX support. That way, the rendering of an entire page is avoided, when an update is needed in only a certain region in a page.</p>
+        <p>You will implement a customer filter functionality, which results are shown in the customer list. When a search is performed only this list is rendered and not the whole page.</p>
+        <p>Also the navigation between pages will be done using AJAX.</p>
+        <br />
+        <a name="_Toc224120019" href="#">
+          <span />
+        </a>
+        <p>
+          <b>Task 1 – Implementing the Customer Search Logic</b>
+        </p>
+        <p>In this task you will implement customer search functionality to filter customers and update the customer list asynchronously.</p>
+        <ol>
+          <li>Open the solution file <b>MvcSampleApp.sln</b> located under the <b>enhancingAspNetMvcApp\Ex02-PartialViews\begin </b>folder. Alternatively you might continue using the solution obtained after completing the previous exercise.</li>
+          <li>Open the <b>AdventureWorksRepository</b> class, located inside the <b>Models</b> folder.</li>
+          <li>Add logic to implement the customer search functionality. To do this, paste the following method in the <b>AdventureWorksRepository</b> class.<p>(Code Snippet – <i>Enhancing Asp.Net MVC Lab – AdventureWorksRepository GetFilteredCustomers Method</i>)</p><div class="code"><span codeLanguage="CSharp"><table width="100%" cellspacing="0" cellpadding="0"><tr><th>C#</th><th><span class="copyCode" onclick="CopyCode(this)" onkeypress="CopyCode_CheckKey(this)" onmouseover="ChangeCopyCodeIcon(this)" onfocusin="ChangeCopyCodeIcon(this)" onmouseout="ChangeCopyCodeIcon(this)" onfocusout="ChangeCopyCodeIcon(this)" tabindex="0"><img class="copyCodeImage" name="ccImage" align="absmiddle" src="../local/copycode.gif" />Copy Code
+                  </span></th></tr><tr><td colspan="2"><pre><b>public IEnumerable&lt;Customer&gt; GetFilteredCustomers(string filterPattern, int page, int size)</b><b>{</b><b>    return this.context.Customer.Where(c =&gt; (c.CompanyName + " - " + c.FirstName + " " + c.LastName).Contains(filterPattern)).OrderBy(c =&gt; c.CustomerID).Skip(page * size).Take(size);</b><b>}</b></pre></td></tr></table></span></div><br /><div class="alert"><table width="100%" cellspacing="0" cellpadding="0"><tr><th align="left"><img class="note" src="../local/note.gif" />Note:</th></tr><tr><td> The <b>GetFilteredCustomers</b> method shown in the preceding code, searches the database for the provided filter pattern in the concatenation of the <b>CompanyName</b>, <b>FirstName</b> and <b>LastName</b> fields of the customer table.<b> </b></td></tr></table><p /></div></li>
+          <br />
+          <li>Add the <b>CustomerFilter</b> property, in the <b>CustomerViewData</b> class. To do this, paste the following bolded code inside the class, which is located in the <b>ViewData</b> folder.<p>(Code Snippet – <i>Enhancing Asp.Net MVC Lab – CustomerViewData CustomerFilter Property</i>)</p><div class="code"><span codeLanguage="CSharp"><table width="100%" cellspacing="0" cellpadding="0"><tr><th>C#</th><th><span class="copyCode" onclick="CopyCode(this)" onkeypress="CopyCode_CheckKey(this)" onmouseover="ChangeCopyCodeIcon(this)" onfocusin="ChangeCopyCodeIcon(this)" onmouseout="ChangeCopyCodeIcon(this)" onfocusout="ChangeCopyCodeIcon(this)" tabindex="0"><img class="copyCodeImage" name="ccImage" align="absmiddle" src="../local/copycode.gif" />Copy Code
+                  </span></th></tr><tr><td colspan="2"><pre>public class CustomerViewData{    public IEnumerable&lt;Customer&gt; Customers    {        get;        set;    }    public int PreviousPage    {        get;        set;    }    public int NextPage    {        get;        set;    }<b>    public string CustomerFilter</b><b>    {</b><b>        get;</b><b>        set;</b><b>    }</b>}</pre></td></tr></table></span></div><br /></li>
+          <li>Open the <b>CustomerController</b> class. To do this, in the <b>Solution Explorer</b>, double click the <b>CustomerController.cs</b> file, located inside the <b>Controllers</b> folder.</li>
+          <li>Update the <b>Index</b> method, removing the page parameter because the Index method will not be in charge of pagination. The following code shows the updated <b>Index</b> method.<p>(Code Snippet – <i>Enhancing Asp.Net MVC Lab – CustomerController Index Action</i>)</p><div class="code"><span codeLanguage="CSharp"><table width="100%" cellspacing="0" cellpadding="0"><tr><th>C#</th><th><span class="copyCode" onclick="CopyCode(this)" onkeypress="CopyCode_CheckKey(this)" onmouseover="ChangeCopyCodeIcon(this)" onfocusin="ChangeCopyCodeIcon(this)" onmouseout="ChangeCopyCodeIcon(this)" onfocusout="ChangeCopyCodeIcon(this)" tabindex="0"><img class="copyCodeImage" name="ccImage" align="absmiddle" src="../local/copycode.gif" />Copy Code
+                  </span></th></tr><tr><td colspan="2"><pre><b>public ActionResult Index()</b><b>{</b><b>    var viewData = new CustomerViewData();</b><b>    viewData.Customers = this.repository.GetCustomers(0, 10);</b><b>    viewData.NextPage = 1;</b><b>    viewData.PreviousPage = 0;</b><b>    return View(viewData);</b><b>}</b></pre></td></tr></table></span></div><br /></li>
+          <li>Add the <b>FilterCustomers</b> action method that will be invoked when the search form is submitted. To do this, add the following code in the <b>CustomerController</b> class.<p>(Code Snippet – <i>Enhancing Asp.Net MVC Lab – CustomerController FilterCustomers Action</i>)</p><div class="code"><span codeLanguage="CSharp"><table width="100%" cellspacing="0" cellpadding="0"><tr><th>C#</th><th><span class="copyCode" onclick="CopyCode(this)" onkeypress="CopyCode_CheckKey(this)" onmouseover="ChangeCopyCodeIcon(this)" onfocusin="ChangeCopyCodeIcon(this)" onmouseout="ChangeCopyCodeIcon(this)" onfocusout="ChangeCopyCodeIcon(this)" tabindex="0"><img class="copyCodeImage" name="ccImage" align="absmiddle" src="../local/copycode.gif" />Copy Code
+                  </span></th></tr><tr><td colspan="2"><pre><b>public ActionResult FilterCustomers(string customersFilter)</b><b>{</b><b>    var viewData = new CustomerViewData();</b><b>    viewData.Customers = this.repository.GetFilteredCustomers(customersFilter, 0, 10);</b><b>    viewData.NextPage = 1;</b><b>    viewData.PreviousPage = 0;</b><b>    viewData.CustomerFilter = customersFilter;</b><b>    return PartialView("CustomerList", viewData);</b><b>}</b></pre></td></tr></table></span></div><br /><div class="alert"><table width="100%" cellspacing="0" cellpadding="0"><tr><th align="left"><img class="note" src="../local/note.gif" />Note:</th></tr><tr><td> Partial Views are used to extract common pieces of UI shared across the application or, as in this case, when only a part of the View needs to be updated after an AJAX request to the server.</td></tr></table><p /></div><br /></li>
+          <li>Add the <b>ChangeCustomersPage</b> action method that will be in charge of the pagination of the customer list. To do this, add the following code in the <b>CustomerController</b> class.<p>(Code Snippet – <i>Enhancing Asp.Net MVC Lab – CustomerController ChangeCustomersPage Method</i>)</p><div class="code"><span codeLanguage="CSharp"><table width="100%" cellspacing="0" cellpadding="0"><tr><th>C#</th><th><span class="copyCode" onclick="CopyCode(this)" onkeypress="CopyCode_CheckKey(this)" onmouseover="ChangeCopyCodeIcon(this)" onfocusin="ChangeCopyCodeIcon(this)" onmouseout="ChangeCopyCodeIcon(this)" onfocusout="ChangeCopyCodeIcon(this)" tabindex="0"><img class="copyCodeImage" name="ccImage" align="absmiddle" src="../local/copycode.gif" />Copy Code
+                  </span></th></tr><tr><td colspan="2"><pre><b>public ActionResult ChangeCustomersPage(string customersFilter, int currentPage)</b><b>{</b><b>    var viewData = new CustomerViewData();</b><b>    if (string.IsNullOrEmpty(customersFilter))</b><b>    {</b><b>        viewData.Customers = this.repository.GetCustomers(currentPage, 10);</b><b>    }</b><b>    else</b><b>    {</b><b>        viewData.Customers = this.repository.GetFilteredCustomers(customersFilter, currentPage, 10);</b><b>    }</b><b>    viewData.NextPage = currentPage + 1;</b><b>    viewData.PreviousPage = (currentPage &lt;= 0) ? 0 : currentPage - 1;</b><b>    viewData.CustomerFilter = customersFilter;</b><b>    return PartialView("CustomerList", viewData);</b><b>}</b></pre></td></tr></table></span></div></li>
+        </ol>
+        <br />
+        <a name="_Toc224120020" href="#">
+          <span />
+        </a>
+        <p>
+          <b>Task 2 – Adding AJAX to the Application</b>
+        </p>
+        <p>In this task you will add the required JavaScript scripts and refactor the customers Index view to use AJAX.</p>
+        <ol>
+          <li>Open the <b>Site.Master</b> page. The file is located in the <b>Views\Shared</b> folder.</li>
+          <li>Add the required JavaScript scripts to add AJAX functionality to the application. To do this, add the following bolded code inside the <b>&lt;head&gt;</b> tag of the view master page.<div class="code"><span codeLanguage="other"><table width="100%" cellspacing="0" cellpadding="0"><tr><th>HTML</th><th><span class="copyCode" onclick="CopyCode(this)" onkeypress="CopyCode_CheckKey(this)" onmouseover="ChangeCopyCodeIcon(this)" onfocusin="ChangeCopyCodeIcon(this)" onmouseout="ChangeCopyCodeIcon(this)" onfocusout="ChangeCopyCodeIcon(this)" tabindex="0"><img class="copyCodeImage" name="ccImage" align="absmiddle" src="../local/copycode.gif" />Copy Code
+                  </span></th></tr><tr><td colspan="2"><pre>&lt;head runat="server"&gt;<b>&lt;script src="../../Scripts/MicrosoftAjax.js" type="text/javascript"&gt;&lt;/script&gt;</b><b>    &lt;script src="../../Scripts/MicrosoftMvcAjax.js" type="text/javascript"&gt;&lt;/script&gt;</b><b>    &lt;script src="../../Scripts/jquery-1.3.1.min.js" type="text/javascript"&gt;&lt;/script&gt;</b>    &lt;title&gt;&lt;asp:ContentPlaceHolder ID="TitleContent" runat="server" /&gt;&lt;/title&gt;    &lt;link href="../../Content/Site.css" rel="stylesheet" type="text/css" /&gt;&lt;/head&gt;</pre></td></tr></table></span></div></li>
+          <br />
+          <div class="alert">
+            <table width="100%" cellspacing="0" cellpadding="0">
+              <tr>
+                <th align="left">
+                  <img class="note" src="../local/note.gif" />Note:</th>
+              </tr>
+              <tr>
+                <td>All three of these files are included in the <b>Scripts</b> folder of a new ASP.NET MVC application.<br />The inclusion of the required JavaScript files in the application’s view master page is a good practice if you plan to use AJAX in multiple pages in your application. That way, the JavaScript files will be included in all of the pages in the application automatically.</td>
+              </tr>
+            </table>
+            <p />
+          </div>
+          <br />
+          <li>Open the customers <b>Index</b> page. To do this, in the <b>Solution Explorer</b>, double click the <b>Index.aspx</b> file, located inside the <b>Views\Customer</b> folder.</li>
+          <li>Add a new AJAX form to filter customers. The form will have a textbox and a submit button. To do this, add the following bolded code below the Customer heading.<div class="code"><span codeLanguage="other"><table width="100%" cellspacing="0" cellpadding="0"><tr><th>ASP.NET</th><th><span class="copyCode" onclick="CopyCode(this)" onkeypress="CopyCode_CheckKey(this)" onmouseover="ChangeCopyCodeIcon(this)" onfocusin="ChangeCopyCodeIcon(this)" onmouseout="ChangeCopyCodeIcon(this)" onfocusout="ChangeCopyCodeIcon(this)" tabindex="0"><img class="copyCodeImage" name="ccImage" align="absmiddle" src="../local/copycode.gif" />Copy Code
+                  </span></th></tr><tr><td colspan="2"><pre>&lt;asp:Content ID="Content2" ContentPlaceHolderID="MainContent" runat="server"&gt;    &lt;h2&gt;        Customers&lt;/h2&gt;<b>&lt;% using (Ajax.BeginForm("FilterCustomers", new AjaxOptions() { UpdateTargetId = "divCustomerList" }))</b><b>{ %&gt;</b><b>&lt;label for="customersFilter"&gt;</b><b>Search:&lt;/label&gt;</b><b>&lt;%= Html.TextBox("customersFilter") %&gt;</b><b>&lt;input type="submit" value="Go" /&gt;</b><b>&lt;% } %&gt;</b>    &lt;ul&gt;        &lt;% foreach (var customer in Model.Customers)           { %&gt;        &lt;li&gt;            &lt;%= Html.ActionLink(customer.CompanyName + " - " + customer.FirstName        + " " + customer.LastName, "Info", new { id = customer.CustomerID }) %&gt;        &lt;/li&gt;        &lt;% } %&gt;    &lt;/ul&gt;    &lt;%=Html.ActionLink("&lt;&lt; Previous Page", "Index", new { page = ViewData.Model.PreviousPage }) %&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp       &lt;%=Html.ActionLink("Next Page &gt;&gt;", "Index", new { page = ViewData.Model.NextPage }) %&gt;&lt;/asp:Content&gt;</pre></td></tr></table></span></div><br /><div class="alert"><table width="100%" cellspacing="0" cellpadding="0"><tr><th align="left"><img class="note" src="../local/note.gif" />Note:</th></tr><tr><td>The <b>Ajax.BeginForm</b> helper method is used to create an AJAX form, which submission is done asynchronously.  In this overload, the method takes the following parameters: the action name that is called on submitting and an array containing the Ajax options. In the preceding code, the <b>filterCustomers</b> action method and the Ajax options, containing the <b>UpdateTargetId</b> are passed as parameters.<br />The <b>UpdateTargetId</b> AJAX option is used for defining the region that will be updated as a result of the AJAX requests. </td></tr></table><p /></div><br /></li>
+          <li>Create a new partial view in the <b>Views\Customer</b> folder. To do this, right-click the <b>Views\Customer</b> folders, point to <b>Add</b> and click <b>View</b>. In the <b>Add View</b> window, type <b>CustomerList </b>as the view name, select the <b>Create a partial View (.ascx)</b> and <b>Create a strongly-typed view</b> checkboxes, and then select <b>MvcSampleApp.ViewData.CustomerViewData</b> in the <b>View data class</b> combo box. Click <b>Add</b> to insert the view.<p><img src="images\5639bac6-b9c5-4aec-be26-b64c42e4ca68.png" /></p><p><b>Figure 1</b><br /><i>The Add View dialog</i></p><br /></li>
+          <li>Separate the part of the view that you want to update asynchronously (the customer list) into a separate partial view (view user control). The section of the Index view that displays the table of customers has to be moved into the <b>CustomerList</b> partial view. To do this, cut from the <b>Index.aspx</b> file the <i>&lt;ul&gt;</i> element that renders the customer list and the Html.ActionLinks calls, and paste it inside the <b>CustomerList.ascx</b> under a new <i>&lt;div&gt;</i> element with <b>divCustomers</b> as id. The code in the <b>CustomerList.ascx</b> should look like the following code:<div class="code"><span codeLanguage="other"><table width="100%" cellspacing="0" cellpadding="0"><tr><th>ASP.NET</th><th><span class="copyCode" onclick="CopyCode(this)" onkeypress="CopyCode_CheckKey(this)" onmouseover="ChangeCopyCodeIcon(this)" onfocusin="ChangeCopyCodeIcon(this)" onmouseout="ChangeCopyCodeIcon(this)" onfocusout="ChangeCopyCodeIcon(this)" tabindex="0"><img class="copyCodeImage" name="ccImage" align="absmiddle" src="../local/copycode.gif" />Copy Code
+                  </span></th></tr><tr><td colspan="2"><pre>&lt;%@ Control Language="C#" Inherits="System.Web.Mvc.ViewUserControl&lt;MvcSampleApp.ViewData.CustomerViewData&gt;" %&gt;<b>&lt;div id="divCustomers"&gt;</b><b>    &lt;ul&gt;</b><b>        &lt;% foreach (var customer in Model.Customers)</b><b>           { %&gt;</b><b>            &lt;li&gt;</b><b>                &lt;%= Html.ActionLink(customer.CompanyName + " - " + customer.FirstName + " " + customer.LastName, "Info", new { id = customer.CustomerID }) %&gt;</b><b>            &lt;/li&gt;</b><b>        &lt;% } %&gt;</b><b>    &lt;/ul&gt;</b><b>    &lt;%=Ajax.ActionLink("&lt;&lt; Previous Page", "ChangeCustomersPage", new { currentPage = Model.PreviousPage, customersFilter = Model.CustomerFilter }, new AjaxOptions() { UpdateTargetId = "divCustomers" })%&gt; &amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp</b><b>    &lt;%=Ajax.ActionLink("Next Page &gt;&gt;", "ChangeCustomersPage", new { currentPage = Model.NextPage, customersFilter = Model.CustomerFilter }, new AjaxOptions() { UpdateTargetId = "divCustomers" })%&gt;</b><b>&lt;/div&gt;</b></pre></td></tr></table></span></div><div class="alert"><table width="100%" cellspacing="0" cellpadding="0"><tr><th align="left"><img class="note" src="../local/note.gif" />Note:</th></tr><tr><td>The content of the partial view is wrapped in a div section since all of it will need to be updated when doing an AJAX request through the Previous Page / Next Page action links.</td></tr></table><p /></div><br /></li>
+          <li>In the <b>Index</b> view, replace the code that was moved with a call to the partial view. To do this, use the <b>RenderPartial</b> method, as shown in the following bolded code.<div class="code"><span codeLanguage="other"><table width="100%" cellspacing="0" cellpadding="0"><tr><th>ASP.NET</th><th><span class="copyCode" onclick="CopyCode(this)" onkeypress="CopyCode_CheckKey(this)" onmouseover="ChangeCopyCodeIcon(this)" onfocusin="ChangeCopyCodeIcon(this)" onmouseout="ChangeCopyCodeIcon(this)" onfocusout="ChangeCopyCodeIcon(this)" tabindex="0"><img class="copyCodeImage" name="ccImage" align="absmiddle" src="../local/copycode.gif" />Copy Code
+                  </span></th></tr><tr><td colspan="2"><pre>&lt;%@ Page Title="" Language="C#" MasterPageFile="~/Views/Shared/Site.Master" Inherits="System.Web.Mvc.ViewPage&lt;MvcSampleApp.ViewData.CustomerViewData&gt;" %&gt;&lt;asp:Content ID="Content1" ContentPlaceHolderID="TitleContent" runat="server"&gt;    Index&lt;/asp:Content&gt;&lt;asp:Content ID="Content2" ContentPlaceHolderID="MainContent" runat="server"&gt;    &lt;h2&gt;        Customers&lt;/h2&gt;    &lt;% using (Ajax.BeginForm("FilterCustomers", new AjaxOptions() { UpdateTargetId = "divCustomerList" }))       { %&gt;            &lt;label for="customersFilter"&gt;                Search:&lt;/label&gt;            &lt;%= Html.TextBox("customersFilter") %&gt;            &lt;input type="submit" value="Go" /&gt;    &lt;% } %&gt;<b>    &lt;div id="divCustomerList"&gt;</b><b>        &lt;% Html.RenderPartial("CustomerList", Model); %&gt;</b><b>    &lt;/div&gt;</b>&lt;/asp:Content&gt;</pre></td></tr></table></span></div><br /><div class="alert"><table width="100%" cellspacing="0" cellpadding="0"><tr><th align="left"><img class="note" src="../local/note.gif" />Note:</th></tr><tr><td> The <b>RenderPartial</b> method is used for rendering the partial view with an empty view data and the given model.<br />The call to the <b>RenderPartial</b> method is located inside the div tags, to define the section of the page that will be updated on AJAX requests.</td></tr></table><p /></div></li>
+        </ol>
+      </div>
+      <div id="footer">
+        <div class="footerLine">
+          <img src="../local/footer.gif" alt="Footer image" width="100%" height="3px" />
+        </div>To give feedback please write to mvckit@microsoft.com<p />Copyright © 2009 by Microsoft Corporation. All rights reserved.</div>
+    </div>
+  </body>
+</html>

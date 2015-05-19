@@ -1,0 +1,223 @@
+<html dir="ltr" xmlns:MSHelp="http://msdn.microsoft.com/mshelp" xmlns:dt="uuid:C2F41010-65B3-11d1-A29F-00AA00C14882" xmlns:xlink="http://www.w3.org/1999/xlink">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+    <meta name="save" content="history" />
+    <xml>
+      <MSHelp:TOCTitle Title="Exercise 3: Testing an ASP.NET MVC Application" />
+      <MSHelp:RLTitle Title="Exercise 3: Testing an ASP.NET MVC Application" />
+      <MSHelp:Attr Name="DocSet" Value="docSet" />
+      <MSHelp:Attr Name="TopicType" Value="kbOrient" />
+      <MSHelp:Attr Name="Locale" Value="kbEnglish" />
+      <MSHelp:Attr Name="AssetId" Value="{GUID}" />
+    </xml>
+    <title>Exercise 3: Testing an ASP.NET MVC Application</title>
+    <link rel="stylesheet" type="text/css" href="../local/Classic.css" />
+    <script src="../local/EventUtilities.js" type="text/jscript" language="jscript"> </script>
+    <script src="../local/SplitScreen.js" type="text/jscript" language="jscript"> </script>
+    <script src="../local/Dropdown.js" type="text/jscript" language="jscript"> </script>
+    <script src="../local/script.js" type="text/jscript" language="jscript"> </script>
+  </head>
+  <body>
+    <input type="hidden" id="userDataCache" class="userDataStyle" />
+    <input type="hidden" id="hiddenScrollOffset" />
+    <img id="dropDownImage" style="display:none; height:0; width:0;" alt="DropDown image" src="../local/drpdown.gif" />
+    <img id="dropDownHoverImage" style="display:none; height:0; width:0;" alt="DropDownHover image" src="../local/drpdown_orange.gif" />
+    <img id="collapseImage" style="display:none; height:0; width:0;" alt="Collapse image" src="../local/collapse_all.gif" />
+    <img id="expandImage" style="display:none; height:0; width:0;" alt="Expand image" src="../local/expand_all.gif" />
+    <img id="collapseAllImage" style="display:none; height:0; width:0;" alt="CollapseAll image" src="../local/collall.gif" />
+    <img id="expandAllImage" style="display:none; height:0; width:0;" alt="ExpandAll image" src="../local/expall.gif" />
+    <img id="copyImage" style="display:none; height:0; width:0;" alt="Copy image" src="../local/copycode.gif" />
+    <img id="copyHoverImage" style="display:none; height:0; width:0;" alt="CopyHover image" src="../local/copycodeHighlight.gif" />
+    <div id="header">
+      <table width="100%" id="topTable">
+        <tr id="headerTableRow1">
+          <td align="left">
+            <span id="runningHeaderText">Introduction to ASP.NET MVC</span>
+          </td>
+        </tr>
+        <tr id="headerTableRow2">
+          <td align="left">
+            <span id="nsrTitle">Exercise 3: Testing an ASP.NET MVC Application</span>
+          </td>
+        </tr>
+        <tr id="headerTableRow3">
+          <td />
+        </tr>
+      </table>
+    </div>
+    <div id="mainSection">
+      <div id="mainBody">
+        <div id="allHistory" class="saveHistory" onsave="saveAll()" onload="loadAll()" />
+        <p>Separation of application tasks (input logic, business logic, and UI logic) in MVC ASP.NET applications enables testability, and test-driven development (TDD) by default. All core contracts within the MVC framework are interface-based and can be tested by using mock objects, which are simulated objects that imitate the behavior of actual objects in the application. You can unit-test the application without having to run the controllers in an ASP.NET process, which makes unit testing fast and flexible. You can use any unit-testing framework that is compatible with the .NET Framework.</p>
+        <p>Even though this exercise does not follow strictly the Test-Driven Development approach you will learn what is needed and how to perform unit testing while creating an ASP.NET MVC application. </p>
+        <a name="_Toc190837083" href="#">
+          <span />
+        </a>
+        <a name="_Toc205281195" href="#">
+          <span />
+        </a>
+        <a name="_Toc223344224" href="#">
+          <span />
+        </a>
+        <a name="_Toc224707086" href="#">
+          <span />
+        </a>
+        <p>
+          <b>Task 1 – Opening the ASP.NET MVC Application</b>
+        </p>
+        <p>In this task you will obtain the necessary files to be able to do the exercise and open the Visual Studio begin solution. </p>
+        <p>To able to test in isolation ASP.NET MVC routes, this exercise uses a mock framework for the .NET platform called <b>Moq</b>, which is the same mock framework used by the ASP.NET MVC team.</p>
+        <ol>
+          <li>Download the <b>Moq</b> Library. To do this, follow this link: <a href="http://code.google.com/p/moq/">http://code.google.com/p/moq/</a> and download the <b>Moq</b> Library 3.0 version binaries.</li>
+          <li>Once the download is finished, extract and copy the <b>Moq.dll</b> file into <b>AspNetMvc\Assets\ </b>folder<b>.</b></li>
+          <li>Open Microsoft Visual Studio 2008 from <b>Start | All Programs | Microsoft Visual Studio 2008 | Microsoft Visual Studio 2008</b>. Open the solution file <b>MvcSampleApp.sln</b> located under <b>AspNetMvc\Ex03-TestingMvcApp\begin\</b>.</li>
+        </ol>
+        <a name="_Toc190837084" href="#">
+          <span />
+        </a>
+        <a name="_Toc205281196" href="#">
+          <span />
+        </a>
+        <a name="_Toc223344225" href="#">
+          <span />
+        </a>
+        <a name="_Toc224707087" href="#">
+          <span />
+        </a>
+        <p>
+          <b>Task 2 – Testing Application Routes</b>
+        </p>
+        <p>In this task you will learn how to write unit tests for the route matching rules defined in <b>Global.asax</b>.</p>
+        <ol>
+          <li>Add a reference to the <b>Moq</b> Library core assembly. To do this, in <b>Solution Explorer</b>, right-click <b>MvcSampleApp.Test</b> project and select <b>Add Reference</b>. In the <b>Add Reference</b> dialog box, select the <b>Browse</b> tab, browse to <b>AspNetMvc\Assets</b> folder select <b>Moq.dll</b>. Click <b>OK</b> to add the reference.</li>
+          <li>Import the route tests outline. To do this, right-click on the <b>MvcSampleApp.Test</b> project, and select <b>Add Existing Item</b>. Navigate to the <b>AspNetMvc\Assets</b> folder and select the <b>RouteTests.cs</b> file. Double-click on the <b>RouteTests.cs</b> file to open it up. </li>
+          <li>Add the following namespace directive to <b>RouteTests.cs</b>.<div class="code"><span codeLanguage="CSharp"><table width="100%" cellspacing="0" cellpadding="0"><tr><th>C#</th><th><span class="copyCode" onclick="CopyCode(this)" onkeypress="CopyCode_CheckKey(this)" onmouseover="ChangeCopyCodeIcon(this)" onfocusin="ChangeCopyCodeIcon(this)" onmouseout="ChangeCopyCodeIcon(this)" onfocusout="ChangeCopyCodeIcon(this)" tabindex="0"><img class="copyCodeImage" name="ccImage" align="absmiddle" src="../local/copycode.gif" />Copy Code
+                  </span></th></tr><tr><td colspan="2"><pre><b>using Moq;</b></pre></td></tr></table></span></div><br /></li>
+          <li>Implement the <b>GetRouteDataForUrl</b> method. To do this, paste the following code (shown in <b>bold</b>) inside the method:<div class="alert"><table width="100%" cellspacing="0" cellpadding="0"><tr><th align="left"><img class="note" src="../local/note.gif" />Note:</th></tr><tr><td> This method emulates the mechanism that performs the ASP.NET Routing engine when it receives a URL and should return the matching route data from the loaded application route collection. Given a <b>RouteData</b> collection and a URL, it uses a mocked <b>HttpContextBase</b> object and the URL parameter to find the matching <b>RouteData</b> in the <b>RouteCollection</b>. </td></tr></table><p /></div><br /><p>(Code Snippet – <i>Intro to</i><i>Asp.Net MVC Lab</i> – <i>GetRouteDataForUrl</i>)</p><div class="code"><span codeLanguage="CSharp"><table width="100%" cellspacing="0" cellpadding="0"><tr><th>C#</th><th><span class="copyCode" onclick="CopyCode(this)" onkeypress="CopyCode_CheckKey(this)" onmouseover="ChangeCopyCodeIcon(this)" onfocusin="ChangeCopyCodeIcon(this)" onmouseout="ChangeCopyCodeIcon(this)" onfocusout="ChangeCopyCodeIcon(this)" tabindex="0"><img class="copyCodeImage" name="ccImage" align="absmiddle" src="../local/copycode.gif" />Copy Code
+                  </span></th></tr><tr><td colspan="2"><pre>private static RouteData GetRouteDataForUrl(RouteCollection routes, string url){<b>    var mockRequest = new Mock&lt;HttpRequestBase&gt;();</b><b>    mockRequest.Setup(r =&gt; r.AppRelativeCurrentExecutionFilePath).Returns(url);</b><b>    mockRequest.Setup(r =&gt; r.PathInfo).Returns(String.Empty);</b><b>    var mockContext = new Mock&lt;HttpContextBase&gt;();</b><b>    mockContext.Setup(c =&gt; c.Request).Returns(mockRequest.Object);</b><b>    RouteData routeData = routes.GetRouteData(mockContext.Object);</b><b>    return routeData;</b>}</pre></td></tr></table></span></div><br /><div class="alert"><table width="100%" cellspacing="0" cellpadding="0"><tr><th align="left"><img class="note" src="../local/note.gif" />Note:</th></tr><tr><td>For more information about how the <b>GetRouteDataForUrl</b> method works. Please check the <a href="docSet_13ae0f74-1db2-4ac9-9d05-501e65266ff3.html">Appendix</a> section.</td></tr></table><p /></div><br /></li>
+          <li>Start implementing a test method for the customer default route (<i>“~/Customer”</i>) that maps to the <b>Customer</b> controller <b>Index</b> view. Paste the following code inside <b>ShouldCustomerTakeDefaultRoute </b>test method:<div class="alert"><table width="100%" cellspacing="0" cellpadding="0"><tr><th align="left"><img class="note" src="../local/note.gif" />Note:</th></tr><tr><td> This section creates a new route collection, and fills it with all the routes used in the previous exercise by calling the <b>MvcApplication.RegisterRoutes()</b>.</td></tr></table><p /></div><br /><div class="code"><span codeLanguage="CSharp"><table width="100%" cellspacing="0" cellpadding="0"><tr><th>C#</th><th><span class="copyCode" onclick="CopyCode(this)" onkeypress="CopyCode_CheckKey(this)" onmouseover="ChangeCopyCodeIcon(this)" onfocusin="ChangeCopyCodeIcon(this)" onmouseout="ChangeCopyCodeIcon(this)" onfocusout="ChangeCopyCodeIcon(this)" tabindex="0"><img class="copyCodeImage" name="ccImage" align="absmiddle" src="../local/copycode.gif" />Copy Code
+                  </span></th></tr><tr><td colspan="2"><pre>[TestMethod]public void ShouldCustomerTakeDefaultRoute(){<b>    RouteCollection routes = new RouteCollection();</b><b>    MvcApplication.RegisterRoutes(routes);</b>}</pre></td></tr></table></span></div><br /></li>
+          <li>Add code to call the <b>GetRouteDataForUrl </b>method and return the matching route for the “<i>~/Customer”</i> Url. Paste the following code below the previous one.<div class="code"><span codeLanguage="CSharp"><table width="100%" cellspacing="0" cellpadding="0"><tr><th>C#</th><th><span class="copyCode" onclick="CopyCode(this)" onkeypress="CopyCode_CheckKey(this)" onmouseover="ChangeCopyCodeIcon(this)" onfocusin="ChangeCopyCodeIcon(this)" onmouseout="ChangeCopyCodeIcon(this)" onfocusout="ChangeCopyCodeIcon(this)" tabindex="0"><img class="copyCodeImage" name="ccImage" align="absmiddle" src="../local/copycode.gif" />Copy Code
+                  </span></th></tr><tr><td colspan="2"><pre>[TestMethod]public void ShouldCustomerTakeDefaultRoute(){    RouteCollection routes = new RouteCollection();    MvcApplication.RegisterRoutes(routes);<b>    RouteData routeData = GetRouteDataForUrl(routes, "~/Customer");</b>}</pre></td></tr></table></span></div><br /></li>
+          <li>Add the “asserts” to the method. Paste the following code below the previous one. The code asserts that:<ol><li>A route has been found.</li><li>The controller that will be called is the <b>Customer</b> controller.</li><li>The action method that will be called is <b>Index</b>.</li></ol></li>
+          <p class="label">
+            <i> (Code Snippet – Intro to Asp.Net MVC Lab – ShouldCustomerTakeDefaultRoute)</i>
+          </p>
+          <div class="code">
+            <span codeLanguage="CSharp">
+              <table width="100%" cellspacing="0" cellpadding="0">
+                <tr>
+                  <th>C#</th>
+                  <th>
+                    <span class="copyCode" onclick="CopyCode(this)" onkeypress="CopyCode_CheckKey(this)" onmouseover="ChangeCopyCodeIcon(this)" onfocusin="ChangeCopyCodeIcon(this)" onmouseout="ChangeCopyCodeIcon(this)" onfocusout="ChangeCopyCodeIcon(this)" tabindex="0">
+                      <img class="copyCodeImage" name="ccImage" align="absmiddle" src="../local/copycode.gif" />Copy Code
+                  </span>
+                  </th>
+                </tr>
+                <tr>
+                  <td colspan="2">
+                    <pre>[TestMethod]public void ShouldCustomerTakeDefaultRoute(){    RouteCollection routes = new RouteCollection();    MvcApplication.RegisterRoutes(routes);    RouteData routeData = GetRouteDataForUrl(routes, "~/Customers");<b>    Assert.IsNotNull(routeData, "Should have found the route");</b><b>    Assert.AreEqual("Customer", routeData.Values["controller"], "Customer controller expected");</b><b>    Assert.AreEqual("Index", routeData.Values["action"], "Index action expected");</b>}</pre>
+                  </td>
+                </tr>
+              </table>
+            </span>
+          </div>
+          <br />
+          <li>Implement a test method for the<b> </b>route that maps to<b> Customer</b> controller <b>Info</b> action (e.g. “<i>~/Customer/Info/1</i>”). To do this, paste the following code into <b>ShouldCustomerTakeInfoRoute</b> test method. This method does the same as <b>ShouldCustomerTakeDefaultRoute</b> and asserts that:<ol><li>A route has been found.</li><li>The controller that is called is the <b>Customer</b> controller.</li><li>The <b>Id</b> parameter value is one.</li><li>The action method that is called is <b>Info</b>.</li></ol></li>
+          <p>(Code Snippet – <i>Intro to</i><i>Asp.Net MVC Lab</i> – <i>ShouldCustomerTakeInfoRoute</i>)</p>
+          <div class="code">
+            <span codeLanguage="CSharp">
+              <table width="100%" cellspacing="0" cellpadding="0">
+                <tr>
+                  <th>C#</th>
+                  <th>
+                    <span class="copyCode" onclick="CopyCode(this)" onkeypress="CopyCode_CheckKey(this)" onmouseover="ChangeCopyCodeIcon(this)" onfocusin="ChangeCopyCodeIcon(this)" onmouseout="ChangeCopyCodeIcon(this)" onfocusout="ChangeCopyCodeIcon(this)" tabindex="0">
+                      <img class="copyCodeImage" name="ccImage" align="absmiddle" src="../local/copycode.gif" />Copy Code
+                  </span>
+                  </th>
+                </tr>
+                <tr>
+                  <td colspan="2">
+                    <pre>[TestMethod]public void ShouldCustomerTakeInfoRoute(){<b>    RouteCollection routes = new RouteCollection();</b><b>    MvcApplication.RegisterRoutes(routes);</b><b>    RouteData routeData = GetRouteDataForUrl(routes, "~/Customer/Info/1");</b><b>    Assert.IsNotNull(routeData, "Should have found the route");</b><b>    Assert.AreEqual("Customer", routeData.Values["controller"], "Customer controller expected");</b><b>    Assert.AreEqual("1", routeData.Values["id"], "Customer ID = 1 expected");</b><b>    Assert.AreEqual("Info", routeData.Values["action"], "Info action expected");</b>}</pre>
+                  </td>
+                </tr>
+              </table>
+            </span>
+          </div>
+          <br />
+          <li>Implement a test method for the<b> </b>route that maps to <b>Address</b> controller <b>Create</b> view (e.g. “~/Address/Create/1”). Paste the following code into <b>ShouldAddressTakeCreateRoute</b> test method. This method does the same as the previous one and asserts that:<ol><li>A route has been found.</li><li>The controller that is called is the <b>Address</b> controller.</li><li>The <b>Id</b> parameter value is one.</li><li>The action method that is called is <b>Create</b>.</li></ol></li>
+          <p>(Code Snippet – <i>Intro to</i><i>Asp.Net MVC Lab</i> – <i>ShouldAddressTakeNewRoute</i>)</p>
+          <div class="code">
+            <span codeLanguage="CSharp">
+              <table width="100%" cellspacing="0" cellpadding="0">
+                <tr>
+                  <th>C#</th>
+                  <th>
+                    <span class="copyCode" onclick="CopyCode(this)" onkeypress="CopyCode_CheckKey(this)" onmouseover="ChangeCopyCodeIcon(this)" onfocusin="ChangeCopyCodeIcon(this)" onmouseout="ChangeCopyCodeIcon(this)" onfocusout="ChangeCopyCodeIcon(this)" tabindex="0">
+                      <img class="copyCodeImage" name="ccImage" align="absmiddle" src="../local/copycode.gif" />Copy Code
+                  </span>
+                  </th>
+                </tr>
+                <tr>
+                  <td colspan="2">
+                    <pre>[TestMethod]public void ShouldAddressTakeCreateRoute(){<b>    RouteCollection routes = new RouteCollection();</b><b>    MvcApplication.RegisterRoutes(routes);</b><b>    RouteData routeData = GetRouteDataForUrl(routes, "~/Address/Create/1");</b><b>    Assert.IsNotNull(routeData, "Should have found the route");</b><b>    Assert.AreEqual("Address", routeData.Values["Controller"], "Address controller expected");</b><b>    Assert.AreEqual("1", routeData.Values["Id"], "Customer ID = 1 expected");</b><b>    Assert.AreEqual("Create", routeData.Values["action"], "Create action expected"); </b>}</pre>
+                  </td>
+                </tr>
+              </table>
+            </span>
+          </div>
+          <div class="alert">
+            <table width="100%" cellspacing="0" cellpadding="0">
+              <tr>
+                <th align="left">
+                  <img class="note" src="../local/note.gif" />Note:</th>
+              </tr>
+              <tr>
+                <td><b> </b>If you want to test these methods run successfully you can now follow the steps in <a href="docSet_0956c790-c9cf-4b9f-8684-e32579db1bb6.html">Verification 1</a>.</td>
+              </tr>
+            </table>
+            <p />
+          </div>
+        </ol>
+        <a name="_Toc190837085" href="#">
+          <span />
+        </a>
+        <a name="_Toc205281197" href="#">
+          <span />
+        </a>
+        <a name="_Toc223344226" href="#">
+          <span />
+        </a>
+        <a name="_Toc224707088" href="#">
+          <span />
+        </a>
+        <p>
+          <b>Task 3 – Testing Customer Controller</b>
+        </p>
+        <p>In this task you will create unit tests for the <b>Customer</b> controller. In the application, the <b>Customer</b> controller uses <b>AdventureWorks</b> entity data model to interact with the database. The idea in this task is to also mock entity data model so as to have full control over the tests. If any of these tests fail, you will be sure that the defect was produced within the <b>Controller</b> component rather than in the <b>AdventureWorks</b> entity data model.</p>
+        <ol>
+          <li>Import the <b>CustomerController</b> test class. To do this, right-click the <b>Controllers</b> folder under the <b>MvcSampleApp.Test</b> project and select <b>Add Existing Item</b>. Navigate to the <b>AspNetMvc\Assets</b> directory and select the <b>CustomerControllerTest.cs</b> file. </li>
+          <li>Import the stub version for the <b>AdventureWorks</b> repository. To do this, right-click the <b>MvcSampleApp.Test</b> project and select <b>Add Existing Item</b>. Navigate to the <b>AspNetMvc\Assets</b> directory and select the <b>AdventureWorksRepositoryStub.cs</b> file.<div class="alert"><table width="100%" cellspacing="0" cellpadding="0"><tr><th align="left"><img class="note" src="../local/note.gif" />Note:</th></tr><tr><td>The <b>AdventureWorksRepositoryStub</b> class implements the <b>IAdventureWorksRepository</b> interface. You will include this interface in a further step.</td></tr></table><p /></div><br /></li>
+          <li>Add a reference to the <b>System.Data.Entity</b> assembly. To do this, in <b>Solution Explorer</b>, right-click <b>MvcSampleApp.Test</b> project and select <b>Add Reference</b>. In the <b>Add Reference</b> dialog box, select the <b>.NET</b> tab, select the <b>System.Data.Entity</b> component. Click <b>OK</b> to add the reference.</li>
+          <li>Import the <b>AdventureWorks</b> repository interface. To do this, right-click the <b>Models</b> folder under <b>MvcSampleApp</b> project and select Add Existing Item. Navigate to the <b>AspNetMvc\Assets</b> directory and select the <b>IAdventureWorksRepository.cs</b> file.</li>
+          <li>Modify the <b>AdventureWorksRepository</b> class to implement the AdventureWorks repository interface. To do this, open the <b>AdventureWorksRepository.cs</b> file under the <b>Models</b> folder in the <b>MvcSampleApp</b> project and replace the class declaration using the following code.<div class="code"><span codeLanguage="CSharp"><table width="100%" cellspacing="0" cellpadding="0"><tr><th>C#</th><th><span class="copyCode" onclick="CopyCode(this)" onkeypress="CopyCode_CheckKey(this)" onmouseover="ChangeCopyCodeIcon(this)" onfocusin="ChangeCopyCodeIcon(this)" onmouseout="ChangeCopyCodeIcon(this)" onfocusout="ChangeCopyCodeIcon(this)" tabindex="0"><img class="copyCodeImage" name="ccImage" align="absmiddle" src="../local/copycode.gif" />Copy Code
+                  </span></th></tr><tr><td colspan="2"><pre>public class AdventureWorksRepository : IAdventureWorksRepository</pre></td></tr></table></span></div><br /></li>
+          <li>Modify the <b>CustomerController</b> class to implement two constructor methods. The first method will create an instance of <b>AdventureWorksRepository</b> and the second one will accept an <b>IAdventureWorksRepository</b> implementation. To do this, open the <b>CustomerController.cs</b> file under the <b>Controllers</b> folder in the <b>MvcSampleApp</b> project and replace the repository field declaration with the following constructor methods.<div class="code"><span codeLanguage="CSharp"><table width="100%" cellspacing="0" cellpadding="0"><tr><th>C#</th><th><span class="copyCode" onclick="CopyCode(this)" onkeypress="CopyCode_CheckKey(this)" onmouseover="ChangeCopyCodeIcon(this)" onfocusin="ChangeCopyCodeIcon(this)" onmouseout="ChangeCopyCodeIcon(this)" onfocusout="ChangeCopyCodeIcon(this)" tabindex="0"><img class="copyCodeImage" name="ccImage" align="absmiddle" src="../local/copycode.gif" />Copy Code
+                  </span></th></tr><tr><td colspan="2"><pre>public class CustomerController : Controller{<b>    private IAdventureWorksRepository repository;</b><b>    public CustomerController()</b><b>    {</b><b>        this.repository = new AdventureWorksRepository();</b><b>    }</b><b>    public CustomerController(IAdventureWorksRepository repository)</b><b>    {</b><b>        this.repository = repository;</b><b>    }</b>…}</pre></td></tr></table></span></div><br /></li>
+          <li>Double-click <b>CustomerControllerTest.cs</b> for edit. Implement a test method to verify that the <b>Customer</b> controller <b>Index</b> action method renders the <b>Index</b> view, passing a view data that is not null. Paste the following code into <b>ShouldLoadCustomerIndexView</b> test method in the <b>CustomerControllerTests</b> class. <p>(Code Snippet – <i>Intro to</i><i>Asp.Net MVC Lab</i> – <i>ShouldLoadCustomerIndexView</i>)</p><div class="code"><span codeLanguage="CSharp"><table width="100%" cellspacing="0" cellpadding="0"><tr><th>C#</th><th><span class="copyCode" onclick="CopyCode(this)" onkeypress="CopyCode_CheckKey(this)" onmouseover="ChangeCopyCodeIcon(this)" onfocusin="ChangeCopyCodeIcon(this)" onmouseout="ChangeCopyCodeIcon(this)" onfocusout="ChangeCopyCodeIcon(this)" tabindex="0"><img class="copyCodeImage" name="ccImage" align="absmiddle" src="../local/copycode.gif" />Copy Code
+                  </span></th></tr><tr><td colspan="2"><pre>[TestMethod]public void ShouldLoadCustomerIndexView(){<b>    CustomerController controller = new CustomerController(new AdventureWorksRepositoryStub());</b><b>    ViewResult result = controller.Index(1) as ViewResult;</b><b>    Assert.IsTrue(string.IsNullOrEmpty(result.ViewName));</b><b>    Assert.IsNotNull(result.ViewData);</b>}</pre></td></tr></table></span></div><br /><div class="alert"><table width="100%" cellspacing="0" cellpadding="0"><tr><th align="left"><img class="note" src="../local/note.gif" />Note:</th></tr><tr><td> The method uses a repository stub version (<b>AdventureWorksRepositoryStub</b>) that implements only the <b>GetCustomers</b> method (returning two empty customers) and <b>GetCustomersById</b> method. Check the <b>AdventureWorksRepositoryStub.cs</b> file under the test project for implementation details.<br />Notice that you’re checking for an <i>Empty</i>or <i>Null</i> string value from the rendered view name. This is because when the controller calls the <b>View </b>method without specifying a view name, the resulting <b>ViewResult</b>’s <b>ViewName</b> property will be null, indicating that no explicit view was specified, and that the view with the same name as the controller action method should be rendered. You can explicitly specify the <b>ViewName</b> by calling an overloaded version of <b>View()</b>.</td></tr></table><p /></div><br /></li>
+          <li>Implement a test method that verifies that the <b>CustomerViewData</b> is properly filled in the <b>Index</b> method of the <b>Customers</b> controller. Paste the following code into <b>ShouldLoadCustomerIndexPageView </b>test method.<p>(Code Snippet – <i>Intro to</i><i>Asp.Net MVC Lab</i> – <i>ShouldLoadCustomerIndexPageView</i>)</p><div class="code"><span codeLanguage="CSharp"><table width="100%" cellspacing="0" cellpadding="0"><tr><th>C#</th><th><span class="copyCode" onclick="CopyCode(this)" onkeypress="CopyCode_CheckKey(this)" onmouseover="ChangeCopyCodeIcon(this)" onfocusin="ChangeCopyCodeIcon(this)" onmouseout="ChangeCopyCodeIcon(this)" onfocusout="ChangeCopyCodeIcon(this)" tabindex="0"><img class="copyCodeImage" name="ccImage" align="absmiddle" src="../local/copycode.gif" />Copy Code
+                  </span></th></tr><tr><td colspan="2"><pre>[TestMethod]public void ShouldLoadCustomerIndexPageView(){<b>    CustomerController controller = new CustomerController(new AdventureWorksRepositoryStub());</b><b>    ViewResult result = controller.Index(1) as ViewResult;</b><b></b><b>    Assert.IsInstanceOfType(result.ViewData.Model, typeof(CustomerViewData));</b><b>    CustomerViewData customerViewData = result.ViewData.Model as CustomerViewData;</b><b>    Assert.AreEqual(2, customerViewData.NextPage, "Page 2 expected");</b><b>    Assert.AreEqual(2, customerViewData.Customers.Count(), "2 Customers expected");</b>}</pre></td></tr></table></span></div><br /></li>
+          <li>Implement a test method that verifies that the <b>Customer</b> controller <b>Info</b> action method renders the <b>Info</b> view, passing a view data which is not null. Paste the following code into <b>ShouldLoadCustomerInfoView </b>test method.<p>(Code Snippet – <i>Intro to</i><i>Asp.Net MVC Lab</i> – <i>ShouldLoadCustomerInfoView</i>)</p><div class="code"><span codeLanguage="CSharp"><table width="100%" cellspacing="0" cellpadding="0"><tr><th>C#</th><th><span class="copyCode" onclick="CopyCode(this)" onkeypress="CopyCode_CheckKey(this)" onmouseover="ChangeCopyCodeIcon(this)" onfocusin="ChangeCopyCodeIcon(this)" onmouseout="ChangeCopyCodeIcon(this)" onfocusout="ChangeCopyCodeIcon(this)" tabindex="0"><img class="copyCodeImage" name="ccImage" align="absmiddle" src="../local/copycode.gif" />Copy Code
+                  </span></th></tr><tr><td colspan="2"><pre>[TestMethod]public void ShouldLoadCustomerInfoView(){<b>    CustomerController controller = new CustomerController(new AdventureWorksRepositoryStub());</b><b>    ViewResult result = controller.Info(1) as ViewResult;</b><b>    Assert.IsTrue(string.IsNullOrEmpty(result.ViewName));</b><b>    Assert.IsNotNull(result.ViewData);</b>}</pre></td></tr></table></span></div><br /></li>
+          <li> Implement a test method that verifies that the <b>Customer </b>entity view data is properly filled in the <b>Info</b> method of the <b>Customers</b> controller. Paste the following code into <b>ShouldLoadCustomerOneInfoView </b>test method.<p>(Code Snippet – <i>Intro to</i><i>Asp.Net MVC Lab</i> – <i>ShouldLoadCustomerOneInfoView</i>)</p><div class="code"><span codeLanguage="CSharp"><table width="100%" cellspacing="0" cellpadding="0"><tr><th>C#</th><th><span class="copyCode" onclick="CopyCode(this)" onkeypress="CopyCode_CheckKey(this)" onmouseover="ChangeCopyCodeIcon(this)" onfocusin="ChangeCopyCodeIcon(this)" onmouseout="ChangeCopyCodeIcon(this)" onfocusout="ChangeCopyCodeIcon(this)" tabindex="0"><img class="copyCodeImage" name="ccImage" align="absmiddle" src="../local/copycode.gif" />Copy Code
+                  </span></th></tr><tr><td colspan="2"><pre>[TestMethod]public void ShouldLoadCustomerOneInfoView(){<b>    CustomerController controller = new CustomerController(new AdventureWorksRepositoryStub());</b><b>    ViewResult result = controller.Info(1) as ViewResult;</b><b>    Assert.IsInstanceOfType(result.ViewData.Model, typeof(Customer));</b><b>    Customer customer = result.ViewData.Model as Customer;</b><b>    Assert.AreEqual(1, customer.CustomerID, "CustomerId 1 expected");</b>}</pre></td></tr></table></span></div></li>
+        </ol>
+      </div>
+      <div id="footer">
+        <div class="footerLine">
+          <img src="../local/footer.gif" alt="Footer image" width="100%" height="3px" />
+        </div>To give feedback please write to mvckit@microsoft.com<p />Copyright © 2009 by Microsoft Corporation. All rights reserved.</div>
+    </div>
+  </body>
+</html>

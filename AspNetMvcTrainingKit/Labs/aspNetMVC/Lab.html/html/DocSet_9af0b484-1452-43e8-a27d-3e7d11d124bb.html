@@ -1,0 +1,208 @@
+<html dir="ltr" xmlns:MSHelp="http://msdn.microsoft.com/mshelp" xmlns:dt="uuid:C2F41010-65B3-11d1-A29F-00AA00C14882" xmlns:xlink="http://www.w3.org/1999/xlink">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+    <meta name="save" content="history" />
+    <xml>
+      <MSHelp:TOCTitle Title="Exercise 1: Creating an ASP.NET MVC Application" />
+      <MSHelp:RLTitle Title="Exercise 1: Creating an ASP.NET MVC Application" />
+      <MSHelp:Attr Name="DocSet" Value="docSet" />
+      <MSHelp:Attr Name="TopicType" Value="kbOrient" />
+      <MSHelp:Attr Name="Locale" Value="kbEnglish" />
+      <MSHelp:Attr Name="AssetId" Value="{GUID}" />
+    </xml>
+    <title>Exercise 1: Creating an ASP.NET MVC Application</title>
+    <link rel="stylesheet" type="text/css" href="../local/Classic.css" />
+    <script src="../local/EventUtilities.js" type="text/jscript" language="jscript"> </script>
+    <script src="../local/SplitScreen.js" type="text/jscript" language="jscript"> </script>
+    <script src="../local/Dropdown.js" type="text/jscript" language="jscript"> </script>
+    <script src="../local/script.js" type="text/jscript" language="jscript"> </script>
+  </head>
+  <body>
+    <input type="hidden" id="userDataCache" class="userDataStyle" />
+    <input type="hidden" id="hiddenScrollOffset" />
+    <img id="dropDownImage" style="display:none; height:0; width:0;" alt="DropDown image" src="../local/drpdown.gif" />
+    <img id="dropDownHoverImage" style="display:none; height:0; width:0;" alt="DropDownHover image" src="../local/drpdown_orange.gif" />
+    <img id="collapseImage" style="display:none; height:0; width:0;" alt="Collapse image" src="../local/collapse_all.gif" />
+    <img id="expandImage" style="display:none; height:0; width:0;" alt="Expand image" src="../local/expand_all.gif" />
+    <img id="collapseAllImage" style="display:none; height:0; width:0;" alt="CollapseAll image" src="../local/collall.gif" />
+    <img id="expandAllImage" style="display:none; height:0; width:0;" alt="ExpandAll image" src="../local/expall.gif" />
+    <img id="copyImage" style="display:none; height:0; width:0;" alt="Copy image" src="../local/copycode.gif" />
+    <img id="copyHoverImage" style="display:none; height:0; width:0;" alt="CopyHover image" src="../local/copycodeHighlight.gif" />
+    <div id="header">
+      <table width="100%" id="topTable">
+        <tr id="headerTableRow1">
+          <td align="left">
+            <span id="runningHeaderText">Introduction to ASP.NET MVC</span>
+          </td>
+        </tr>
+        <tr id="headerTableRow2">
+          <td align="left">
+            <span id="nsrTitle">Exercise 1: Creating an ASP.NET MVC Application</span>
+          </td>
+        </tr>
+        <tr id="headerTableRow3">
+          <td />
+        </tr>
+      </table>
+    </div>
+    <div id="mainSection">
+      <div id="mainBody">
+        <div id="allHistory" class="saveHistory" onsave="saveAll()" onload="loadAll()" />
+        <p>In this exercise you will learn how to create an ASP.NET MVC application in Visual Studio and introduce the default project structure and conventions. </p>
+        <p>The ASP.NET MVC framework separates the model, view, and controller components. The model component typically maintains state by persisting data in a database. The view component is selected by the controller and renders the appropriate UI. By default, the ASP.NET MVC framework uses the existing ASP.NET page (.aspx), master page (.master), and user control (.ascx) types for rendering to the browser. The controller component locates the appropriate action method in the controller, gets values to use as the action method's arguments, and handles any errors that might occur when the action method runs. It then renders the requested view. By default, each set of components is in a separate folder of an MVC Web application project. </p>
+        <a name="_Task_1_–" href="#">
+          <span />
+        </a>
+        <a name="_Toc182141331" href="#">
+          <span />
+        </a>
+        <a name="_Toc223343086" href="#">
+          <span />
+        </a>
+        <a name="_Toc224707068" href="#">
+          <span />
+        </a>
+        <p>
+          <b>Task 1 – Creating an ASP.NET MVC Web Application Project</b>
+        </p>
+        <p>In this task you will create and configure an empty ASP.NET MVC application project using the MVC Visual Studio template.</p>
+        <ol>
+          <li>Open Microsoft Visual Studio 2008 from <b>Start</b> | <b>All Programs</b> | <b>Microsoft Visual Studio 2008</b> | <b>Microsoft Visual Studio 2008</b>. </li>
+          <li>On the <b>File</b> menu, point to <b>New</b>, and click <b>Project</b>.  </li>
+          <li>In the <b>New Project</b> dialog box make sure that <b>.NET Framework 3.5 </b>is selected and select the <b>Visual C# | ASP.NET MVC Web Application</b> project type. You may set the location to <b>AspNetMvc\Ex01-CreatingMvcApp\begin </b>which is the provided folder.</li>
+          <li>Change the <b>Name</b> to <b>MvcSampleApp</b> and click <b>OK</b>.<p><img src="images\cb138af8-b583-4eec-bccf-ce3b74109227.png" /></p><p><b>Figure 1</b><br /><i>Create New Project Dialog Box</i></p><br /><p>After selecting the <b>OK</b> button, you’ll be asked whether you’d like to create a test project as well. Select <b>Yes</b>, enter <b>MvcSampleApp.Test</b> as the name of the project, and then click <b>OK</b>.</p><div class="alert"><table width="100%" cellspacing="0" cellpadding="0"><tr><th align="left"><img class="note" src="../local/note.gif" />Note:</th></tr><tr><td>When you create a new MVC Web application, Visual Studio gives you the option to create two projects at the same time. The first project is a Web project where you can implement your application. The second project is a testing project where you can write unit tests for your MVC components.</td></tr></table><p /></div><br /><p><img src="images\4ce1d5a5-6b57-4a39-a333-c30b1617ba00.png" /></p><p><b>Figure 2</b><br /><i>Create Unit Tests Dialog Box</i></p><br /><div class="alert"><table width="100%" cellspacing="0" cellpadding="0"><tr><th align="left"><img class="note" src="../local/note.gif" />Note:</th></tr><tr><td> The <b>Test framework </b>drop-down list on the test project dialog window currently only has an option for <b>Visual Studio Unit Test</b>. This list is extensible and will include other testing framework options when they’re installed on your machine. This will enable you to easily begin writing unit tests against your ASP.NET MVC application using your favorite unit testing framework.</td></tr></table><p /></div><br /></li>
+          <li>Configure the web site to use port 50000. This step is needed for consistency with the end solution provided.<ol><li>To do this, in <b>Solution Explorer</b>, right-click <b>MvcSampleApp</b> project and in the context menu select <b>Properties</b>. </li><li>In the <b>Property</b> pages open the <b>Web</b> tab.</li><li>In the <b>Servers</b> section select <b>Specific Port</b>.</li><li>Set the port number to <b>50000</b>.</li><li>Press <b>Ctrl</b> + <b>S</b> to save changes.<p><img src="images\8e40ad73-0fc9-4c46-9c6e-9237e3e22da7.png" /></p><p><b>Figure 3</b><br /><i>Specifying a port number</i></p></li></ol></li>
+        </ol>
+        <a name="_Toc224707069" href="#">
+          <span />
+        </a>
+        <p>
+          <b>Task 2 – Exploring the Solution Structure</b>
+        </p>
+        <p>The ASP.NET MVC framework includes a Visual Studio project template that helps you create Web applications that are structured to support the MVC pattern. This template creates a new MVC Web application that is configured to have the required folders, item templates, and configuration-file entries.</p>
+        <p>In this task you will examine the solution structure to understand the involved elements and its relationships.</p>
+        <ol>
+          <li>Press <b>Ctrl+ Alt + L</b> to see the <b>Solution Explorer</b> and expand the folders to expose its content.<p><img src="images\c2b0a067-b1c8-4268-91c4-4d1d22ad897d.png" /></p><p><b>Figure 4</b><br /><i>ASP.NET MVC Solution Structure</i></p><br /><p>When you create an ASP.NET MVC Web application project, MVC components are separated based on the following project folders:</p><ul><li><b>App_data: </b>The App_Data folder is the physical store for data. This folder has the same role as it does in ASP.NET Web sites that use Web Forms pages.</li><li><b>Content</b>: The Content folder is the recommended location to add content files such as cascading style sheet files, images, and so on. In general, the Content folder is for static files.</li><li><b>Controllers:</b> Controller classes. In a MVC based application are the components responsible for handling end user interaction, manipulating the model, and ultimately choosing a view to render to display UI.<div class="alert"><table width="100%" cellspacing="0" cellpadding="0"><tr><th align="left"><img class="note" src="../local/note.gif" />Note:</th></tr><tr><td> The MVC framework requires the names of all controllers to end with "Controller"—for example, HomeController, LoginController, or ProductController.</td></tr></table><p /></div></li><br /><li><b>Models</b>: The Models folder is provided for classes that represent the application model for your MVC Web application. This usually includes code that defines objects and that defines the logic for interaction with the data store. Typically, the actual model objects will be in separate class libraries. However, when you create a new application, you might put classes here and then move them into separate class libraries at a later point in the development cycle.</li><li><b>Scripts</b>: This is the recommended place to store JavaScript files in your application.</li><li><b>Views</b>: The Views folder is the recommended location for views. Views are the components responsible for displaying the application's user interface. Views use .aspx, .ascx, and .master files, in addition to any other files that are related to rendering views. The Views folder contains a folder for each controller; the folder is named with the controller-name prefix. For example, if you have a controller named <b>HomeController</b>, the Views folder will contain a folder named Home. By default, when the ASP.NET MVC framework loads a view, it looks for an .aspx file that has the requested view name in the Views\controllerName folder (<b>Views\[ControllerName]\[Action].aspx</b>).</li><li><b>Views\Shared:</b> By default, there is also a folder named Shared in the Views folder, which does not correspond to any controller. The Shared folder is used for views that are shared across multiple controllers. For example, you can put the Web application's master page in the Shared folder.</li></ul></li>
+          <div class="alert">
+            <table width="100%" cellspacing="0" cellpadding="0">
+              <tr>
+                <th align="left">
+                  <img class="note" src="../local/note.gif" />Note:</th>
+              </tr>
+              <tr>
+                <td> In addition to the folders listed previously, an MVC Web application uses the <b>Global.asax</b> file to set global URL routing defaults, and it uses the Web.config file to configure the application.</td>
+              </tr>
+            </table>
+            <p />
+          </div>
+        </ol>
+        <a name="_Toc223343087" href="#">
+          <span />
+        </a>
+        <a name="_Toc224707070" href="#">
+          <span />
+        </a>
+        <p>
+          <b>Task 2 – Understanding the Controllers</b>
+        </p>
+        <p>In ASP.NET applications that do not use the MVC framework, user interaction is organized around pages, and around raising and handling events from those pages. In contrast, user interaction with ASP.NET MVC applications is organized around controllers and their action methods.</p>
+        <p>The ASP.NET MVC framework maps URLs to classes that are referred to as controllers. Controllers process incoming requests, handle user input and interactions, and execute appropriate application logic. A controller class typically calls a separate view component to generate the HTML markup for the request. In an MVC application, the view only displays information; the controller handles and responds to user input and interaction.</p>
+        <ol>
+          <li>Open the <b>Home Controller</b>. To do this, in the Solution Explorer, double-click the <b>HomeController.cs</b> file under <b>Controllers</b> folder. You will see the following code:<div class="alert"><table width="100%" cellspacing="0" cellpadding="0"><tr><th align="left"><img class="note" src="../local/note.gif" />Note:</th></tr><tr><td> The default behavior of the MVC framework requires that all controller classes must be suffixed with "<b>Controller</b>". This convention can be modified if desired. All controller classes must implement the <b>IController</b> interface (or inherit from the <b>Controller</b> base class, which in turn implements <b>IController</b>).<br />The controller defines action methods. In the typical workflow of an MVC Web application, controller action methods handle the incoming web request. These action methods use the incoming parameter values to execute application code, retrieve or update data model objects from a database, and select a view that renders a response to a browser.</td></tr></table><p /></div><br /><p><img src="images\3f4ec961-b99e-47a3-8706-9cf95702e374.png" /></p><p><b>Figure 5</b><br /><i>Viewing the Controller’s auto generated code</i></p></li>
+          <br />
+          <div class="alert">
+            <table width="100%" cellspacing="0" cellpadding="0">
+              <tr>
+                <th align="left">
+                  <img class="note" src="../local/note.gif" />Note:</th>
+              </tr>
+              <tr>
+                <td> The <b>[HandleError]</b> attribute filter provides a way to declaratively indicate on a Controller or Action method that a friendly error response should be displayed if an error occurs during the processing of an ASP.NET MVC request.</td>
+              </tr>
+            </table>
+            <p />
+          </div>
+          <br />
+          <div class="alert">
+            <table width="100%" cellspacing="0" cellpadding="0">
+              <tr>
+                <th align="left">
+                  <img class="note" src="../local/note.gif" />Note:</th>
+              </tr>
+              <tr>
+                <td> Notice that the methods name binds to actions in the request URL. In order for an action method to be callable, it must be public, and not have a <b>[NonActionAttribute]</b> attached to it.<br />Action methods must return an <b>ActionResult</b> instance. An action result is what a controller action returns after executing, in response to a browser request. This can include: rendering a view, redirecting to another action, redirecting to another page, etc.<br />ASP.NET MVC framework supports several types of action results including:<br />- <b>ViewResult</b>: Represents HTML and markup. <br />- <b>EmptyResult:</b> Represents no result.<br />- <b>RedirectResult</b>: Represents a redirection to a new URL.<br />- <b>JsonResult</b>: Represents a JavaScript Object Notation result that can be used in an AJAX application.<br />- <b>JavaScriptResult</b>: Represents a JavaScript script.<br />- <b>ContentResult</b>: Represents a text result.<br />- <b>FileContentResult</b>: Represents a downloadable file (with the binary content).<br />- <b>FilePathResult</b>: Represents a downloadable file (with a path).<br />- <b>FileStreamResult</b>: Represents a downloadable file (with a file stream).<br /><br />In this case the actions do not return a <b>ViewResult()</b>,<b> </b>but the <b>View()</b> method of the <b>Controller</b> base class. Normally, you do not return an <b>ActionResult</b> directly; instead, you call one of the following methods of the <b>Controller</b> base class:<br />- <b>View</b>: Returns a <b>ViewResult</b> action result. <br />- <b>Redirect</b>: Returns a <b>RedirectResult</b> action result. <br />- <b>RedirectToAction</b>: Returns a <b>RedirectToRouteResult</b> action result (redirects to the specified action). <br />- <b>RedirectToRoute</b>: Returns a <b>RedirectToRouteResult</b> action result (redirects to the specified route). <br />- <b>Json</b>: Returns a <b>JsonResult</b> action result. <br />- <b>JavaScriptResult</b>: Returns a <b>JavaScriptResult</b>. <br />- <b>Content</b>: Returns a <b>ContentResult</b> action result. <br />- <b>File</b>: Returns a <b>FileContentResult</b>, <b>FilePathResult</b>, or <b>FileStreamResult</b> depending on the parameters passed to the method. <br /> For more information, see <a href="http://www.asp.net/learn/mvc/tutorial-03-cs.aspx">http://www.asp.net/learn/mvc/tutorial-03-cs.aspx</a>. </td>
+              </tr>
+            </table>
+            <p />
+          </div>
+          <br />
+          <li>Views should only render their output using the view-specific data provided by the Controller class. In the ASP.NET MVC Framework we call this view-specific data, <b>ViewData</b>. <div class="alert"><table width="100%" cellspacing="0" cellpadding="0"><tr><th align="left"><img class="note" src="../local/note.gif" />Note:</th></tr><tr><td> To pass data to the view, you can use the <b>ViewData</b> property of the <b>ControllerBase</b> class. This property returns a <b>ViewDataDictionary</b> object that has case-insensitive string keys. You can use the <b>ViewData</b> dictionary for this or use strongly-typed data as we will cover in this lab. Notice that in the <b>Home</b> controller, the methods set values in the <b>ViewData</b> dictionary and returns to the view associated to the action calling the <b>View</b> method of the controller.</td></tr></table><p /></div><br /><p><img src="images\c22fafe7-05e8-4713-996b-a018d4398839.png" /></p><p><b>Figure 6</b><br /><i>Using the ViewData dictionary</i></p><br /></li>
+        </ol>
+        <a name="_Toc223343088" href="#">
+          <span />
+        </a>
+        <a name="_Toc224707071" href="#">
+          <span />
+        </a>
+        <p>
+          <b>Task 3 – Understanding the Views</b>
+        </p>
+        <p>In the typical workflow of an MVC Web application, controller action methods handle an incoming Web request. These action methods use the incoming parameter values to execute application code, and retrieve or update data model objects from a database. They then select a view that renders a response to a browser.</p>
+        <ol>
+          <li>In an MVC application the views are the components responsible for displaying the application's user interface. Views are intended exclusively for encapsulating presentation logic. They should not contain any application logic or database retrieval code. Views render the appropriate UI by using this View Data class which is a MVC view-related data object that the controller provides when it calls the method to render the view.</li>
+          <li>The views use .aspx, .ascx, and .master files, as well as any other files that are related to rendering views. The Views folder contains a folder for each controller that is named with the controller prefix.</li>
+          <li>Open the <b>Index</b> view of the <b>Home</b> controller. To do this, in <b>Solution Explorer</b>, double-click the <b>Index.aspx</b> file under <b>Views\Home</b> folder.<div class="alert"><table width="100%" cellspacing="0" cellpadding="0"><tr><th align="left"><img class="note" src="../local/note.gif" />Note:</th></tr><tr><td> View-templates do not have a code-behind file by default.  This is mainly to reinforce the purpose of views in a MVC application which are intended to be purely about rendering and to not contain any non-rendering related code.</td></tr></table><p /></div><br /><p><img src="images\f8654e98-2645-40bb-859e-98787ccbd06f.png" /></p><p><b>Figure 7</b><br /><i>Viewing the View’s auto generated code</i></p><br /><div class="alert"><table width="100%" cellspacing="0" cellpadding="0"><tr><th align="left"><img class="note" src="../local/note.gif" />Note:</th></tr><tr><td> The <b>Html</b> object is an instance of the <b>HtmlHelper</b> class which provides useful common methods to generate HTML tags. The <b>Encode</b> method applies HTML encoding to a specified string. In this case, the View is encoding the <b>Message</b> value received from the Controller through the <b>ViewData</b> dictionary.<br />From within your View you can access the <b>ViewData</b> in either a late-bound or strongly-typed way. If your View derives from <b>ViewPage</b>, the <b>ViewData</b> property will be typed as a late-bound dictionary.  If your View derives from the generics based <b>ViewPage&lt;T&gt;</b>, where <b>T</b> indicates the data object type of the <b>ViewData</b> the controller is passing to the View, the <b>ViewData</b> property will be strongly typed to match the same type that your controller passed in.</td></tr></table><p /></div><br /></li>
+        </ol>
+        <a name="_Toc223343089" href="#">
+          <span />
+        </a>
+        <a name="_Toc224707072" href="#">
+          <span />
+        </a>
+        <p>
+          <b>Task 4 – Understanding the ASP.NET URL Routing</b>
+        </p>
+        <p>The ASP.NET MVC framework uses <b>ASP.NET Routing</b> to map URLs to controller classes and actions. <b>ASP.NET Routing</b> parses variables in the URL according to a pattern that you define, and automatically passes the variables to a controller action as parameter arguments. In this way the URLs do not have to map to specific files in a Web site.</p>
+        <p>By default ASP.NET MVC projects have a preconfigured set of URL routing rules that enable you to easily get started on an application without needing to explicitly configure anything.  You can start developing using a default set of name-based URL mapping conventions that are declared within the ASP.NET <b>Application</b> class of the <b>Global.asax</b> file created by the new ASP.NET MVC project template in Visual Studio.</p>
+        <p>The preconfigured routing rule indicates that the ASP.NET MVC framework should by default map URLs to Controllers using a <b><i>[controller]/[action]/[id]</i></b> pattern when determining which <b>Controller</b> class to instantiate, and which <b>Action</b> method to invoke (along with which parameters should be passed in).  </p>
+        <div class="alert">
+          <table width="100%" cellspacing="0" cellpadding="0">
+            <tr>
+              <th align="left">
+                <img class="note" src="../local/note.gif" />Note:</th>
+            </tr>
+            <tr>
+              <td>Double-click <b>Global.asax</b> in <b>Solution Explorer</b> to see how the preconfigured routes are defined.</td>
+            </tr>
+          </table>
+          <p />
+        </div>
+        <br />
+        <br />
+        <ol>
+          <li>Start a new instance of the <b>MvcSampleApp</b> project. To do this, in <b>Solution Explorer</b> right-click <b>MvcSampleApp</b> project, point to <b>Debug</b> and select <b>Start New Instance</b>.<div class="alert"><table width="100%" cellspacing="0" cellpadding="0"><tr><th align="left"><img class="note" src="../local/note.gif" />Note:</th></tr><tr><td> If the dialog <b>Debugging Not Enabled</b> appears, select <b>Modify the Web.config file to enable debugging</b> and click <b>OK</b>.</td></tr></table><p /></div><br /><p>A request will be made to <a href="http://localhost:50000/"><b>http://localhost:50000</b></a> which will be intercepted by the <b>ASP.NET Routing</b> engine applying the <b><i>Default</i></b> registered route (the pattern is <b><i>[controller]/[action]/[id]</i>)</b>. Since the URL does not contain any controller to map, the routing engine will instantiate a default controller (<i>Home</i>), and invoke a default action (<i>Index</i>) specified in the registered route.</p><p><img src="images\c7b71332-2c45-479b-80ec-04f2e6a4527b.png" /></p><p><b>Figure 8</b><br /><i>Viewing the default registered route in Global.asax</i></p><br /><p>In this case, the default parameters for the route are <b>Home</b> as the controller, and <b>Index</b> as the action; that’s why <b>Home</b> controller’s<b> Index </b>View is rendered.</p><p><img src="images\2a3617dc-05f1-4605-9eee-f163a24a4a2c.png" /></p><p><b>Figure 9</b><br /><i>MVC Sample Application Home Page</i></p></li>
+          <br />
+          <div class="alert">
+            <table width="100%" cellspacing="0" cellpadding="0">
+              <tr>
+                <th align="left">
+                  <img class="note" src="../local/note.gif" />Note:</th>
+              </tr>
+              <tr>
+                <td> The default URL routing pattern is as indicated before: <b>…/[ControllerName]/[Action]/[Parameters]</b>. You can define new routing rules in the <b>RegisterRoutes</b> method in <b>Global.asax.cs</b> file. Routes are initialized in the <b>Application_Start</b> method of the <b>Global.asax.cs</b> or <b>Global.asax.vb</b> file. </td>
+              </tr>
+            </table>
+            <p />
+          </div>
+          <br />
+          <li>Browse to the <b>About</b> Page by clicking <b>About </b>link on page header. You will be redirected to the following address in the web browser <a href="http://localhost:50000/Home/About">http://localhost:50000/Home/About</a>  which invokes <b>About</b> method on the <b>Home Controller</b>.<p><img src="images\da5ff554-3631-45d3-8325-e8266c3fb05d.png" /></p><p><b>Figure 10</b><br /><i>About Page</i></p></li>
+        </ol>
+        <br />
+      </div>
+      <div id="footer">
+        <div class="footerLine">
+          <img src="../local/footer.gif" alt="Footer image" width="100%" height="3px" />
+        </div>To give feedback please write to mvckit@microsoft.com<p />Copyright © 2009 by Microsoft Corporation. All rights reserved.</div>
+    </div>
+  </body>
+</html>

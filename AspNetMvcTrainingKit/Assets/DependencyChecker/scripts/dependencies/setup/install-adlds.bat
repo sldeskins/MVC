@@ -1,0 +1,1 @@
+ServerManagerCmd -install ADLDS -allsubfeatures

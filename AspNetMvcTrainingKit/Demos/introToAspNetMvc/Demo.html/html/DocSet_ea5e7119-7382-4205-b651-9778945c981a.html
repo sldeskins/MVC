@@ -1,0 +1,595 @@
+<html dir="ltr" xmlns:MSHelp="http://msdn.microsoft.com/mshelp" xmlns:dt="uuid:C2F41010-65B3-11d1-A29F-00AA00C14882" xmlns:xlink="http://www.w3.org/1999/xlink">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+    <meta name="save" content="history" />
+    <xml>
+      <MSHelp:TOCTitle Title="Step-by-Step Walkthrough" />
+      <MSHelp:RLTitle Title="Step-by-Step Walkthrough" />
+      <MSHelp:Attr Name="DocSet" Value="docSet" />
+      <MSHelp:Attr Name="TopicType" Value="kbOrient" />
+      <MSHelp:Attr Name="Locale" Value="kbEnglish" />
+      <MSHelp:Attr Name="AssetId" Value="{GUID}" />
+    </xml>
+    <title>Step-by-Step Walkthrough</title>
+    <link rel="stylesheet" type="text/css" href="../local/Classic.css" />
+    <script src="../local/EventUtilities.js" type="text/jscript" language="jscript"> </script>
+    <script src="../local/SplitScreen.js" type="text/jscript" language="jscript"> </script>
+    <script src="../local/Dropdown.js" type="text/jscript" language="jscript"> </script>
+    <script src="../local/script.js" type="text/jscript" language="jscript"> </script>
+  </head>
+  <body>
+    <input type="hidden" id="userDataCache" class="userDataStyle" />
+    <input type="hidden" id="hiddenScrollOffset" />
+    <img id="dropDownImage" style="display:none; height:0; width:0;" alt="DropDown image" src="../local/drpdown.gif" />
+    <img id="dropDownHoverImage" style="display:none; height:0; width:0;" alt="DropDownHover image" src="../local/drpdown_orange.gif" />
+    <img id="collapseImage" style="display:none; height:0; width:0;" alt="Collapse image" src="../local/collapse_all.gif" />
+    <img id="expandImage" style="display:none; height:0; width:0;" alt="Expand image" src="../local/expand_all.gif" />
+    <img id="collapseAllImage" style="display:none; height:0; width:0;" alt="CollapseAll image" src="../local/collall.gif" />
+    <img id="expandAllImage" style="display:none; height:0; width:0;" alt="ExpandAll image" src="../local/expall.gif" />
+    <img id="copyImage" style="display:none; height:0; width:0;" alt="Copy image" src="../local/copycode.gif" />
+    <img id="copyHoverImage" style="display:none; height:0; width:0;" alt="CopyHover image" src="../local/copycodeHighlight.gif" />
+    <div id="header">
+      <table width="100%" id="topTable">
+        <tr id="headerTableRow1">
+          <td align="left">
+            <span id="runningHeaderText">Introduction to ASP.NET MVC</span>
+          </td>
+        </tr>
+        <tr id="headerTableRow2">
+          <td align="left">
+            <span id="nsrTitle">Step-by-Step Walkthrough</span>
+          </td>
+        </tr>
+        <tr id="headerTableRow3">
+          <td />
+        </tr>
+      </table>
+    </div>
+    <div id="mainSection">
+      <div id="mainBody">
+        <div id="allHistory" class="saveHistory" onsave="saveAll()" onload="loadAll()" />
+        <p>This demo is composed of the following segments:</p>
+        <ol>
+          <li>Creating and Exploring an MVC Application</li>
+          <li>Developing an MVC Application</li>
+          <li>Unit Testing an MVC Application</li>
+        </ol>
+        <a name="_Toc224114989" href="#">
+          <span />
+        </a>
+        <a name="_Toc224724213" href="#">
+          <span />
+        </a>
+        <h3 class="subheading">Segment #1 – Creating and Exploring an MVC Application</h3>
+        <table style="">
+          <tr valign="top">
+            <th>
+              <p>Action</p>
+            </th>
+            <th>
+              <p>Script</p>
+            </th>
+            <th>
+              <p>Screenshot</p>
+            </th>
+          </tr>
+          <tr valign="top">
+            <td>
+              <p>1. Open Microsoft Visual Studio 2008 from <b>Start</b> | <b>All Programs</b> | <b>Microsoft Visual Studio 2008</b><b>| Microsoft Visual Studio 2008</b>. </p>
+              <p>2. On the <b>File</b> menu, point to <b>New</b>, and click <b>Project</b>.  </p>
+              <p>3. In the <b>New Project</b> dialog box make sure that <b>.NET Framework 3.5</b> is selected and select the <b>Visual C#</b> | <b>ASP.NET MVC Web Application</b> project type. Provide the desired location.</p>
+              <p>4. Change the Name to <b>MvcSampleApp</b> and click <b>OK</b>.</p>
+            </td>
+            <td>
+              <ul>
+                <li>Let’s open Visual Studio 2008, and create a new MVC Application from scratch using the built-in Visual Studio <b>ASP.NET MVC Web Application</b> template included in the MVC Framework 1.0.</li>
+                <li>This template creates by default the entire solution structure and conventions that best fits an ASP.NET MVC application. </li>
+                <li>When you create a new MVC Web application, Visual Studio gives you the option to create two projects at the same time. The first project is a Web Application with the default project structure and conventions where you can implement your MVC application. The second project is a testing project where you can write unit tests for your MVC components.</li>
+                <li>In a moment you will see how the project is organized in terms of folders, and which files should be placed inside each of them.</li>
+                <li>The <b>Test framework </b>drop-down list on the <b>Create Unit Test Project</b> dialog has currently one option for <b>Visual Studio Unit Test</b>. This list is extensible and may include other testing framework options if installed on your machine. This will enable you to easily begin writing unit tests against your ASP.NET MVC application using your favorite unit testing framework.</li>
+              </ul>
+            </td>
+            <td>
+              <p>
+                <img src="images\1cd5a5bc-2a83-4a40-b513-ded764a90b80.png" />
+              </p>
+              <p>
+                <img src="images\7b02f363-7ccc-4be1-8199-617cab046928.png" />
+              </p>
+              <br />
+            </td>
+          </tr>
+          <tr valign="top">
+            <td>
+              <p>5. Press <b>Ctrl+ Alt + L</b> to see the <b>Solution Explorer</b> and expand the folders to expose its content.</p>
+              <p>6. Show the different folders in the solution with its contents.</p>
+            </td>
+            <td>
+              <ul>
+                <li>When you create an ASP.NET MVC Web application project, MVC components are separated into the following project folders:<ul><li><b>App_data: </b>The App_Data folder is the physical store for data. This folder has the same role as it does in ASP.NET Web sites that use Web Forms pages.</li><li><b>Content</b>: This folder is the recommended location to add content files such as cascading style sheet files, images, and so on. In general, the Content folder is for static files.</li><li><b>Controllers:</b> In this folder you can place Controller classes. In an MVC based application, these are the components responsible for handling end user interaction, manipulating the model, and ultimately choosing a view to render to display UI.</li><li><b>Models</b>: In this folder you can place classes that represent the application model of your MVC Web application. This usually includes code that defines objects and that defines the logic for interaction with the data store. Typically, the actual model objects will be in separate class libraries. However, when you create a new application, you might put classes here and then move them into separate class libraries at a later point in the development cycle.</li><li><b>Scripts</b>: In this folder you can place the JavaScript files of your application.</li><li><b>Views</b>: This folder is the recommended location for placing views. Views are the components responsible for displaying the application's user interface. Views use <b>.aspx</b>, <b>.ascx</b>, and <b>.master</b> files, in addition to any other files that are related to rendering views. The Views folder contains a folder for each controller that is named with the controller-name prefix. For example, if you have a controller named <b>HomeController</b>, the Views folder will contain a folder named Home.</li><li><b>Views\Shared:</b> This folder does not correspond to any controller. The <b>Shared</b> folder is used for views that are shared across multiple controllers. For example, you can put the Web application's master page in the Shared folder.</li></ul></li>
+              </ul>
+            </td>
+            <td>
+              <p>
+                <img src="images\81721e4b-133c-451d-aa82-5f039a6db492.png" />
+              </p>
+            </td>
+          </tr>
+          <tr valign="top">
+            <td>
+              <p>7. Open the <b>Home Controller</b>. To do this, in <b>Solution Explorer</b>, double-click the <b>HomeController.cs</b> file under <b>Controllers</b> folder.</p>
+              <br />
+              <p>8. Show how <b>HomeController</b> inherits from the <b>Controller</b> class, and highlight the methods representing action methods.</p>
+            </td>
+            <td>
+              <ul>
+                <li>Before running the application, you should have a basic notion about how the framework works behind the scenes. We will start by understanding what is a controller and how it works in ASP.NET.</li>
+                <li>In ASP.NET applications that do not use the MVC framework, user interaction is organized around pages, and around raising and handling events from those pages. In contrast, user interaction with ASP.NET MVC applications is organized around controllers and their action methods.</li>
+                <li>The ASP.NET MVC framework maps URLs to classes that are referred to as controllers. Controllers process incoming requests, handle user input and interactions, and execute appropriate application logic.</li>
+                <li>Let’s move to see more concretely what controllers are about. I will open the home controller to show how a Controller class is defined, and how action methods are created to handle user interaction. These action methods use the incoming parameter values to execute application code, retrieve or update data model objects from a database, and select a view that renders a response to a browser.</li>
+                <li>The action methods names bind to actions in the URL request. In order for an action method to be callable, it must be public, and do not have a <b>[NonActionAttribute]</b> associated to it.</li>
+                <li>The default behavior of the MVC framework requires that all controller classes must be suffixed with "<b>Controller</b>". This convention can be modified if desired. All controller classes must implement the <b>IController</b> interface or inherit from the <b>Controller</b> base class, which in turn implements <b>IController</b>.</li>
+                <li>The <b>[HandleError]</b> attribute filter provides a way to declaratively indicate on a Controller or Action method that a friendly error response should be displayed if an error occurs during the processing of an ASP.NET MVC request.</li>
+                <li>Action methods must return an <b>ActionResult</b> instance. An action result is what a controller action returns after executing, in response to a browser request. This can include rendering a view, redirecting to another action, redirecting to another page, a downloadable file, a JavaScript file, and more.</li>
+              </ul>
+            </td>
+            <td>
+              <p>
+                <img src="images\fa530ba7-2487-45b4-920e-ffcd9b5f9b2d.png" />
+              </p>
+            </td>
+          </tr>
+          <tr valign="top">
+            <td>
+              <p>9. Open the <b>Index</b> view associated to the <b>HomeController</b>. To do this, in <b>Solution Explorer</b>, double-click <b>Index.aspx</b> under <b>Views\Home</b> folder. </p>
+              <p>10. Show that the View inherits from <b>System.Web.Mvc.ViewPage</b>.</p>
+              <p>11. Show the <b>Html.Enconde</b> call.</p>
+            </td>
+            <td>
+              <ul>
+                <li>Let’s see how is that a view can be associated to the action method of a controller. As seen before, all the views corresponding to a particular controller are located under the <b>Views\Controller</b> folder. In this case, I want to open the <b>Index</b> view of the <b>Home</b> controller, which will be rendered whenever the <b>Index</b> action method is called.</li>
+                <li>In an MVC application the views are the components responsible for displaying the application's user interface. Views are intended exclusively for encapsulating presentation logic. </li>
+                <li>Views should not contain any application logic or database retrieval code. Views render the appropriate UI by using this <b>ViewData</b> class, which is an MVC view-related data object provided by the controller.</li>
+                <li>From within your View you can access the <b>ViewData</b> in either a late-bound or strongly-typed way. If your View derives from <b>ViewPage</b>, the <b>ViewData</b> property will be typed as a late-bound dictionary. If your view derives from the generics based <b>ViewPage&lt;T&gt;</b>, <b>T</b> indicates the data object type of the strongly typed <b>ViewData</b> provided by the controller.</li>
+                <li>View-templates do not have a code-behind file by default. This is mainly to reinforce the purpose of views in a MVC application, which are intended to be purely about rendering and to not contain any non-rendering related code.</li>
+                <li>The <b>Html</b> object used in this code snippet is an instance of the <b>HtmlHelper</b> class, which provides useful common methods to generate HTML tags. The <b>Encode()</b> method applies HTML encoding to a specified string. In this case, the view is encoding the <b>Message</b> value received from the Controller through the <b>ViewData</b> dictionary.</li>
+              </ul>
+            </td>
+            <td>
+              <p>
+                <img src="images\2cf4a485-b3a8-402b-af1c-9c1771436667.png" />
+              </p>
+              <br />
+            </td>
+          </tr>
+          <tr valign="top">
+            <td>
+              <p>12. Double-click <b>Global.asax</b> in <b>Solution Explorer</b> to see how the preconfigured routes are defined.</p>
+              <p>13. Show the default route in the <b>RegisterRoutes</b> method.</p>
+            </td>
+            <td>
+              <ul>
+                <li>Until now, we have seen controllers, their associated views, and how they are rendered based on the action method that handles the request. But there is an important piece missing: How does the framework knows which controller should instantiate, and which action method should invoke based on the request URL?</li>
+                <li>The answer is <b>ASP.NET Routing</b>. This mechanism parses variables in the URL according to a pattern that you define, and automatically passes the variables to a controller action as parameter arguments. With this approach, the URLs do not have to map to specific files in a Web site.</li>
+                <li>These patterns or rules are specified in the ASP.NET <b>Application</b> class of the <b>Global.asax</b> file. Let’s open the <b>Global.asax</b> file, and see that by default <b>ASP.NET MVC</b> projects provide a preconfigured set of URL routing rules that enable you to easily get started on an application without needing to explicitly configure anything. However, you can define new routing rules that better fits your scenario in the <b>RegisterRoutes</b> method in <b>Global.asax</b>.</li>
+                <li>The preconfigured routing rule indicates that the ASP.NET MVC framework should by default map URLs to Controllers using a <b><i>[controller]/[action]/[id]</i></b> pattern when determining which <b>Controller</b> class to instantiate, and which <b>Action</b> method to invoke along with the id which are the parameters that should be passed in.</li>
+                <li>The third parameter in the current <b>MapRoute </b>overload we are using<b> </b>specifies the action that should be performed if the request URL does not match with the registered route. This action will be to instantiate the <b>Home</b> controller, and invoke the <b>Index</b> action method. We will see how this works in a few minutes when browsing the default page.</li>
+              </ul>
+            </td>
+            <td>
+              <p>
+                <img src="images\92c6e102-7d33-45d8-a24a-f8a1dcff6a1c.png" />
+              </p>
+            </td>
+          </tr>
+          <tr valign="top">
+            <td>
+              <p>14. Start a new instance of the <b>MvcSampleApp</b> project. To do this, in <b>Solution Explorer</b> right-click <b>MvcSampleApp</b> project, point to <b>Debug</b> and select <b>Start New Instance</b>.</p>
+              <p>15. If the <b>Script Debugging Disabled </b>dialog<b> </b>appears, click <b>Yes</b> to continue debugging.</p>
+              <p>16. Show the URL in the browser: <a href="http://localhost:50000/"><b>http://localhost:50000</b></a>.</p>
+            </td>
+            <td>
+              <ul>
+                <li>It’s time to see our MVC application working. Let’s start a new instance and see what is happening with the default page.</li>
+                <li>A request is made to <a href="http://localhost:50000/"><b>http://localhost:50000</b></a> which is intercepted by the <b>ASP.NET Routing</b> engine applying the <b><i>Default</i></b> registered route we’ve seen before <b><i>[controller]/[action]/[id]</i></b>. Since the URL does not contain any controller to map, the routing engine instantiates the <b>Home</b> controller, and invokes the <b>Index</b> action method as seen before.</li>
+              </ul>
+            </td>
+            <td>
+              <p>
+                <img src="images\ebc47754-d805-420e-bc65-c9ac3e43d0ee.png" />
+              </p>
+            </td>
+          </tr>
+          <tr valign="top">
+            <td>
+              <p>17. With the solution running, open the <b>HomeController.cs</b> file for debugging.</p>
+              <p>18. Insert a breakpoint in the <b>return View()</b> line of the the <b>About</b> action method. To do this, set the cursor in the line and press <b>F9</b>.</p>
+              <p>19. After the breakpoint is hit, press <b>F5</b> to continue execution.</p>
+            </td>
+            <td>
+              <ul>
+                <li>Before browsing the <b>About</b> link I will put a breakpoint in the <b>About</b> action method to verify that is indeed handling the request for the current route.</li>
+                <li>Let’s click the <b>About</b> link and see how the breakpoint is hit. I will resume the execution and the view for the <b>About</b> action will be rendered.</li>
+                <li>Pay attention to the URL in the <b>About</b> page: <a href="http://localhost:50000/Home/About"><b>http://localhost:50000/Home/About</b>.</a>According to default defined route, <b>ASP.NET</b><b>Routing</b> understands that has to instantiate a <b>Home</b> controller, and invoke the <b>About</b> action method with no additional parameters.</li>
+              </ul>
+            </td>
+            <td>
+              <p>
+                <img src="images\ff618fd8-309d-4184-a802-4a5a010b7342.png" />
+              </p>
+              <br />
+              <p>
+                <img src="images\a1f4675e-71a2-476e-8f8f-909b6601de71.png" />
+              </p>
+              <br />
+              <p>
+                <img src="images\3af2f224-c579-4479-ad3d-f01fc3665e2a.png" />
+              </p>
+            </td>
+          </tr>
+        </table>
+        <br />
+        <br />
+        <a name="_Toc224724214" href="#">
+          <span />
+        </a>
+        <h3 class="subheading">Segment #2 – Developing an MVC Application</h3>
+        <table style="">
+          <tr valign="top">
+            <th>
+              <p>Action</p>
+            </th>
+            <th>
+              <p>Script</p>
+            </th>
+            <th>
+              <p>Screenshot</p>
+            </th>
+          </tr>
+          <tr valign="top">
+            <td>
+              <p>20. Open the solution file <b>MvcSampleApp.sln</b> located under <b>..\Demos\introToAspNetMvc\code\</b>. </p>
+              <p>21. Open the <b>AdventureWorks</b> entity data model, located in the <b>Model</b> folder.</p>
+              <p>22. Show the generated model created with ADO.NET Entity framework, which contains only the <b>Products</b> table.</p>
+            </td>
+            <td>
+              <ul>
+                <li>Let’s open a solution that has already some controllers, views and the model implemented. As we talked before, these are the principal actors of an MVC application.</li>
+                <li>It is now time to introduce the model. These components of an application are responsible for maintaining state; in web applications this state is typically persisted inside a database.</li>
+                <li>The ASP.NET MVC Framework enables you to use any data access pattern or framework you want in order to retrieve and manage your models.You can use ADO.NET DataSets/DataReaders if you want. You can also use object relational mapper (ORM) like ADO.NET Entity framework, NHibernate, LLBLGen, if you prefer.</li>
+                <li>In this case the model was created using ADO.NET Entity framework. </li>
+                <li>Let’s open the model which is located in the <b>Model</b> folder. As you can see, our model is very simple and only contains a products table.</li>
+              </ul>
+            </td>
+            <td>
+              <p>
+                <img src="images\dfeec07b-1838-43ce-a9f5-ae9ae765f280.png" />
+              </p>
+            </td>
+          </tr>
+          <tr valign="top">
+            <td>
+              <p>23. Open the <b>AdventureWorksRepository </b>class, located in the <b>Model</b> folder.</p>
+              <p>24. Show the different methods of the class that perform the CRUD operations on the <b>Product</b> table of the database.</p>
+            </td>
+            <td>
+              <ul>
+                <li>In the <b>Model</b> folder, we have an additional class, the <b>AdventureWorksRepository</b>. The repository exposes methods to retrieve entities from the model, generating a level of abstraction from the underlying data model.</li>
+                <li>As you can see, the <b>AdventureWorksRepository</b> class contains methods to query the database and perform CRUD operations on the database.The <b>GetProducts</b> and <b>GetProductsByID</b> retrieve data from the database, while <b>AddProduct</b>, <b>UpdateProduct</b>, and <b>DeleteProduct</b> methods; insert, update, and delete products from the database, respectively.</li>
+              </ul>
+            </td>
+            <td>
+              <p>
+                <img src="images\be40d4da-3552-4d23-b52c-6eaccda071e8.png" />
+              </p>
+            </td>
+          </tr>
+          <tr valign="top">
+            <td>
+              <p>25. Create an empty MVC controller class. In the <b>Solution Explorer</b> right-click the <b>Controllers</b> folder, point to <b>Add</b> and select Controller.</p>
+              <p>26. Leave the <b>Controller Name</b> as it is and select the <b>Add action methods for Create, Update and Details scenarios</b>, and then click <b>Add</b>.</p>
+              <p>27. In the recently created controller, show the automatically created stub methods.</p>
+            </td>
+            <td>
+              <ul>
+                <li>We will create a controller using the Visual Studio tooling. To do this, right-click the <b>Controllers</b> folder, point to <b>Add</b> and click <b>Controller</b>.</li>
+                <li>As I mentioned before, the convention for controller naming is to add the <b>Controller</b> suffix to the class name; here you can see how this convention is integrated in the <b>Add Controller</b> dialog window. We can also select the option to add action methods for Create, Update and Details scenarios automatically. Clicking the <b>Add</b> button will cause the controller class to be created and added to the project.</li>
+                <li>This controller class will contain stub action methods for the selected scenarios that the MVC framework has automatically created. You only have to complete these methods with your own logic. For the <b>Edit</b> and <b>Create</b> scenarios two action methods were created, one for <b>GET</b> requests and one for <b>POST</b> requests.</li>
+              </ul>
+            </td>
+            <td>
+              <p>
+                <img src="images\f3fbbf60-c550-45c4-8815-5aee1796c986.png" />
+              </p>
+              <br />
+            </td>
+          </tr>
+          <tr valign="top">
+            <td>
+              <p>28. Open the <b>ProductsController</b> class, located in the <b>Controller</b> folder.</p>
+              <p>29. Show the implemented <b>Index</b> action method of this controller.</p>
+            </td>
+            <td>
+              <ul>
+                <li>For practical purposes, I will be working with the existing <b>Product</b> controller that has some of its action methods already implemented. Let’s see the <b>Index</b> method.</li>
+                <li>In the <b>Index</b> method we will create a new instance of the <b>ProductViewData</b> and set its properties: a list of all products to show, and the previous and next page number required to implement the list pagination.</li>
+                <li>Finally, we return the <b>Index</b> view, passing the view data as a parameter.</li>
+              </ul>
+            </td>
+            <td>
+              <p>
+                <img src="images\370f8413-eff6-461d-925f-f16bd1fe4692.png" />
+              </p>
+            </td>
+          </tr>
+          <tr valign="top">
+            <td>
+              <p>30. Show both <b>Create</b> action methods of this controller.</p>
+            </td>
+            <td>
+              <ul>
+                <li>Let’s see the Create action methods used in Insertion scenarios. As you can see, there are two action methods for this, one to respond to <b>GET</b> requests (where the initial empty form will be displayed) and one for <b>POST</b> requests (to impact the insertion in the model and the database).</li>
+                <li>Notice that the method used for <b>POST</b> requests has the <b>AcceptVerbs</b> attribute applied. This method creates a new product instance, use the <b>UpdateModel</b> helper method to bind the form data to the instance properties; and finally use the repository class to insert the product in the database.</li>
+              </ul>
+            </td>
+            <td>
+              <p>
+                <img src="images\f3922537-9f03-4a73-b1c5-ad74612885b4.png" />
+              </p>
+            </td>
+          </tr>
+          <tr valign="top">
+            <td>
+              <p>31. Open the <b>ProductsViewData</b> class, located in the <b>ViewData</b> folder.</p>
+              <p>32. Show the two properties of the class that are used for rendering the product controller’s views.</p>
+            </td>
+            <td>
+              <ul>
+                <li>Now, let’s examine the <b>ProductViewData</b> class. This class contains the ViewData for some of the Products’ views.</li>
+                <li>The class contains the <b>Products</b>, <b>PreviousPage</b>, and <b>NextPage</b> properties, which are used for rendering some of the views of the product controller.</li>
+              </ul>
+            </td>
+            <td>
+              <p>
+                <img src="images\91822930-3322-4829-a80c-cf709c8948c6.png" />
+              </p>
+            </td>
+          </tr>
+          <tr valign="top">
+            <td>
+              <p>33. Open the <b>Default1Controller </b>controller class created previously.</p>
+              <p>34. Right-click inside the <b>Index</b> method’s code and click <b>Add View</b>. In the dialog window, select <b>Create a strongly-typed view</b>. In the <b>ViewData class</b> and <b>View content</b> combo boxes, select <b>MvcSampleApp.ViewData.ProductViewData</b> and <b>List</b> respectively.</p>
+              <p>35. Repeat the same step for the <b>Edit</b> action method, selecting <b>MvcSampleApp.Models.Product</b> as the <b>ViewData class</b> and <b>Edit</b> as the <b>View content</b>.</p>
+              <p>36. Open the Solution Explorer window, and show the folder structure of the solution created by the scaffolding.</p>
+            </td>
+            <td>
+              <ul>
+                <li>Now we will create the views for each controller’s action method; we will use the <b>Default1Controller</b> that we have created previously. When you right-click inside the code of an action method, the <b>Add View</b> option appears. This option allows you to create empty view templates, or automatically generated view templates based on the type of object passed to the view by the Controller action method. The scaffolding mechanism uses reflection when creating view templates passed to it.</li>
+                <li>I will create a view based on the <b>Index</b> and <b>Edit</b> action methods of the <b>Product</b> controller, providing the <b>ProductViewData</b> and <b>Product</b> view data classes, and using the <b>List</b> and <b>Edit</b> view contents respectively.</li>
+                <li>Let’s see the solution explorer. Note that the framework created the new view and a folder for the controller inside the <b>Views</b> folder.</li>
+              </ul>
+            </td>
+            <td>
+              <p>
+                <img src="images\0cb15e9c-d1d1-46e9-aa89-3cc33b28b0fd.png" />
+              </p>
+              <br />
+              <p>
+                <img src="images\824abe81-6ae1-4a86-bac7-f7faa02b2263.png" />
+              </p>
+            </td>
+          </tr>
+          <tr valign="top">
+            <td>
+              <p>37. Open the <b>Edit.aspx</b> page, located in the <b>Views\Product</b> folder.</p>
+              <p>38. Show the design view of this page.</p>
+              <p>39. Open the <b>Index.aspx</b> page, located in the <b>Views\Product</b> folder.</p>
+              <p>40. Show the design view of this page and the HTML code.</p>
+            </td>
+            <td>
+              <ul>
+                <li>For practical purposes, we will see the existing scaffolded views of the product controller. I will open the <b>Edit</b> view. You can see that the framework has created the edit form automatically. These views work very well, but typically need some work to adjust them to your needs. For example, in this view I deleted the <b>ProductId</b> field because it should not an editable field.</li>
+                <li>For instance, the generated <b>Index</b> view took more effort to adjust it to the desired state, because we had to manually implement the pagination and select which field will be shown in the list.</li>
+              </ul>
+            </td>
+            <td>
+              <p>
+                <img src="images\6ba6fa82-08b6-48d4-a38c-7422e66f8c2d.png" />
+              </p>
+            </td>
+          </tr>
+          <tr valign="top">
+            <td>
+              <p>41. Open the <b>ProductsController</b> class, located in the <b>Controller</b> folder.</p>
+              <p>42. Set a breakpoint in the <b>Index</b> action method of this controller. Run the application and click the Products link.</p>
+            </td>
+            <td>
+              <ul>
+                <li>Now we will see how the action method is invoked when a request is made to <b>/Product/Index</b>. To do this, we will set a breakpoint in the Index action method of the products controller.</li>
+                <li>Let’s run the application and go to the Products list. The application execution breaks and we confirm that the routing is working well.Notice that by default the Index method is set as the default method of every controller. That is why when the URL points to a controller and no action method is specified, the default action method (<b>Index</b>) will be invoked.</li>
+              </ul>
+            </td>
+            <td>
+              <p>
+                <img src="images\d61848d6-7228-4cc9-b2a3-60edebe7b814.png" />
+              </p>
+            </td>
+          </tr>
+          <tr valign="top">
+            <td>
+              <p>43. Open the <b>Create.aspx</b> page and show the validation logic inside the HTML code.</p>
+              <p>44. Run the application. Go to the Products page and click <b>Create New</b>.</p>
+              <p>45. In the form, delete the <b>ProductID</b> field, enter some input in the <b>Name</b> field, enter some characters in the <b>StandardCost</b> field, and click <b>Save</b>.</p>
+            </td>
+            <td>
+              <ul>
+                <li>Finally, we will see how the default form validation works.</li>
+                <li>Let’s open the <b>Create.aspx</b> page to see the validation code that is inserted automatically by the MVC framework. You can see that for every form field, the <b>ValidationMessage</b> helper method was added. By default an “*” will be shown when an error occurs on the field, but this message can be customized. At the top of the form the <b>ValidationSummary</b> helper method was also added to show a list of all errors in the form.Keep in mind that this provided validation works with the constraints defined in the model.</li>
+                <li>So let’s run the application and we will try to create a new product.We will leave the <b>ProductID</b> field empty, enter something in the <b>Name</b> field, and enter some characters in the <b>StandardCost</b> field.Now let’s click save. The validation message will be shown and the fields with invalid inputs will be highlighted.Notice that the input entered in the form is not cleared, its state is preserved. This is the expected behavior of web application and saves the user for re-entering the data manually.</li>
+              </ul>
+            </td>
+            <td>
+              <p>
+                <img src="images\f3347cd6-349d-45c7-b244-f54faa77619b.png" />
+              </p>
+              <br />
+              <p>
+                <img src="images\960717ba-3ed8-4633-ac19-bb02a27d0b3e.png" />
+              </p>
+            </td>
+          </tr>
+        </table>
+        <br />
+        <a name="_Toc224558894" href="#">
+          <span />
+        </a>
+        <a name="_Toc224724215" href="#">
+          <span />
+        </a>
+        <h3 class="subheading">Segment #3 – Unit Testing an MVC Application</h3>
+        <table style="">
+          <tr valign="top">
+            <th>
+              <p>Action</p>
+            </th>
+            <th>
+              <p>Script</p>
+            </th>
+            <th>
+              <p>Screenshot</p>
+            </th>
+          </tr>
+          <tr valign="top">
+            <td>
+              <p>46. Expand the <b>MvcSampleApp.Tests</b> project.</p>
+              <p>47. Expand the <b>Controllers</b> folder, and show all the files contained in the test project.</p>
+            </td>
+            <td>
+              <ul>
+                <li>Now we will focus our attention in the test project. In this project you can find all the components to make unit testing to your Mvc application.</li>
+                <li>Separation of application tasks (input logic, business logic, and UI logic) in MVC ASP.NET applications enables testability, and test-driven development (TDD) by default.</li>
+                <li>All core contracts within the MVC framework are interface-based and can be tested by using mock objects, which are simulated objects that imitate the behavior of actual objects in the application.</li>
+                <li>You can unit-test the application without having to run the controllers in an ASP.NET process, which makes unit testing fast and flexible.</li>
+                <li>The <b>Controllers</b> folder contains all the classes that tests our controllers. As you can see here, we have one <b>TestClass</b> per controller. Each class will have all the methods that tests specific controller behavior.</li>
+                <li>We have also some other files such as <b>RouteTests </b>that contains all tests related to routing in our Mvc Application.</li>
+              </ul>
+            </td>
+            <td>
+              <p>
+                <img src="images\85903ea9-3e0b-41a3-9a7c-439c2f5e4967.png" />
+              </p>
+            </td>
+          </tr>
+          <tr valign="top">
+            <td>
+              <p>48. Open the <b>RouteTest.cs</b> file.</p>
+              <p>49. Show the <b>GetRouteDataForUrl()</b> method.</p>
+              <br />
+            </td>
+            <td>
+              <ul>
+                <li>Let’s see how can we test the route matching rules defined in <b>Global.asax</b>.</li>
+                <li><b>GetRouteDataForUrl</b> method emulates the mechanism that performs the ASP.NET Routing engine when it receives an URL, and returns the matching route data from the loaded application route collection. This method uses <b>moq</b> mocking library to mock the <b>HttpContextBase </b>class<b> </b>which enables to find the matching <b>RouteData</b> in the <b>RouteCollection </b>bas<b> </b>on<b> </b>the URL parameter.</li>
+              </ul>
+            </td>
+            <td>
+              <p>
+                <img src="images\39cc69c1-56f6-448e-8509-8c91e1f2a67e.png" />
+              </p>
+            </td>
+          </tr>
+          <tr valign="top">
+            <td>
+              <p>50. Show the <b>ShouldProductTakeInfoRoute()</b> method.</p>
+              <p>51. Insert a breakpoint in the first line of <b>ShouldProductTakeInfoRoute()</b> method. To do this, set the cursor on the line and press <b>F9</b>.</p>
+              <p>52. Leave the cursor inside the method. In <b>Test</b> menu, point to <b>Debug,</b> and select <b>Tests in Current Context</b>.</p>
+              <p>53. Keep pressing <b>F10</b> to <b>step over</b> to the next line until the test pass.</p>
+            </td>
+            <td>
+              <ul>
+                <li>Let’s pick one routing test method to see how this testing works.</li>
+                <li><b>ShouldProductTakeInfoRoute </b>is testing that when we make a request to <b>~/Product/Info/1</b>, the default registered route establishes that <b>Product</b> is the matching controller, <b>Info</b> is matching view, and <b>1</b> is the matching parameter.</li>
+                <li>Let’s analyze this step by step. I will insert a breakpoint in the first line and step over until the test pass.</li>
+                <li>First, we create an empty <b>RouteCollection</b>. We fill this collection by calling the <b>RegisterRoutes()</b> method defined in <b>Global.asax</b>. Consequently, the <b>RouteCollection</b> will contain the default route.</li>
+                <li>We call the <b>GetRouteDataForUrl() </b>to obtain the concrete route that matches our URL. Remember that this method mocks the ASP.NET routing behavior.</li>
+                <li>Once we have the concrete route, we must make sure that it is pointing to the right controller, views and parameters. This is what the following <b>Assert</b>s are doing.</li>
+                <li>Every<b> Assert </b>is correct<b>, </b>so we can see how the test passes.</li>
+              </ul>
+            </td>
+            <td>
+              <p>
+                <img src="images\feef37a3-acbe-4e46-9769-65c35358979d.png" />
+              </p>
+              <br />
+              <p>
+                <img src="images\c480250e-c9a7-4f53-abb7-ca40627cdf0c.png" />
+              </p>
+            </td>
+          </tr>
+          <tr valign="top">
+            <td>
+              <p>54. Open the <b>ProductControllerTest.cs</b> file under the <b>Controllers</b> folder.</p>
+              <p>55. Show the test method signatures.</p>
+              <p>56. Open the <b>AdventureWorksRepositoryStub.cs </b>file, and make a quick review to its methods.</p>
+              <br />
+              <br />
+              <br />
+            </td>
+            <td>
+              <ul>
+                <li>Now it is time to test some controllers. More concretely, we will see how to test some action methods of the <b>Product</b> controller.</li>
+                <li>In the application, the <b>Product</b> controller uses <b>AdventureWorks</b> entity data model to interact with the database. The idea here is to also simulate this behavior by creating a stub class of the <b>AdventureWorksRepository</b> so as to have full control over these tests. If any of them fail, you will be sure that the defect was produced within the <b>Controller</b> component rather than in the <b>AdventureWorks</b> entity data model.</li>
+                <li><b>GetProducts()</b> method returns just two fixed Products. While <b>GetProductById() </b>method creates an empty <b>Product</b> and assigns the productId that comes as a parameter.</li>
+              </ul>
+            </td>
+            <td>
+              <p>
+                <img src="images\8e686fbc-3c6f-4791-8c73-d5ac1411c6f2.png" />
+              </p>
+              <br />
+              <p>
+                <img src="images\bf9cae9a-fe77-4c90-9702-8638f1f29f24.png" />
+              </p>
+            </td>
+          </tr>
+          <tr valign="top">
+            <td>
+              <p>57. Switch to <b>ProductControllerTest.cs</b> file.</p>
+              <p>58. Show the <b>ShouldLoadProductDetailsView()</b> method.</p>
+              <p>59. Insert a breakpoint in the first line of <b>ShouldLoadProductDetailsView()</b> method. To do this, set the cursor on the line and press <b>F9</b>.</p>
+              <p>60. Leave the cursor inside the method. In <b>Test</b> menu, point to <b>Debug,</b> and select <b>Tests in Current Context</b>.</p>
+              <p>61. Keep pressing <b>F10</b> to <b>step over</b> to the next line until the test pass.</p>
+            </td>
+            <td>
+              <ul>
+                <li>Let’s pick one of the <b>Product</b> test method to see how this testing works.</li>
+                <li><b>ShouldLoadProductDetailsView </b>is<b> </b>testing that<b> </b>the <b>Details</b> action method is obtaining the specified <b>Product</b> from the repository, and returning the correct <b>ViewData</b> type having been filled with the proper content.</li>
+                <li>Let’s analyze this step by step. I will insert a breakpoint in the first line and step over until the test pass.</li>
+                <li>First, we create a new instance of the <b>ProductController</b> class, by passing the <b>AdventureWorksRepositoryStub</b>.<b> </b>By doing this we are telling the controller to use the stubbed repository, instead of the one created with entity data model.</li>
+                <li>We call the <b>Details</b> action method passing the product id <b>609 </b>as parameter. This method should return a <b>ViewResult</b>.</li>
+                <li>Once we have the <b>ViewResult</b>, we must make sure that the instance is of type <b>Product</b>, and that contains a product with id <b>609</b>. This is what the following <b>Assert</b>s are doing.</li>
+                <li>Every<b> Assert </b>is correct<b>, </b>so we can see how the test passes.</li>
+              </ul>
+            </td>
+            <td>
+              <p>
+                <img src="images\4103d224-102c-490f-aae0-8db78e0aa9cf.png" />
+              </p>
+              <br />
+              <p>
+                <img src="images\7945e89d-cd86-47ce-b6ac-eb4599ae3c14.png" />
+              </p>
+            </td>
+          </tr>
+        </table>
+        <br />
+        <br />
+        <br />
+      </div>
+      <div id="footer">
+        <div class="footerLine">
+          <img src="../local/footer.gif" alt="Footer image" width="100%" height="3px" />
+        </div>To give feedback please write to mvckit@microsoft.com<p />Copyright © 2009 by Microsoft Corporation. All rights reserved.</div>
+    </div>
+  </body>
+</html>

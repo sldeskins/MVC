@@ -1,0 +1,81 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<DependencyCheckerConfiguration>
+
+  <title>Introduction to ASP.NET MVC</title>
+  <!--<image>.\Resources\customLogo.png</image>-->
+
+  <previews>
+    <title>Steps Summary</title>    
+    <preview name="Check dependencies" description="Check prerequisites for the ASP.NET MVC Training Kit"></preview>	
+	  <preview name="Create a database alias" description="Create an alias for the AdventureWorksLT database"></preview>
+    <preview name="Install Visual Studio code snippets" description="Launch the Visual Studio installer to install the code snippets"></preview>       
+  </previews>
+  
+  <tasks>
+    <task description="Create an alias for the AdventureWorksLT database" scriptName=".\scripts\tasks\createDatabaseAlias.cmd" displayConsole="true"/>
+    <task description="Launch the Visual Studio installer to install the code snippets" scriptName=".\scripts\tasks\installVSCodeSnippets.cmd" displayConsole="true"/>    
+  </tasks>
+  
+  <dependencies>
+	<os type="Vista" buildNumber="6000">
+		<dependency
+                    value=".\scripts\Dependencies\Check\CheckVistaSP1.ps1"
+                    enabled="true"
+                    optional="false"
+					required="true"
+                    title="Windows Vista SP1"
+                    explanation="ASP.NET MVC Training Kit requires Windows Vista Service Pack 1"
+					scriptName=""
+					downloadUrl="http://www.microsoft.com/downloads/details.aspx?FamilyID=f559842a-9c9b-4579-b64a-09146a0ba746" />
+    </os>
+	
+	<os type="Vista;Server" buildNumber="6001;6002;7000">				
+		<dependency
+                    value=".\scripts\Dependencies\Check\CheckVS2008SP1.ps1"
+                    enabled="true"
+                    optional="false"
+                    required="true"
+                    title="Microsoft Visual Studio 2008 Service Pack 1"
+                    explanation="ASP.NET MVC Training Kit requires Microsoft Visual Studio 2008 SP 1"
+                    scriptName=""
+                    downloadUrl="http://www.microsoft.com/downloads/details.aspx?FamilyId=FBEE1648-7106-44A7-9649-6D9F6D58056E" />
+
+    <dependency
+                   value=".\scripts\Dependencies\Check\CheckNET35SP1.ps1"
+                   enabled="true"
+                   optional="false"
+                   title=".NET Framework 3.5 SP1"
+                   explanation="ASP.NET MVC requires .NET Framework 3.5 SP1"
+                   scriptName=""
+                   downloadUrl="http://www.microsoft.com/downloads/details.aspx?familyid=ab99342f-5d1a-413d-8319-81da479ab0d7" />
+
+    <dependency
+                    value=".\scripts\Dependencies\Check\CheckSQL2005or2008.ps1"
+                    enabled="true"
+                    optional="false"
+                    title="Microsoft SQL Server 2005 or 2008 Express"
+                    explanation="ASP.NET MVC Training Kit requires SQL Server 2005 or 2008 Express"
+					          scriptName=""
+                    downloadUrl="http://www.microsoft.com/express/sql/download/" />
+
+    <dependency
+                    value=".\scripts\Dependencies\Check\CheckAdventureWorksLTDB.ps1"
+                    enabled="true"
+                    optional="false"
+                    title="SQL Server AdventureWorksLT Sample Database"
+                    explanation="ASP.NET MVC Training Kit requires AdventureWorksLT 2005 Sample Database for SQL Server 2005 or AdventureWorks 2008 Sample Database for SQL Server 2008"
+					          scriptName=""
+                    downloadUrl="http://msftdbprodsamples.codeplex.com/" />
+
+    <dependency
+                    value=".\scripts\Dependencies\Check\CheckAspNetMVC.ps1"
+                    enabled="true"
+                    optional="false"
+                    title="ASP.NET MVC"
+                    explanation="ASP.NET MVC Training Kit requires ASP.NET MVC"
+					          scriptName=""
+                    downloadUrl="http://www.asp.net/MVC/" />
+  </os>
+  </dependencies>
+  
+</DependencyCheckerConfiguration>

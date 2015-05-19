@@ -1,0 +1,95 @@
+<html dir="ltr" xmlns:MSHelp="http://msdn.microsoft.com/mshelp" xmlns:dt="uuid:C2F41010-65B3-11d1-A29F-00AA00C14882" xmlns:xlink="http://www.w3.org/1999/xlink">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+    <meta name="save" content="history" />
+    <xml>
+      <MSHelp:TOCTitle Title="Exercise 3: Implementing Action Filters" />
+      <MSHelp:RLTitle Title="Exercise 3: Implementing Action Filters" />
+      <MSHelp:Attr Name="DocSet" Value="docSet" />
+      <MSHelp:Attr Name="TopicType" Value="kbOrient" />
+      <MSHelp:Attr Name="Locale" Value="kbEnglish" />
+      <MSHelp:Attr Name="AssetId" Value="{GUID}" />
+    </xml>
+    <title>Exercise 3: Implementing Action Filters</title>
+    <link rel="stylesheet" type="text/css" href="../local/Classic.css" />
+    <script src="../local/EventUtilities.js" type="text/jscript" language="jscript"> </script>
+    <script src="../local/SplitScreen.js" type="text/jscript" language="jscript"> </script>
+    <script src="../local/Dropdown.js" type="text/jscript" language="jscript"> </script>
+    <script src="../local/script.js" type="text/jscript" language="jscript"> </script>
+  </head>
+  <body>
+    <input type="hidden" id="userDataCache" class="userDataStyle" />
+    <input type="hidden" id="hiddenScrollOffset" />
+    <img id="dropDownImage" style="display:none; height:0; width:0;" alt="DropDown image" src="../local/drpdown.gif" />
+    <img id="dropDownHoverImage" style="display:none; height:0; width:0;" alt="DropDownHover image" src="../local/drpdown_orange.gif" />
+    <img id="collapseImage" style="display:none; height:0; width:0;" alt="Collapse image" src="../local/collapse_all.gif" />
+    <img id="expandImage" style="display:none; height:0; width:0;" alt="Expand image" src="../local/expand_all.gif" />
+    <img id="collapseAllImage" style="display:none; height:0; width:0;" alt="CollapseAll image" src="../local/collall.gif" />
+    <img id="expandAllImage" style="display:none; height:0; width:0;" alt="ExpandAll image" src="../local/expall.gif" />
+    <img id="copyImage" style="display:none; height:0; width:0;" alt="Copy image" src="../local/copycode.gif" />
+    <img id="copyHoverImage" style="display:none; height:0; width:0;" alt="CopyHover image" src="../local/copycodeHighlight.gif" />
+    <div id="header">
+      <table width="100%" id="topTable">
+        <tr id="headerTableRow1">
+          <td align="left">
+            <span id="runningHeaderText">Enhancing Asp.NET MVC Applications</span>
+          </td>
+        </tr>
+        <tr id="headerTableRow2">
+          <td align="left">
+            <span id="nsrTitle">Exercise 3: Implementing Action Filters</span>
+          </td>
+        </tr>
+        <tr id="headerTableRow3">
+          <td />
+        </tr>
+      </table>
+    </div>
+    <div id="mainSection">
+      <div id="mainBody">
+        <div id="allHistory" class="saveHistory" onsave="saveAll()" onload="loadAll()" />
+        <p>In this exercise, you will learn how to implement an action filter. An action filter is an attribute that you can apply to a controller action or an entire controller that modifies the way in which the action is executed.</p>
+        <p>The ASP.NET MVC framework supports four different types of filters:</p>
+        <ol>
+          <li><b>Authorization filters</b> – Implements the <b>IAuthorizationFilter</b> attribute.</li>
+          <li><b>Action filters</b> – Implements the <b>IActionFilter</b> attribute.</li>
+          <li><b>Result filters</b> – Implements the <b>IResultFilter</b> attribute.</li>
+          <li><b>Exception filters</b> – Implements the <b>IExceptionFilter</b> attribute.</li>
+        </ol>
+        <p>Filters are executed in the order listed above.</p>
+        <p>
+          <b>
+          </b>
+        </p>
+        <a name="_Toc224120024" href="#">
+          <span />
+        </a>
+        <p>
+          <b>Task 1 – Implementing Action Filters</b>
+        </p>
+        <p>In this task you will create an action filter to log the execution of the desired controller’s action methods.</p>
+        <ol>
+          <li>Open the solution file <b>MvcSampleApp.sln</b> located under the <b>enhancingAspNetMvcApp\Ex03-ActionFilters\begin </b>folder. Alternatively you might continue using the solution obtained after completing the previous exercise.</li>
+          <li>Create a folder named <b>ActionFilters</b>. To do this, in the <b>Solution Explorer</b>, right click the MvcSampleApp project, point to <b>Add</b>, click <b>New Folder</b> and set the folder name to <b>ActionFilters</b>.</li>
+          <li>Create the <b>LogActionFilterAttribute</b> class in the <b>ActionFilters</b> folder. To do this, right click the <b>ActionFilters</b> folder, point to <b>Add</b>, click <b>Class</b>, then set the class name to <b>LogActionFilterAttribute</b>.</li>
+          <li>Open the <b>LogActionFilterAttribute.cs</b> file and replace the using statements at the top of the file with the following ones. <div class="code"><span codeLanguage="CSharp"><table width="100%" cellspacing="0" cellpadding="0"><tr><th>C#</th><th><span class="copyCode" onclick="CopyCode(this)" onkeypress="CopyCode_CheckKey(this)" onmouseover="ChangeCopyCodeIcon(this)" onfocusin="ChangeCopyCodeIcon(this)" onmouseout="ChangeCopyCodeIcon(this)" onfocusout="ChangeCopyCodeIcon(this)" tabindex="0"><img class="copyCodeImage" name="ccImage" align="absmiddle" src="../local/copycode.gif" />Copy Code
+                  </span></th></tr><tr><td colspan="2"><pre><b>using System.Diagnostics;</b><b>using System.Globalization;</b><b>using System.Web.Mvc;</b><b>using System.Web.Routing;</b></pre></td></tr></table></span></div><br /></li>
+          <li>Change the class signature to inherit from the <b>ActionFilterAttribute</b> class, as shown in the following code.<div class="code"><span codeLanguage="CSharp"><table width="100%" cellspacing="0" cellpadding="0"><tr><th>C#</th><th><span class="copyCode" onclick="CopyCode(this)" onkeypress="CopyCode_CheckKey(this)" onmouseover="ChangeCopyCodeIcon(this)" onfocusin="ChangeCopyCodeIcon(this)" onmouseout="ChangeCopyCodeIcon(this)" onfocusout="ChangeCopyCodeIcon(this)" tabindex="0"><img class="copyCodeImage" name="ccImage" align="absmiddle" src="../local/copycode.gif" />Copy Code
+                  </span></th></tr><tr><td colspan="2"><pre>public class LogActionFilterAttribute : ActionFilterAttribute{}</pre></td></tr></table></span></div><div class="alert"><table width="100%" cellspacing="0" cellpadding="0"><tr><th align="left"><img class="note" src="../local/note.gif" />Note:</th></tr><tr><td>The base <b>ActionFilterAttribute</b> class has the following methods that you can override:<br /><b>OnActionExecuting</b> – This method is called before a controller action is executed.<br /><b>OnActionExecuted</b> – This method is called after a controller action is executed.<br /><b>OnResultExecuting</b> – This method is called before a controller action result is executed.<br /><b>OnResultExecuted</b> – This method is called after a controller action result is executed.</td></tr></table><p /></div><br /></li>
+          <li>Add the <b>LogEntry</b> method in the <b>LogActionFilterAttribute</b> class. This method obtains information from the route data and writes it on the <b>Output </b>window. To do this, paste the following code into the <b>LogActionFilterAttribute</b> class.<p>(Code Snippet – <i>Enhancing Asp.Net MVC Lab – LogActionFilterAttribute LogEntry Method</i>)</p><div class="code"><span codeLanguage="CSharp"><table width="100%" cellspacing="0" cellpadding="0"><tr><th>C#</th><th><span class="copyCode" onclick="CopyCode(this)" onkeypress="CopyCode_CheckKey(this)" onmouseover="ChangeCopyCodeIcon(this)" onfocusin="ChangeCopyCodeIcon(this)" onmouseout="ChangeCopyCodeIcon(this)" onfocusout="ChangeCopyCodeIcon(this)" tabindex="0"><img class="copyCodeImage" name="ccImage" align="absmiddle" src="../local/copycode.gif" />Copy Code
+                  </span></th></tr><tr><td colspan="2"><pre><b>private static void LogEntry(string executionStep, RouteData routeData)</b><b>{</b><b>    string controller = routeData.Values["controller"] as string;</b><b>    string action = routeData.Values["action"] as string;</b><b>    string entry = string.Format(CultureInfo.CurrentUICulture, "Log Action Filter: {0} {1} on {2}", executionStep, action, controller);</b><b></b><b>    Debug.WriteLine(entry);</b><b>}</b></pre></td></tr></table></span></div><br /></li>
+          <li>Override the <b>OnActionExecuting</b> and <b>OnActionExecuted</b> methods from the base class to call the <b>LogEntry</b> method created in the previous step, which will be responsible for logging the controller actions execution. To do this, add the following code in the <b>LogActionFilterAttribute</b> class.<p>(Code Snippet – <i>Enhancing Asp.Net MVC Lab – LogActionFilterAttribute Methods</i>)</p><div class="code"><span codeLanguage="CSharp"><table width="100%" cellspacing="0" cellpadding="0"><tr><th>C#</th><th><span class="copyCode" onclick="CopyCode(this)" onkeypress="CopyCode_CheckKey(this)" onmouseover="ChangeCopyCodeIcon(this)" onfocusin="ChangeCopyCodeIcon(this)" onmouseout="ChangeCopyCodeIcon(this)" onfocusout="ChangeCopyCodeIcon(this)" tabindex="0"><img class="copyCodeImage" name="ccImage" align="absmiddle" src="../local/copycode.gif" />Copy Code
+                  </span></th></tr><tr><td colspan="2"><pre><b>public override void OnActionExecuting(ActionExecutingContext filterContext)</b><b>{</b><b>    LogEntry("Executing", filterContext.RouteData);</b><b>}</b><b>public override void OnActionExecuted(ActionExecutedContext filterContext)</b><b>{</b><b>    LogEntry("Executed", filterContext.RouteData);</b><b>}</b></pre></td></tr></table></span></div><br /></li>
+          <li>Open the <b>AddressController.cs</b> file, and add the following using statement:<div class="code"><span codeLanguage="CSharp"><table width="100%" cellspacing="0" cellpadding="0"><tr><th>C#</th><th><span class="copyCode" onclick="CopyCode(this)" onkeypress="CopyCode_CheckKey(this)" onmouseover="ChangeCopyCodeIcon(this)" onfocusin="ChangeCopyCodeIcon(this)" onmouseout="ChangeCopyCodeIcon(this)" onfocusout="ChangeCopyCodeIcon(this)" tabindex="0"><img class="copyCodeImage" name="ccImage" align="absmiddle" src="../local/copycode.gif" />Copy Code
+                  </span></th></tr><tr><td colspan="2"><pre><b>using MvcSampleApp.ActionFilters;</b></pre></td></tr></table></span></div><br /></li>
+          <li>In the <b>AddressController</b> class, add the <b>LogActionFilter</b> attribute to every action method that you wish to log. In this case, the <b>Create</b> (POST), <b>Edit</b> (POST), and <b>Delete</b> action methods. The following code shows the attribute applied to every action that will be logged.<div class="code"><span codeLanguage="CSharp"><table width="100%" cellspacing="0" cellpadding="0"><tr><th>C#</th><th><span class="copyCode" onclick="CopyCode(this)" onkeypress="CopyCode_CheckKey(this)" onmouseover="ChangeCopyCodeIcon(this)" onfocusin="ChangeCopyCodeIcon(this)" onmouseout="ChangeCopyCodeIcon(this)" onfocusout="ChangeCopyCodeIcon(this)" tabindex="0"><img class="copyCodeImage" name="ccImage" align="absmiddle" src="../local/copycode.gif" />Copy Code
+                  </span></th></tr><tr><td colspan="2"><pre>public class AddressController : Controller{    private AdventureWorksRepository repository = new AdventureWorksRepository();     public ActionResult Create(int customerId)    {      …    }<b>[LogActionFilter]</b>    [AcceptVerbs(HttpVerbs.Post), ActionName("Create")]    public ActionResult SaveNew(int customerId)    {       …    }    public ActionResult Edit(int addressId, int customerId)    {        …    }<b>[LogActionFilter]</b>    [AcceptVerbs(HttpVerbs.Post)]    public ActionResult Edit(int addressId, int customerId, FormCollection collection)    {        …    }<b>    [LogActionFilter]</b>    public ActionResult Delete(int addressId, int customerId)    {        …    }}</pre></td></tr></table></span></div></li>
+        </ol>
+      </div>
+      <div id="footer">
+        <div class="footerLine">
+          <img src="../local/footer.gif" alt="Footer image" width="100%" height="3px" />
+        </div>To give feedback please write to mvckit@microsoft.com<p />Copyright © 2009 by Microsoft Corporation. All rights reserved.</div>
+    </div>
+  </body>
+</html>

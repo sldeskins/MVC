@@ -1,0 +1,134 @@
+<html dir="ltr" xmlns:MSHelp="http://msdn.microsoft.com/mshelp" xmlns:dt="uuid:C2F41010-65B3-11d1-A29F-00AA00C14882" xmlns:xlink="http://www.w3.org/1999/xlink">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+    <meta name="save" content="history" />
+    <xml>
+      <MSHelp:TOCTitle Title="Exercise 3: Verification" />
+      <MSHelp:RLTitle Title="Exercise 3: Verification" />
+      <MSHelp:Attr Name="DocSet" Value="docSet" />
+      <MSHelp:Attr Name="TopicType" Value="kbOrient" />
+      <MSHelp:Attr Name="Locale" Value="kbEnglish" />
+      <MSHelp:Attr Name="AssetId" Value="{GUID}" />
+    </xml>
+    <title>Exercise 3: Verification</title>
+    <link rel="stylesheet" type="text/css" href="../local/Classic.css" />
+    <script src="../local/EventUtilities.js" type="text/jscript" language="jscript"> </script>
+    <script src="../local/SplitScreen.js" type="text/jscript" language="jscript"> </script>
+    <script src="../local/Dropdown.js" type="text/jscript" language="jscript"> </script>
+    <script src="../local/script.js" type="text/jscript" language="jscript"> </script>
+  </head>
+  <body>
+    <input type="hidden" id="userDataCache" class="userDataStyle" />
+    <input type="hidden" id="hiddenScrollOffset" />
+    <img id="dropDownImage" style="display:none; height:0; width:0;" alt="DropDown image" src="../local/drpdown.gif" />
+    <img id="dropDownHoverImage" style="display:none; height:0; width:0;" alt="DropDownHover image" src="../local/drpdown_orange.gif" />
+    <img id="collapseImage" style="display:none; height:0; width:0;" alt="Collapse image" src="../local/collapse_all.gif" />
+    <img id="expandImage" style="display:none; height:0; width:0;" alt="Expand image" src="../local/expand_all.gif" />
+    <img id="collapseAllImage" style="display:none; height:0; width:0;" alt="CollapseAll image" src="../local/collall.gif" />
+    <img id="expandAllImage" style="display:none; height:0; width:0;" alt="ExpandAll image" src="../local/expall.gif" />
+    <img id="copyImage" style="display:none; height:0; width:0;" alt="Copy image" src="../local/copycode.gif" />
+    <img id="copyHoverImage" style="display:none; height:0; width:0;" alt="CopyHover image" src="../local/copycodeHighlight.gif" />
+    <div id="header">
+      <table width="100%" id="topTable">
+        <tr id="headerTableRow1">
+          <td align="left">
+            <span id="runningHeaderText">Introduction to ASP.NET MVC</span>
+          </td>
+        </tr>
+        <tr id="headerTableRow2">
+          <td align="left">
+            <span id="nsrTitle">Exercise 3: Verification</span>
+          </td>
+        </tr>
+        <tr id="headerTableRow3">
+          <td />
+        </tr>
+      </table>
+    </div>
+    <div id="mainSection">
+      <div id="mainBody">
+        <div id="allHistory" class="saveHistory" onsave="saveAll()" onload="loadAll()" />
+        <p>In order to verify that you have correctly performed all steps of exercise two, proceed as follows:</p>
+        <a name="_Toc190837087" href="#">
+          <span />
+        </a>
+        <a name="_Toc205281199" href="#">
+          <span />
+        </a>
+        <a name="_Toc223344228" href="#">
+          <span />
+        </a>
+        <a name="_Toc224707090" href="#">
+          <span />
+        </a>
+        <h3 class="subheading">Verification 1</h3>
+        <p>In this verification you will make sure all the route tests implemented pass successfully.</p>
+        <ol>
+          <li>Open the solution <b>MvcSampleApp.sln</b> in Visual Studio if not already opened.</li>
+          <li>Press <b>Ctrl + Shift + B</b> to build the solution.</li>
+          <li>In<b> Test</b> menu, point to <b>Windows</b> and select <b>Test List Editor</b>.</li>
+          <li>Select the following tests:<ol><li>ShouldCustomerTakeDefaultRoute</li><li>ShouldCustomerTakeInfoRoute</li><li>ShouldAddressTakeCreateRoute</li></ol></li>
+          <p>
+            <img src="images\7d2f2e16-3062-4bee-8984-2dd31096b701.png" />
+          </p>
+          <p>
+            <b>Figure 1</b>
+            <br />
+            <i>Selecting tests to run</i>
+          </p>
+          <br />
+          <div class="alert">
+            <table width="100%" cellspacing="0" cellpadding="0">
+              <tr>
+                <th align="left">
+                  <img class="note" src="../local/note.gif" />Note:</th>
+              </tr>
+              <tr>
+                <td>The ASP.NET MVC Test Project Template adds 25 pre-built unit tests that verify the behavior of the <b>AccountsController</b> class (which is a controller added to the project by default to handle login and account management scenarios.)  Review the <b>AccountControllerTest.cs</b> file for detailed examples of controller unit testing.</td>
+              </tr>
+            </table>
+            <p />
+          </div>
+          <br />
+          <li>In<b> Test</b> menu, point to <b>Run</b> and select <b>Tests in Current Context</b>.</li>
+          <li>Make sure that all tests pass.<p><img src="images\1f621b4d-b479-48a6-ac2c-be06eb9e3da6.png" /></p><p><b>Figure 2</b><br /><i>Tests pass</i></p><br /></li>
+        </ol>
+        <a name="_Toc190837089" href="#">
+          <span />
+        </a>
+        <a name="_Toc205281200" href="#">
+          <span />
+        </a>
+        <a name="_Toc223344229" href="#">
+          <span />
+        </a>
+        <a name="_Toc224707091" href="#">
+          <span />
+        </a>
+        <h3 class="subheading">Verification 2</h3>
+        <p>In this verification you will make sure that all the tests implemented for the <b>Customer</b> controller pass successfully.</p>
+        <ol>
+          <li>Open the solution <b>MvcSampleApp.sln</b> in Visual Studio if not already opened.</li>
+          <li>Press <b>Ctrl + Shift + B</b> to build the solution.</li>
+          <li>In<b> Test</b> menu, point to <b>Windows</b> and select <b>Test List Editor</b>.</li>
+          <li>Select the following tests:<ol><li>ShouldLoadCustomerIndexView</li><li>ShouldLoadCustomerIndexPageView</li><li>ShouldLoadCustomerInfoView</li><li>ShouldLoadCustomerOneInfoView</li></ol></li>
+          <p>
+            <img src="images\97f6e1bb-d3e0-4587-96b7-f0d8f43a62be.png" />
+          </p>
+          <p>
+            <b>Figure 3</b>
+            <br />
+            <i>Selecting tests to run</i>
+          </p>
+          <br />
+          <li>In<b> Test</b> menu, point to <b>Run</b> and select <b>Tests in Current Context</b>.</li>
+          <li>Make sure that all tests pass.<p><img src="images\cb775b10-6ef2-476c-9640-f09a11611488.png" /></p><p><b>Figure 4</b><br /><i>Tests pass</i></p></li>
+        </ol>
+      </div>
+      <div id="footer">
+        <div class="footerLine">
+          <img src="../local/footer.gif" alt="Footer image" width="100%" height="3px" />
+        </div>To give feedback please write to mvckit@microsoft.com<p />Copyright © 2009 by Microsoft Corporation. All rights reserved.</div>
+    </div>
+  </body>
+</html>

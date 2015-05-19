@@ -1,0 +1,86 @@
+<html dir="ltr" xmlns:MSHelp="http://msdn.microsoft.com/mshelp" xmlns:dt="uuid:C2F41010-65B3-11d1-A29F-00AA00C14882" xmlns:xlink="http://www.w3.org/1999/xlink">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+    <meta name="save" content="history" />
+    <xml>
+      <MSHelp:TOCTitle Title="Opening Statement" />
+      <MSHelp:RLTitle Title="Opening Statement" />
+      <MSHelp:Attr Name="DocSet" Value="docSet" />
+      <MSHelp:Attr Name="TopicType" Value="kbOrient" />
+      <MSHelp:Attr Name="Locale" Value="kbEnglish" />
+      <MSHelp:Attr Name="AssetId" Value="{GUID}" />
+    </xml>
+    <title>Opening Statement</title>
+    <link rel="stylesheet" type="text/css" href="../local/Classic.css" />
+    <script src="../local/EventUtilities.js" type="text/jscript" language="jscript"> </script>
+    <script src="../local/SplitScreen.js" type="text/jscript" language="jscript"> </script>
+    <script src="../local/Dropdown.js" type="text/jscript" language="jscript"> </script>
+    <script src="../local/script.js" type="text/jscript" language="jscript"> </script>
+  </head>
+  <body>
+    <input type="hidden" id="userDataCache" class="userDataStyle" />
+    <input type="hidden" id="hiddenScrollOffset" />
+    <img id="dropDownImage" style="display:none; height:0; width:0;" alt="DropDown image" src="../local/drpdown.gif" />
+    <img id="dropDownHoverImage" style="display:none; height:0; width:0;" alt="DropDownHover image" src="../local/drpdown_orange.gif" />
+    <img id="collapseImage" style="display:none; height:0; width:0;" alt="Collapse image" src="../local/collapse_all.gif" />
+    <img id="expandImage" style="display:none; height:0; width:0;" alt="Expand image" src="../local/expand_all.gif" />
+    <img id="collapseAllImage" style="display:none; height:0; width:0;" alt="CollapseAll image" src="../local/collall.gif" />
+    <img id="expandAllImage" style="display:none; height:0; width:0;" alt="ExpandAll image" src="../local/expall.gif" />
+    <img id="copyImage" style="display:none; height:0; width:0;" alt="Copy image" src="../local/copycode.gif" />
+    <img id="copyHoverImage" style="display:none; height:0; width:0;" alt="CopyHover image" src="../local/copycodeHighlight.gif" />
+    <div id="header">
+      <table width="100%" id="topTable">
+        <tr id="headerTableRow1">
+          <td align="left">
+            <span id="runningHeaderText">Introduction to ASP.NET MVC</span>
+          </td>
+        </tr>
+        <tr id="headerTableRow2">
+          <td align="left">
+            <span id="nsrTitle">Opening Statement</span>
+          </td>
+        </tr>
+        <tr id="headerTableRow3">
+          <td />
+        </tr>
+      </table>
+    </div>
+    <div id="mainSection">
+      <div id="mainBody">
+        <div id="allHistory" class="saveHistory" onsave="saveAll()" onload="loadAll()" />
+        <p>Today I would like to walk you through a demo application built to show the ASP.NET MVC basics, its capabilities, and its advantages.</p>
+        <p>The<b> Model View Controller (MVC)</b> architectural pattern separates an application into three main components:</p>
+        <ul>
+          <li><b>Models</b>: Model objects are the parts of the application that implement the domain logic. Often, model objects also retrieve and store model state in a database.</li>
+          <li><b>Views:</b> Views are the components that display the application's user interface (UI). Typically, this UI is created from the model data. An example would be an edit view of a Products table that displays text boxes, drop-down lists, and check boxes based on the current state of a Product object.</li>
+          <li><b>Controllers:</b> Controllers are the components that handle user interaction, manipulate the model, and ultimately select a view to render the UI. In an MVC application, the view only displays information; the controller handles and responds to user input and interaction.</li>
+        </ul>
+        <p>The MVC pattern helps you to create applications that separate the different aspects of the application (input logic, business logic, and UI logic), while providing a loose coupling between these elements. This separation helps you manage complexity when you build an application, because it enables you to focus on one aspect of the implementation at a time. In addition to managing complexity, the MVC pattern makes it easier to test applications than it is to test a traditional ASP.NET Web application, encouraging the use of test-driven development (TDD) for creating an applications.</p>
+        <p>This demo uses the AdventureWorksLT Sample Database as the data source. The application displays a list of customers; when you click one, its details are displayed including its registered addresses. Each customer can have more than one registered address.  The application allows you to perform CRUD operations on the customer’s addresses.</p>
+        <p>Is important to notice that the <b>ASP.NET MVC</b> framework provides an alternative to the ASP.NET Web-forms pattern for creating MVC-based Web applications. It is an optional offering and does not replace the existing WebForms Page Controller model.  You can even build a single application and have parts of it written using WebForms and parts written using an MVC approach.</p>
+        <p>In this demo you will specifically see three things:</p>
+        <ol>
+          <li>You will see how to create a sample MVC application from scratch, understanding the MVC pattern basics and the solution structure.</li>
+          <li>You will see how to build the MVC application, that is creating the model, the controllers and the views.</li>
+          <li>You will see how to unit test MVC applications, mocking the application elemnts, testing the controllers and routes. </li>
+        </ol>
+        <div class="alert">
+          <table width="100%" cellspacing="0" cellpadding="0">
+            <tr>
+              <th align="left">
+                <img class="note" src="../local/note.gif" />Note:</th>
+            </tr>
+            <tr>
+              <td> For more information about the MVC (Model View Controller) architectural pattern and the ASP.NET MVC framework, see the Introduction to ASP.NET MVC Lab.</td>
+            </tr>
+          </table>
+          <p />
+        </div>
+      </div>
+      <div id="footer">
+        <div class="footerLine">
+          <img src="../local/footer.gif" alt="Footer image" width="100%" height="3px" />
+        </div>To give feedback please write to mvckit@microsoft.com<p />Copyright © 2009 by Microsoft Corporation. All rights reserved.</div>
+    </div>
+  </body>
+</html>

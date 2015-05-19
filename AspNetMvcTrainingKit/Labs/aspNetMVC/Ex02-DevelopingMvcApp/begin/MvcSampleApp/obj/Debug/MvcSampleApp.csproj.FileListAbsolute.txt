@@ -1,0 +1,5 @@
+C:\Exercises\MVC\AspNetMvcTrainingKit\Labs\aspNetMVC\Ex02-DevelopingMvcApp\begin\MvcSampleApp\bin\MvcSampleApp.dll
+C:\Exercises\MVC\AspNetMvcTrainingKit\Labs\aspNetMVC\Ex02-DevelopingMvcApp\begin\MvcSampleApp\bin\MvcSampleApp.pdb
+C:\Exercises\MVC\AspNetMvcTrainingKit\Labs\aspNetMVC\Ex02-DevelopingMvcApp\begin\MvcSampleApp\obj\Debug\MvcSampleApp.dll
+C:\Exercises\MVC\AspNetMvcTrainingKit\Labs\aspNetMVC\Ex02-DevelopingMvcApp\begin\MvcSampleApp\obj\Debug\MvcSampleApp.pdb
+C:\Exercises\MVC\AspNetMvcTrainingKit\Labs\aspNetMVC\Ex02-DevelopingMvcApp\begin\MvcSampleApp\obj\Debug\MvcSampleApp.csprojResolveAssemblyReference.cache

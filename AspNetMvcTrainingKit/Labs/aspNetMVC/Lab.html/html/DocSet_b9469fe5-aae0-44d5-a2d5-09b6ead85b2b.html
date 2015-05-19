@@ -1,0 +1,292 @@
+<html dir="ltr" xmlns:MSHelp="http://msdn.microsoft.com/mshelp" xmlns:dt="uuid:C2F41010-65B3-11d1-A29F-00AA00C14882" xmlns:xlink="http://www.w3.org/1999/xlink">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+    <meta name="save" content="history" />
+    <xml>
+      <MSHelp:TOCTitle Title="Exercise 2: Developing an ASP.NET MVC Application" />
+      <MSHelp:RLTitle Title="Exercise 2: Developing an ASP.NET MVC Application" />
+      <MSHelp:Attr Name="DocSet" Value="docSet" />
+      <MSHelp:Attr Name="TopicType" Value="kbOrient" />
+      <MSHelp:Attr Name="Locale" Value="kbEnglish" />
+      <MSHelp:Attr Name="AssetId" Value="{GUID}" />
+    </xml>
+    <title>Exercise 2: Developing an ASP.NET MVC Application</title>
+    <link rel="stylesheet" type="text/css" href="../local/Classic.css" />
+    <script src="../local/EventUtilities.js" type="text/jscript" language="jscript"> </script>
+    <script src="../local/SplitScreen.js" type="text/jscript" language="jscript"> </script>
+    <script src="../local/Dropdown.js" type="text/jscript" language="jscript"> </script>
+    <script src="../local/script.js" type="text/jscript" language="jscript"> </script>
+  </head>
+  <body>
+    <input type="hidden" id="userDataCache" class="userDataStyle" />
+    <input type="hidden" id="hiddenScrollOffset" />
+    <img id="dropDownImage" style="display:none; height:0; width:0;" alt="DropDown image" src="../local/drpdown.gif" />
+    <img id="dropDownHoverImage" style="display:none; height:0; width:0;" alt="DropDownHover image" src="../local/drpdown_orange.gif" />
+    <img id="collapseImage" style="display:none; height:0; width:0;" alt="Collapse image" src="../local/collapse_all.gif" />
+    <img id="expandImage" style="display:none; height:0; width:0;" alt="Expand image" src="../local/expand_all.gif" />
+    <img id="collapseAllImage" style="display:none; height:0; width:0;" alt="CollapseAll image" src="../local/collall.gif" />
+    <img id="expandAllImage" style="display:none; height:0; width:0;" alt="ExpandAll image" src="../local/expall.gif" />
+    <img id="copyImage" style="display:none; height:0; width:0;" alt="Copy image" src="../local/copycode.gif" />
+    <img id="copyHoverImage" style="display:none; height:0; width:0;" alt="CopyHover image" src="../local/copycodeHighlight.gif" />
+    <div id="header">
+      <table width="100%" id="topTable">
+        <tr id="headerTableRow1">
+          <td align="left">
+            <span id="runningHeaderText">Introduction to ASP.NET MVC</span>
+          </td>
+        </tr>
+        <tr id="headerTableRow2">
+          <td align="left">
+            <span id="nsrTitle">Exercise 2: Developing an ASP.NET MVC Application</span>
+          </td>
+        </tr>
+        <tr id="headerTableRow3">
+          <td />
+        </tr>
+      </table>
+    </div>
+    <div id="mainSection">
+      <div id="mainBody">
+        <div id="allHistory" class="saveHistory" onsave="saveAll()" onload="loadAll()" />
+        <p>In this exercise you will learn how to develop an ASP.NET MVC application by going through the process of creating controllers, views and models.</p>
+        <p>You will build an ASP.NET MVC application that display a paged list of customers, showing their information and allowing to create, edit and delete the customer’s addresess. The application will have three controllers: the customer controller which handles  customer listing and customer information, the address controller to handle the edition, creation and deletion of addresses and finally the home controller to handle application welcome views.</p>
+        <div class="alert">
+          <table width="100%" cellspacing="0" cellpadding="0">
+            <tr>
+              <th align="left">
+                <img class="note" src="../local/note.gif" />Note:</th>
+            </tr>
+            <tr>
+              <td>To verify that each step is correctly performed, it is recommended to build the solution at the end of each task. </td>
+            </tr>
+          </table>
+          <p />
+        </div>
+        <a name="_Toc223351747" href="#">
+          <span />
+        </a>
+        <br />
+        <a name="_Toc224707074" href="#">
+          <span />
+        </a>
+        <p>
+          <b>Task 1 – Creating an Entity Data Model</b>
+        </p>
+        <p>In this task you will create the mapping specification that connects programmable classes to storage structures using an <b>Entity Data Model</b> (EDM) which is a specification for defining the data used by applications built on the Entity Framework.</p>
+        <ol>
+          <li>Open Microsoft Visual Studio 2008 from <b>Start | All Programs | Microsoft Visual Studio 2008 | Microsoft Visual Studio 2008</b>.</li>
+          <li>Open the solution file <b>MvcSampleApp.sln</b> located under <b>AspNetMvc\Ex02-DevelopingMvcApp\begin\</b>. Alternatively, you may continue working with the solution obtained after completing the previous exercise.</li>
+          <li>In <b>Solution Explorer</b>, open the <b>Shared </b>folder under <b>Views </b>folder. To do this, click the plus sign next to the folders names. Select the <b>Site.Master</b> file. Right-click the file and select <b>Delete</b>.</li>
+          <li>Import the provided <b>Site.Master</b>. To do this, right-click the <b>Shared</b> folder, point to <b>Add</b> and select <b>Existing Item</b>. On the <b>Add Existing Item</b> dialog browse to <b>AspNetMvc\Assets\Shared</b> and select all files in the folder. Click <b>Add</b>.<div class="alert"><table width="100%" cellspacing="0" cellpadding="0"><tr><th align="left"><img class="note" src="../local/note.gif" />Note:</th></tr><tr><td>Like traditional ASP.NET Web pages, ASP.NET page views (.aspx files) can use master pages which provide the ability to define common structure and interface elements for the site.</td></tr></table><p /></div><br /></li>
+          <li>Create the <b>AdventureWorks</b> Entity Data Model. To do this, in <b>Solution Explorer</b>, right-click the <b>Models</b> folder in <b>MvcSampleApp</b> project, point to <b>Add</b>, and click <b>New Item</b>. </li>
+          <li>In the <b>Add New Item</b> dialog box select <b>ADO.NET Entity Data Model.</b> Specify a Name value of <b>AdventureWorks.edmx</b>, and then click <b>Add</b>. <p><img src="images\ec40a924-8743-4fc0-8f79-36a9570fa0d1.png" /></p><p><b>Figure 1</b><br /><i>Adding the ADO.NET Entity Data Model</i></p><br /></li>
+          <li>After the <b>Entity Data Model Wizard</b> opens, select <b>Generate From Database</b> and click <b>Next</b>.</li>
+          <li>Specify the Database connection. To do this, click <b>New Connection</b>. </li>
+          <li>In the <b>Choose Data Source</b> dialog, select <b>Microsoft SQL Server</b> as <b>Data Source</b> and click <b>Continue</b>.</li>
+          <li>In the <b>Connection Properties</b> dialog window, enter <b>AspNetMvcLabs</b> as <b>Server Name</b>, then select <b>AdventureWorksLT</b> database and click <b>OK</b>.<div class="alert"><table width="100%" cellspacing="0" cellpadding="0"><tr><th align="left"><img class="note" src="../local/note.gif" />Note:</th></tr><tr><td><b>AspNetMvcLabs</b> is the default alias for the database server installed when the <b>SetupEx.cmd</b> script was run at the beginning of this lab.</td></tr></table><p /></div><br /><p><img src="images\5c643635-7f7a-4415-af54-ea0b0f23dadf.png" /></p><p><b>Figure 2</b><br /><i>Specify the database connection</i></p><br /></li>
+          <li>Back on the Entity Data Model wizard click <b>Next</b>.</li>
+          <li>Include only the following tables from all the proposed Database objects:<ul><li><b>Address (SalesLT)</b></li><li><b>Customer (SalesLT)</b></li><li><b>CustomerAddress (SalesLT)</b></li></ul></li>
+          <li>Leave the <b>Model Namespace</b> by default<b> </b>and click <b>Finish</b>.<p><img src="images\7f310dd6-96e5-42c6-8ffe-dd1b009b765a.png" /></p><p><b>Figure 3</b><br /><i>Choose the Database Objects to Include in the Model</i></p><br /></li>
+          <li>Add the <b>AdventureWorksRepository</b>. The repository exposes methods to retrieve entities from the model generating a level of abstraction from the underlying data model. Right-click the <b>Models</b> folder of <b>MvcSampleApp</b> project in <b>Solution Explorer</b>, point to <b>Add</b> and click <b>Existing Item</b>. Browse to <b>AspNetMvc\Assets\</b>, select <b>AdventureWorksRepository.cs </b>and click <b>Add</b>.<div class="alert"><table width="100%" cellspacing="0" cellpadding="0"><tr><th align="left"><img class="note" src="../local/note.gif" />Note:</th></tr><tr><td>For information see <a href="http://msdn2.microsoft.com/en-us/library/bb387122.aspx">ADO.NET Entity Framework</a>.</td></tr></table><p /></div></li>
+        </ol>
+        <a name="_Toc223351748" href="#">
+          <span />
+        </a>
+        <a name="_Toc224707075" href="#">
+          <span />
+        </a>
+        <p>
+          <b>Task 2 – Implementing Customer View Data</b>
+        </p>
+        <p>In this task you will create the View Data that will be used in the customer controller to display the paged list of customers.</p>
+        <ol>
+          <li>Create the <b>ViewData</b> folder. To do this, right-click <b>MvcSampleApp</b> project, point to <b>Add</b> and select <b>New Folder</b>. Set <b>ViewData</b> as the folder name.</li>
+          <li>Create the <b>CustomerViewData</b> class. Right-click the <b>ViewData</b> folder, point to <b>Add</b> and select <b>New Item</b>.</li>
+          <li>In the <b>Add New Item</b> dialog box select <b>Class.</b> Specify a Name value of <b>CustomerViewData.cs</b>, and then click <b>Add</b>. <p><img src="images\0f37d62d-1ed1-4538-859e-04ed7cfc22db.png" /></p><p><b>Figure 4</b><br /><i>Adding CustomerViewData class</i></p></li>
+          <br />
+          <li>In <b>CustomerViewData.cs</b>, replace all the using statements created by default with the following code.<div class="code"><span codeLanguage="CSharp"><table width="100%" cellspacing="0" cellpadding="0"><tr><th>C#</th><th><span class="copyCode" onclick="CopyCode(this)" onkeypress="CopyCode_CheckKey(this)" onmouseover="ChangeCopyCodeIcon(this)" onfocusin="ChangeCopyCodeIcon(this)" onmouseout="ChangeCopyCodeIcon(this)" onfocusout="ChangeCopyCodeIcon(this)" tabindex="0"><img class="copyCodeImage" name="ccImage" align="absmiddle" src="../local/copycode.gif" />Copy Code
+                  </span></th></tr><tr><td colspan="2"><pre><b>using System;</b><b>using System.Web;</b><b>using System.Web.Mvc;</b><b>using System.Collections.Generic;</b><b>using MvcSampleApp.Models;</b></pre></td></tr></table></span></div><br /></li>
+          <li>Add the following code (<b>bolded</b>) to the <b>CustomerViewData</b> class to implement its properties. The class provides the view a collection of customers and the numbers of the next and previous pages to generate links.<p>(Code Snippet – <i>Intro to Asp.Net MVC Lab - CustomerViewData Properties</i>)</p><div class="code"><span codeLanguage="CSharp"><table width="100%" cellspacing="0" cellpadding="0"><tr><th>C#</th><th><span class="copyCode" onclick="CopyCode(this)" onkeypress="CopyCode_CheckKey(this)" onmouseover="ChangeCopyCodeIcon(this)" onfocusin="ChangeCopyCodeIcon(this)" onmouseout="ChangeCopyCodeIcon(this)" onfocusout="ChangeCopyCodeIcon(this)" tabindex="0"><img class="copyCodeImage" name="ccImage" align="absmiddle" src="../local/copycode.gif" />Copy Code
+                  </span></th></tr><tr><td colspan="2"><pre>public class CustomerViewData{<b>    public IEnumerable&lt;Customer&gt; Customers</b><b>    {</b><b>        get;</b><b>        set;</b><b>    }</b><b>    public int PreviousPage</b><b>    {</b><b>        get;</b><b>        set;</b><b>    }</b><b>    public int NextPage</b><b>    {</b><b>        get;</b><b>        set;</b><b>    }</b>}</pre></td></tr></table></span></div></li>
+        </ol>
+        <a name="_Toc223351749" href="#">
+          <span />
+        </a>
+        <a name="_Toc224707076" href="#">
+          <span />
+        </a>
+        <p>
+          <b>Task 3 – Implementing Address View Data</b>
+        </p>
+        <p>In this task you will create the view data that will be used in the address controller to allow the editing of an address.</p>
+        <ol>
+          <li>Create the <b>AddressViewData</b> class. Right-click the <b>ViewData</b> folder, point to <b>Add</b> and select <b>New Item</b>.</li>
+          <li>In the <b>Add New Item</b> dialog box select <b>Class.</b> Specify a Name value of <b>AddressViewData.cs</b>, and then click <b>Add</b>. <p><img src="images\1ec20cae-f78c-4505-ae44-a0e577e40118.png" /></p><p><b>Figure 5</b><br /><i>Adding AddressViewData class</i></p></li>
+          <br />
+          <li>In <b>AddressViewData.cs</b>, replace all the namespace directives created by default with the following code. If the file doesn’t open by default in <b>Solution Explorer</b> double-click on <b>AddressViewData.cs</b> under the <b>ViewData</b> folder.<div class="code"><span codeLanguage="CSharp"><table width="100%" cellspacing="0" cellpadding="0"><tr><th>C#</th><th><span class="copyCode" onclick="CopyCode(this)" onkeypress="CopyCode_CheckKey(this)" onmouseover="ChangeCopyCodeIcon(this)" onfocusin="ChangeCopyCodeIcon(this)" onmouseout="ChangeCopyCodeIcon(this)" onfocusout="ChangeCopyCodeIcon(this)" tabindex="0"><img class="copyCodeImage" name="ccImage" align="absmiddle" src="../local/copycode.gif" />Copy Code
+                  </span></th></tr><tr><td colspan="2"><pre><b>using System;</b><b>using System.Web;</b><b>using System.Web.Mvc;</b><b>using MvcSampleApp.Models;</b></pre></td></tr></table></span></div><br /></li>
+          <li>Add the following code to the <b>AddressViewData</b> class to implement its properties. The class provides the view an <b>Address</b> entity object and an integer with the id of the customer whose address is being edited.<p>(Code Snippet <i>- Intro to Asp.Net MVC Lab – AddressViewData Properties</i>)</p><div class="code"><span codeLanguage="CSharp"><table width="100%" cellspacing="0" cellpadding="0"><tr><th>C#</th><th><span class="copyCode" onclick="CopyCode(this)" onkeypress="CopyCode_CheckKey(this)" onmouseover="ChangeCopyCodeIcon(this)" onfocusin="ChangeCopyCodeIcon(this)" onmouseout="ChangeCopyCodeIcon(this)" onfocusout="ChangeCopyCodeIcon(this)" tabindex="0"><img class="copyCodeImage" name="ccImage" align="absmiddle" src="../local/copycode.gif" />Copy Code
+                  </span></th></tr><tr><td colspan="2"><pre>public class AddressViewData{<b>    public Address Address </b><b>    { </b><b>        get; </b><b>        set; </b><b>    }</b><b>    public int CustomerId </b><b>    { </b><b>        get; </b><b>        set; </b><b>    }</b>}</pre></td></tr></table></span></div></li>
+        </ol>
+        <a name="_Toc223351750" href="#">
+          <span />
+        </a>
+        <br />
+        <a name="_Toc224707077" href="#">
+          <span />
+        </a>
+        <p>
+          <b>Task 4 – Implementing Customer Controller</b>
+        </p>
+        <p>In this task you will create the <b>Customers</b> controller with two action methods, one to handle the rendering of a view with a list of customer (<b>Index</b> view) and the other to handle customer’s information view (<b>Info</b> view).</p>
+        <ol>
+          <li>Create an empty MVC controller class. In <b>Solution Explorer</b> right-click the <b>Controllers</b> folder, point to <b>Add</b> and select <b>Controller</b>.</li>
+          <li>Specify a Controller Name value of <b>CustomerController</b>, and then click <b>Add</b>. <p><img src="images\18cf9d0b-fd79-4116-96ee-808a5d17bf27.png" /></p><p><b>Figure 6</b><br /><i>Adding CustomerController controller</i></p><br /></li>
+          <li>In <b>CustomerController.cs</b>, add the following namespace directives:<div class="code"><span codeLanguage="CSharp"><table width="100%" cellspacing="0" cellpadding="0"><tr><th>C#</th><th><span class="copyCode" onclick="CopyCode(this)" onkeypress="CopyCode_CheckKey(this)" onmouseover="ChangeCopyCodeIcon(this)" onfocusin="ChangeCopyCodeIcon(this)" onmouseout="ChangeCopyCodeIcon(this)" onfocusout="ChangeCopyCodeIcon(this)" tabindex="0"><img class="copyCodeImage" name="ccImage" align="absmiddle" src="../local/copycode.gif" />Copy Code
+                  </span></th></tr><tr><td colspan="2"><pre><b>using MvcSampleApp.Models;</b><b>using MvcSampleApp.ViewData;</b></pre></td></tr></table></span></div><br /></li>
+          <li>Instantiate a repository to act as a data access service. To do this, paste the following code inside the <b>CustomerController</b> class.<div class="code"><span codeLanguage="CSharp"><table width="100%" cellspacing="0" cellpadding="0"><tr><th>C#</th><th><span class="copyCode" onclick="CopyCode(this)" onkeypress="CopyCode_CheckKey(this)" onmouseover="ChangeCopyCodeIcon(this)" onfocusin="ChangeCopyCodeIcon(this)" onmouseout="ChangeCopyCodeIcon(this)" onfocusout="ChangeCopyCodeIcon(this)" tabindex="0"><img class="copyCodeImage" name="ccImage" align="absmiddle" src="../local/copycode.gif" />Copy Code
+                  </span></th></tr><tr><td colspan="2"><pre><b>private AdventureWorksRepository repository = new AdventureWorksRepository();</b></pre></td></tr></table></span></div><br /></li>
+          <li>Implement the action method to handle the <b>CustomerController</b><b>Index</b> view. To do this, replace the default <b>Index</b> method with the following code. <div class="alert"><table width="100%" cellspacing="0" cellpadding="0"><tr><th align="left"><img class="note" src="../local/note.gif" />Note:</th></tr><tr><td> The action method creates the view data and fills it with the retrieved list of customers (using paging) and the previous and next page numbers. Finally, it calls the <b>View</b> method, passing the view data. Because the name of the view you wish to render has the same name as the action method being executed (i.e. Index), you don’t need to specify the view name in the call to <b>View</b><i>.</i></td></tr></table><p /></div><br /><p>(Code Snippet – <i>Intro to</i><i>Asp.Net MVC Lab - CustomerController Index Action</i>)</p><div class="code"><span codeLanguage="CSharp"><table width="100%" cellspacing="0" cellpadding="0"><tr><th>C#</th><th><span class="copyCode" onclick="CopyCode(this)" onkeypress="CopyCode_CheckKey(this)" onmouseover="ChangeCopyCodeIcon(this)" onfocusin="ChangeCopyCodeIcon(this)" onmouseout="ChangeCopyCodeIcon(this)" onfocusout="ChangeCopyCodeIcon(this)" tabindex="0"><img class="copyCodeImage" name="ccImage" align="absmiddle" src="../local/copycode.gif" />Copy Code
+                  </span></th></tr><tr><td colspan="2"><pre><b>public ActionResult Index(int? page)</b><b>{</b><b>    var viewData = new CustomerViewData();</b><b>    int currentPage = page ?? 0;</b><b>    viewData.Customers = this.repository.GetCustomers(currentPage, 10);</b><b>    viewData.NextPage = currentPage + 1;</b><b>    viewData.PreviousPage = (currentPage &lt;= 0) ? 0 : currentPage - 1;</b><b>    return View(viewData);</b><b>}</b></pre></td></tr></table></span></div><br /><div class="alert"><table width="100%" cellspacing="0" cellpadding="0"><tr><th align="left"><img class="note" src="../local/note.gif" />Note:</th></tr><tr><td> The ASP.NET MVC framework can automatically map URL parameter values to parameter values for action methods. By default, if an action method takes a parameter, the MVC framework examines incoming request data and determines whether the request contains an HTTP request value with the same name. If so, the request value is automatically passed to the action method.<br />In this case the page number parameter is an optional parameter. Optional parameters in the MVC framework are handled using <b>nullable</b> type arguments on controller action methods (For more information, see <a href="http://msdn.microsoft.com/en-us/library/2cf62fcy.aspx">Using Nullable Types</a>). The MVC framework will either pass in a value if a page number is present in the URL - or pass in null if not.</td></tr></table><p /></div><br /></li>
+          <li>Implement the action method to handle the <b>CustomerController</b><b>Info</b> view. To do this, insert the following code in the <b>CustomerController </b>class. This method retrieves the customer object based on the customer id parameter and renders the customer information view.<p>(Code Snippet – <i>Intro to</i><i>Asp.Net MVC Lab - CustomerController Info Action</i>)</p><div class="code"><span codeLanguage="CSharp"><table width="100%" cellspacing="0" cellpadding="0"><tr><th>C#</th><th><span class="copyCode" onclick="CopyCode(this)" onkeypress="CopyCode_CheckKey(this)" onmouseover="ChangeCopyCodeIcon(this)" onfocusin="ChangeCopyCodeIcon(this)" onmouseout="ChangeCopyCodeIcon(this)" onfocusout="ChangeCopyCodeIcon(this)" tabindex="0"><img class="copyCodeImage" name="ccImage" align="absmiddle" src="../local/copycode.gif" />Copy Code
+                  </span></th></tr><tr><td colspan="2"><pre><b>public ActionResult Info(int id)</b><b>{</b><b>    var customer = this.repository.GetCustomerById(id);</b><b>    return View(customer);</b><b>}</b></pre></td></tr></table></span></div></li>
+        </ol>
+        <a name="_Toc223351751" href="#">
+          <span />
+        </a>
+        <a name="_Toc224707078" href="#">
+          <span />
+        </a>
+        <p>
+          <b>Task 5 – Implementing Address Controller </b>
+        </p>
+        <p>In this task you will implement the <b>Address</b> controller which handles the edition, creation and deletion of customers addresses. The controller is in charge of rendering two views: the <b>Edit</b> view, to edit a customer address and the <b>New</b> view to add a new address to a customer. It is also resposible of handling the form submissions sent back from these two views.</p>
+        <ol>
+          <li>Create an empty MVC controller class. In <b>Solution Explorer</b> right-click the <b>Controllers</b> folder, point to <b>Add</b> and select <b>Controller</b>.</li>
+          <li>Specify a Controller Name value of <b>AddressController</b>. Make sure the <b>Add action methods for Create, Update, and Details scenarios</b> box is checked, and then click <b>Add</b>.<p><img src="images\ee33bc28-ad1f-4378-8edd-ac7bd98772f8.png" /></p><p><b>Figure 7</b><br /><i>Adding AddressController controller</i></p><br /></li>
+          <li>In <b>AddressController.cs</b>, add the necessary namespace references (to the data model, view data, etc.). To do this, add the following namespace directives. If the file doesn’t open by default in <b>Solution Explorer</b> double-click on <b>AddressController.cs</b> under the <b>Controllers</b> folder.<div class="code"><span codeLanguage="CSharp"><table width="100%" cellspacing="0" cellpadding="0"><tr><th>C#</th><th><span class="copyCode" onclick="CopyCode(this)" onkeypress="CopyCode_CheckKey(this)" onmouseover="ChangeCopyCodeIcon(this)" onfocusin="ChangeCopyCodeIcon(this)" onmouseout="ChangeCopyCodeIcon(this)" onfocusout="ChangeCopyCodeIcon(this)" tabindex="0"><img class="copyCodeImage" name="ccImage" align="absmiddle" src="../local/copycode.gif" />Copy Code
+                  </span></th></tr><tr><td colspan="2"><pre><b>using MvcSampleApp.Models;</b><b>using MvcSampleApp.ViewData;</b></pre></td></tr></table></span></div><br /></li>
+          <li>Instantiate a repository to act as a data access service. To do this, paste the following code inside the <b>AddressController</b> class.<div class="code"><span codeLanguage="CSharp"><table width="100%" cellspacing="0" cellpadding="0"><tr><th>C#</th><th><span class="copyCode" onclick="CopyCode(this)" onkeypress="CopyCode_CheckKey(this)" onmouseover="ChangeCopyCodeIcon(this)" onfocusin="ChangeCopyCodeIcon(this)" onmouseout="ChangeCopyCodeIcon(this)" onfocusout="ChangeCopyCodeIcon(this)" tabindex="0"><img class="copyCodeImage" name="ccImage" align="absmiddle" src="../local/copycode.gif" />Copy Code
+                  </span></th></tr><tr><td colspan="2"><pre>public class AddressController : Controller{<b>    private AdventureWorksRepository repository = new AdventureWorksRepository();</b>    ...}</pre></td></tr></table></span></div><br /></li>
+          <li>Remove the <b>Index </b>and <b>Details</b> methods created by default.</li>
+          <li>Implement the action method to handle the rendering of the <b>Create</b> view. To do this, replace the <b>Create</b> method for the <b>GET</b> operation (not decorated with the <b>AcceptVerbs(HttpVerbs.Post)</b> attribute) with the following code: <div class="alert"><table width="100%" cellspacing="0" cellpadding="0"><tr><th align="left"><img class="note" src="../local/note.gif" />Note:</th></tr><tr><td> This method receives the <b>Customer Id</b> as a parameter, retrieves through the repository the <b>Customer</b> entity and finally renders the <b>Create</b> view using the <b>View</b> method.</td></tr></table><p /></div><br /><p>(Code Snippet – <i>Intro to</i><i>Asp.Net MVC Lab – AddressController New Action</i>)</p><div class="code"><span codeLanguage="CSharp"><table width="100%" cellspacing="0" cellpadding="0"><tr><th>C#</th><th><span class="copyCode" onclick="CopyCode(this)" onkeypress="CopyCode_CheckKey(this)" onmouseover="ChangeCopyCodeIcon(this)" onfocusin="ChangeCopyCodeIcon(this)" onmouseout="ChangeCopyCodeIcon(this)" onfocusout="ChangeCopyCodeIcon(this)" tabindex="0"><img class="copyCodeImage" name="ccImage" align="absmiddle" src="../local/copycode.gif" />Copy Code
+                  </span></th></tr><tr><td colspan="2"><pre><b>public ActionResult Create(int customerId)</b><b>{</b><b>    AddressViewData addressViewData = new AddressViewData()</b><b>    {</b><b>        CustomerId = customerId</b><b>    };</b><b>    return View(addressViewData);</b><b>}</b></pre></td></tr></table></span></div></li>
+          <br />
+          <li>Implement the action method to handle the form submissions of the <b>Create</b> view sent back from the browser. To do this, replace the <b>Create</b> method for the <b>POST</b> operation (decorated with the <b>AcceptVerbs(HttpVerbs.Post)</b> attribute) with the following code:<div class="alert"><table width="100%" cellspacing="0" cellpadding="0"><tr><th align="left"><img class="note" src="../local/note.gif" />Note:</th></tr><tr><td> This method receives the <b>customer Id</b> and a <b>FormCollection</b> as a parameter; creates a new <b>Address</b> entity object and initializes it using the form submitted from the browser (<b>UpdateModel</b> method). Then add the address to the database using the repository and returns to the customer information view using the <i>RedirectToAction</i> method.</td></tr></table><p /></div><br /><p>(Code Snippet – <i>Intro to</i><i>Asp.Net MVC Lab – AddressController Create Action</i>)</p><div class="code"><span codeLanguage="CSharp"><table width="100%" cellspacing="0" cellpadding="0"><tr><th>C#</th><th><span class="copyCode" onclick="CopyCode(this)" onkeypress="CopyCode_CheckKey(this)" onmouseover="ChangeCopyCodeIcon(this)" onfocusin="ChangeCopyCodeIcon(this)" onmouseout="ChangeCopyCodeIcon(this)" onfocusout="ChangeCopyCodeIcon(this)" tabindex="0"><img class="copyCodeImage" name="ccImage" align="absmiddle" src="../local/copycode.gif" />Copy Code
+                  </span></th></tr><tr><td colspan="2"><pre>[AcceptVerbs(HttpVerbs.Post)]<b>public ActionResult Create(int customerId, FormCollection collection)</b><b>{</b><b>    try</b><b>    {</b><b>        AddressViewData addressViewData = new AddressViewData();</b><b>        UpdateModel(addressViewData);</b><b>        this.repository.AddAddress(addressViewData.Address, customerId);</b><b>        return RedirectToAction("Info", "Customer", new { id = customerId });</b><b>    }</b><b>    catch</b><b>    {</b><b>        return View();</b><b>    }</b><b>}</b></pre></td></tr></table></span></div><br /><div class="alert"><table width="100%" cellspacing="0" cellpadding="0"><tr><th align="left"><img class="note" src="../local/note.gif" />Note:</th></tr><tr><td> The <b>UpdateModel</b> method is a helper for data binding provided by the ASP.NET MVC Framework. It populates custom classes from form values on Views performing a property assignment for any key that matches a public property on the object.<br />The<b> Controller.RedirectToAction</b> helper method can be used within controllers to return a <b>RedirectToRouteResult</b> that will perform redirects to other actions on the same or another controller. The URLs are generated using the URL routing engine.</td></tr></table><p /></div><br /></li>
+          <li> Implement the action method to handle the rendering of the <b>Edit</b> view. To do this, replace the <b>Edit</b> method for the <b>GET</b> operation (not decorated with the <b>AcceptVerbs(HttpVerbs.Post)</b> attribute) with the following code:<div class="alert"><table width="100%" cellspacing="0" cellpadding="0"><tr><th align="left"><img class="note" src="../local/note.gif" />Note:</th></tr><tr><td> This method retrieves through the repository the <b>Address</b> entity that corresponds to the<b> Address Id</b> received as parameter, and then initializes the address view data. Finally, it renders the <b>Edit </b>view using the <b>View</b> method, and sends the <b>ViewData</b> to the view.</td></tr></table><p /></div><br /><p>(Code Snippet <i>–</i><i>Intro to</i><i>Asp.Net MVC Lab – AddressController Edit Action</i>)</p><div class="code"><span codeLanguage="CSharp"><table width="100%" cellspacing="0" cellpadding="0"><tr><th>C#</th><th><span class="copyCode" onclick="CopyCode(this)" onkeypress="CopyCode_CheckKey(this)" onmouseover="ChangeCopyCodeIcon(this)" onfocusin="ChangeCopyCodeIcon(this)" onmouseout="ChangeCopyCodeIcon(this)" onfocusout="ChangeCopyCodeIcon(this)" tabindex="0"><img class="copyCodeImage" name="ccImage" align="absmiddle" src="../local/copycode.gif" />Copy Code
+                  </span></th></tr><tr><td colspan="2"><pre><b>public ActionResult Edit(int addressId, int customerId)</b><b>{</b><b>    AddressViewData addressViewData = new AddressViewData();</b><b>    addressViewData.Address = this.repository.GetAddressById(addressId);</b><b>    addressViewData.CustomerId = customerId;</b><b>    return View(addressViewData);</b><b>}</b></pre></td></tr></table></span></div><br /></li>
+          <li>Implement the action method to handle the form submissions of the <b>Edit</b> view sent back from the browser. To do this, replace the <b>Edit</b> method for the <b>POST</b> operation (decorated with the <b>AcceptVerbs(HttpVerbs.Post)</b> attribute) with the following code:<div class="alert"><table width="100%" cellspacing="0" cellpadding="0"><tr><th align="left"><img class="note" src="../local/note.gif" />Note:</th></tr><tr><td>  This method retrieves through the repository the <b>Address</b> entity that corresponds to the<b> AddressId</b> received as parameter, and updates it using the form submitted from the browser (<b>UpdateModel</b> method). Then it updates the address in the database using the repository, and returns to the customer information view (<b>Info</b> view) using the <b>RedirectToAction</b> method.</td></tr></table><p /></div><br /><p>(Code Snippet – <i>Intro to</i><i>Asp.Net MVC Lab – AddressController Update Action</i>)</p><div class="code"><span codeLanguage="CSharp"><table width="100%" cellspacing="0" cellpadding="0"><tr><th>C#</th><th><span class="copyCode" onclick="CopyCode(this)" onkeypress="CopyCode_CheckKey(this)" onmouseover="ChangeCopyCodeIcon(this)" onfocusin="ChangeCopyCodeIcon(this)" onmouseout="ChangeCopyCodeIcon(this)" onfocusout="ChangeCopyCodeIcon(this)" tabindex="0"><img class="copyCodeImage" name="ccImage" align="absmiddle" src="../local/copycode.gif" />Copy Code
+                  </span></th></tr><tr><td colspan="2"><pre>[AcceptVerbs(HttpVerbs.Post)]<b>public ActionResult Edit(int addressId, int customerId, FormCollection collection)</b><b>{</b><b>    try</b><b>    {</b><b>        AddressViewData addressViewData = new AddressViewData();</b><b>        addressViewData.Address = this.repository.GetAddressById(addressId);</b><b>        UpdateModel(addressViewData);</b><b>        this.repository.UpdateAddress();</b><b>        return RedirectToAction("Info", "Customer", new { id = customerId });</b><b>    }</b><b>    catch</b><b>    {</b><b>        return View();</b><b>    }</b><b>}</b></pre></td></tr></table></span></div><br /></li>
+          <li>Implement the action method to handle the deletion of a customer address request from the customer information view (<b>Info</b> view). To do this, add the following code to the <b>AddressController</b> class:<div class="alert"><table width="100%" cellspacing="0" cellpadding="0"><tr><th align="left"><img class="note" src="../local/note.gif" />Note:</th></tr><tr><td> This method acts similar as the previous ones, retrieving the <b>Address</b> entity and deleting it through the repository, to then return to the customer information view.</td></tr></table><p /></div><br /><p>(Code Snippet – <i>Intro to</i><i>Asp.Net MVC Lab</i> – <i>AddressController Delete Action</i>)</p><div class="code"><span codeLanguage="CSharp"><table width="100%" cellspacing="0" cellpadding="0"><tr><th>C#</th><th><span class="copyCode" onclick="CopyCode(this)" onkeypress="CopyCode_CheckKey(this)" onmouseover="ChangeCopyCodeIcon(this)" onfocusin="ChangeCopyCodeIcon(this)" onmouseout="ChangeCopyCodeIcon(this)" onfocusout="ChangeCopyCodeIcon(this)" tabindex="0"><img class="copyCodeImage" name="ccImage" align="absmiddle" src="../local/copycode.gif" />Copy Code
+                  </span></th></tr><tr><td colspan="2"><pre><b>public ActionResult Delete(int addressId, int customerId)</b><b>{</b><b>    Address address = this.repository.GetAddressById(addressId);</b><b>    this.repository.DeleteAddress(address, customerId);</b><b>    return RedirectToAction("Info", "Customer", new { id = customerId });</b><b>}</b></pre></td></tr></table></span></div></li>
+        </ol>
+        <a name="_Toc223351752" href="#">
+          <span />
+        </a>
+        <a name="_Toc224707079" href="#">
+          <span />
+        </a>
+        <p>
+          <b>Task 6 – Creating Customer Controller Index View</b>
+        </p>
+        <p>In this task you will create one of the views handled by the customer controller. The index view displays a paged list of customers.</p>
+        <ol>
+          <li>Open the <b>CustomerController</b> class, right-click inside the <b>Index</b> method code, and select <b>Add View</b> action from the context menu.<p><img src="images\0ef522cb-e891-4136-a4a7-9a20f3246c3c.png" /></p><p><b>Figure 8</b><br /><i>Add View option for Index view</i></p></li>
+          <br />
+          <li>In the <b>Add View </b>dialog box specify the following values, and click <b>Add</b> to create the view:<ul><li><b>View Name</b>: Index</li><li>Check the <b>Create a strongly-typed view</b> option<ul><li><b>View data class</b>: MvcSampleApp.ViewData.CustomerViewData</li><li><b>View content</b>: Empty</li></ul></li><li>Check the <b>Select master page</b> option<ul><li>Leave the default master page value: <b>~/Views/Shared/Site.Master</b></li><li><b>ContentPlaceHolder ID</b>: MainContent</li></ul></li></ul></li>
+          <p>
+            <img src="images\5eec4855-9ce4-4040-b6f1-ba8e1935eef7.png" />
+          </p>
+          <p>
+            <b>Figure 9</b>
+            <br />
+            <i>Adding Index view</i>
+          </p>
+          <br />
+          <li>Implement the list of customers in the new view. To do this, in <b>Solution Explorer</b> double-click <b>Index.aspx</b> (under<b> Views\Customer</b> folder) file and replace the second <i>&lt;asp:Content&gt;</i> tag with the following code:<div class="alert"><table width="100%" cellspacing="0" cellpadding="0"><tr><th align="left"><img class="note" src="../local/note.gif" />Note:</th></tr><tr><td> This code loops over the view data collection of customers, printing a link to the customer information view (<i>Info</i>) with the customer’s name.</td></tr></table><p /></div><br /><div class="code"><span codeLanguage="other"><table width="100%" cellspacing="0" cellpadding="0"><tr><th>ASP.NET</th><th><span class="copyCode" onclick="CopyCode(this)" onkeypress="CopyCode_CheckKey(this)" onmouseover="ChangeCopyCodeIcon(this)" onfocusin="ChangeCopyCodeIcon(this)" onmouseout="ChangeCopyCodeIcon(this)" onfocusout="ChangeCopyCodeIcon(this)" tabindex="0"><img class="copyCodeImage" name="ccImage" align="absmiddle" src="../local/copycode.gif" />Copy Code
+                  </span></th></tr><tr><td colspan="2"><pre>&lt;asp:Content ID="Content2" ContentPlaceHolderID="MainContent" runat="server"&gt;<b>&lt;h2&gt;Customers&lt;/h2&gt;</b><b>&lt;ul&gt;</b><b>    &lt;% foreach (var customer in ViewData.Model.Customers) { %&gt;</b><b>    &lt;li&gt;</b><b>        &lt;%= Html.ActionLink(customer.CompanyName + " - " + customer.FirstName </b><b>       + " " + customer.LastName, "Info", new { id = customer.CustomerID }) %&gt;</b><b>    &lt;/li&gt;</b><b>    &lt;% } %&gt;</b><b>&lt;/ul&gt;</b>&lt;/asp:Content&gt;</pre></td></tr></table></span></div><br /><div class="alert"><table width="100%" cellspacing="0" cellpadding="0"><tr><th align="left"><img class="note" src="../local/note.gif" />Note:</th></tr><tr><td>The links are constructed using the <b>Html.ActionLink</b> helper method. This method helps to dynamically generate HTML hyperlinks that link back to action methods on Controllers using the URL mapping rules of your application. The first argument represents the inner content of the hyperlink to render (the name of the customer in this case); the second argument is the name of the action we’re linking to, and the third argument is an anonymous object that specifies the parameters to construct the URL.</td></tr></table><p /></div><br /></li>
+          <li>Implement the next and previous page links. To do this paste the following code below the <i>&lt;ul&gt;</i> element inserted in the previous step. The links are generated using the <i>Html.ActionLink</i> helper method and the <b>PreviousPage</b> and <b>NextPage</b> properties of the <b>CustomerViewData</b>.<div class="code"><span codeLanguage="other"><table width="100%" cellspacing="0" cellpadding="0"><tr><th>ASP.NET</th><th><span class="copyCode" onclick="CopyCode(this)" onkeypress="CopyCode_CheckKey(this)" onmouseover="ChangeCopyCodeIcon(this)" onfocusin="ChangeCopyCodeIcon(this)" onmouseout="ChangeCopyCodeIcon(this)" onfocusout="ChangeCopyCodeIcon(this)" tabindex="0"><img class="copyCodeImage" name="ccImage" align="absmiddle" src="../local/copycode.gif" />Copy Code
+                  </span></th></tr><tr><td colspan="2"><pre>    &lt;/ul&gt;    <b>    &lt;%=Html.ActionLink("&lt;&lt; Previous Page", "Index", new { page = ViewData.Model.PreviousPage }) %&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp   </b><b>    &lt;%=Html.ActionLink("Next Page &gt;&gt;", "Index", new { page = ViewData.Model.NextPage }) %&gt;   </b>&lt;/asp:Content&gt;</pre></td></tr></table></span></div><br /><div class="alert"><table width="100%" cellspacing="0" cellpadding="0"><tr><th align="left"><img class="note" src="../local/note.gif" />Note:</th></tr><tr><td> In addition to using <b>Html.ActionLink</b>, ASP.NET MVC has also the <b>Url.Action</b> helper method that generates raw string URLs.</td></tr></table><p /></div></li>
+        </ol>
+        <a name="_Toc223351753" href="#">
+          <span />
+        </a>
+        <a name="_Toc224707080" href="#">
+          <span />
+        </a>
+        <p>
+          <b>Task 7 – Creating Customer Controller Info View</b>
+        </p>
+        <p>In this task you will create other views handled by the customer controller. The <b>Info</b> view displays customer’s information, including a list of his/her addresses.</p>
+        <ol>
+          <li>Open the <b>CustomerController</b> class, right-click inside the <b>Info</b> method code, and select <b>Add View</b> action from the context menu.<p><img src="images\68a2cbc2-7c1d-4e15-b26e-328b15a6e65d.png" /></p><p><b>Figure 10</b><br /><i>Add View option for Info view</i></p></li>
+          <br />
+          <li>In the <b>Add View </b>dialog box specify the following values:<ul><li><b>View Name</b>: Info</li><li>Check the Create a strongly-typed view option<ul><li><b>View data class</b>: MvcSampleApp.Models.Customer</li><li><b>View content</b>: Empty</li></ul></li><li>Check the <b>Select master page</b> option<ul><li>Leave the default master page value: <b>~/Views/Shared/Site.Master</b></li><li><b>ContentPlaceHolder ID</b>: MainContent</li><br /></ul><p><img src="images\c083486f-69dc-4d8d-a272-12be9fa66fdb.png" /></p><p><b>Figure 21</b><br /><i>Adding Info view</i></p></li><br /></ul><ol><li>Add the code to display the customer general information. To do this, in <b>Solution Explorer</b> double-click <b>Info.aspx </b>(under <b>Views\Customers</b> folder), and paste the following code below the second <i>&lt;asp:Content&gt;</i> tag to replace the generated code. The customer company’s name, email address, name and phone are displayed in a table using a MVC helper method to display text boxes.<div class="code"><span codeLanguage="other"><table width="100%" cellspacing="0" cellpadding="0"><tr><th>ASP.NET</th><th><span class="copyCode" onclick="CopyCode(this)" onkeypress="CopyCode_CheckKey(this)" onmouseover="ChangeCopyCodeIcon(this)" onfocusin="ChangeCopyCodeIcon(this)" onmouseout="ChangeCopyCodeIcon(this)" onfocusout="ChangeCopyCodeIcon(this)" tabindex="0"><img class="copyCodeImage" name="ccImage" align="absmiddle" src="../local/copycode.gif" />Copy Code
+                  </span></th></tr><tr><td colspan="2"><pre>&lt;asp:Content ID="Content2" ContentPlaceHolderID="MainContent" runat="server"&gt;<b>    &lt;h2&gt;</b><b>        Customer Information&lt;/h2&gt;</b><b>    &lt;fieldset&gt;</b><b>        &lt;p&gt;</b><b>            CompanyName:</b><b>            &lt;%= Html.Encode(Model.CompanyName) %&gt;</b><b>        &lt;/p&gt;</b><b>        &lt;p&gt;</b><b>            EmailAddress:</b><b>            &lt;%= Html.Encode(Model.EmailAddress) %&gt;</b><b>        &lt;/p&gt;</b><b>        &lt;p&gt;</b><b>            Name:</b><b>            &lt;%= Html.Encode(Model.Title + " " + Model.FirstName + " " + Model.MiddleName + Model.LastName) %&gt;</b><b>        &lt;/p&gt;</b><b>        &lt;p&gt;</b><b>            Phone:</b><b>            &lt;%= Html.Encode(Model.Phone) %&gt;</b><b>        &lt;/p&gt;</b><b>    &lt;/fieldset&gt;</b>&lt;/asp:Content&gt;</pre></td></tr></table></span></div><br /></li><li>Add the code to display a list of the customer’s addresses. To do this, paste the following code below the <i>&lt;fieldset&gt;</i> section inserted in the previous step (and inside the <i>&lt;/asp:Content&gt;</i> tag). <div class="alert"><table width="100%" cellspacing="0" cellpadding="0"><tr><th align="left"><img class="note" src="../local/note.gif" />Note:</th></tr><tr><td> This code loops over the collection of addresses inside the customer entity object printing the addresses and generating links to the <b>Address</b> controller edit and delete actions. Finally, a link to add a new address to the customer is inserted.</td></tr></table><p /></div><br /><div class="code"><span codeLanguage="other"><table width="100%" cellspacing="0" cellpadding="0"><tr><th>ASP.NET</th><th><span class="copyCode" onclick="CopyCode(this)" onkeypress="CopyCode_CheckKey(this)" onmouseover="ChangeCopyCodeIcon(this)" onfocusin="ChangeCopyCodeIcon(this)" onmouseout="ChangeCopyCodeIcon(this)" onfocusout="ChangeCopyCodeIcon(this)" tabindex="0"><img class="copyCodeImage" name="ccImage" align="absmiddle" src="../local/copycode.gif" />Copy Code
+                  </span></th></tr><tr><td colspan="2"><pre>    &lt;/fieldset&gt;<b>    &lt;h3&gt;</b><b>        Addresses&lt;/h3&gt;</b><b>    &lt;ul&gt;</b><b>        &lt;% foreach (var address in Model.CustomerAddress)</b><b>           { %&gt;</b><b>        &lt;li&gt;</b><b>            &lt;%= address.Address.AddressLine1 + " " + address.Address.AddressLine2 + " - " + address.Address.City %&gt;</b><b>            &lt;%=Html.ActionLink("(Edit)", "Edit", "Address", new { address.AddressID, Model.CustomerID }, null)%&gt;</b><b>            &lt;%=Html.ActionLink("(Delete)", "Delete", "Address", new { address.AddressID, Model.CustomerID }, null)%&gt;</b><b>        &lt;/li&gt;</b><b>        &lt;% } %&gt;</b><b>    &lt;/ul&gt;</b><b>    &lt;%=Html.ActionLink("Add New Address", "Create", "Address", new { Model.CustomerID }, null)%&gt;</b>&lt;/asp:Content&gt;</pre></td></tr></table></span></div></li></ol></li>
+        </ol>
+        <a name="_Toc223351754" href="#">
+          <span />
+        </a>
+        <a name="_Toc224707081" href="#">
+          <span />
+        </a>
+        <p>
+          <b>Task 8 – Creating Address Controller Edit View</b>
+        </p>
+        <p>In this task you will create the <b>Edit</b> view which is handled by the address controller. This view will display information about an existing address, giving the possibility to make changes.</p>
+        <ol>
+          <li>Open the <b>AddressController</b> class, right-click inside the <b>Edit</b> method code for the <b>GET</b> operation, and select <b>Add View</b> action from the context menu.<p><img src="images\05a94e66-47fa-4af7-a2eb-bdc286274f27.png" /></p><p><b>Figure 11</b><br /><i>Add View option for Edit view</i></p></li>
+          <br />
+          <li>In the <b>Add View </b>dialog box specify the following values, and click <b>Add</b>:<ul><li><b>View Name</b>: Edit</li><li>Check the <b>Create a strongly-typed view</b> option<ul><li><b>View data class</b>: MvcSampleApp.ViewData.AddressViewData</li><li><b>View content</b>: Edit</li></ul></li><li>Check the <b>Select master page</b> option<ul><li>Leave the default master page value: <b>~/Views/Shared/Site.Master</b></li><li><b>ContentPlaceHolder ID</b>: MainContent</li><br /></ul><p><img src="images\0856bfac-9f26-4807-94cf-b1f0bae2aba2.png" /></p><p><b>Figure 12</b><br /><i>Adding Edit view</i></p><br /></li></ul></li>
+          <li>Add the code to display the address information.  To do this, in <b>Solution Explorer</b> double-click <b>Edit.aspx</b> under the <b>Views\Address</b> folder to open the file. Paste the following code below the second <i>&lt;asp:Content&gt;</i> tag to replace the generated code. The address information is displayed in a table using the <b>Html.TextBox</b> helper method to display text boxes, and the <b>Html.Form</b> helper method to render a form.<div class="code"><span codeLanguage="other"><table width="100%" cellspacing="0" cellpadding="0"><tr><th>ASP.NET</th><th><span class="copyCode" onclick="CopyCode(this)" onkeypress="CopyCode_CheckKey(this)" onmouseover="ChangeCopyCodeIcon(this)" onfocusin="ChangeCopyCodeIcon(this)" onmouseout="ChangeCopyCodeIcon(this)" onfocusout="ChangeCopyCodeIcon(this)" tabindex="0"><img class="copyCodeImage" name="ccImage" align="absmiddle" src="../local/copycode.gif" />Copy Code
+                  </span></th></tr><tr><td colspan="2"><pre>&lt;asp:Content ID="Content2" ContentPlaceHolderID="MainContent" runat="server"&gt;<b>&lt;h2&gt;Editing: &lt;%= Model.Address.AddressLine1 %&gt;&lt;/h2&gt;</b><b>&lt;%= Html.ValidationSummary("Edit was unsuccessful. Please correct the errors and try again.") %&gt;</b><b>&lt;% using (Html.BeginForm()) {%&gt;</b><b>&lt;fieldset&gt;</b><b>&lt;legend&gt;Fields&lt;/legend&gt;</b><b>&lt;p&gt;</b><b>&lt;label for="AddressLine1"&gt;Address Line 1:&lt;/label&gt;</b><b>&lt;%=Html.TextBox("Address.AddressLine1")%&gt;</b><b>&lt;/p&gt;</b><b>&lt;p&gt;</b><b>&lt;label for="AddressLine2"&gt;Address Line 2:&lt;/label&gt;</b><b>&lt;%=Html.TextBox("Address.AddressLine2")%&gt;</b><b>&lt;/p&gt;</b><b>&lt;p&gt;</b><b>&lt;label for="City"&gt;City:&lt;/label&gt;</b><b>&lt;%=Html.TextBox("Address.City")%&gt;</b><b>&lt;/p&gt;</b><b>&lt;p&gt;</b><b>&lt;label for="StateProvince"&gt;State/Province:&lt;/label&gt;</b><b>&lt;%=Html.TextBox("Address.StateProvince")%&gt;</b><b>&lt;/p&gt;</b><b>&lt;p&gt;</b><b>&lt;label for="PostalCode"&gt;Postal Code:&lt;/label&gt;</b><b>&lt;%=Html.TextBox("Address.PostalCode")%&gt;</b><b>&lt;/p&gt;</b><b>&lt;p&gt;</b><b>&lt;label for="CountryRegion"&gt;Country/Region:&lt;/label&gt;</b><b>&lt;%=Html.TextBox("Address.CountryRegion")%&gt;</b><b>&lt;/p&gt;</b><b>&lt;p&gt;</b><b>&lt;input type="submit" value="Save" /&gt;</b><b>&lt;/p&gt;</b><b>&lt;/fieldset&gt;</b><b>   &lt;% } %&gt;</b>&lt;/asp:Content&gt;</pre></td></tr></table></span></div><br /><div class="alert"><table width="100%" cellspacing="0" cellpadding="0"><tr><th align="left"><img class="note" src="../local/note.gif" />Note:</th></tr><tr><td> Notice how the <b>Html.BeginForm</b> helper method is used to render a form leveraging the <b>IDisposable</b> pattern with the using keyword to auto-terminate the <b>Form</b> declaration. The form submitting method call will then be translated into the proper URL form. </td></tr></table><p /></div></li>
+          <br />
+          <div class="alert">
+            <table width="100%" cellspacing="0" cellpadding="0">
+              <tr>
+                <th align="left">
+                  <img class="note" src="../local/note.gif" />Note:</th>
+              </tr>
+              <tr>
+                <td> The <b>Html.TextBox</b> helper method used above dynamically generates the HTML code for a text box. It receives as arguments: the html name, the text to display and an anonymous object with desired element’s html attributes. <br />Notice that in some cases, we’re not specifying the value of the textbox. This is because the <b>Html.TextBox</b> helper method will look for a property in ViewData (or ViewData.Model) that has the same name as the name given to the textbox. If it finds one then it will grab that value and use it. </td>
+              </tr>
+            </table>
+            <p />
+          </div>
+        </ol>
+        <a name="_Toc223351755" href="#">
+          <span />
+        </a>
+        <a name="_Toc224707082" href="#">
+          <span />
+        </a>
+        <p>
+          <b>Task 9 – Creating Address Controller New View</b>
+        </p>
+        <p>In this task you will create the <b>Create</b> view which is handled by the address controller. The <b>Create</b> view displays a blank form to create a new address for the selected customer.</p>
+        <ol>
+          <li>Open the <b>AddressController</b> class, right-click inside the <b>Create</b> method code for the <b>GET</b> operation, and select <b>Add View</b> action from the context menu.<p><img src="images\1d157f1e-07d8-4772-afb1-bf79aff6d30d.png" /></p><p><b>Figure 24</b><br /><i>Add View option for Create view</i></p><br /></li>
+          <li>In the <b>Add View </b>dialog box specify the following values, and click <b>Add</b> to create the view:<ul><li><b>View Name</b>: Create</li><li>Check the <b>Create a strongly-typed view</b> option<ul><li><b>View data class</b>: MvcSampleApp.ViewData.AddressViewData</li><li><b>View content</b>: Create</li></ul></li><li>Check the <b>Select master page</b> option<ul><li>Leave the default master page value: <b>~/Views/Shared/Site.Master</b></li><li><b>ContentPlaceHolder ID</b>: MainContent</li></ul></li></ul></li>
+          <p>
+            <img src="images\48136abd-acad-4192-826e-67e145d01d17.png" />
+          </p>
+          <p>
+            <b>Figure 25</b>
+            <br />
+            <i>Adding Create view</i>
+          </p>
+          <br />
+          <li>Implement the blank form in the view to capture user input for the new address. To do this, in <b>Solution Explorer</b> double-click <b>Create.aspx </b>(under the <b>Views\Address</b> folder) to open the file. Replace the second <i>&lt;asp:Content&gt;</i> tag with the following code:<div class="code"><span codeLanguage="other"><table width="100%" cellspacing="0" cellpadding="0"><tr><th>ASP.NET</th><th><span class="copyCode" onclick="CopyCode(this)" onkeypress="CopyCode_CheckKey(this)" onmouseover="ChangeCopyCodeIcon(this)" onfocusin="ChangeCopyCodeIcon(this)" onmouseout="ChangeCopyCodeIcon(this)" onfocusout="ChangeCopyCodeIcon(this)" tabindex="0"><img class="copyCodeImage" name="ccImage" align="absmiddle" src="../local/copycode.gif" />Copy Code
+                  </span></th></tr><tr><td colspan="2"><pre>&lt;asp:Content ID="Content2" ContentPlaceHolderID="MainContent" runat="server"&gt;<b>    &lt;h2&gt;</b><b>        Create Address</b><b>    &lt;/h2&gt;</b><b>    &lt;%= Html.ValidationSummary("Create was unsuccessful. Please correct the errors and try again.") %&gt;</b><b>    &lt;% using (Html.BeginForm())</b><b>       {%&gt;</b><b>    &lt;fieldset&gt;</b><b>        &lt;legend&gt;Fields&lt;/legend&gt;</b><b>        &lt;p&gt;</b><b>            &lt;label for="AddressLine1"&gt;</b><b>                Address Line 1:&lt;/label&gt;</b><b>            &lt;%= Html.TextBox("Address.AddressLine1") %&gt;</b><b>        &lt;/p&gt;</b><b>        &lt;p&gt;</b><b>            &lt;label for="AddressLine2"&gt;</b><b>                Address Line 2:&lt;/label&gt;</b><b>            &lt;%= Html.TextBox("Address.AddressLine2") %&gt;</b><b>        &lt;/p&gt;</b><b>        &lt;p&gt;</b><b>            &lt;label for="City"&gt;</b><b>                City:&lt;/label&gt;</b><b>            &lt;%= Html.TextBox("Address.City")%&gt;</b><b>        &lt;/p&gt;</b><b>        &lt;p&gt;</b><b>            &lt;label for="StateProvince"&gt;</b><b>                State/Province:&lt;/label&gt;</b><b>            &lt;%= Html.TextBox("Address.StateProvince")%&gt;</b><b>        &lt;/p&gt;</b><b>        &lt;p&gt;</b><b>            &lt;label for="PostalCode"&gt;</b><b>                Postal Code:&lt;/label&gt;</b><b>            &lt;%= Html.TextBox("Address.PostalCode")%&gt;</b><b>        &lt;/p&gt;</b><b>        &lt;p&gt;</b><b>            &lt;label for="CountryRegion"&gt;</b><b>                Country/Region:&lt;/label&gt;</b><b>            &lt;%= Html.TextBox("Address.CountryRegion")%&gt;</b><b>        &lt;/p&gt;</b><b>        &lt;p&gt;</b><b>            &lt;input type="submit" value="Create" /&gt;</b><b>        &lt;/p&gt;</b><b>    &lt;/fieldset&gt;</b><b>    &lt;% } %&gt;</b>&lt;/asp:Content&gt;</pre></td></tr></table></span></div></li>
+        </ol>
+        <br />
+      </div>
+      <div id="footer">
+        <div class="footerLine">
+          <img src="../local/footer.gif" alt="Footer image" width="100%" height="3px" />
+        </div>To give feedback please write to mvckit@microsoft.com<p />Copyright © 2009 by Microsoft Corporation. All rights reserved.</div>
+    </div>
+  </body>
+</html>

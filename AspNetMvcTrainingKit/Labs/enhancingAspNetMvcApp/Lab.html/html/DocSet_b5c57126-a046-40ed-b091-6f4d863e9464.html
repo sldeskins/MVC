@@ -1,0 +1,230 @@
+<html dir="ltr" xmlns:MSHelp="http://msdn.microsoft.com/mshelp" xmlns:dt="uuid:C2F41010-65B3-11d1-A29F-00AA00C14882" xmlns:xlink="http://www.w3.org/1999/xlink">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+    <meta name="save" content="history" />
+    <xml>
+      <MSHelp:TOCTitle Title="Exercise 1: Using Form Posting in a MVC Web Application" />
+      <MSHelp:RLTitle Title="Exercise 1: Using Form Posting in a MVC Web Application" />
+      <MSHelp:Attr Name="DocSet" Value="docSet" />
+      <MSHelp:Attr Name="TopicType" Value="kbOrient" />
+      <MSHelp:Attr Name="Locale" Value="kbEnglish" />
+      <MSHelp:Attr Name="AssetId" Value="{GUID}" />
+    </xml>
+    <title>Exercise 1: Using Form Posting in a MVC Web Application</title>
+    <link rel="stylesheet" type="text/css" href="../local/Classic.css" />
+    <script src="../local/EventUtilities.js" type="text/jscript" language="jscript"> </script>
+    <script src="../local/SplitScreen.js" type="text/jscript" language="jscript"> </script>
+    <script src="../local/Dropdown.js" type="text/jscript" language="jscript"> </script>
+    <script src="../local/script.js" type="text/jscript" language="jscript"> </script>
+  </head>
+  <body>
+    <input type="hidden" id="userDataCache" class="userDataStyle" />
+    <input type="hidden" id="hiddenScrollOffset" />
+    <img id="dropDownImage" style="display:none; height:0; width:0;" alt="DropDown image" src="../local/drpdown.gif" />
+    <img id="dropDownHoverImage" style="display:none; height:0; width:0;" alt="DropDownHover image" src="../local/drpdown_orange.gif" />
+    <img id="collapseImage" style="display:none; height:0; width:0;" alt="Collapse image" src="../local/collapse_all.gif" />
+    <img id="expandImage" style="display:none; height:0; width:0;" alt="Expand image" src="../local/expand_all.gif" />
+    <img id="collapseAllImage" style="display:none; height:0; width:0;" alt="CollapseAll image" src="../local/collall.gif" />
+    <img id="expandAllImage" style="display:none; height:0; width:0;" alt="ExpandAll image" src="../local/expall.gif" />
+    <img id="copyImage" style="display:none; height:0; width:0;" alt="Copy image" src="../local/copycode.gif" />
+    <img id="copyHoverImage" style="display:none; height:0; width:0;" alt="CopyHover image" src="../local/copycodeHighlight.gif" />
+    <div id="header">
+      <table width="100%" id="topTable">
+        <tr id="headerTableRow1">
+          <td align="left">
+            <span id="runningHeaderText">Enhancing Asp.NET MVC Applications</span>
+          </td>
+        </tr>
+        <tr id="headerTableRow2">
+          <td align="left">
+            <span id="nsrTitle">Exercise 1: Using Form Posting in a MVC Web Application</span>
+          </td>
+        </tr>
+        <tr id="headerTableRow3">
+          <td />
+        </tr>
+      </table>
+    </div>
+    <div id="mainSection">
+      <div id="mainBody">
+        <div id="allHistory" class="saveHistory" onsave="saveAll()" onload="loadAll()" />
+        <p>In this exercise, you will learn how to work with form posting scenarios in a Web application created with ASP.NET MVC. </p>
+        <p>ASP.NET MVC 1.0 includes the following new features:</p>
+        <ul>
+          <li>The ability to publish a single action URL and dispatch it differently depending on the HTTP Verb (GET or POST)</li>
+          <li>Model Binders that allow rich parameter objects to be constructed from form input values</li>
+          <li>Helper methods that enable incoming form input values to be mapped to existing model object instances within action methods</li>
+        </ul>
+        <div class="alert">
+          <table width="100%" cellspacing="0" cellpadding="0">
+            <tr>
+              <th align="left">
+                <img class="note" src="../local/note.gif" />Note:</th>
+            </tr>
+            <tr>
+              <td> Form posting scenarios are those where a &lt;form&gt; section is defined on the HTML page which contains all the input fields. The client requests to the server are done with the POST verb (usually by declaring a <b>submit</b> button type inside the &lt;form&gt; tag).</td>
+            </tr>
+          </table>
+          <p />
+        </div>
+        <p>In the following tasks you will learn how each of these features can be implemented on a form posting scenario and the benefits of using them.</p>
+        <br />
+        <a name="_Toc223948239" href="#">
+          <span />
+        </a>
+        <a name="_Toc224120011" href="#">
+          <span />
+        </a>
+        <p>
+          <b>Task 1 – Using the ActionName Attribute</b>
+        </p>
+        <p>In this task you will use the <b>ActionName</b> attribute to allow the method name implementation on your controller class to be different from the published URL.</p>
+        <div class="alert">
+          <table width="100%" cellspacing="0" cellpadding="0">
+            <tr>
+              <th align="left">
+                <img class="note" src="../local/note.gif" />Note:</th>
+            </tr>
+            <tr>
+              <td> For example, rather than having two overloaded <b>Create</b> methods in your controller, you may instead want to have the POST method named <b>Save</b>. In this case you can apply the <b>[ActionName("Create")]</b> attribute in order to keep the same URL for both actions but with different method names.</td>
+            </tr>
+          </table>
+          <p />
+        </div>
+        <br />
+        <ol>
+          <li>Open Microsoft Visual Studio 2008 from <b>Start | All Programs | Microsoft Visual Studio 2008 | Microsoft Visual Studio 2008</b>.</li>
+          <li>Open the solution file <b>MvcSampleApp.sln</b> located under the <b>enhancingAspNetMvcApp\Ex01-</b><b>FormPosting\begin </b>folder.</li>
+          <li>Open the <b>AddressController</b> class. To do this, in the <b>Solution Explorer</b>, double click the <b>AddressController.cs</b> file, located inside the <b>Controllers</b> folder.</li>
+          <li>Notice that the class contains two <b>Create</b> overloaded action methods.<p><img src="images\de5cae2d-022c-414a-9ead-8018138972a6.png" /></p><p><b>Figure 1</b><br /><i>Viewing the overloads of Create method</i></p><br /><div class="alert"><table width="100%" cellspacing="0" cellpadding="0"><tr><th align="left"><img class="note" src="../local/note.gif" />Note:</th></tr><tr><td>  Typically, MVC applications have two action methods to handle create or update scenarios. One for returning the html view that displays the initial empty form, and another to save the inputted data when the form is submitted.<br />The downside to using two actions in those scenarios is that you need to publish two URLs from your site. For example, "<i>/Address/Create</i>" and "<i>/Address/Save</i>".  The problem with this comes when you need to redisplay the HTML form due to an input error, because the URL of the redisplayed form in the scenario will be "<i>/Address/Save</i>" instead of "<i>/Address/Create</i>". This is because <b>Save</b> was the URL the form was posted to. To summarize, you are in the <b>Create</b> address and submit the form, and then you are redirected to the <b>Save</b> URL where the data is validated and errors are shown. After that, if there were errors while saving the data, you will be redirected again to the <b>Create</b> URL to fix the inputs. One of the problems with this approach is that requires two additional redirections.</td></tr></table><p /></div></li>
+          <br />
+          <li>Notice that the second action method has the <b>AcceptVerbs</b> attribute applied with a <b>Post</b> value passed as a parameter. The <b>AcceptVerbs</b> attribute allows specifying how the action methods will be dispatched. For example, you can declare an action method that will be called on GET scenarios and another one that will be called on POST scenarios.<div class="alert"><table width="100%" cellspacing="0" cellpadding="0"><tr><th align="left"><img class="note" src="../local/note.gif" />Note:</th></tr><tr><td> The usage of the <b>AcceptVerbs</b> attribute permits publishing just a single URL (in this case: <i>/Address/Create</i>). Besides, the handling automatically varies based on the incoming HTTP verb.</td></tr></table><p /></div></li>
+          <br />
+          <div class="alert">
+            <table width="100%" cellspacing="0" cellpadding="0">
+              <tr>
+                <th align="left">
+                  <img class="note" src="../local/note.gif" />Note:</th>
+              </tr>
+              <tr>
+                <td> Both action methods have the same name—<b>Create</b>—but different overloads.  The method used in POST scenarios has an additional parameter of type <b>FormCollection</b>. This parameter is not used in the code, as it is only provided to have a different method signature.</td>
+              </tr>
+            </table>
+            <p />
+          </div>
+          <br />
+          <li>Use the <b>ActionName</b> attribute to allow changing the <b>Create</b> (for POST) method name. This allows you to prescind from the overloads, and remove the unused parameter from the method signature. To do this, replace the <b>Create</b> action method and attribute (for POST) with the following code:<div class="code"><span codeLanguage="CSharp"><table width="100%" cellspacing="0" cellpadding="0"><tr><th>C#</th><th><span class="copyCode" onclick="CopyCode(this)" onkeypress="CopyCode_CheckKey(this)" onmouseover="ChangeCopyCodeIcon(this)" onfocusin="ChangeCopyCodeIcon(this)" onmouseout="ChangeCopyCodeIcon(this)" onfocusout="ChangeCopyCodeIcon(this)" tabindex="0"><img class="copyCodeImage" name="ccImage" align="absmiddle" src="../local/copycode.gif" />Copy Code
+                  </span></th></tr><tr><td colspan="2"><pre><b>[AcceptVerbs(HttpVerbs.Post), ActionName("Create")]</b><b>public ActionResult SaveNew(int customerId)</b></pre></td></tr></table></span></div></li>
+          <br />
+          <div class="alert">
+            <table width="100%" cellspacing="0" cellpadding="0">
+              <tr>
+                <th align="left">
+                  <img class="note" src="../local/note.gif" />Note:</th>
+              </tr>
+              <tr>
+                <td> By adding the <b>ActionName</b> attribute, despite that the method name is <b>SaveNew()</b>,<b> </b>the action method will handle requests for <b>Create</b> actions in POST operations<b>.</b></td>
+              </tr>
+            </table>
+            <p />
+          </div>
+        </ol>
+        <a name="_Toc223948240" href="#">
+          <span />
+        </a>
+        <a name="_Toc224120012" href="#">
+          <span />
+        </a>
+        <p>
+          <b>Task 2 – Creating a Custom Model Binder</b>
+        </p>
+        <p>In this task you will learn how to implement a custom Model Binder which automatically constructs rich parameter objects from form input values. In contrast with previous versions of ASP.NET MVC in which the user had to manually construct the model object (for example, <i>product</i> or <i>address</i>) based on the input values (specified as method arguments); this new feature provides a way for complex types to be de-serialized from the incoming HTTP input, and passed to a <b>Controller</b> action method as arguments or populated through the <b>UpdateModel</b> / <b>TryUpdateModel</b> methods (this is shown in the current exercise). In other words, the action methods now receive the full model object rather than the input values as separated arguments.</p>
+        <p>Model Binders can be registered at 4 different levels, and its scope will be different depending where they were registered:</p>
+        <ol>
+          <li>As an attribute applied to the Controller's action method's argument. In this case the model binder will only be used when de-serializing the HTTP input to the action method argument.</li>
+          <li>As an attribute applied to the type of a model. When registered at this level, the Model Binder will be used each time an instance of the type has to be de-serialized.</li>
+          <li>On the <b>ModelBinders.Binders</b> dictionary on the <b>Application_Start</b> method of the <b>MvcApplication</b> class. As on the previous level, defining a Model Binder on this level will affect the application globally, automatically using this binder each time an instance of the model type needs to be de-serialized.</li>
+          <li>As the default binder, a binder can be registered to be used when a type-specific model binder can't be found, and in this case the registration affects the application globally.</li>
+        </ol>
+        <div class="alert">
+          <table width="100%" cellspacing="0" cellpadding="0">
+            <tr>
+              <th align="left">
+                <img class="note" src="../local/note.gif" />Note:</th>
+            </tr>
+            <tr>
+              <td> Model Binders also provide support for handling input exceptions, and make it easier to redisplay forms when errors occur (without requiring the end-user to have to re-enter all their data again).</td>
+            </tr>
+          </table>
+          <p />
+        </div>
+        <br />
+        <ol>
+          <li>Create a folder named <b>Binders</b>. To do this, in the <b>Solution Explorer</b>, right click the <b>MvcSampleApp</b> project, point to <b>Add</b>, click <b>New Folder</b> and set the folder name to <b>Binders</b>.</li>
+          <li>Create the <b>AddressViewDataBinder</b> class in the <b>Binders</b> folder. To do this, right click the <b>Binders</b> folder, point to <b>Add</b> and select <b>Class. </b>Set the class name to <b>AddressViewDataBinder</b>.<p><img src="images\239e1f69-a39a-4d94-90bb-4a98e1c07844.png" /></p><p><b>Figure 2</b><br /><i>Adding the AddressViewDataBinder class</i></p></li>
+          <br />
+          <li>Open the <b>AddressViewDataBinder.cs</b> file and replace the using statements at the top of the file with the following ones:<div class="code"><span codeLanguage="CSharp"><table width="100%" cellspacing="0" cellpadding="0"><tr><th>C#</th><th><span class="copyCode" onclick="CopyCode(this)" onkeypress="CopyCode_CheckKey(this)" onmouseover="ChangeCopyCodeIcon(this)" onfocusin="ChangeCopyCodeIcon(this)" onmouseout="ChangeCopyCodeIcon(this)" onfocusout="ChangeCopyCodeIcon(this)" tabindex="0"><img class="copyCodeImage" name="ccImage" align="absmiddle" src="../local/copycode.gif" />Copy Code
+                  </span></th></tr><tr><td colspan="2"><pre><b>using System.Web.Mvc;</b><b>using MvcSampleApp.Models;</b><b>using MvcSampleApp.ViewData;</b></pre></td></tr></table></span></div><br /></li>
+          <li>Change the class signature to implement the <b>IModelBinder</b> interface, as shown in the following code.<div class="code"><span codeLanguage="CSharp"><table width="100%" cellspacing="0" cellpadding="0"><tr><th>C#</th><th><span class="copyCode" onclick="CopyCode(this)" onkeypress="CopyCode_CheckKey(this)" onmouseover="ChangeCopyCodeIcon(this)" onfocusin="ChangeCopyCodeIcon(this)" onmouseout="ChangeCopyCodeIcon(this)" onfocusout="ChangeCopyCodeIcon(this)" tabindex="0"><img class="copyCodeImage" name="ccImage" align="absmiddle" src="../local/copycode.gif" />Copy Code
+                  </span></th></tr><tr><td colspan="2"><pre>public class AddressViewDataBinder : IModelBinder{}</pre></td></tr></table></span></div><br /><div class="alert"><table width="100%" cellspacing="0" cellpadding="0"><tr><th align="left"><img class="note" src="../local/note.gif" />Note:</th></tr><tr><td> Model binders in ASP.NET MVC are classes that implement the <b>IModelBinder</b> interface, and can be used to help manage the binding of types to input parameters.  A model binder can be written to work against a specific object type, or can alternatively be used to handle a broad range of types. The <b>IModelBinder</b> interface allows you to unit test binders independent of the web-server or any specific controller implementation.</td></tr></table><p /></div><br /></li>
+          <li>Add the implementation of the <b>BindModel</b> method that will be the entry point for the model binder.<p>(Code Snippet – <i>Enhancing Asp.Net MVC Lab – AddressViewDataBinder BindModel Method</i>)</p><div class="code"><span codeLanguage="CSharp"><table width="100%" cellspacing="0" cellpadding="0"><tr><th>C#</th><th><span class="copyCode" onclick="CopyCode(this)" onkeypress="CopyCode_CheckKey(this)" onmouseover="ChangeCopyCodeIcon(this)" onfocusin="ChangeCopyCodeIcon(this)" onmouseout="ChangeCopyCodeIcon(this)" onfocusout="ChangeCopyCodeIcon(this)" tabindex="0"><img class="copyCodeImage" name="ccImage" align="absmiddle" src="../local/copycode.gif" />Copy Code
+                  </span></th></tr><tr><td colspan="2"><pre>public class AddressViewDataBinder : IModelBinder    {<b>public object BindModel(ControllerContext controllerContext, ModelBindingContext bindingContext)</b><b>        {</b><b>            AddressViewData addressViewData = (AddressViewData)bindingContext.Model;</b><b>            if (addressViewData.Address == null)</b><b>            {</b><b>                addressViewData.Address = new Address();</b><b>            }</b><b>            addressViewData.CustomerId = GetValueFromProvider&lt;int&gt;(bindingContext, "CustomerId");</b><b>            return RetrieveAddressViewDataFromContext(addressViewData, bindingContext);</b>        }</pre></td></tr></table></span></div><br /></li>
+          <li>Add the <b>RetrieveAddressViewDataFromContext</b> method that will populate the <b>AddressViewData</b> view data from the binding context.<p>(Code Snippet – <i>Enhancing Asp.Net MVC Lab – AddressViewDataBinder RetrieveAddressViewDataFromContext Method</i>)</p><div class="code"><span codeLanguage="CSharp"><table width="100%" cellspacing="0" cellpadding="0"><tr><th>C#</th><th><span class="copyCode" onclick="CopyCode(this)" onkeypress="CopyCode_CheckKey(this)" onmouseover="ChangeCopyCodeIcon(this)" onfocusin="ChangeCopyCodeIcon(this)" onmouseout="ChangeCopyCodeIcon(this)" onfocusout="ChangeCopyCodeIcon(this)" tabindex="0"><img class="copyCodeImage" name="ccImage" align="absmiddle" src="../local/copycode.gif" />Copy Code
+                  </span></th></tr><tr><td colspan="2"><pre>public class AddressViewDataBinder : IModelBinder{...<b>private static AddressViewData RetrieveAddressViewDataFromContext(AddressViewData addressViewData, ModelBindingContext bindingContext)</b><b>        {</b><b>            if (bindingContext.PropertyFilter("Address.AddressLine1"))</b><b>            {</b><b>                addressViewData.Address.AddressLine1 = GetValueFromProvider&lt;string&gt;(bindingContext, "Address.AddressLine1");</b><b>            }</b><b>            if (bindingContext.PropertyFilter("Address.AddressLine2"))</b><b>            {</b><b>                addressViewData.Address.AddressLine2 = GetValueFromProvider&lt;string&gt;(</b><b>                        bindingContext, "Address.AddressLine2");</b><b>            }</b><b>            if (bindingContext.PropertyFilter("Address.City"))</b><b>            {</b><b>                addressViewData.Address.City = GetValueFromProvider&lt;string&gt;(bindingContext, "Address.City");</b><b>            }</b><b>            if (bindingContext.PropertyFilter("Address.CountryRegion"))</b><b>            {</b><b>                addressViewData.Address.CountryRegion = GetValueFromProvider&lt;string&gt;(</b><b>                        bindingContext, "Address.CountryRegion");</b><b>            }</b><b>            if (bindingContext.PropertyFilter("Address.PostalCode"))</b><b>            {</b><b>                addressViewData.Address.PostalCode = GetValueFromProvider&lt;string&gt;(bindingContext, "Address.PostalCode");</b><b>            }</b><b>            if (bindingContext.PropertyFilter("Address.StateProvince"))</b><b>            {</b><b>                addressViewData.Address.StateProvince = GetValueFromProvider&lt;string&gt;(</b><b>                        bindingContext, "Address.StateProvince");</b><b>            }</b><b>            return addressViewData;</b><b>        }</b>}</pre></td></tr></table></span></div><br /></li>
+          <li>Add the <b>GetValueFromProvider</b> helper method that gets the values from the binding context as a string and converts them to the appropriate type. This is shown in the following bolded code.<p>(Code Snippet – <i>Enhancing Asp.Net MVC Lab – AddressViewDataBinder GetValueFromProvider Method</i>)</p><div class="code"><span codeLanguage="CSharp"><table width="100%" cellspacing="0" cellpadding="0"><tr><th>C#</th><th><span class="copyCode" onclick="CopyCode(this)" onkeypress="CopyCode_CheckKey(this)" onmouseover="ChangeCopyCodeIcon(this)" onfocusin="ChangeCopyCodeIcon(this)" onmouseout="ChangeCopyCodeIcon(this)" onfocusout="ChangeCopyCodeIcon(this)" tabindex="0"><img class="copyCodeImage" name="ccImage" align="absmiddle" src="../local/copycode.gif" />Copy Code
+                  </span></th></tr><tr><td colspan="2"><pre>public class AddressViewDataBinder : IModelBinder{...<b>    private static T GetValueFromProvider&lt;T&gt;(ModelBindingContext bindingContext, string key)</b><b>    {</b><b>        ValueProviderResult valueProviderResult;</b><b>        bindingContext.ValueProvider.TryGetValue(key, out valueProviderResult);</b><b>        if (valueProviderResult != null)</b><b>        {</b><b>            return (T)valueProviderResult.ConvertTo(typeof(T));</b><b>        }</b><b>        return default(T);</b><b>    }</b>}</pre></td></tr></table></span></div><br /></li>
+          <li>Register the model binder in the <b>Global.asax</b> file. To do this, open the <b>Global.asax</b> file, and add the following bolded code inside the <b>Application_Start</b> method.<div class="code"><span codeLanguage="CSharp"><table width="100%" cellspacing="0" cellpadding="0"><tr><th>C#</th><th><span class="copyCode" onclick="CopyCode(this)" onkeypress="CopyCode_CheckKey(this)" onmouseover="ChangeCopyCodeIcon(this)" onfocusin="ChangeCopyCodeIcon(this)" onmouseout="ChangeCopyCodeIcon(this)" onfocusout="ChangeCopyCodeIcon(this)" tabindex="0"><img class="copyCodeImage" name="ccImage" align="absmiddle" src="../local/copycode.gif" />Copy Code
+                  </span></th></tr><tr><td colspan="2"><pre>protected void Application_Start(){    RegisterRoutes(RouteTable.Routes);<b>ModelBinders.Binders.Add(typeof(AddressViewData), new AddressViewDataBinder());</b>}</pre></td></tr></table></span></div><div class="alert"><table width="100%" cellspacing="0" cellpadding="0"><tr><th align="left"><img class="note" src="../local/note.gif" />Note:</th></tr><tr><td> ASP.NET MVC also supports the ability to register binders at application startup using the <b>ModelBinders.Binders</b> collection. This is useful when you want to use a type written by a third party (that you can't annotate) or if you don't want to add a binder attribute annotation on your model object directly. Additionally, binders can be registered at other levels within an MVC application, such as a parameter attribute, or as an attribute on the type of the parameter being passed to the action method.</td></tr></table><p /></div></li>
+        </ol>
+        <a name="_Toc223948241" href="#">
+          <span />
+        </a>
+        <a name="_Toc224120013" href="#">
+          <span />
+        </a>
+        <p>
+          <b>Task 3 – Using the UpdateModel and TryUpdateModel Helper Methods</b>
+        </p>
+        <p>In this task you will learn how to use the <b>UpdateModel</b> and <b>TryUpdateModel</b> helper methods that enable incoming form input values to be mapped to existing model object instances within action methods.</p>
+        <div class="alert">
+          <table width="100%" cellspacing="0" cellpadding="0">
+            <tr>
+              <th align="left">
+                <img class="note" src="../local/note.gif" />Note:</th>
+            </tr>
+            <tr>
+              <td> The <b>ModelBinder</b> support explained previously is great for scenarios where you want to instantiate new objects and pass them in as arguments to a controller action method. There are also scenarios, though, when you want to be able to bind input values to existing object instances that you own retrieving/creating yourself within the action method.  For example, when enabling an edit scenario for an existing product in the database, you might want to use an ORM to retrieve an existing product instance from the database first within your action method, then bind the new input values to the retrieved product instance, and then save the changes back to the database.</td>
+            </tr>
+          </table>
+          <p />
+        </div>
+        <br />
+        <ol>
+          <li>Open the <b>AddressController</b> class. To do this, in the <b>Solution Explorer</b>, double click the <b>AddressController.cs</b> file, located inside the <b>Controllers</b> folder.</li>
+          <li>Look for the <b>Edit</b> action method that handles POST operations (specifically the one that has the <b>AcceptVerbs(HttpVerbs.Post)</b> attribute applied).<p>Notice that the <b>UpdateModel</b> helper method is used in the method’s body.</p><p><img src="images\4b4cd3c1-f4e0-4b60-beb9-c11a95938a48.png" /></p><p><b>Figure 3</b><br /><i>Calling the UpdateModel method in the Edit action method</i></p><br /><div class="alert"><table width="100%" cellspacing="0" cellpadding="0"><tr><th align="left"><img class="note" src="../local/note.gif" />Note:</th></tr><tr><td> The <b>UpdateModel</b> helper method allows you to pass in an existing object instance as the first argument, and optionally as a second argument you pass in a security white-list of specific properties you want to update using the form post values. The <b>UpdateModel</b> method will attempt to update all of the properties in the list. If you do not provide this list, the default behavior is to update all the properties of the model. If any of them fail, the method will raise an exception.</td></tr></table><p /></div><br /></li>
+          <li>Replace the line of code where the <b>UpdateModel</b> method is invoked, with a <b>TryUpdateModel</b> call and store the result value in a <b>Boolean</b> variable. Also create a variable to store the value providers, which can be get from the <b>FormCollection</b> instance. The updated code is shown in the following  bolded code:<div class="code"><span codeLanguage="CSharp"><table width="100%" cellspacing="0" cellpadding="0"><tr><th>C#</th><th><span class="copyCode" onclick="CopyCode(this)" onkeypress="CopyCode_CheckKey(this)" onmouseover="ChangeCopyCodeIcon(this)" onfocusin="ChangeCopyCodeIcon(this)" onmouseout="ChangeCopyCodeIcon(this)" onfocusout="ChangeCopyCodeIcon(this)" tabindex="0"><img class="copyCodeImage" name="ccImage" align="absmiddle" src="../local/copycode.gif" />Copy Code
+                  </span></th></tr><tr><td colspan="2"><pre>[AcceptVerbs(HttpVerbs.Post)]public ActionResult Edit(int addressId, int customerId, FormCollection collection){    try    {        AddressViewData addressViewData = new AddressViewData();        addressViewData.Address = this.repository.GetAddressById(addressId);<b>IDictionary&lt;string, ValueProviderResult&gt; valueProviders = collection.ToValueProvider();</b><b>bool updateModelResult = TryUpdateModel(addressViewData, null, null, new[] { "Address.CountryRegion" }, valueProviders);</b>    }    catch    {        return View();    }}</pre></td></tr></table></span></div><br /><div class="alert"><table width="100%" cellspacing="0" cellpadding="0"><tr><th align="left"><img class="note" src="../local/note.gif" />Note:</th></tr><tr><td>The <b>TryUpdateModel</b> helper method has the same purpose as the <b>UpdateModel</b> method. The major difference between them is that the <b>TryUpdateModel</b> returns a <b>Boolean</b> value of false if the mapping of properties fails, and true if everything worked well, while <b>UpdateModel</b> does not have a return value, and always throws an exception when the mapping fails.<br />Nevertheless, they both work the same way, updating all properties whose mapping does not fail even if some property update do fail.Choose whichever method works best with your error handling preferences.</td></tr></table><p /></div><p>Notice that you are using an overload of the <b>TryUpdateModel</b> method which accepts the following parameters:</p><ul><li><b>Model</b>: The model instance to update from the input form. In this case, the addressViewData view data.</li><li><b>Prefix</b>: Prefix to use when looking up the values in the value provider.</li><li><b>IncludeProperties</b>: The list of properties to include in the update, if different than null <b>TryUpdateModel</b> will update only the listed properties.</li><li><b>ExcludeProperties</b>: The list of properties to explicitly exclude from the update. These properties will be excluded, even if they are in the <b>IncludeProperties</b> list.</li><li><b>ValueProviders</b>:  A dictionary of value providers which are used internally to convert the values from the request to the properties of <b>Model</b>.</li></ul></li>
+          <div class="alert">
+            <table width="100%" cellspacing="0" cellpadding="0">
+              <tr>
+                <th align="left">
+                  <img class="note" src="../local/note.gif" />Note:</th>
+              </tr>
+              <tr>
+                <td>In the preceding code the <b>CountryRegion</b> property was passed to the <b>TryUpdateModel</b> method in the <b>ExcludeProperties</b> parameter. Therefore changes to this property will not be impacted in the model. This could be, for example, as the result of a business rule where you cannot change the country of an existing address.</td>
+              </tr>
+            </table>
+            <p />
+          </div>
+          <br />
+          <li>Add a conditional clause below the previously inserted code to impact the changes in the database or not, depending on the result of the <b>TryUpdateModel</b> method. To do this, replace the two lines of code where the <b>UpdateAddress()</b> and <b>RedirectToAction()</b> methods are invoked, with the following code:<div class="code"><span codeLanguage="CSharp"><table width="100%" cellspacing="0" cellpadding="0"><tr><th>C#</th><th><span class="copyCode" onclick="CopyCode(this)" onkeypress="CopyCode_CheckKey(this)" onmouseover="ChangeCopyCodeIcon(this)" onfocusin="ChangeCopyCodeIcon(this)" onmouseout="ChangeCopyCodeIcon(this)" onfocusout="ChangeCopyCodeIcon(this)" tabindex="0"><img class="copyCodeImage" name="ccImage" align="absmiddle" src="../local/copycode.gif" />Copy Code
+                  </span></th></tr><tr><td colspan="2"><pre><b>if (!updateModelResult)</b><b>{</b><b>    return View(addressViewData);</b><b>}</b><b>else</b><b>{</b><b>    this.repository.UpdateAddress();</b><b>    return RedirectToAction("Info", "Customer", new { id = customerId });</b><b>}</b></pre></td></tr></table></span></div><br /><div class="alert"><table width="100%" cellspacing="0" cellpadding="0"><tr><th align="left"><img class="note" src="../local/note.gif" />Note:</th></tr><tr><td> As seen in the preceding code, when the <b>TryUpdateModel</b> operation returns true—no errors in the mapping—you will be redirected to the customer info page after the database is updated.</td></tr></table><p /></div></li>
+        </ol>
+      </div>
+      <div id="footer">
+        <div class="footerLine">
+          <img src="../local/footer.gif" alt="Footer image" width="100%" height="3px" />
+        </div>To give feedback please write to mvckit@microsoft.com<p />Copyright © 2009 by Microsoft Corporation. All rights reserved.</div>
+    </div>
+  </body>
+</html>
