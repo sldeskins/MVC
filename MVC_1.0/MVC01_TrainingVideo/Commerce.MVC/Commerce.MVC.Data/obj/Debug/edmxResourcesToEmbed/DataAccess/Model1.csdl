@@ -1,0 +1,82 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="Commerce.MVCModel" Alias="Self" xmlns="http://schemas.microsoft.com/ado/2006/04/edm">
+  <EntityContainer Name="Entities">
+    <EntitySet Name="Categories" EntityType="Commerce.MVCModel.Category" />
+    <EntitySet Name="ProductDescriptions" EntityType="Commerce.MVCModel.ProductDescription" />
+    <EntitySet Name="ProductReviews" EntityType="Commerce.MVCModel.ProductReview" />
+    <EntitySet Name="Products" EntityType="Commerce.MVCModel.Product" />
+    <AssociationSet Name="FK_Products_Categories" Association="Commerce.MVCModel.FK_Products_Categories">
+      <End Role="Categories" EntitySet="Categories" />
+      <End Role="Products" EntitySet="Products" />
+    </AssociationSet>
+    <AssociationSet Name="FK_ProductDescription_Products" Association="Commerce.MVCModel.FK_ProductDescription_Products">
+      <End Role="Products" EntitySet="Products" />
+      <End Role="ProductDescription" EntitySet="ProductDescriptions" />
+    </AssociationSet>
+    <AssociationSet Name="FK_ProductReviews_Products" Association="Commerce.MVCModel.FK_ProductReviews_Products">
+      <End Role="Products" EntitySet="Products" />
+      <End Role="ProductReviews" EntitySet="ProductReviews" />
+    </AssociationSet>
+  </EntityContainer>
+  <EntityType Name="Category">
+    <Key>
+      <PropertyRef Name="CategoryID" />
+    </Key>
+    <Property Name="CategoryID" Type="Int32" Nullable="false" />
+    <Property Name="CategoryName" Type="String" Nullable="false" MaxLength="50" Unicode="true" FixedLength="true" />
+    <Property Name="ParentID" Type="Int32" />
+    <NavigationProperty Name="Products" Relationship="Commerce.MVCModel.FK_Products_Categories" FromRole="Categories" ToRole="Products" />
+  </EntityType>
+  <EntityType Name="ProductDescription">
+    <Key>
+      <PropertyRef Name="ProductionDescriptionID" />
+    </Key>
+    <Property Name="ProductionDescriptionID" Type="Int32" Nullable="false" />
+    <Property Name="CultureID" Type="Int32" Nullable="false" />
+    <Property Name="Description" Type="String" MaxLength="Max" Unicode="true" FixedLength="false" />
+    <NavigationProperty Name="Product" Relationship="Commerce.MVCModel.FK_ProductDescription_Products" FromRole="ProductDescription" ToRole="Products" />
+  </EntityType>
+  <EntityType Name="ProductReview">
+    <Key>
+      <PropertyRef Name="ProductReviewID" />
+    </Key>
+    <Property Name="ProductReviewID" Type="Int32" Nullable="false" />
+    <Property Name="ProductID" Type="Int32" Nullable="false" />
+    <Property Name="Author" Type="String" MaxLength="50" Unicode="true" FixedLength="true" />
+    <Property Name="Email" Type="String" MaxLength="50" Unicode="true" FixedLength="true" />
+    <Property Name="Body" Type="String" MaxLength="100" Unicode="true" FixedLength="true" />
+    <NavigationProperty Name="Product" Relationship="Commerce.MVCModel.FK_ProductReviews_Products" FromRole="ProductReviews" ToRole="Products" />
+  </EntityType>
+  <EntityType Name="Product">
+    <Key>
+      <PropertyRef Name="ProductID" />
+    </Key>
+    <Property Name="ProductID" Type="Int32" Nullable="false" />
+    <Property Name="ProductName" Type="String" Nullable="false" MaxLength="50" Unicode="true" FixedLength="true" />
+    <Property Name="UnitPrice" Type="Decimal" Nullable="false" Precision="18" Scale="0" />
+    <Property Name="DiscountPercent" Type="Decimal" Nullable="false" Precision="18" Scale="0" />
+    <NavigationProperty Name="Category" Relationship="Commerce.MVCModel.FK_Products_Categories" FromRole="Products" ToRole="Categories" />
+    <NavigationProperty Name="ProductDescriptions" Relationship="Commerce.MVCModel.FK_ProductDescription_Products" FromRole="Products" ToRole="ProductDescription" />
+    <NavigationProperty Name="ProductReview" Relationship="Commerce.MVCModel.FK_ProductReviews_Products" FromRole="Products" ToRole="ProductReviews" />
+  </EntityType>
+  <Association Name="FK_Products_Categories">
+    <End Role="Categories" Type="Commerce.MVCModel.Category" Multiplicity="0..1" />
+    <End Role="Products" Type="Commerce.MVCModel.Product" Multiplicity="*" />
+  </Association>
+  <Association Name="FK_ProductDescription_Products">
+    <End Role="Products" Type="Commerce.MVCModel.Product" Multiplicity="1" />
+    <End Role="ProductDescription" Type="Commerce.MVCModel.ProductDescription" Multiplicity="*" />
+  </Association>
+  <Association Name="FK_ProductReviews_Products">
+    <End Role="Products" Type="Commerce.MVCModel.Product" Multiplicity="1" />
+    <End Role="ProductReviews" Type="Commerce.MVCModel.ProductReview" Multiplicity="0..1" />
+    <ReferentialConstraint>
+      <Principal Role="Products">
+        <PropertyRef Name="ProductID" />
+      </Principal>
+      <Dependent Role="ProductReviews">
+        <PropertyRef Name="ProductReviewID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+</Schema>

@@ -139,5 +139,45 @@ namespace Commerce.MVC.Tests
           Assert.IsNotNull(p);
         }
         #endregion
+
+        #region Localized Description Test
+        
+        //[TestMethod]
+        //public void ProductDescription_Should_Have_Local_Body_ProductID(){
+        //    ProductDescription d = new ProductDescription(1, "en-US", "English Description");
+        //    Assert.AreEqual(1, d.ProductID);
+        //    Assert.AreEqual("en-US", d.Locale);
+        //    Assert.AreEqual("English Description", d.Body);
+        //}
+        //[TestMethod]
+        //public void Reposistory_Can_Return_ProductDescriptions()
+        //{
+        //    ICatalogRepository rep = new TestCatalogRepository();
+        //    Assert.IsNotNull(rep.GetProductDescriptions());
+        //}
+        //[TestMethod]
+        //public void CatalogService_Returns_5_Descriptions_Wtih_ProductID()
+        //{
+        //    Product p = catalogService.GetProductsByID(1);
+        //    Assert.AreEqual(5, p.LocalizedDescription.Count);
+        //}
+
+
+        //[TestMethod]
+        //public void CatalogService_RSOTO_Default_ProductDesctription_bases()
+        //{
+        //    Product p = catalogService.GetProductsByID(1, "fr");
+        //    Assert.AreEqual("English Description", p.Description);
+        //}
+
+
+
+        //[TestMethod]
+        //public void CatalogService_Sets_default_productDescription_Base()
+        //{
+        //    Product p = catalogService.GetProductsByID(1);
+        //    Assert.AreEqual("English Description", p.Description);
+        //}
+        #endregion
     }
 }

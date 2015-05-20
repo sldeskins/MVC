@@ -19,10 +19,9 @@ namespace Commerce.MVC.Tests
             for (int i = 1; i <= 2; i++)
             {
                 Category c = new Category();
-                c.ID = 1;
+                c.ID = i;
                 c.Name = "Parent" + i.ToString();
                 c.ParentID = 0;
-                result.Add(c);
 
                 for (int x = 10; x < 15; x++)
                 {
@@ -32,7 +31,7 @@ namespace Commerce.MVC.Tests
                     sub.ParentID = i;
                     result.Add(sub);
                 }
-
+                result.Add(c);
             }
             return result.AsQueryable<Category>();
 
@@ -44,7 +43,7 @@ namespace Commerce.MVC.Tests
             int loopIndex = 0;
             int uniqueProductID = 1;
 
-            var categories = GetCategories().Where(x => x.ParentID > 0).ToList();
+            var categories = GetCategories().Where(x => x.ParentID > 0).Select(c => new { c.ID, c.Name}).Distinct().ToList();
 
             foreach (var c in categories)
             {

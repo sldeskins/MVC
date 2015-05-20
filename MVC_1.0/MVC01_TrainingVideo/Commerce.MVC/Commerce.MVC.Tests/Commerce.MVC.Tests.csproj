@@ -11,9 +11,10 @@
     <AppDesignerFolder>Properties</AppDesignerFolder>
     <RootNamespace>Commerce.MVC.Tests</RootNamespace>
     <AssemblyName>Commerce.MVC.Tests</AssemblyName>
-    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <TargetFrameworkVersion>v3.5</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <ProjectTypeGuids>{3AC096D0-A1C2-E12C-1390-A8335801FDAB};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
+    <TargetFrameworkProfile />
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <DebugSymbols>true</DebugSymbols>
@@ -33,7 +34,9 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
-    <Reference Include="Microsoft.VisualStudio.QualityTools.UnitTestFramework, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL" />
+    <Reference Include="Microsoft.VisualStudio.QualityTools.UnitTestFramework, Version=10.1.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\..\..\..\..\..\Program Files (x86)\Microsoft Visual Studio 10.0\Common7\IDE\ReferenceAssemblies\v2.0\Microsoft.VisualStudio.QualityTools.UnitTestFramework.dll</HintPath>
+    </Reference>
     <Reference Include="System" />
     <Reference Include="System.ComponentModel.DataAnnotations">
       <RequiredTargetFramework>3.5</RequiredTargetFramework>
@@ -44,7 +47,6 @@
     </Reference>
     <Reference Include="System.Data" />
     <Reference Include="System.Web" />
-    <Reference Include="System.Web.ApplicationServices" />
     <Reference Include="System.Web.Extensions">
       <RequiredTargetFramework>3.5</RequiredTargetFramework>
     </Reference>
@@ -64,13 +66,13 @@
     <Content Include="App.config" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\ClassLibrary1\Commerce.MVC.Services.csproj">
-      <Project>{3AA0C3AB-77CC-437D-B76B-36605723BDF7}</Project>
-      <Name>Commerce.MVC.Services</Name>
-    </ProjectReference>
-    <ProjectReference Include="..\ClassLibrary2\Commerce.MVC.Data.csproj">
+    <ProjectReference Include="..\Commerce.MVC.Data\Commerce.MVC.Data.csproj">
       <Project>{1B6BB0F6-138E-4E7B-8537-7D1892A45CEE}</Project>
       <Name>Commerce.MVC.Data</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Commerce.MVC.Services\Commerce.MVC.Services.csproj">
+      <Project>{3AA0C3AB-77CC-437D-B76B-36605723BDF7}</Project>
+      <Name>Commerce.MVC.Services</Name>
     </ProjectReference>
     <ProjectReference Include="..\Commerce.MVC\Commerce.MVC.Web.csproj">
       <Project>{AD0DAA28-E176-467C-97DD-8B2648DA3C47}</Project>
