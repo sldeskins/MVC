@@ -1,0 +1,34 @@
+
+https://www.asp.net/mvc/videos/mvc-1/aspnet-mvc-storefront/  rob connery
+
+
+example code is redirected to here
+https://mvcsamples.codeplex.com/
+
+using visual studio 2008 and converted into visual studio 2010
+
+
+May 2015
+
+
+
+
+http://www.asp.net/mvc/videos
+https://www.asp.net/mvc/videos/mvc-1/aspnet-mvc-storefront/aspnet-mvc-storefront-part-1-architectural-discussion-and-overview
+
+robcon@microsoft.comRob Conery
+
+http://www.codeplex.com/mvcsamples
+
+episode 6
+---------
+http://ccszengaden.com
+
+the zen of css design 
+
+episode 7 
+---------
+Phill Haack
+http://haacked.com/archive/
+http://haacked.com/archive/2008/03/13/url-routing-debugger.aspx  
+ 

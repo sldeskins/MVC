@@ -1,0 +1,5 @@
+C:\Exercises\MVC\MVC_2.0\ToDoTasksList\ToDoTasksList\bin\ToDoTasksList.dll
+C:\Exercises\MVC\MVC_2.0\ToDoTasksList\ToDoTasksList\bin\ToDoTasksList.pdb
+C:\Exercises\MVC\MVC_2.0\ToDoTasksList\ToDoTasksList\obj\Debug\ToDoTasksList.dll
+C:\Exercises\MVC\MVC_2.0\ToDoTasksList\ToDoTasksList\obj\Debug\ToDoTasksList.pdb
+C:\Exercises\MVC\MVC_2.0\ToDoTasksList\ToDoTasksList\obj\Debug\ToDoTasksList.csprojResolveAssemblyReference.cache

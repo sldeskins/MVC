@@ -1,0 +1,8 @@
+C:\Exercises\MVC\MVC_3.0\OdeToFood\OdeToFood.Tests\bin\Debug\OdeToFood.Tests.dll.config
+C:\Exercises\MVC\MVC_3.0\OdeToFood\OdeToFood.Tests\bin\Debug\OdeToFood.Tests.dll
+C:\Exercises\MVC\MVC_3.0\OdeToFood\OdeToFood.Tests\bin\Debug\OdeToFood.Tests.pdb
+C:\Exercises\MVC\MVC_3.0\OdeToFood\OdeToFood.Tests\bin\Debug\OdeToFood.dll
+C:\Exercises\MVC\MVC_3.0\OdeToFood\OdeToFood.Tests\bin\Debug\OdeToFood.pdb
+C:\Exercises\MVC\MVC_3.0\OdeToFood\OdeToFood.Tests\obj\Debug\OdeToFood.Tests.csprojResolveAssemblyReference.cache
+C:\Exercises\MVC\MVC_3.0\OdeToFood\OdeToFood.Tests\obj\Debug\OdeToFood.Tests.dll
+C:\Exercises\MVC\MVC_3.0\OdeToFood\OdeToFood.Tests\obj\Debug\OdeToFood.Tests.pdb

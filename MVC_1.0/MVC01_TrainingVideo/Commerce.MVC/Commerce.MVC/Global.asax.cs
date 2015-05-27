@@ -18,8 +18,15 @@ namespace Commerce.MVC
 
             routes.MapRoute(
                 "Default", // Route name
-                "{controller}/{action}/{id}", // URL with parameters
+                "Home/{action}/{id}", // URL with parameters
                 new { controller = "Home", action = "Index", id = UrlParameter.Optional } // Parameter defaults
+            );
+
+            routes.MapRoute(
+                "Category",  //Route Name
+                "store/{category}/{subcategory}", //URL with parameters
+                new { controller = "Catalog", action = "Index", category = "featured", subcategory = "All items" }
+                // new { controller = @"[^\.]*" }
             );
 
         }

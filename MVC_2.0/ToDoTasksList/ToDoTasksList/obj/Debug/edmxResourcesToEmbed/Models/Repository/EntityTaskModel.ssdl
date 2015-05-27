@@ -1,0 +1,25 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="ToDoTaskModel.Entity.Store" Alias="Self" Provider="System.Data.SqlClient" ProviderManifestToken="2008" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns="http://schemas.microsoft.com/ado/2006/04/edm/ssdl">
+  <EntityContainer Name="ToDoTaskModelEntityStoreContainer">
+    <EntitySet Name="OneTwo" EntityType="ToDoTaskModel.Entity.Store.OneTwo" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="Task" EntityType="ToDoTaskModel.Entity.Store.Task" store:Type="Tables" Schema="dbo" />
+  </EntityContainer>
+  <EntityType Name="OneTwo">
+    <Key>
+      <PropertyRef Name="OneTwoID" />
+    </Key>
+    <Property Name="OneTwoID" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="Description" Type="nvarchar" MaxLength="300" />
+    <Property Name="RankOrder" Type="int" />
+  </EntityType>
+  <EntityType Name="Task">
+    <Key>
+      <PropertyRef Name="TaskID" />
+    </Key>
+    <Property Name="TaskID" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="Description" Type="nvarchar" Nullable="false" MaxLength="300" />
+    <Property Name="DateAdded" Type="datetime" Nullable="false" />
+    <Property Name="IsCompleted" Type="bit" Nullable="false" />
+    <Property Name="DateCompleted" Type="datetime" />
+  </EntityType>
+</Schema>

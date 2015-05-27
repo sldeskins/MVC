@@ -1,0 +1,7 @@
+C:\Exercises\MVC\MVC_3.0\OdeToFood\OdeToFood\bin\OdeToFood.dll
+C:\Exercises\MVC\MVC_3.0\OdeToFood\OdeToFood\bin\OdeToFood.pdb
+C:\Exercises\MVC\MVC_3.0\OdeToFood\OdeToFood\bin\EntityFramework.dll
+C:\Exercises\MVC\MVC_3.0\OdeToFood\OdeToFood\bin\EntityFramework.xml
+C:\Exercises\MVC\MVC_3.0\OdeToFood\OdeToFood\obj\Debug\OdeToFood.csprojResolveAssemblyReference.cache
+C:\Exercises\MVC\MVC_3.0\OdeToFood\OdeToFood\obj\Debug\OdeToFood.dll
+C:\Exercises\MVC\MVC_3.0\OdeToFood\OdeToFood\obj\Debug\OdeToFood.pdb

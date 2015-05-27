@@ -1,0 +1,41 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<TestRun id="6f933947-5967-46bf-8929-28181374ab1b" name="sheila.deskins@TEGRIT0048 2015-05-21 16:40:11" runUser="TEGRITSOLUTIONS\sheila.deskins" xmlns="http://microsoft.com/schemas/VisualStudio/TeamTest/2010">
+  <TestSettings name="Default Test Settings" id="66e0647b-3abb-4c24-a571-3f1738f95176">
+    <Deployment userDeploymentRoot="C:\Exercises\MVC\MVC_3.0\OdeToFood\TestResults" useDefaultDeploymentRoot="false" runDeploymentRoot="sheila.deskins_TEGRIT0048 2015-05-21 16_40_11">
+      <DeploymentItem filename="C:\Exercises\MVC\MVC_3.0\OdeToFood\OdeToFood\bin\OdeToFood.dll" />
+    </Deployment>
+    <Execution>
+      <TestTypeSpecific />
+      <AgentRule name="Execution Agents">
+      </AgentRule>
+    </Execution>
+  </TestSettings>
+  <Times creation="2015-05-21T16:40:11.1105385-04:00" queuing="2015-05-21T16:40:11.1815385-04:00" start="2015-05-21T16:40:11.1835385-04:00" finish="2015-05-21T16:40:11.3165385-04:00" />
+  <ResultSummary outcome="Completed">
+    <Counters total="2" executed="2" passed="2" error="0" failed="0" timeout="0" aborted="0" inconclusive="0" passedButRunAborted="0" notRunnable="0" notExecuted="0" disconnected="0" warning="0" completed="0" inProgress="0" pending="0" />
+  </ResultSummary>
+  <TestDefinitions>
+    <UnitTest name="About" storage="c:\exercises\mvc\mvc_3.0\odetofood\odetofood.tests\bin\debug\odetofood.tests.dll" id="653a2c34-af22-d968-0820-3bd0b2574fa2">
+      <Execution id="1dd6cb88-f33c-4b2a-8db6-e772a663fb34" />
+      <TestMethod codeBase="C:/Exercises/MVC/MVC_3.0/OdeToFood/OdeToFood.Tests/bin/Debug/OdeToFood.Tests.DLL" adapterTypeName="Microsoft.VisualStudio.TestTools.TestTypes.Unit.UnitTestAdapter, Microsoft.VisualStudio.QualityTools.Tips.UnitTest.Adapter, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" className="OdeToFood.Tests.Controllers.HomeControllerTest, OdeToFood.Tests, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null" name="About" />
+    </UnitTest>
+    <UnitTest name="Index" storage="c:\exercises\mvc\mvc_3.0\odetofood\odetofood.tests\bin\debug\odetofood.tests.dll" id="63556101-b6bd-1fd7-9e9c-28627f792b94">
+      <Execution id="0c4d885f-6fac-4905-8672-569f58471b70" />
+      <TestMethod codeBase="C:/Exercises/MVC/MVC_3.0/OdeToFood/OdeToFood.Tests/bin/Debug/OdeToFood.Tests.DLL" adapterTypeName="Microsoft.VisualStudio.TestTools.TestTypes.Unit.UnitTestAdapter, Microsoft.VisualStudio.QualityTools.Tips.UnitTest.Adapter, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" className="OdeToFood.Tests.Controllers.HomeControllerTest, OdeToFood.Tests, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null" name="Index" />
+    </UnitTest>
+  </TestDefinitions>
+  <TestLists>
+    <TestList name="Results Not in a List" id="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestList name="All Loaded Results" id="19431567-8539-422a-85d7-44ee4e166bda" />
+  </TestLists>
+  <TestEntries>
+    <TestEntry testId="63556101-b6bd-1fd7-9e9c-28627f792b94" executionId="0c4d885f-6fac-4905-8672-569f58471b70" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="653a2c34-af22-d968-0820-3bd0b2574fa2" executionId="1dd6cb88-f33c-4b2a-8db6-e772a663fb34" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+  </TestEntries>
+  <Results>
+    <UnitTestResult executionId="0c4d885f-6fac-4905-8672-569f58471b70" testId="63556101-b6bd-1fd7-9e9c-28627f792b94" testName="Index" computerName="TEGRIT0048" duration="00:00:00.0247510" startTime="2015-05-21T16:40:11.1865385-04:00" endTime="2015-05-21T16:40:11.3035385-04:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="0c4d885f-6fac-4905-8672-569f58471b70">
+    </UnitTestResult>
+    <UnitTestResult executionId="1dd6cb88-f33c-4b2a-8db6-e772a663fb34" testId="653a2c34-af22-d968-0820-3bd0b2574fa2" testName="About" computerName="TEGRIT0048" duration="00:00:00.0009482" startTime="2015-05-21T16:40:11.3065385-04:00" endTime="2015-05-21T16:40:11.3085385-04:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="1dd6cb88-f33c-4b2a-8db6-e772a663fb34">
+    </UnitTestResult>
+  </Results>
+</TestRun>

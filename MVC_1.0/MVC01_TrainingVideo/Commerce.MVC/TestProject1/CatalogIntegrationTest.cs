@@ -3,9 +3,9 @@ using System.Text;
 using System.Collections.Generic;
 using System.Linq;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
+using Commerce.MVC.SqlRepository.Data;
 using Commerce.MVC.SqlRepository;
-using Commerce.MVC.Data;
-using Commerce.MVC.Data.DataAccess;
+using Commerce.MVC.Data; 
 using Commerce.MVC.Services;
 
 namespace Commerce.MVC.IntegrationTests

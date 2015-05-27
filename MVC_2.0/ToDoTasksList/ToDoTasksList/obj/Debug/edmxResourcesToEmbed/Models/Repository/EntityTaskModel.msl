@@ -1,0 +1,25 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="urn:schemas-microsoft-com:windows:storage:mapping:CS">
+  <EntityContainerMapping StorageEntityContainer="ToDoTaskModelEntityStoreContainer" CdmEntityContainer="ToDoTaskEntities">
+    <EntitySetMapping Name="Tasks">
+      <EntityTypeMapping TypeName="ToDoTaskList.Models.Entity.Task">
+        <MappingFragment StoreEntitySet="Task">
+          <ScalarProperty Name="DateCompleted" ColumnName="DateCompleted" />
+          <ScalarProperty Name="IsCompleted" ColumnName="IsCompleted" />
+          <ScalarProperty Name="DateAdded" ColumnName="DateAdded" />
+          <ScalarProperty Name="Description" ColumnName="Description" />
+          <ScalarProperty Name="TaskID" ColumnName="TaskID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="OneTwoes">
+      <EntityTypeMapping TypeName="ToDoTaskList.Models.Entity.OneTwo">
+        <MappingFragment StoreEntitySet="OneTwo">
+          <ScalarProperty Name="RankOrder" ColumnName="RankOrder" />
+          <ScalarProperty Name="Description" ColumnName="Description" />
+          <ScalarProperty Name="OneTwoID" ColumnName="OneTwoID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>

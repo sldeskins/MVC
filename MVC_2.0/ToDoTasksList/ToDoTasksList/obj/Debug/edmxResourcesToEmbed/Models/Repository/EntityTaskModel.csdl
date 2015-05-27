@@ -1,0 +1,25 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="ToDoTaskList.Models.Entity" Alias="Self" xmlns="http://schemas.microsoft.com/ado/2006/04/edm">
+  <EntityContainer Name="ToDoTaskEntities">
+    <EntitySet Name="Tasks" EntityType="ToDoTaskList.Models.Entity.Task" />
+    <EntitySet Name="OneTwoes" EntityType="ToDoTaskList.Models.Entity.OneTwo" />
+  </EntityContainer>
+  <EntityType Name="Task">
+    <Key>
+      <PropertyRef Name="TaskID" />
+    </Key>
+    <Property Type="Int32" Name="TaskID" Nullable="false" a:StoreGeneratedPattern="Identity" xmlns:a="http://schemas.microsoft.com/ado/2009/02/edm/annotation" />
+    <Property Type="String" Name="Description" Nullable="false" MaxLength="300" FixedLength="false" Unicode="true" />
+    <Property Type="DateTime" Name="DateAdded" Nullable="false" />
+    <Property Type="Boolean" Name="IsCompleted" Nullable="false" />
+    <Property Type="DateTime" Name="DateCompleted" />
+  </EntityType>
+  <EntityType Name="OneTwo">
+    <Key>
+      <PropertyRef Name="OneTwoID" />
+    </Key>
+    <Property Type="Int32" Name="OneTwoID" Nullable="false" a:StoreGeneratedPattern="Identity" xmlns:a="http://schemas.microsoft.com/ado/2009/02/edm/annotation" />
+    <Property Type="String" Name="Description" MaxLength="300" FixedLength="false" Unicode="true" />
+    <Property Type="Int32" Name="RankOrder" />
+  </EntityType>
+</Schema>

@@ -1,0 +1,1 @@
+C:\Exercises\MVC\MVC_2.0\ToDoTasksList\ToDoTasksList.Tests\obj\Debug\ToDoTasksList.Tests.csprojResolveAssemblyReference.cache

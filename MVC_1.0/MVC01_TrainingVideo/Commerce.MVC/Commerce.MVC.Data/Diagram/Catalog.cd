@@ -3,29 +3,30 @@
   <Class Name="Commerce.MVC.Data.Category">
     <Position X="0.5" Y="1.25" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>AAAAAAAAAAAAgAAAAAAAAAQAAAAAAAAAAAAAgAAQAAA=</HashCode>
-      <FileName>Category.cs</FileName>
+      <HashCode>AAAAAQAAAAAAgAAEgAAAAAQAAAAAAJAAAAAAgAAQAAQ=</HashCode>
+      <FileName>Model\Category.cs</FileName>
+      <NewMemberFileName>Category.cs</NewMemberFileName>
     </TypeIdentifier>
   </Class>
   <Class Name="Commerce.MVC.Data.Product">
     <Position X="3" Y="1.25" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>AIAAEAQCAQAggAAAAAAAAAQAAgCACAAAAAAAIAAAAAA=</HashCode>
-      <FileName>Product.cs</FileName>
+      <HashCode>BAgAAEAIAQggggAEwICAAAQAAACAAJAAIAAgIgCAIAg=</HashCode>
+      <FileName>Model\Product.cs</FileName>
     </TypeIdentifier>
   </Class>
   <Class Name="Commerce.MVC.Data.ProductReview">
     <Position X="5.25" Y="1.25" Width="1.5" />
     <TypeIdentifier>
       <HashCode>EAAAAAAAAAAAgIgACAAAAAAAQAAAAAAAAAAAAAAAAAA=</HashCode>
-      <FileName>ProductReview.cs</FileName>
+      <FileName>Model\ProductReview.cs</FileName>
     </TypeIdentifier>
   </Class>
   <Class Name="Commerce.MVC.Data.ProductDescription">
     <Position X="0.5" Y="3.25" Width="1.5" />
     <TypeIdentifier>
       <HashCode>EAAAAAAAAAAAgAAAAAABAAAAAABAAAAAAAAAAAAAAAA=</HashCode>
-      <FileName>ProductDescription.cs</FileName>
+      <FileName>Model\ProductDescription.cs</FileName>
     </TypeIdentifier>
   </Class>
   <Font Name="Segoe UI" Size="9" />

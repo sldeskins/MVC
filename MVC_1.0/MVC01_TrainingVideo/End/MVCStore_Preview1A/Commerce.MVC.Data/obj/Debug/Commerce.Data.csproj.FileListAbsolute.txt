@@ -1,0 +1,13 @@
+D:\@Microsoft\MVC Storefront\Commerce.MVC.Data\bin\Debug\Commerce.Data.dll.config
+D:\@Microsoft\MVC Storefront\Commerce.MVC.Data\bin\Debug\Commerce.Data.dll
+D:\@Microsoft\MVC Storefront\Commerce.MVC.Data\bin\Debug\Commerce.Data.pdb
+D:\@Microsoft\MVC Storefront\Commerce.MVC.Data\obj\Debug\ResolveAssemblyReference.cache
+D:\@Microsoft\MVC Storefront\Commerce.MVC.Data\obj\Debug\Commerce.Data.dll
+D:\@Microsoft\MVC Storefront\Commerce.MVC.Data\obj\Debug\Commerce.Data.pdb
+D:\@Microsoft\MVC Storefront\Commerce.MVC.Data\bin\Debug\StructureMap.dll
+C:\Exercises\MVC\MVC_1.0\MVC01_TrainingVideo\End\MVCStore_Preview1A\Commerce.MVC.Data\bin\Debug\Commerce.Data.dll.config
+C:\Exercises\MVC\MVC_1.0\MVC01_TrainingVideo\End\MVCStore_Preview1A\Commerce.MVC.Data\bin\Debug\Commerce.Data.dll
+C:\Exercises\MVC\MVC_1.0\MVC01_TrainingVideo\End\MVCStore_Preview1A\Commerce.MVC.Data\bin\Debug\Commerce.Data.pdb
+C:\Exercises\MVC\MVC_1.0\MVC01_TrainingVideo\End\MVCStore_Preview1A\Commerce.MVC.Data\obj\Debug\Commerce.Data.dll
+C:\Exercises\MVC\MVC_1.0\MVC01_TrainingVideo\End\MVCStore_Preview1A\Commerce.MVC.Data\obj\Debug\Commerce.Data.pdb
+C:\Exercises\MVC\MVC_1.0\MVC01_TrainingVideo\End\MVCStore_Preview1A\Commerce.MVC.Data\obj\Debug\Commerce.Data.csprojResolveAssemblyReference.cache

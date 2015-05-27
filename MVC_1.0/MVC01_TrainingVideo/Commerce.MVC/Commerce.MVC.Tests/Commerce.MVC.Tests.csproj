@@ -56,10 +56,12 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Controllers\CatalogControllerTests.cs" />
     <Compile Include="CatalogTests.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Controllers\HomeControllerTest.cs" />
     <Compile Include="Controllers\AccountControllerTest.cs" />
+    <Compile Include="TestBase.cs" />
     <Compile Include="TestCatalogRepository.cs" />
   </ItemGroup>
   <ItemGroup>

@@ -1,0 +1,37 @@
+MVC 02 Videos
+https://www.asp.net/mvc/videos/mvc-2/
+
+
+
+
+Music Store by Jon Galloway
+tutorial source code   http://mvcmusicstore.codeplex.com/
+other learning topic matter resources http://www.asp.net/mvc/application-development
+https://www.asp.net/mvc/videos/mvc-2/music-store/mvc-music-store-part-1-intro,-tools,-and-project-structure
+
+
+
+
+
+------------------------
+http://blogs.msdn.com/b/brunoterkaly/archive/2011/05/21/mvc-2-and-3-tutorials-best-and-fastest-way-to-learn.aspx
+MVC - A framework to emit HTML5 and jQuery JavaScript
+
+Best First Tutorial to learn MVC 3
+	
+
+http://www.asp.net/mvc/tutorials/getting-started-with-mvc3-part1-cs
+
+Master Tutorial / MVC Tutorial Selection Screen
+
+[ Read and Code your way through ]
+	
+
+http://www.asp.net/mvc/tutorials
+
+Master Tutorial / Videos
+
+[ Simply watch and repeat ]
+	
+
+http://www.asp.net/mvc/videos

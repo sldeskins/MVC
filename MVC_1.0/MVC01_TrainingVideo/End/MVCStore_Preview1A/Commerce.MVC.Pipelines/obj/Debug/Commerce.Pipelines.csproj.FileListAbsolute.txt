@@ -1,0 +1,24 @@
+D:\@Microsoft\MVC Storefront\Commerce.MVC.Pipelines\bin\Debug\Commerce.Pipelines.dll
+D:\@Microsoft\MVC Storefront\Commerce.MVC.Pipelines\bin\Debug\Commerce.Pipelines.pdb
+D:\@Microsoft\MVC Storefront\Commerce.MVC.Pipelines\bin\Debug\Commerce.Data.dll
+D:\@Microsoft\MVC Storefront\Commerce.MVC.Pipelines\bin\Debug\Commerce.Services.dll
+D:\@Microsoft\MVC Storefront\Commerce.MVC.Pipelines\bin\Debug\StructureMap.dll
+D:\@Microsoft\MVC Storefront\Commerce.MVC.Pipelines\bin\Debug\DotNetOpenId.dll
+D:\@Microsoft\MVC Storefront\Commerce.MVC.Pipelines\bin\Debug\NLog.dll
+D:\@Microsoft\MVC Storefront\Commerce.MVC.Pipelines\bin\Debug\Commerce.Services.pdb
+D:\@Microsoft\MVC Storefront\Commerce.MVC.Pipelines\bin\Debug\Commerce.Data.pdb
+D:\@Microsoft\MVC Storefront\Commerce.MVC.Pipelines\obj\Debug\ResolveAssemblyReference.cache
+D:\@Microsoft\MVC Storefront\Commerce.MVC.Pipelines\obj\Debug\Commerce.Pipelines.dll
+D:\@Microsoft\MVC Storefront\Commerce.MVC.Pipelines\obj\Debug\Commerce.Pipelines.pdb
+C:\Exercises\MVC\MVC_1.0\MVC01_TrainingVideo\End\MVCStore_Preview1A\Commerce.MVC.Pipelines\bin\Debug\Commerce.Pipelines.dll
+C:\Exercises\MVC\MVC_1.0\MVC01_TrainingVideo\End\MVCStore_Preview1A\Commerce.MVC.Pipelines\bin\Debug\Commerce.Pipelines.pdb
+C:\Exercises\MVC\MVC_1.0\MVC01_TrainingVideo\End\MVCStore_Preview1A\Commerce.MVC.Pipelines\bin\Debug\Commerce.Data.dll
+C:\Exercises\MVC\MVC_1.0\MVC01_TrainingVideo\End\MVCStore_Preview1A\Commerce.MVC.Pipelines\bin\Debug\Commerce.Services.dll
+C:\Exercises\MVC\MVC_1.0\MVC01_TrainingVideo\End\MVCStore_Preview1A\Commerce.MVC.Pipelines\bin\Debug\StructureMap.dll
+C:\Exercises\MVC\MVC_1.0\MVC01_TrainingVideo\End\MVCStore_Preview1A\Commerce.MVC.Pipelines\bin\Debug\DotNetOpenId.dll
+C:\Exercises\MVC\MVC_1.0\MVC01_TrainingVideo\End\MVCStore_Preview1A\Commerce.MVC.Pipelines\bin\Debug\NLog.dll
+C:\Exercises\MVC\MVC_1.0\MVC01_TrainingVideo\End\MVCStore_Preview1A\Commerce.MVC.Pipelines\bin\Debug\Commerce.Data.pdb
+C:\Exercises\MVC\MVC_1.0\MVC01_TrainingVideo\End\MVCStore_Preview1A\Commerce.MVC.Pipelines\bin\Debug\Commerce.Services.pdb
+C:\Exercises\MVC\MVC_1.0\MVC01_TrainingVideo\End\MVCStore_Preview1A\Commerce.MVC.Pipelines\obj\Debug\Commerce.Pipelines.csprojResolveAssemblyReference.cache
+C:\Exercises\MVC\MVC_1.0\MVC01_TrainingVideo\End\MVCStore_Preview1A\Commerce.MVC.Pipelines\obj\Debug\Commerce.Pipelines.dll
+C:\Exercises\MVC\MVC_1.0\MVC01_TrainingVideo\End\MVCStore_Preview1A\Commerce.MVC.Pipelines\obj\Debug\Commerce.Pipelines.pdb

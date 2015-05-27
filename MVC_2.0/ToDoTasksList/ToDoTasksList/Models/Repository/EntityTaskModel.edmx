@@ -1,0 +1,108 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="1.0" xmlns:edmx="http://schemas.microsoft.com/ado/2007/06/edmx">
+  <!-- EF Runtime content -->
+  <edmx:Runtime>
+    <!-- SSDL content -->
+    <edmx:StorageModels>
+    <Schema Namespace="ToDoTaskModel.Entity.Store" Alias="Self" Provider="System.Data.SqlClient" ProviderManifestToken="2008" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns="http://schemas.microsoft.com/ado/2006/04/edm/ssdl">
+        <EntityContainer Name="ToDoTaskModelEntityStoreContainer">
+          <EntitySet Name="OneTwo" EntityType="ToDoTaskModel.Entity.Store.OneTwo" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="Task" EntityType="ToDoTaskModel.Entity.Store.Task" store:Type="Tables" Schema="dbo" />
+        </EntityContainer>
+        <EntityType Name="OneTwo">
+          <Key>
+            <PropertyRef Name="OneTwoID" />
+          </Key>
+          <Property Name="OneTwoID" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="Description" Type="nvarchar" MaxLength="300" />
+          <Property Name="RankOrder" Type="int" />
+        </EntityType>
+        <EntityType Name="Task">
+          <Key>
+            <PropertyRef Name="TaskID" />
+          </Key>
+          <Property Name="TaskID" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="Description" Type="nvarchar" Nullable="false" MaxLength="300" />
+          <Property Name="DateAdded" Type="datetime" Nullable="false" />
+          <Property Name="IsCompleted" Type="bit" Nullable="false" />
+          <Property Name="DateCompleted" Type="datetime" />
+        </EntityType>
+      </Schema></edmx:StorageModels>
+    <!-- CSDL content -->
+    <edmx:ConceptualModels>
+      <Schema Namespace="ToDoTaskList.Models.Entity" Alias="Self" xmlns="http://schemas.microsoft.com/ado/2006/04/edm">
+        <EntityContainer Name="ToDoTaskEntities" >
+          <EntitySet Name="Tasks" EntityType="ToDoTaskList.Models.Entity.Task" />
+          <EntitySet Name="OneTwoes" EntityType="ToDoTaskList.Models.Entity.OneTwo" />
+        </EntityContainer>
+        <EntityType Name="Task">
+          <Key>
+            <PropertyRef Name="TaskID" />
+          </Key>
+          <Property Type="Int32" Name="TaskID" Nullable="false" a:StoreGeneratedPattern="Identity" xmlns:a="http://schemas.microsoft.com/ado/2009/02/edm/annotation" />
+          <Property Type="String" Name="Description" Nullable="false" MaxLength="300" FixedLength="false" Unicode="true" />
+          <Property Type="DateTime" Name="DateAdded" Nullable="false" />
+          <Property Type="Boolean" Name="IsCompleted" Nullable="false" />
+          <Property Type="DateTime" Name="DateCompleted" />
+        </EntityType>
+        <EntityType Name="OneTwo">
+          <Key>
+            <PropertyRef Name="OneTwoID" />
+          </Key>
+          <Property Type="Int32" Name="OneTwoID" Nullable="false" a:StoreGeneratedPattern="Identity" xmlns:a="http://schemas.microsoft.com/ado/2009/02/edm/annotation" />
+          <Property Type="String" Name="Description" MaxLength="300" FixedLength="false" Unicode="true" />
+          <Property Type="Int32" Name="RankOrder" />
+        </EntityType>
+      </Schema>
+    </edmx:ConceptualModels>
+    <!-- C-S mapping content -->
+    <edmx:Mappings>
+      <Mapping Space="C-S" xmlns="urn:schemas-microsoft-com:windows:storage:mapping:CS">
+        <EntityContainerMapping StorageEntityContainer="ToDoTaskModelEntityStoreContainer" CdmEntityContainer="ToDoTaskEntities" >
+          <EntitySetMapping Name="Tasks">
+            <EntityTypeMapping TypeName="ToDoTaskList.Models.Entity.Task">
+              <MappingFragment StoreEntitySet="Task">
+                <ScalarProperty Name="DateCompleted" ColumnName="DateCompleted" />
+                <ScalarProperty Name="IsCompleted" ColumnName="IsCompleted" />
+                <ScalarProperty Name="DateAdded" ColumnName="DateAdded" />
+                <ScalarProperty Name="Description" ColumnName="Description" />
+                <ScalarProperty Name="TaskID" ColumnName="TaskID" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="OneTwoes">
+            <EntityTypeMapping TypeName="ToDoTaskList.Models.Entity.OneTwo">
+              <MappingFragment StoreEntitySet="OneTwo">
+                <ScalarProperty Name="RankOrder" ColumnName="RankOrder" />
+                <ScalarProperty Name="Description" ColumnName="Description" />
+                <ScalarProperty Name="OneTwoID" ColumnName="OneTwoID" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+        </EntityContainerMapping>
+      </Mapping>
+    </edmx:Mappings>
+  </edmx:Runtime>
+  <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <Designer xmlns="http://schemas.microsoft.com/ado/2007/06/edmx">
+    <Connection>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="MetadataArtifactProcessing" Value="EmbedInOutputAssembly" />
+      </DesignerInfoPropertySet>
+    </Connection>
+    <Options>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="ValidateOnBuild" Value="true" />
+        <DesignerProperty Name="EnablePluralization" Value="True" />
+        <DesignerProperty Name="IncludeForeignKeysInModel" Value="False" />
+      </DesignerInfoPropertySet>
+    </Options>
+    <!-- Diagram content (shape and connector positions) -->
+    <Diagrams>
+      <Diagram Name="EntityTaskModel" >
+        <EntityTypeShape EntityType="ToDoTaskList.Models.Entity.Task" Width="1.5" PointX="0.75" PointY="0.75" Height="1.9802864583333326" />
+        <EntityTypeShape EntityType="ToDoTaskList.Models.Entity.OneTwo" Width="1.5" PointX="3.375" PointY="0.75" Height="1.5956835937499996" />
+      </Diagram>
+    </Diagrams>
+  </Designer>
+</edmx:Edmx>

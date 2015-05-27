@@ -1,0 +1,37 @@
+D:\@Microsoft\MVC Storefront\Commerce.MVC.Tests\bin\Debug\Commerce.Tests.dll.config
+D:\@Microsoft\MVC Storefront\Commerce.MVC.Tests\bin\Debug\Commerce.Tests.dll
+D:\@Microsoft\MVC Storefront\Commerce.MVC.Tests\bin\Debug\Commerce.Tests.pdb
+D:\@Microsoft\MVC Storefront\Commerce.MVC.Tests\bin\Debug\Commerce.Data.dll
+D:\@Microsoft\MVC Storefront\Commerce.MVC.Tests\bin\Debug\Commerce.MVC.Web.dll
+D:\@Microsoft\MVC Storefront\Commerce.MVC.Tests\bin\Debug\Commerce.Pipelines.dll
+D:\@Microsoft\MVC Storefront\Commerce.MVC.Tests\bin\Debug\Commerce.Services.dll
+D:\@Microsoft\MVC Storefront\Commerce.MVC.Tests\bin\Debug\DotNetOpenId.dll
+D:\@Microsoft\MVC Storefront\Commerce.MVC.Tests\bin\Debug\StructureMap.dll
+D:\@Microsoft\MVC Storefront\Commerce.MVC.Tests\bin\Debug\NLog.dll
+D:\@Microsoft\MVC Storefront\Commerce.MVC.Tests\bin\Debug\Commerce.Pipelines.pdb
+D:\@Microsoft\MVC Storefront\Commerce.MVC.Tests\bin\Debug\Commerce.Services.pdb
+D:\@Microsoft\MVC Storefront\Commerce.MVC.Tests\bin\Debug\Commerce.MVC.Web.pdb
+D:\@Microsoft\MVC Storefront\Commerce.MVC.Tests\bin\Debug\Commerce.Data.pdb
+D:\@Microsoft\MVC Storefront\Commerce.MVC.Tests\obj\Debug\ResolveAssemblyReference.cache
+D:\@Microsoft\MVC Storefront\Commerce.MVC.Tests\obj\Debug\Commerce.Tests.dll
+D:\@Microsoft\MVC Storefront\Commerce.MVC.Tests\obj\Debug\Commerce.Tests.pdb
+D:\@Microsoft\MVC Storefront\Commerce.MVC.Tests\bin\Debug\Microsoft.Web.Mvc.dll
+D:\@Microsoft\MVC Storefront\Commerce.MVC.Tests\bin\Debug\Moq.dll
+C:\Exercises\MVC\MVC_1.0\MVC01_TrainingVideo\End\MVCStore_Preview1A\Commerce.MVC.Tests\bin\Debug\Commerce.Tests.dll.config
+C:\Exercises\MVC\MVC_1.0\MVC01_TrainingVideo\End\MVCStore_Preview1A\Commerce.MVC.Tests\bin\Debug\Commerce.Tests.dll
+C:\Exercises\MVC\MVC_1.0\MVC01_TrainingVideo\End\MVCStore_Preview1A\Commerce.MVC.Tests\bin\Debug\Commerce.Tests.pdb
+C:\Exercises\MVC\MVC_1.0\MVC01_TrainingVideo\End\MVCStore_Preview1A\Commerce.MVC.Tests\bin\Debug\Commerce.Data.dll
+C:\Exercises\MVC\MVC_1.0\MVC01_TrainingVideo\End\MVCStore_Preview1A\Commerce.MVC.Tests\bin\Debug\Commerce.MVC.Web.dll
+C:\Exercises\MVC\MVC_1.0\MVC01_TrainingVideo\End\MVCStore_Preview1A\Commerce.MVC.Tests\bin\Debug\Commerce.Pipelines.dll
+C:\Exercises\MVC\MVC_1.0\MVC01_TrainingVideo\End\MVCStore_Preview1A\Commerce.MVC.Tests\bin\Debug\Commerce.Services.dll
+C:\Exercises\MVC\MVC_1.0\MVC01_TrainingVideo\End\MVCStore_Preview1A\Commerce.MVC.Tests\bin\Debug\Microsoft.Web.Mvc.dll
+C:\Exercises\MVC\MVC_1.0\MVC01_TrainingVideo\End\MVCStore_Preview1A\Commerce.MVC.Tests\bin\Debug\StructureMap.dll
+C:\Exercises\MVC\MVC_1.0\MVC01_TrainingVideo\End\MVCStore_Preview1A\Commerce.MVC.Tests\bin\Debug\DotNetOpenId.dll
+C:\Exercises\MVC\MVC_1.0\MVC01_TrainingVideo\End\MVCStore_Preview1A\Commerce.MVC.Tests\bin\Debug\NLog.dll
+C:\Exercises\MVC\MVC_1.0\MVC01_TrainingVideo\End\MVCStore_Preview1A\Commerce.MVC.Tests\bin\Debug\Commerce.Data.pdb
+C:\Exercises\MVC\MVC_1.0\MVC01_TrainingVideo\End\MVCStore_Preview1A\Commerce.MVC.Tests\bin\Debug\Commerce.Pipelines.pdb
+C:\Exercises\MVC\MVC_1.0\MVC01_TrainingVideo\End\MVCStore_Preview1A\Commerce.MVC.Tests\bin\Debug\Commerce.Services.pdb
+C:\Exercises\MVC\MVC_1.0\MVC01_TrainingVideo\End\MVCStore_Preview1A\Commerce.MVC.Tests\bin\Debug\Commerce.MVC.Web.pdb
+C:\Exercises\MVC\MVC_1.0\MVC01_TrainingVideo\End\MVCStore_Preview1A\Commerce.MVC.Tests\obj\Debug\Commerce.Tests.csprojResolveAssemblyReference.cache
+C:\Exercises\MVC\MVC_1.0\MVC01_TrainingVideo\End\MVCStore_Preview1A\Commerce.MVC.Tests\obj\Debug\Commerce.Tests.dll
+C:\Exercises\MVC\MVC_1.0\MVC01_TrainingVideo\End\MVCStore_Preview1A\Commerce.MVC.Tests\obj\Debug\Commerce.Tests.pdb
