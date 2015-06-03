@@ -7,6 +7,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WebApplicationRealEstateWit
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Tests", "Tests\Tests.csproj", "{EB98C530-6828-4BDB-A63F-4EA69AD08CA3}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RealEstateWithMongoDB_WOldDriver", "RealEstateWithMongoDB_WOldDriver\RealEstateWithMongoDB_WOldDriver\RealEstateWithMongoDB_WOldDriver.csproj", "{98FFC68A-FF03-40FE-8109-B64A1DBADE9B}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -21,6 +23,10 @@ Global
 		{EB98C530-6828-4BDB-A63F-4EA69AD08CA3}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{EB98C530-6828-4BDB-A63F-4EA69AD08CA3}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{EB98C530-6828-4BDB-A63F-4EA69AD08CA3}.Release|Any CPU.Build.0 = Release|Any CPU
+		{98FFC68A-FF03-40FE-8109-B64A1DBADE9B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{98FFC68A-FF03-40FE-8109-B64A1DBADE9B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{98FFC68A-FF03-40FE-8109-B64A1DBADE9B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{98FFC68A-FF03-40FE-8109-B64A1DBADE9B}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

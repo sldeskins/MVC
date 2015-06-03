@@ -1,0 +1,68 @@
+﻿@model RealEstateWithMongoDB_WOldDriver.Rentals.PostRental
+
+@{
+    ViewBag.Title = "old driver Post";
+}
+
+<h2>Post Rental</h2>
+
+@using (Html.BeginForm())
+{
+    @Html.AntiForgeryToken()
+
+    <div class="form-horizontal">
+        <div class="form-group">
+            @Html.LabelFor(model => model.Description, new
+        {
+            @class = "control-label"
+        })
+            <div class="col-md-10">
+                @Html.TextAreaFor(model => model.Description)
+            </div>
+        </div>
+        <div class="form-group">
+            @Html.LabelFor(model => model.NumberOfRooms, new
+        {
+            @class = "control-label"
+        })
+            <div class="col-md-10">
+                @Html.EditorFor(model => model.NumberOfRooms)
+            </div>
+        </div>
+
+        <div class="form-group">
+            @Html.LabelFor(model => model.Price, new
+        {
+            @class = "control-label"
+        })
+            <div class="col-md-10">
+                @Html.EditorFor(model => model.Price)
+            </div>
+        </div>
+
+        <div class="form-group">
+            @Html.LabelFor(model => model.Address, new
+        {
+            @class = "control-label"
+        })
+            <div class="col-md-10">
+                @Html.TextAreaFor(model => model.Address)
+            </div>
+        </div>
+        <div class="form-group">
+            <div class="col-md-offset-2 col-md-10" >
+                @* @Html.ActionLink("Add new rental listing", "Post","Rentals")*@
+                <input type="submit" formaction="post" value="click here to add" class="btn btn-default"/>
+            </div>
+        </div>
+
+    </div>
+
+}
+
+<p>
+    @Html.ActionLink("Edit", "Edit", new
+{ /* id = Model.PrimaryKey */
+}) |
+    @Html.ActionLink("Back to List", "Index")
+</p>

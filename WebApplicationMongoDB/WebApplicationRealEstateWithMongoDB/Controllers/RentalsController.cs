@@ -20,6 +20,8 @@ namespace WebApplicationRealEstateWithMongoDB.Controllers
             //  var filter =Builders<BsonDocument>.Filter.All<Rentals.Rental>(item=>item.)  ;
 
             //  var cursor = await Context.Rentals.Find(c => c.Id != BsonNull).FirstOrDefaultAsync();
+           
+         
             var t = this.getCollection();
             t.Wait();
             

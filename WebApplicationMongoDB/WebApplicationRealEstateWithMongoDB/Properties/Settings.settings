@@ -12,5 +12,8 @@
     <Setting Name="RealEstateDatabaseName" Type="System.String" Scope="Application">
       <Value Profile="(Default)">realestate</Value>
     </Setting>
+    <Setting Name="RealEstateCollectionName" Type="System.String" Scope="Application">
+      <Value Profile="(Default)">rentals</Value>
+    </Setting>
   </Settings>
 </SettingsFile>

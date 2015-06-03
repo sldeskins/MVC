@@ -38,8 +38,8 @@ namespace WebApplicationRealEstateWithMongoDB.App_Start
         public MongoDB.Driver.IMongoCollection<Rentals.Rental> Rentals
         {
             get
-            {
-                return Database.GetCollection<Rentals.Rental>("rentals");
+            { 
+                return Database.GetCollection<Rentals.Rental>(Settings.Default.RealEstateCollectionName);
             }
         }
     }

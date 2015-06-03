@@ -41,5 +41,14 @@ namespace WebApplicationRealEstateWithMongoDB.Properties {
                 return ((string)(this["RealEstateDatabaseName"]));
             }
         }
+        
+        [global::System.Configuration.ApplicationScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("rentals")]
+        public string RealEstateCollectionName {
+            get {
+                return ((string)(this["RealEstateCollectionName"]));
+            }
+        }
     }
 }
