@@ -18,7 +18,7 @@ namespace WebApplicationRealEstateWithMongoDB
                 url: "{controller}/{action}/{id}",
                 defaults: new
                 {
-                    controller = "Home",
+                    controller = "Rentals",
                     action = "Index",
                     id = UrlParameter.Optional
                 }

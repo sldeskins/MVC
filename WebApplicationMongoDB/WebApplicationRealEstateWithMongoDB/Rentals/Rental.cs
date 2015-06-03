@@ -4,6 +4,7 @@ using System.Linq;
 using System.Web;
 using MongoDB.Bson;
 using MongoDB.Bson.Serialization.Attributes;
+using System.Text;
 
 namespace WebApplicationRealEstateWithMongoDB.Rentals
 {
@@ -26,6 +27,22 @@ namespace WebApplicationRealEstateWithMongoDB.Rentals
             get;
             set;
         }
+
+        public List<PriceAdjustment> Adjustments = new List<PriceAdjustment>();
+
+        [BsonIgnore]
+        public string AddressString
+        {
+            get
+            {
+                StringBuilder sb = new StringBuilder();
+                foreach (var a in Address)
+                {
+                    sb.AppendLine(a);
+                }
+                return sb.ToString();
+            }
+        }
         public List<string> Address = new List<string>();
         private PostRental postRental;
 
@@ -46,6 +63,13 @@ namespace WebApplicationRealEstateWithMongoDB.Rentals
         {
             get;
             set;
+        }
+
+        internal void AdjustPrice ( AdjustPrice adjustPrice )
+        {
+            var adjustment = new PriceAdjustment(adjustPrice, Price);
+            Adjustments.Add(adjustment);
+            Price = adjustment.NewPrice;
         }
     }
 }

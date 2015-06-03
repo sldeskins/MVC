@@ -18,19 +18,15 @@ namespace WebApplicationRealEstateWithMongoDB.Controllers
         public ActionResult Index ()
         {
             //  var filter =Builders<BsonDocument>.Filter.All<Rentals.Rental>(item=>item.)  ;
-
             //  var cursor = await Context.Rentals.Find(c => c.Id != BsonNull).FirstOrDefaultAsync();
            
-         
-            var t = this.getCollection();
-            t.Wait();
-            
-            return View("Post");
+
+           // var rentals =  Context.Database.GetCollection<Rental>("rentals");
+
+            var rentals = Context.Rentals ;
+            return View(rentals);
         }
-        private async Task getCollection ()
-        {
-            await Context.Rentals.Find(c => c.NumberOfRooms>0).FirstOrDefaultAsync();
-        }
+       
         public ActionResult Post ()
         {
             return View();
@@ -39,7 +35,36 @@ namespace WebApplicationRealEstateWithMongoDB.Controllers
         public ActionResult Post ( PostRental postRental )
         {
             var rental = new Rental(postRental);
-            Context.Rentals.InsertOneAsync(rental);
+            Context.RentalsDBCollection.InsertOneAsync(rental);
+            return RedirectToAction("Index");
+        }
+        private Rental GetRental ( string id )
+        {
+            //var filter = new BsonDocument("_id", new ObjectId(id));
+            var filter = MongoDB.Driver.Builders<BsonDocument>.Filter.Eq("_id", new ObjectId(id));
+            // var rental = Context.Rentals.Find<Rental>(filter).FirstOrDefaultAsync<Rental>();
+            var rentals = Context.Database.GetCollection<Rental>("rentals");
+            var rental = (Rental)rentals.Find<Rental>(r => r.Id == id);
+            return rental;
+        }
+        public ActionResult Delete ( string id )
+        {
+            throw new NotImplementedException();
+           // Context.Rentals.Remove(MongoDB.Driver.Builders.Query.EQ("_id", new ObjectId(id)));
+            return RedirectToAction("Index");
+        }
+        public ActionResult AdjustPrice ( string id )
+        {
+            var rental = GetRental(id);
+            return View(rental);
+        }
+        [HttpPost]
+        public ActionResult AdjustPrice ( string id, AdjustPrice adjustPrice )
+        {
+            var rental = GetRental(id);
+            rental.AdjustPrice(adjustPrice);
+            throw new NotImplementedException();
+           // Context.Rentals.Save(rental);
             return RedirectToAction("Index");
         }
     }

@@ -135,7 +135,9 @@
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
       <DependentUpon>Settings.settings</DependentUpon>
     </Compile>
+    <Compile Include="Rentals\AdjustPrice.cs" />
     <Compile Include="Rentals\PostRental.cs" />
+    <Compile Include="Rentals\PriceAdjustment.cs" />
     <Compile Include="Rentals\Rental.cs" />
   </ItemGroup>
   <ItemGroup>
@@ -179,7 +181,8 @@
     <Content Include="Views\Home\Index.cshtml" />
     <Content Include="Scripts\jquery-1.10.2.min.map" />
     <Content Include="Views\Rentals\Post.cshtml" />
-    <Content Include="Views\Rentals\_dlPost.cshtml" />
+    <Content Include="Views\Rentals\AdjustPrice.cshtml" />
+    <Content Include="Views\Rentals\Index.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

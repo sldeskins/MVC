@@ -1,7 +1,7 @@
 ﻿@model WebApplicationRealEstateWithMongoDB.Rentals.PostRental
 
 @{
-    ViewBag.Title = "Post";
+    ViewBag.Title = "old driver Post";
 }
 
 <h2>Post Rental</h2>
@@ -14,7 +14,7 @@
         <div class="form-group">
             @Html.LabelFor(model => model.Description, new
         {
-            @class = ""
+            @class = "control-label"
         })
             <div class="col-md-10">
                 @Html.TextAreaFor(model => model.Description)
@@ -23,7 +23,7 @@
         <div class="form-group">
             @Html.LabelFor(model => model.NumberOfRooms, new
         {
-            @class = "contorl-"
+            @class = "control-label"
         })
             <div class="col-md-10">
                 @Html.EditorFor(model => model.NumberOfRooms)
@@ -33,7 +33,7 @@
         <div class="form-group">
             @Html.LabelFor(model => model.Price, new
         {
-            @class = ""
+            @class = "control-label"
         })
             <div class="col-md-10">
                 @Html.EditorFor(model => model.Price)
@@ -43,15 +43,17 @@
         <div class="form-group">
             @Html.LabelFor(model => model.Address, new
         {
-            @class = ""
+            @class = "control-label"
         })
             <div class="col-md-10">
                 @Html.TextAreaFor(model => model.Address)
             </div>
         </div>
         <div class="form-group">
-           @* @Html.ActionLink("Add new rental listing", "Post","Rentals")*@
-            <input type="submit"  formaction="post"  value="click here to add"/>
+            <div class="col-md-offset-2 col-md-10" >
+                @* @Html.ActionLink("Add new rental listing", "Post","Rentals")*@
+                <input type="submit" formaction="post" value="click here to add" class="btn btn-default"/>
+            </div>
         </div>
 
     </div>

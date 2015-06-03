@@ -17,12 +17,7 @@ namespace RealEstateWithMongoDB_WOldDriver.Controllers
 
         public ActionResult Index ()
         {
-            //  var filter =Builders<BsonDocument>.Filter.All<Rentals.Rental>(item=>item.)  ;
-
-            //  var cursor = await Context.Rentals.Find(c => c.Id != BsonNull).FirstOrDefaultAsync();
-
-
-            var rentals = Context.Rentals.FindAll();
+             var rentals = Context.Rentals.FindAll();
 
             return View(rentals);
         }
