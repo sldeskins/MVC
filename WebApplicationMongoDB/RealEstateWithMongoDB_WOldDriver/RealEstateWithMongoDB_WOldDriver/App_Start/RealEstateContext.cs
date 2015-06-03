@@ -43,5 +43,6 @@ namespace RealEstateWithMongoDB_WOldDriver.App_Start
                 return Database.GetCollection<Rentals.Rental>(Settings.Default.RealEstateCollectionName);
             }
         }
+        
     }
 }
