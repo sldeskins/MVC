@@ -7,6 +7,9 @@ using RealEstateWithMongoDB_WOldDriver.Rentals;
 using MongoDB.Bson;
 using MongoDB.Driver;
 using System.Threading.Tasks;
+using MongoDB.Driver.Builders;
+using MongoDB.Driver.Linq;
+
 
 namespace RealEstateWithMongoDB_WOldDriver.Controllers
 {
@@ -15,11 +18,45 @@ namespace RealEstateWithMongoDB_WOldDriver.Controllers
         public readonly App_Start.RealEstateContext Context = new App_Start.RealEstateContext();
         // GET: Rentals
 
-        public ActionResult Index ()
+        public ActionResult Index ( RentalsFilter filters )
         {
-             var rentals = Context.Rentals.FindAll();
+            //var rentals = FilterRentals1(filters)
+            //    .SetSortOrder(SortBy<Rental>.Ascending(r => r.Price));
+            var rentals = FilterRentals(filters);
 
-            return View(rentals);
+            var model = new RentalsList
+            {
+                Rentals = rentals,
+                Filters = filters
+            };
+            return View(model);
+        }
+        private IEnumerable<Rental> FilterRentals ( RentalsFilter filters )
+        {
+            //note: need to add using MongoDB.Driver.Linq; to pick up the linq extension methods with the mongodriver
+            IQueryable<Rental> rentals = Context.Rentals.AsQueryable()
+                .OrderBy(r => r.Price);
+
+            if (filters.MinimunRooms.HasValue)
+            {
+                rentals = rentals.Where(r => r.NumberOfRooms >= filters.MinimunRooms);
+            }
+            if (filters.PriceLimit.HasValue)
+            {
+                var query = MongoDB.Driver.Builders.Query<Rental>.LTE(r => r.Price, filters.PriceLimit);
+                rentals = rentals.Where(r => query.Inject());
+            }
+            return rentals;
+        }
+        private MongoCursor<Rental> FilterRentals1 ( RentalsFilter filters )
+        {
+            //before
+            if (!filters.PriceLimit.HasValue)
+            {
+                return Context.Rentals.FindAll();
+            }
+            var query = MongoDB.Driver.Builders.Query<Rental>.LTE(r => r.Price, filters.PriceLimit);
+            return Context.Rentals.Find(query);
         }
 
         public ActionResult Post ()
@@ -43,6 +80,10 @@ namespace RealEstateWithMongoDB_WOldDriver.Controllers
         {
             Context.Rentals.Remove(MongoDB.Driver.Builders.Query.EQ("_id", new ObjectId(id)));
             return RedirectToAction("Index");
+        }
+        public string PriceDistribution ()
+        {
+         return   new QueryPriceDistribution().Run(Context.Rentals).ToJson();
         }
         public ActionResult AdjustPrice ( string id )
         {

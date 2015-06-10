@@ -128,10 +128,11 @@
     <Compile Include="App_Start\FilterConfig.cs" />
     <Compile Include="App_Start\RealEstateContext.cs" />
     <Compile Include="App_Start\RouteConfig.cs" />
-    <Compile Include="Controllers\HomeController.cs">
+    <Compile Include="Rentals\HomeController.cs">
       <SubType>
       </SubType>
     </Compile>
+    <Compile Include="Rentals\QueryPriceDistribution.cs" />
     <Compile Include="Controllers\RentalsController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
@@ -146,6 +147,8 @@
     <Compile Include="Rentals\PostRental.cs" />
     <Compile Include="Rentals\PriceAdjustment.cs" />
     <Compile Include="Rentals\Rental.cs" />
+    <Compile Include="Rentals\RentalsFilter.cs" />
+    <Compile Include="Rentals\RentalsList.cs" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="Content\bootstrap.css" />

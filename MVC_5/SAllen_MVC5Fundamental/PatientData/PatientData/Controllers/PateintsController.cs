@@ -21,25 +21,45 @@ namespace PatientData.Controllers
         {
             return _patients.FindAll();
         }
-
-        public HttpResponseMessage Get ( string id )
+        ////way one
+        //public HttpResponseMessage Get ( string id )
+        //{
+        //    var patient = _patients.FindOneById(ObjectId.Parse(id));
+        //    if (patient == null)
+        //    {
+        //        return Request.CreateErrorResponse(HttpStatusCode.NotFound, "Patient not found!");
+        //    }
+        //    return Request.CreateResponse(patient);
+        //}
+        public IHttpActionResult Get ( string id )
         {
             var patient = _patients.FindOneById(ObjectId.Parse(id));
             if (patient == null)
             {
-                return Request.CreateErrorResponse(HttpStatusCode.NotFound, "Patient not found!");
+                return NotFound();
             }
-            return Request.CreateResponse(patient);
+            return Ok(patient);
         }
+        ////way one
+        //[Route("api/patients/{id}/medications")]
+        //public HttpResponseMessage GetMedications ( string id )
+        //{
+        //    var patient = _patients.FindOneById(ObjectId.Parse(id));
+        //    if (patient == null)
+        //    {
+        //        return Request.CreateErrorResponse(HttpStatusCode.NotFound, "Patient not found!");
+        //    }
+        //    return Request.CreateResponse(patient.Medications);
+        //}
         [Route("api/patients/{id}/medications")]
-        public HttpResponseMessage GetMedications ( string id )
+        public IHttpActionResult GetMedications ( string id )
         {
             var patient = _patients.FindOneById(ObjectId.Parse(id));
             if (patient == null)
             {
-                return Request.CreateErrorResponse(HttpStatusCode.NotFound, "Patient not found!");
+                return NotFound();
             }
-            return Request.CreateResponse(patient.Medications);
+            return Ok(patient.Medications);
         }
     }
 }
