@@ -9,7 +9,7 @@ using MongoDB.Driver;
 using System.Threading.Tasks;
 using MongoDB.Driver.Builders;
 using MongoDB.Driver.Linq;
-
+using MongoDB.Driver.GridFS;
 
 namespace RealEstateWithMongoDB_WOldDriver.Controllers
 {
@@ -83,7 +83,56 @@ namespace RealEstateWithMongoDB_WOldDriver.Controllers
         }
         public string PriceDistribution ()
         {
-         return   new QueryPriceDistribution().Run(Context.Rentals).ToJson();
+            return new QueryPriceDistribution().Run(Context.Rentals).ToJson();
+        }
+        public ActionResult AttachImage ( string id )
+        {
+            var rental = GetRental(id);
+            return View(rental);
+        }
+        [HttpPost]
+        public ActionResult AttachImage ( string id, HttpPostedFileBase file )
+        {
+            var rental = GetRental(id);
+            if (rental.HasImage())
+            {
+                DeleteImage(rental);
+            }
+            StoreImage(file, rental);
+
+            // rental.ImageId = fileInfo.Id.AsObjectId.ToString();
+            Context.Rentals.Save(rental);
+            return RedirectToAction("Index");
+        }
+
+        private void DeleteImage ( Rental rental )
+        {
+            Context.Database.GridFS.DeleteById(new ObjectId(rental.ImageId));
+            rental.ImageId = null;
+            Context.Rentals.Save(rental);
+        }
+
+        private void StoreImage ( HttpPostedFileBase file, Rental rental )
+        {
+            var imageId = ObjectId.GenerateNewId();
+            rental.ImageId = imageId.ToString();
+            Context.Rentals.Save(rental);
+
+            var options = new MongoGridFSCreateOptions
+            {
+                Id = imageId,
+                ContentType = file.ContentType
+            };
+            var fileInfo = Context.Database.GridFS.Upload(file.InputStream, file.FileName, options);
+        }
+        public ActionResult GetImage ( string id )
+        {
+            var image = Context.Database.GridFS.FindOneById(new ObjectId(id));
+            if (image == null)
+            {
+                return HttpNotFound();
+            }
+            return File(image.OpenRead(), image.ContentType);
         }
         public ActionResult AdjustPrice ( string id )
         {

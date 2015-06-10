@@ -71,5 +71,15 @@ namespace RealEstateWithMongoDB_WOldDriver.Rentals
             Adjustments.Add(adjustment);
             Price = adjustment.NewPrice;
         }
+
+        public string ImageId
+        {
+            get;
+            set;
+        }
+        public bool HasImage ()
+        {
+            return !String.IsNullOrWhiteSpace(ImageId);
+        }
     }
 }

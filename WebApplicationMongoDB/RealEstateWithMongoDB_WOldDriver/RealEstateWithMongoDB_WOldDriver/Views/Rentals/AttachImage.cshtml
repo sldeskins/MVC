@@ -1,0 +1,53 @@
+﻿@model RealEstateWithMongoDB_WOldDriver.Rentals.Rental
+
+@{
+    ViewBag.Title = "AttachImage";
+}
+
+<h2>AttachImage</h2>
+
+@using (Html.BeginForm(null, null, FormMethod.Post, new
+{
+    enctype = "multipart/form-data"
+}))
+{
+    @Html.AntiForgeryToken()
+
+    <div class="form-horizontal">
+        <div class="form-group">
+            <label class="control-label col-md-2">Description</label>
+            <div class="col-md-10">@Model.Description</div>
+        </div>
+    </div>
+    <div class="form-group">
+        @Html.Label("Image", new
+   {
+       @class = "control-label col-md-2"
+   })
+    </div>
+    <div class="form-group">
+        <div class="col-md-10">
+            <input type="file" name="file" id="file" value="Choose File" />
+        </div>
+    </div>
+    <div class="form-group">
+        <div class="col-md-10">
+            <input type="submit" value="Attach" class="btn btn-default" />
+        </div>
+    </div>
+}
+@if (Model.HasImage())
+{
+    <img src="@Url.Action("GetImage", new
+         {
+             id = @Model.ImageId
+         })" />
+}
+
+<p>
+    @*@Html.ActionLink("Edit", "Edit", new
+        {
+            id = Model.Id
+        }) |*@
+    @Html.ActionLink("Back to Rentals", "Index")
+</p>
