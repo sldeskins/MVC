@@ -1,0 +1,41 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 2013
+VisualStudioVersion = 12.0.31101.0
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "eManager.Domain", "eManager.Domain\eManager.Domain.csproj", "{045CE7DE-D53F-414F-B73B-12104146CBC3}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "eManager.Web", "eManager.Web\eManager.Web.csproj", "{2BC34C70-549E-499A-8237-2344B5553788}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = ".nuget", ".nuget", "{CDC62B03-5075-4C8B-A2AE-A025737A0C77}"
+	ProjectSection(SolutionItems) = preProject
+		.nuget\NuGet.Config = .nuget\NuGet.Config
+		.nuget\NuGet.exe = .nuget\NuGet.exe
+		.nuget\NuGet.targets = .nuget\NuGet.targets
+	EndProjectSection
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "eManager.Web2", "eManager.Web2\eManager.Web2.csproj", "{5DCA82AB-7451-4250-A2D6-A5C67164A11F}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{045CE7DE-D53F-414F-B73B-12104146CBC3}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{045CE7DE-D53F-414F-B73B-12104146CBC3}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{045CE7DE-D53F-414F-B73B-12104146CBC3}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{045CE7DE-D53F-414F-B73B-12104146CBC3}.Release|Any CPU.Build.0 = Release|Any CPU
+		{2BC34C70-549E-499A-8237-2344B5553788}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{2BC34C70-549E-499A-8237-2344B5553788}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{2BC34C70-549E-499A-8237-2344B5553788}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{2BC34C70-549E-499A-8237-2344B5553788}.Release|Any CPU.Build.0 = Release|Any CPU
+		{5DCA82AB-7451-4250-A2D6-A5C67164A11F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{5DCA82AB-7451-4250-A2D6-A5C67164A11F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{5DCA82AB-7451-4250-A2D6-A5C67164A11F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{5DCA82AB-7451-4250-A2D6-A5C67164A11F}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal
