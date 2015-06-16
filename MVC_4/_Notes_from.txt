@@ -16,3 +16,8 @@ C:\Windows\Microsoft.NET\Framework\v4.0.30319\Config\Browsers
 
 example to override user agent string value (for kindle fire aka Silk)
 Mozilla/5.0 (X11; Linux x86_64; U; en-us) AppleWebKit/537.36 (KHTML, like Gecko) Silk/3.22 like Chrome/34.0.1847.137 Safari/537.36
+
+
+
+
+Opera Mobile to see how things look on mobile
