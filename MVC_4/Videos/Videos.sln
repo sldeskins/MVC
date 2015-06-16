@@ -1,0 +1,40 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 2013
+VisualStudioVersion = 12.0.31101.0
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Videos", "Videos\Videos.csproj", "{BA6ECC1C-9F6C-415D-996F-28C875566D0D}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ConsoleClient", "ConsoleClient\ConsoleClient.csproj", "{A1752397-1169-4FFE-B31B-4A71872EA4EC}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TPL", "TPL\TPL.csproj", "{E4E7479C-620C-46A9-B961-17F15D694F05}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FakeNewsAndWeatherWithAsync", "FakeNewsAndWeatherWithAsync\FakeNewsAndWeatherWithAsync.csproj", "{17312B41-04A9-4FC9-8684-F60CA05B0CD4}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{BA6ECC1C-9F6C-415D-996F-28C875566D0D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{BA6ECC1C-9F6C-415D-996F-28C875566D0D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{BA6ECC1C-9F6C-415D-996F-28C875566D0D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{BA6ECC1C-9F6C-415D-996F-28C875566D0D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{A1752397-1169-4FFE-B31B-4A71872EA4EC}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A1752397-1169-4FFE-B31B-4A71872EA4EC}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A1752397-1169-4FFE-B31B-4A71872EA4EC}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A1752397-1169-4FFE-B31B-4A71872EA4EC}.Release|Any CPU.Build.0 = Release|Any CPU
+		{E4E7479C-620C-46A9-B961-17F15D694F05}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E4E7479C-620C-46A9-B961-17F15D694F05}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E4E7479C-620C-46A9-B961-17F15D694F05}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E4E7479C-620C-46A9-B961-17F15D694F05}.Release|Any CPU.Build.0 = Release|Any CPU
+		{17312B41-04A9-4FC9-8684-F60CA05B0CD4}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{17312B41-04A9-4FC9-8684-F60CA05B0CD4}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{17312B41-04A9-4FC9-8684-F60CA05B0CD4}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{17312B41-04A9-4FC9-8684-F60CA05B0CD4}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

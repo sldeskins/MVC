@@ -16,5 +16,7 @@ namespace eManager.Domain
         {
             get;
         }
+
+        void Save ();
     }
 }

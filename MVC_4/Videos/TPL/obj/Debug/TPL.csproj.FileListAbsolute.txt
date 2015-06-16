@@ -1,0 +1,5 @@
+C:\Exercises\MVC\MVC_4\Videos\TPL\bin\Debug\TPL.exe.config
+C:\Exercises\MVC\MVC_4\Videos\TPL\bin\Debug\TPL.exe
+C:\Exercises\MVC\MVC_4\Videos\TPL\bin\Debug\TPL.pdb
+C:\Exercises\MVC\MVC_4\Videos\TPL\obj\Debug\TPL.exe
+C:\Exercises\MVC\MVC_4\Videos\TPL\obj\Debug\TPL.pdb

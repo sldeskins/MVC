@@ -1,0 +1,10 @@
+C:\Exercises\MVC\MVC_4\Videos\ConsoleClient\bin\Debug\ConsoleClient.exe.config
+C:\Exercises\MVC\MVC_4\Videos\ConsoleClient\bin\Debug\ConsoleClient.exe
+C:\Exercises\MVC\MVC_4\Videos\ConsoleClient\bin\Debug\ConsoleClient.pdb
+C:\Exercises\MVC\MVC_4\Videos\ConsoleClient\bin\Debug\Newtonsoft.Json.dll
+C:\Exercises\MVC\MVC_4\Videos\ConsoleClient\bin\Debug\System.Net.Http.Formatting.dll
+C:\Exercises\MVC\MVC_4\Videos\ConsoleClient\bin\Debug\Newtonsoft.Json.xml
+C:\Exercises\MVC\MVC_4\Videos\ConsoleClient\bin\Debug\System.Net.Http.Formatting.xml
+C:\Exercises\MVC\MVC_4\Videos\ConsoleClient\obj\Debug\ConsoleClient.csprojResolveAssemblyReference.cache
+C:\Exercises\MVC\MVC_4\Videos\ConsoleClient\obj\Debug\ConsoleClient.exe
+C:\Exercises\MVC\MVC_4\Videos\ConsoleClient\obj\Debug\ConsoleClient.pdb

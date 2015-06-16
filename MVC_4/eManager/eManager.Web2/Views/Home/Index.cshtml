@@ -5,11 +5,18 @@
 }
 
 <h1>
-    @ViewBag.Title</h1>
+    @ViewBag.Title
+</h1>
 
-    <ul>
-        @foreach (var item in Model) {
-            <li>@item.Name </li>
- }
-    </ul>
-    
+<ul>
+    @foreach (var item in Model) {
+
+        <li>
+            @Html.ActionLink(item.Name, "detail", "department", new
+      {
+          item.ID
+      }, null)
+        </li>
+        }
+</ul>
+

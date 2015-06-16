@@ -18,5 +18,10 @@ namespace eManager.Domain
             get;
             set;
         }
+        public virtual DateTime? HireDate
+        {
+            get;
+            set;
+        }
     }
 }
