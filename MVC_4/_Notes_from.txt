@@ -1,0 +1,18 @@
+from:
+
+http://www.pluralsight.com/courses/mvc4
+
+ASP.NET MVC 4 Fundamentals
+
+This course will provide an introduction to ASP.NET MVC, and also drill into new features for version 4 of the framework; including web optimizations, the web api, async programming and mobile development.
+by Scott Allen 
+---------------------------
+Notes:
+
+How does asp mvc determine whether a browser is mobile or not?
+Look into the various browser configs in 
+C:\Windows\Microsoft.NET\Framework\v4.0.30319\Config\Browsers
+
+
+example to override user agent string value (for kindle fire aka Silk)
+Mozilla/5.0 (X11; Linux x86_64; U; en-us) AppleWebKit/537.36 (KHTML, like Gecko) Silk/3.22 like Chrome/34.0.1847.137 Safari/537.36

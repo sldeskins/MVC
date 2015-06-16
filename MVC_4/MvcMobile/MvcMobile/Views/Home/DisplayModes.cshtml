@@ -1,0 +1,44 @@
+﻿@model IEnumerable<IDisplayMode>
+@{Layout = null;
+}
+
+<!DOCTYPE html>
+@{
+    ViewBag.Title = "DisplayModes";
+}
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Display Modes</title>
+</head>
+<body>
+    <div>
+        <div>Regular user agent: @ViewContext.HttpContext.Request.UserAgent</div>
+        <div>Override user agent: @Server.UrlDecode(ViewContext.HttpContext.GetOverriddenUserAgent())</div>
+
+        <h2>DisplayModes</h2>
+        <table>
+            <tr>
+                <th>Name</th>
+                <th>Can Handle Content - Regular</th>
+                @foreach (var mode in Model)
+                {
+                <tr>
+                    <td>@mode.DisplayModeId</td>
+                    <td>@mode.CanHandleContext(ViewContext.HttpContext)</td>
+                </tr>
+                }
+
+            </table>
+            @using (Html.BeginForm())
+            {
+                <button name="mode" value="">Default View</button>
+    <button name="mode" value="mobile">Mobile View</button>
+    <button name="mode" value="desktop">Desktop View</button>
+    <button name="mode" value="silk">Silk View</button>
+            }
+        </div>
+    </body>
+
+
+</html>

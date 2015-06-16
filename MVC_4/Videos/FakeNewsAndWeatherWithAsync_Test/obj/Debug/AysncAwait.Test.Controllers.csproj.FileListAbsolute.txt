@@ -1,0 +1,1 @@
+C:\Exercises\MVC\MVC_4\Videos\FakeNewsAndWeatherWithAsync_Test\obj\Debug\AysncAwait.Test.Controllers.csprojResolveAssemblyReference.cache
