@@ -1,0 +1,18 @@
+
+ASP.NET MVC Testing From Scratch
+
+Testing for your MVC Application
+by Jesse Liberty 
+
+Mocking
+AAA
+
+Arrange
+Act
+Assert
+
+
+
+JustMock Lite, Telerik via nuGet
+
+TestComplete by Smart Bear for automated UI testing

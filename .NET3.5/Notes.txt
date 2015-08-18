@@ -1,0 +1,15 @@
+
+ASP.NET 3.5 Fundamentals
+
+Learn how to build modern, responsive Web applications on the Windows platform using ASP.NET.
+by Fritz Onion, et al. 
+================================================================
+VS2008, IIS7, Server2003
+---
+built on to of .NET.aspx parsed into classes and complied into assemblies
+loaded into w3wp.exe
+
+from visual command prompt if things are out of sync in IIS6; handler mapping isapx
+c:> aspnet_regiis -i
+
+

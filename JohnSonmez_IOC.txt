@@ -1,0 +1,25 @@
+
+Practical IoC With ASP.NET MVC 4
+
+In this course, we'll learn how to use an IoC container, like Unity in an ASP.NET MVC 4 application and some of the basics of the practical application of IoC containers.
+by John Sonmez 
+@jsonmez
+http://simpleprogrammer.com
+
+
+IoC Containers
+Uity
+AutoFac
+FUnq
+LinFu
+Ninject
+Spring.Net
+Windsor
+
+ . . .
+ 
+ http://psight.me/ioc-containers
+ 
+ MEF  Microsoft Extensible Factory
+ 
+ 
