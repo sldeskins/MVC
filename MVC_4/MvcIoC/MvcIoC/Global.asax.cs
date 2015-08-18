@@ -23,6 +23,9 @@ namespace MvcIoC
             RouteConfig.RegisterRoutes(RouteTable.Routes);
             BundleConfig.RegisterBundles(BundleTable.Bundles);
             AuthConfig.RegisterAuth();
+
+            var factory = new CustomeControllerFactory();
+            ControllerBuilder.Current.SetControllerFactory(factory);
         }
     }
 }

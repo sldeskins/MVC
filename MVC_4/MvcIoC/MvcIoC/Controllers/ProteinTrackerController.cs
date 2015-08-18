@@ -9,18 +9,24 @@ namespace MvcIoC.Controllers
 {
     public class ProteinTrackerController : Controller
     {
-    private ProtienTrackingService protienTrackingService = new ProtienTrackingService();
+        private IProteinTrackingService protienTrackingService;
 
         // GET: ProteinTracking
+
+        public ProteinTrackerController ( IProteinTrackingService protienTrackingService )
+        {
+           this. protienTrackingService = protienTrackingService;
+        }
+
         public ActionResult Index()
         {
         ViewBag.Total = protienTrackingService.Total;
         ViewBag.Goal = protienTrackingService.Goal;
             return View();
         }
-        public ActionResult AddProtien (int amount)
+        public ActionResult AddProtein (int amount)
         {
-            protienTrackingService.AddProtien(amount);
+            protienTrackingService.AddProtein(amount);
             ViewBag.Goal = protienTrackingService.Goal;
             return View("index");
         }

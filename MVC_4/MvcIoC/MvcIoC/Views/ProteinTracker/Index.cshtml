@@ -1,11 +1,17 @@
-﻿
+﻿@model MvcIoC.Models.ProteinRespository
+
 @{
     ViewBag.Title = "Index";
 }
 
-<h2>Index</h2>
+<h2>Protein Tracker</h2>
 
- gOAL:     ViewBag.Goal
- 
-tOTAL:    ViewBag.Total
- 
+<p>
+    gOAL:     @ViewBag.Goal
+
+    tOTAL:    @ViewBag.Total
+</p>
+
+@Html.TextBox("amount",0) 
+@Html.ActionLink("add","AddProtein")
+<input id="Submit1" type="submit" value="Add" />

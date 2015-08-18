@@ -200,7 +200,11 @@
     <Compile Include="Controllers\AccountController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\ProteinTrackerController.cs" />
-    <Compile Include="Models\ProtienTrackingService.cs" />
+    <Compile Include="Infrastructure\CustomeControllerFactory.cs" />
+    <Compile Include="Models\IProteinTrackingService.cs" />
+    <Compile Include="Models\ProteinData.cs" />
+    <Compile Include="Models\ProteinRespository.cs" />
+    <Compile Include="Models\ProteinTrackingService.cs" />
     <Compile Include="Filters\InitializeSimpleMembershipAttribute.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
@@ -303,7 +307,6 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
-    <Folder Include="Views\ProteinTracking\" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="packages.config" />
