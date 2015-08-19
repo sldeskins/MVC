@@ -1,17 +1,17 @@
-﻿@model MvcIoC.Models.ProteinRespository
-
+﻿@model dynamic
+@*@inherits MvcIoC.Pages.ProteinTrackerBasePage
 @{
-    ViewBag.Title = "Index";
+    ViewBag.Title = "Protein Tracker";
+    Layout = "~/Views/Shared/_Layout.cshtml";
 }
+@AnalyticsService.Code*@
 
 <h2>Protein Tracker</h2>
+   Total:@ViewBag.Total
+    Goal: @ViewBag.Goal
 
-<p>
-    gOAL:     @ViewBag.Goal
-
-    tOTAL:    @ViewBag.Total
-</p>
-
-@Html.TextBox("amount",0) 
-@Html.ActionLink("add","AddProtein")
-<input id="Submit1" type="submit" value="Add" />
+    @using (Html.BeginForm())
+    {
+        <input type="text" id="amount" name="amount" />
+        <input id="Submit1" type="submit" value="Add" />
+    }

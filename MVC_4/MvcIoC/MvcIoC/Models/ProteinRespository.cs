@@ -5,22 +5,22 @@ using System.Web;
 
 namespace MvcIoC.Models
 {
-    public class ProteinRespository
+    public class ProteinRespository : IProteinRespository
     {
-    private static ProteinData data = new ProteinData();
-    public ProteinData GetData ( DateTime dateTime )
+        private static ProteinData data = new ProteinData();
+        public ProteinData GetData ( DateTime dateTime )
         {
-         return data;
+            return data;
         }
 
         public void SetTotal ( DateTime dateTime, int value )
         {
-           data.Total=value;
+            data.Total = value;
         }
 
         public void SetGoal ( DateTime dateTime, int value )
         {
-           data.Goal=value;
+            data.Goal = value;
         }
     }
 }

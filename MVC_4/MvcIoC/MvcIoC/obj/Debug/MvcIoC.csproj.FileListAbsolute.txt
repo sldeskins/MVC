@@ -1,5 +1,6 @@
-C:\Exercises\MVC\MVC_4\MvcIoC\MvcIoC\bin\MvcIoC.dll
 C:\Exercises\MVC\MVC_4\MvcIoC\MvcIoC\bin\MvcIoC.dll.config
+C:\Exercises\MVC\MVC_4\MvcIoC\MvcIoC\bin\MvcIoC.dll
+C:\Exercises\MVC\MVC_4\MvcIoC\MvcIoC\bin\MvcIoC.pdb
 C:\Exercises\MVC\MVC_4\MvcIoC\MvcIoC\bin\Antlr3.Runtime.dll
 C:\Exercises\MVC\MVC_4\MvcIoC\MvcIoC\bin\DotNetOpenAuth.AspNet.dll
 C:\Exercises\MVC\MVC_4\MvcIoC\MvcIoC\bin\DotNetOpenAuth.Core.dll
@@ -11,6 +12,11 @@ C:\Exercises\MVC\MVC_4\MvcIoC\MvcIoC\bin\EntityFramework.dll
 C:\Exercises\MVC\MVC_4\MvcIoC\MvcIoC\bin\EntityFramework.SqlServer.dll
 C:\Exercises\MVC\MVC_4\MvcIoC\MvcIoC\bin\Microsoft.Data.Edm.dll
 C:\Exercises\MVC\MVC_4\MvcIoC\MvcIoC\bin\Microsoft.Data.OData.dll
+C:\Exercises\MVC\MVC_4\MvcIoC\MvcIoC\bin\Microsoft.Practices.ServiceLocation.dll
+C:\Exercises\MVC\MVC_4\MvcIoC\MvcIoC\bin\Microsoft.Practices.Unity.Configuration.dll
+C:\Exercises\MVC\MVC_4\MvcIoC\MvcIoC\bin\Microsoft.Practices.Unity.dll
+C:\Exercises\MVC\MVC_4\MvcIoC\MvcIoC\bin\Microsoft.Practices.Unity.Mvc.dll
+C:\Exercises\MVC\MVC_4\MvcIoC\MvcIoC\bin\Microsoft.Practices.Unity.RegistrationByConvention.dll
 C:\Exercises\MVC\MVC_4\MvcIoC\MvcIoC\bin\Microsoft.Web.Infrastructure.dll
 C:\Exercises\MVC\MVC_4\MvcIoC\MvcIoC\bin\Microsoft.Web.WebPages.OAuth.dll
 C:\Exercises\MVC\MVC_4\MvcIoC\MvcIoC\bin\Newtonsoft.Json.dll
@@ -28,6 +34,7 @@ C:\Exercises\MVC\MVC_4\MvcIoC\MvcIoC\bin\System.Web.Razor.dll
 C:\Exercises\MVC\MVC_4\MvcIoC\MvcIoC\bin\System.Web.WebPages.Deployment.dll
 C:\Exercises\MVC\MVC_4\MvcIoC\MvcIoC\bin\System.Web.WebPages.dll
 C:\Exercises\MVC\MVC_4\MvcIoC\MvcIoC\bin\System.Web.WebPages.Razor.dll
+C:\Exercises\MVC\MVC_4\MvcIoC\MvcIoC\bin\WebActivatorEx.dll
 C:\Exercises\MVC\MVC_4\MvcIoC\MvcIoC\bin\WebGrease.dll
 C:\Exercises\MVC\MVC_4\MvcIoC\MvcIoC\bin\WebMatrix.Data.dll
 C:\Exercises\MVC\MVC_4\MvcIoC\MvcIoC\bin\WebMatrix.WebData.dll
@@ -44,6 +51,12 @@ C:\Exercises\MVC\MVC_4\MvcIoC\MvcIoC\bin\EntityFramework.xml
 C:\Exercises\MVC\MVC_4\MvcIoC\MvcIoC\bin\EntityFramework.SqlServer.xml
 C:\Exercises\MVC\MVC_4\MvcIoC\MvcIoC\bin\Microsoft.Data.Edm.xml
 C:\Exercises\MVC\MVC_4\MvcIoC\MvcIoC\bin\Microsoft.Data.OData.xml
+C:\Exercises\MVC\MVC_4\MvcIoC\MvcIoC\bin\Microsoft.Practices.ServiceLocation.pdb
+C:\Exercises\MVC\MVC_4\MvcIoC\MvcIoC\bin\Microsoft.Practices.ServiceLocation.xml
+C:\Exercises\MVC\MVC_4\MvcIoC\MvcIoC\bin\Microsoft.Practices.Unity.xml
+C:\Exercises\MVC\MVC_4\MvcIoC\MvcIoC\bin\Microsoft.Practices.Unity.Configuration.xml
+C:\Exercises\MVC\MVC_4\MvcIoC\MvcIoC\bin\Microsoft.Practices.Unity.Mvc.xml
+C:\Exercises\MVC\MVC_4\MvcIoC\MvcIoC\bin\Microsoft.Practices.Unity.RegistrationByConvention.xml
 C:\Exercises\MVC\MVC_4\MvcIoC\MvcIoC\bin\Microsoft.Web.WebPages.OAuth.xml
 C:\Exercises\MVC\MVC_4\MvcIoC\MvcIoC\bin\Newtonsoft.Json.xml
 C:\Exercises\MVC\MVC_4\MvcIoC\MvcIoC\bin\System.Net.Http.Extensions.xml
@@ -94,5 +107,4 @@ C:\Exercises\MVC\MVC_4\MvcIoC\MvcIoC\bin\zh-Hant\System.Spatial.resources.dll
 C:\Exercises\MVC\MVC_4\MvcIoC\MvcIoC\obj\Debug\MvcIoC.csproj.App.config
 C:\Exercises\MVC\MVC_4\MvcIoC\MvcIoC\obj\Debug\MvcIoC.dll
 C:\Exercises\MVC\MVC_4\MvcIoC\MvcIoC\obj\Debug\MvcIoC.pdb
-C:\Exercises\MVC\MVC_4\MvcIoC\MvcIoC\bin\MvcIoC.pdb
 C:\Exercises\MVC\MVC_4\MvcIoC\MvcIoC\obj\Debug\MvcIoC.csprojResolveAssemblyReference.cache
