@@ -1,0 +1,5 @@
+C:\Users\sheila.deskins\Downloads\Security Sample\C#\Security2\bin\Debug\Security2.exe
+C:\Users\sheila.deskins\Downloads\Security Sample\C#\Security2\bin\Debug\Security2.pdb
+C:\Users\sheila.deskins\Downloads\Security Sample\C#\Security2\obj\Debug\Security2.csprojResolveAssemblyReference.cache
+C:\Users\sheila.deskins\Downloads\Security Sample\C#\Security2\obj\Debug\Security2.exe
+C:\Users\sheila.deskins\Downloads\Security Sample\C#\Security2\obj\Debug\Security2.pdb

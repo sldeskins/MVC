@@ -1,0 +1,9 @@
+C:\Exercises\MVC\EndToEndSOA\CarRental\CarRental.Business.Entities\bin\Debug\CarRental.Business.Entities.dll
+C:\Exercises\MVC\EndToEndSOA\CarRental\CarRental.Business.Entities\bin\Debug\CarRental.Business.Entities.pdb
+C:\Exercises\MVC\EndToEndSOA\CarRental\CarRental.Business.Entities\obj\Debug\CarRental.Business.Entities.csprojResolveAssemblyReference.cache
+C:\Exercises\MVC\EndToEndSOA\CarRental\CarRental.Business.Entities\obj\Debug\CarRental.Business.Entities.dll
+C:\Exercises\MVC\EndToEndSOA\CarRental\CarRental.Business.Entities\obj\Debug\CarRental.Business.Entities.pdb
+C:\Exercises\MVC\EndToEndSOA\CarRental\CarRental.Business.Entities\bin\Debug\Core.Common.Core.dll
+C:\Exercises\MVC\EndToEndSOA\CarRental\CarRental.Business.Entities\bin\Debug\Core.Common.Core.pdb
+C:\Exercises\MVC\EndToEndSOA\CarRental\CarRental.Business.Entities\bin\Debug\Core.Common.Contracts.dll
+C:\Exercises\MVC\EndToEndSOA\CarRental\CarRental.Business.Entities\bin\Debug\Core.Common.Contracts.pdb

@@ -7,6 +7,13 @@ namespace MvcIoC.Models
 {
     public class ProteinRespository : IProteinRespository
     {
+        private readonly string dataSource;
+
+        public ProteinRespository ( string dataSource )
+        {
+            this.dataSource = dataSource;
+        }
+
         private static ProteinData data = new ProteinData();
         public ProteinData GetData ( DateTime dateTime )
         {

@@ -1,0 +1,5 @@
+C:\Exercises\MVC\EndToEndSOA\CarRental\Utils\obj\Debug\Utils.csprojResolveAssemblyReference.cache
+C:\Exercises\MVC\EndToEndSOA\CarRental\Utils\bin\Debug\Utils.dll
+C:\Exercises\MVC\EndToEndSOA\CarRental\Utils\bin\Debug\Utils.pdb
+C:\Exercises\MVC\EndToEndSOA\CarRental\Utils\obj\Debug\Utils.dll
+C:\Exercises\MVC\EndToEndSOA\CarRental\Utils\obj\Debug\Utils.pdb

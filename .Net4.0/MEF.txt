@@ -1,0 +1,6 @@
+Building Extensible Applications with MEF
+
+Managed Extensibility Framework is Microsoft's answer to the extensibility problem. This course dives into MEF, its mechanics and how MEF can be used to build flexible, pluggable applications.
+by Dustin Davis 
+
+.net 4

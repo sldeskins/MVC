@@ -8,7 +8,7 @@ http://simpleprogrammer.com
 
 
 IoC Containers
-Uity
+Unity
 AutoFac
 FUnq
 LinFu
@@ -23,3 +23,10 @@ Windsor
  MEF  Microsoft Extensible Factory
  
  http://msdn.microsoft.com/en-us/library/ff647202
+ 
+ 
+ Unity example
+ Ninject example
+ Structure Map example
+ 
+ 

@@ -1,0 +1,5 @@
+C:\Exercises\MVC\EndToEndSOA\CarRental\Core.Common.Contracts\bin\Debug\Core.Common.Contracts.dll
+C:\Exercises\MVC\EndToEndSOA\CarRental\Core.Common.Contracts\bin\Debug\Core.Common.Contracts.pdb
+C:\Exercises\MVC\EndToEndSOA\CarRental\Core.Common.Contracts\obj\Debug\Core.Common.Contracts.csprojResolveAssemblyReference.cache
+C:\Exercises\MVC\EndToEndSOA\CarRental\Core.Common.Contracts\obj\Debug\Core.Common.Contracts.dll
+C:\Exercises\MVC\EndToEndSOA\CarRental\Core.Common.Contracts\obj\Debug\Core.Common.Contracts.pdb
